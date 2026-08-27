@@ -272,14 +272,11 @@ export async function getTranscript(videoId: string): Promise<TranscriptResult> 
   const cached = transcriptCache.get(videoId);
   if (cached) return { segments: cached };
 
-  // Featured lessons ship with verified timestamped captions. Resolve these
-  // before contacting YouTube: production hosts such as Vercel are frequently
-  // served a bot-check page instead of caption data from datacenter IPs.
-  const curated = getCuratedTranscript(videoId);
-  if (curated) {
-    transcriptCache.set(videoId, curated);
-    return { segments: curated };
-  }
+  // NOTE: the bundled curated transcripts are hand-written and their
+  // timestamps do not line up with the real audio, so they are only used as a
+  // very last resort (see the end of this function) — never before the real
+  // captions or the AI transcription.
+
 
   let title: string | undefined;
   let channel: string | undefined;
