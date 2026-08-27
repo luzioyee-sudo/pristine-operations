@@ -46,13 +46,18 @@ function parseSegments(content: string): TranscriptSegment[] {
   }
   if (!Array.isArray(parsed)) return [];
 
+  const legacyValues = parsed
+    .map((item: any) => secondsValue(item?.start ?? item?.offset))
+    .filter(Number.isFinite);
+  const legacyScale = legacyValues.some((value: number) => value > 18000) ? 1 : 1000;
+
   const rows = parsed
     .map((item: any) => {
       const hasMilliseconds = item?.start_ms !== undefined || item?.startMs !== undefined;
       const startValue = item?.start_ms ?? item?.startMs ?? item?.start ?? item?.offset;
       const endValue = item?.end_ms ?? item?.endMs ?? item?.end;
       const durationValue = item?.duration_ms ?? item?.durationMs ?? item?.dur ?? item?.duration;
-      const unit = hasMilliseconds ? 1 : 1000;
+      const unit = hasMilliseconds ? 1 : legacyScale;
       const start = secondsValue(startValue) * unit;
       const explicitEnd = secondsValue(endValue) * unit;
       const duration = secondsValue(durationValue) * unit;
