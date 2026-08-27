@@ -33,21 +33,32 @@ function parseSegments(content: string): TranscriptSegment[] {
   }
   if (!Array.isArray(parsed)) return [];
 
-  return parsed
+  const rows = parsed
     .map((item: any) => {
       const start = Number(item?.start ?? item?.offset ?? 0);
       const dur = Number(item?.dur ?? item?.duration ?? 0);
       const text = String(item?.text ?? "").replace(/\s+/g, " ").trim();
       if (!text || !Number.isFinite(start) || start < 0) return null;
-      return {
-        text,
-        offset: Math.round(start * 1000),
-        duration: Math.round((Number.isFinite(dur) && dur > 0 ? dur : 3) * 1000),
-      };
+      return { text, start, dur: Number.isFinite(dur) && dur > 0 ? dur : 0 };
     })
     .filter(Boolean)
-    .sort((a: TranscriptSegment, b: TranscriptSegment) => a.offset - b.offset);
+    .sort((a: any, b: any) => a.start - b.start);
+
+  if (!rows.length) return [];
+
+  // The model is asked for seconds but sometimes answers in milliseconds.
+  // No YouTube lesson runs longer than ~5 hours, so a last timestamp beyond
+  // that can only mean the values are already in milliseconds.
+  const lastStart = rows[rows.length - 1].start;
+  const scale = lastStart > 18000 ? 1 : 1000;
+
+  return rows.map((row: any) => ({
+    text: row.text,
+    offset: Math.round(row.start * scale),
+    duration: Math.max(300, Math.round((row.dur || 3) * scale)),
+  }));
 }
+
 
 export async function transcribeWithAi(videoId: string): Promise<TranscriptSegment[]> {
   const apiKey = process.env["LOVABLE_API_KEY"];
