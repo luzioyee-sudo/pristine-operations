@@ -15,7 +15,7 @@ import {
   getLexiconStats,
   deleteLexicalEntry,
 } from "../server/lexiconService";
-import { getServerSupabase } from "../server/supabaseServer";
+import { getServerSupabase, hasServerSupabase } from "../server/supabaseServer";
 import { CURATED_TRANSCRIPTS } from "../data/curatedTranscripts";
 import { createMiniApp } from "./mini-express";
 
@@ -212,6 +212,10 @@ app.post("/api/analytics/track", async (req, res) => {
   try {
     const events = Array.isArray(req.body) ? req.body : [req.body];
     if (!events.length) return res.status(400).json({ error: 'Empty tracking payload.' });
+    if (!hasServerSupabase()) {
+      // Analytics storage isn't configured in this environment: accept and drop.
+      return res.json({ success: true, count: 0, skipped: true });
+    }
     const supabase = getServerSupabase();
     const rows = events.map(normalizeAnalyticsEvent);
     const { error } = await supabase.from('analytics_events').upsert(rows, { onConflict: 'event_id' });
