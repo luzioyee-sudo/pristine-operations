@@ -215,7 +215,9 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
         hi = mid - 1;
       }
     }
-    return found;
+    if (found < 0) return -1;
+    const active = lines[found];
+    return currentMs < active.offset + active.duration ? found : -1;
   }, [lines, currentMs]);
 
   const activeLineRef = useRef<HTMLLIElement | null>(null);

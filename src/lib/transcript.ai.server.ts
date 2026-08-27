@@ -16,11 +16,24 @@ const GATEWAY_URL = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
 const PROMPT = [
   "Transcribe the ENTIRE video verbatim, in the language actually spoken.",
-  'Return ONLY a JSON array of objects {"start": number, "dur": number, "text": string}',
-  "where start and dur are seconds from the beginning of the video.",
-  "Split the speech into caption-sized lines of 3-10 seconds that cover the whole",
-  "video in order, with no overlaps. Do not translate. No markdown, no commentary.",
+  "You are producing subtitles that must follow the audible speech exactly.",
+  "Inspect the video timecode for every phrase; do not estimate, evenly distribute,",
+  "or shift timestamps to remove silence. Intro music and silence must remain gaps.",
+  'Return ONLY a JSON array of objects {"start_ms": integer, "end_ms": integer, "text": string}.',
+  "start_ms is the exact first audible phoneme and end_ms is the exact last audible",
+  "phoneme, both measured from 00:00.000 of the supplied video. Use short natural",
+  "phrases, preserve pauses between phrases, never overlap entries, and do not translate.",
+  "No markdown and no commentary.",
 ].join(" ");
+
+function secondsValue(value: unknown): number {
+  if (typeof value === "string" && value.includes(":")) {
+    const parts = value.split(":").map(Number);
+    if (parts.some((part) => !Number.isFinite(part))) return Number.NaN;
+    return parts.reduce((total, part) => total * 60 + part, 0);
+  }
+  return Number(value);
+}
 
 function parseSegments(content: string): TranscriptSegment[] {
   const match = content.match(/\[[\s\S]*\]/);
@@ -33,30 +46,45 @@ function parseSegments(content: string): TranscriptSegment[] {
   }
   if (!Array.isArray(parsed)) return [];
 
+  const legacyValues = parsed
+    .map((item: any) => secondsValue(item?.start ?? item?.offset))
+    .filter(Number.isFinite);
+  const legacyScale = legacyValues.some((value: number) => value > 18000) ? 1 : 1000;
+
   const rows = parsed
     .map((item: any) => {
-      const start = Number(item?.start ?? item?.offset ?? 0);
-      const dur = Number(item?.dur ?? item?.duration ?? 0);
+      const hasMilliseconds = item?.start_ms !== undefined || item?.startMs !== undefined;
+      const startValue = item?.start_ms ?? item?.startMs ?? item?.start ?? item?.offset;
+      const endValue = item?.end_ms ?? item?.endMs ?? item?.end;
+      const durationValue = item?.duration_ms ?? item?.durationMs ?? item?.dur ?? item?.duration;
+      const unit = hasMilliseconds ? 1 : legacyScale;
+      const start = secondsValue(startValue) * unit;
+      const explicitEnd = secondsValue(endValue) * unit;
+      const duration = secondsValue(durationValue) * unit;
       const text = String(item?.text ?? "").replace(/\s+/g, " ").trim();
       if (!text || !Number.isFinite(start) || start < 0) return null;
-      return { text, start, dur: Number.isFinite(dur) && dur > 0 ? dur : 0 };
+      const end = Number.isFinite(explicitEnd) && explicitEnd > start
+        ? explicitEnd
+        : start + (Number.isFinite(duration) && duration > 0 ? duration : 0);
+      return { text, start, end };
     })
     .filter(Boolean)
     .sort((a: any, b: any) => a.start - b.start);
 
   if (!rows.length) return [];
 
-  // The model is asked for seconds but sometimes answers in milliseconds.
-  // No YouTube lesson runs longer than ~5 hours, so a last timestamp beyond
-  // that can only mean the values are already in milliseconds.
-  const lastStart = rows[rows.length - 1].start;
-  const scale = lastStart > 18000 ? 1 : 1000;
-
-  return rows.map((row: any) => ({
-    text: row.text,
-    offset: Math.round(row.start * scale),
-    duration: Math.max(300, Math.round((row.dur || 3) * scale)),
-  }));
+  return rows
+    .map((row: any, index: number) => {
+      const nextStart = rows[index + 1]?.start;
+      const measuredEnd = row.end > row.start ? row.end : (nextStart ?? row.start + 3000);
+      const end = nextStart === undefined ? measuredEnd : Math.min(measuredEnd, nextStart);
+      return {
+        text: row.text,
+        offset: Math.round(row.start),
+        duration: Math.max(100, Math.round(end - row.start)),
+      };
+    })
+    .filter((row: TranscriptSegment) => row.duration > 0);
 }
 
 

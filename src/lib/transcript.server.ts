@@ -1,6 +1,5 @@
 // @ts-nocheck
 import type { TranscriptSegment } from "./transcript.functions";
-import { CURATED_TRANSCRIPTS } from "@/app/data/curatedTranscripts";
 
 // Simple in-memory cache so repeat views of the same video are instant.
 const store = new Map<string, TranscriptSegment[]>();
@@ -252,17 +251,6 @@ export type TranscriptResult = {
   channel?: string;
 };
 
-function getCuratedTranscript(videoId: string): TranscriptSegment[] | undefined {
-  const transcript = CURATED_TRANSCRIPTS[videoId];
-  if (!transcript?.segments.length) return undefined;
-
-  return transcript.segments.map((segment) => ({
-    text: segment.text,
-    offset: Math.round(segment.startTime * 1000),
-    duration: Math.max(300, Math.round((segment.endTime - segment.startTime) * 1000)),
-  }));
-}
-
 /**
  * Resolves a transcript for a YouTube video, trying multiple client identities
  * and caption formats. Works from serverless/datacenter hosts (Vercel,
@@ -271,12 +259,6 @@ function getCuratedTranscript(videoId: string): TranscriptSegment[] | undefined 
 export async function getTranscript(videoId: string): Promise<TranscriptResult> {
   const cached = transcriptCache.get(videoId);
   if (cached) return { segments: cached };
-
-  // NOTE: the bundled curated transcripts are hand-written and their
-  // timestamps do not line up with the real audio, so they are only used as a
-  // very last resort (see the end of this function) — never before the real
-  // captions or the AI transcription.
-
 
   let title: string | undefined;
   let channel: string | undefined;
@@ -356,13 +338,6 @@ export async function getTranscript(videoId: string): Promise<TranscriptResult> 
     }
   } catch (err) {
     lastError = err instanceof Error ? err.message : lastError;
-  }
-
-  // Absolute last resort: the bundled hand-written transcript, if any.
-  const curated = getCuratedTranscript(videoId);
-  if (curated) {
-    transcriptCache.set(videoId, curated);
-    return { segments: curated, title, channel };
   }
 
   if (sawTracks) {
