@@ -347,6 +347,20 @@ export async function getTranscript(videoId: string): Promise<TranscriptResult> 
     lastError = err instanceof Error ? err.message : lastError;
   }
 
+  // YouTube blocks caption requests from datacenter IPs (Vercel, Cloudflare),
+  // so in production the steps above usually come back empty. Fall back to
+  // AI transcription, which reads the video directly and always works.
+  try {
+    const { transcribeWithAi } = await import("./transcript.ai.server");
+    const aiSegments = await transcribeWithAi(videoId);
+    if (aiSegments.length) {
+      transcriptCache.set(videoId, aiSegments);
+      return { segments: aiSegments, title, channel };
+    }
+  } catch (err) {
+    lastError = err instanceof Error ? err.message : lastError;
+  }
+
   if (sawTracks) {
     throw new Error("Transcript could not be loaded for this video");
   }
