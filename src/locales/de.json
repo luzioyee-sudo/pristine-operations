@@ -1,0 +1,102 @@
+{
+  "common": {
+    "back": "Zurück",
+    "clear": "Löschen",
+    "open": "Öffnen",
+    "close": "Schließen",
+    "loading": "Wird geladen…",
+    "retry": "Erneut versuchen"
+  },
+  "nav": {
+    "lessons": "Deine Lektionen",
+    "explore": "Entdecken",
+    "recommends": "Empfehlungen",
+    "settings": "Einstellungen",
+    "primary": "Hauptnavigation"
+  },
+  "lessons": {
+    "eyebrow": "Deine Bibliothek",
+    "title": "Deine Lektionen",
+    "subtitle": "Die zuletzt angesehenen Videos. Wähle eines aus und lerne weiter.",
+    "clearAria": "Verlauf löschen",
+    "emptyTitle": "Noch keine Lektionen",
+    "emptyBody": "Finde ein Video unter Entdecken — es erscheint hier, nachdem du es angesehen hast.",
+    "goExplore": "Zu Entdecken",
+    "metaTitle": "Deine Lektionen — Verlauf",
+    "metaDescription": "Zuletzt angesehene Videos mit ihren Transkripten."
+  },
+  "explore": {
+    "eyebrow": "Finde etwas",
+    "title": "Entdecken",
+    "subtitle": "Füge einen YouTube-Link ein oder durchsuche unsere Auswahl.",
+    "placeholder": "YouTube-Link einfügen oder suchen…",
+    "inputAria": "YouTube-Link oder Suchbegriff",
+    "invalidLink": "In diesem Link wurde keine YouTube-Video-ID gefunden.",
+    "resultsFor": "Ergebnisse für „{{query}}“.",
+    "noResults": "Keine Videos passen zu deiner Suche.",
+    "metaTitle": "Entdecken — Videos finden",
+    "metaDescription": "Suche YouTube-Videos per Link oder stöbere in Empfehlungen mit Transkript."
+  },
+  "recommends": {
+    "eyebrow": "Kuratiert",
+    "title": "Empfehlungen",
+    "subtitle": "Handverlesene Videos, die dir gefallen dürften.",
+    "metaTitle": "Empfehlungen — Videos",
+    "metaDescription": "Für dich ausgewählte Videos."
+  },
+  "watch": {
+    "transcript": "Transkript",
+    "lineCount": "{{count}} Zeilen",
+    "noVideo": "Kein Video ausgewählt.",
+    "findVideo": "Video unter Entdecken finden",
+    "noLines": "Keine Transkriptzeilen gefunden.",
+    "jumpTo": "Zu {{time}} springen",
+    "metaTitle": "Ansehen — Player & Transkript",
+    "metaDescription": "Sieh ein Video an und lies das Transkript mit.",
+    "notes": "Notizen",
+    "notesPlaceholder": "Notiere neue Wörter, Wendungen oder Ideen aus diesem Video…",
+    "notesSaved": "Gespeichert",
+    "notesClear": "Löschen",
+    "notesCount": "{{count}} Wörter",
+    "showNotes": "Notizen",
+    "hideNotes": "Notizen ausblenden",
+    "nowLearning": "Aktuell im Fokus",
+    "untitled": "YouTube-Video",
+    "progressPct": "{{pct}} % abgeschlossen",
+    "statLines": "Transkriptzeilen",
+    "statLineRead": "Zeile",
+    "statRemaining": "Verbleibend",
+    "chapters": "Kapitel",
+    "chapterCount": "{{count}} Abschnitte",
+    "vocabulary": "Vokabeln aus diesem Video",
+    "wordCount": "{{count}} Wörter",
+    "noVocabulary": "Wichtige Ausdrücke erscheinen hier, sobald das Transkript geladen ist.",
+    "notesIdle": "Öffne die Notizen, um neue Wörter, Wendungen oder Ideen festzuhalten."
+  },
+  "dictionary": {
+    "lookingUp": "Wird nachgeschlagen…",
+    "noDefinition": "Keine Definition gefunden.",
+    "phraseHint": "Tippe auf den Lautsprecher, um diesen Ausdruck zu hören.",
+    "playPronunciation": "Aussprache abspielen",
+    "translation": "Übersetzung",
+    "translating": "Wird übersetzt…",
+    "noTranslation": "Keine Übersetzung verfügbar."
+  },
+  "settings": {
+    "eyebrow": "Einstellungen",
+    "title": "Einstellungen",
+    "subtitle": "Wähle das Erscheinungsbild der App und deine Lernsprache.",
+    "language": "App-Sprache",
+    "languageHelp": "Sprache der Oberfläche. Sie bestimmt auch, in welche Sprache Wörter übersetzt werden.",
+    "autoDetected": "Automatisch von deinem Gerät erkannt",
+    "systemDefault": "Gerätesprache verwenden",
+    "prefetch": "Intelligente Wort-Vorübersetzung",
+    "prefetchHelp": "Die App liest im Transkript voraus und bereitet Übersetzungen vor, damit ein Tippen sofort wirkt.",
+    "metaTitle": "Einstellungen — Sprache & Präferenzen",
+    "metaDescription": "Ändere die App-Sprache und deine Lernpräferenzen."
+  },
+  "errors": {
+    "transcript": "Das Transkript für dieses Video konnte nicht geladen werden.",
+    "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  }
+}

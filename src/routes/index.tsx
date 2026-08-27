@@ -1,24 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
+import { RibbleApp } from "@/components/RibbleApp";
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Ribble — Read, Listen and Learn Languages" },
+      {
+        name: "description",
+        content:
+          "Ribble turns real reading into language learning: tap any word for instant translation, build flashcards, practise pronunciation and track progress.",
+      },
+      { property: "og:title", content: "Ribble — Read, Listen and Learn Languages" },
+      {
+        property: "og:description",
+        content:
+          "Read PDFs and articles with instant word translation, flashcards, quizzes and pronunciation practice.",
+      },
+    ],
+  }),
+  component: RibbleApp,
+});

@@ -10,33 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SplatRouteImport } from './routes/$'
+import { Route as ApiSplatRouteImport } from './routes/api/$'
+import { Route as ApiPublicTranscriptRouteImport } from './routes/api/public/transcript'
+import { Route as ApiPublicTranslateRouteImport } from './routes/api/public/translate'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiSplatRoute = ApiSplatRouteImport.update({
+  id: '/api/$',
+  path: '/api/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicTranscriptRoute = ApiPublicTranscriptRouteImport.update({
+  id: '/api/public/transcript',
+  path: '/api/public/transcript',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicTranslateRoute = ApiPublicTranslateRouteImport.update({
+  id: '/api/public/translate',
+  path: '/api/public/translate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/api/$': typeof ApiSplatRoute
+  '/api/public/transcript': typeof ApiPublicTranscriptRoute
+  '/api/public/translate': typeof ApiPublicTranslateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/api/$': typeof ApiSplatRoute
+  '/api/public/transcript': typeof ApiPublicTranscriptRoute
+  '/api/public/translate': typeof ApiPublicTranslateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/api/$': typeof ApiSplatRoute
+  '/api/public/transcript': typeof ApiPublicTranscriptRoute
+  '/api/public/translate': typeof ApiPublicTranslateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/$' | '/api/$' | '/api/public/transcript' | '/api/public/translate'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/$' | '/api/$' | '/api/public/transcript' | '/api/public/translate'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/api/$'
+    | '/api/public/transcript'
+    | '/api/public/translate'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
+  ApiSplatRoute: typeof ApiSplatRoute
+  ApiPublicTranscriptRoute: typeof ApiPublicTranscriptRoute
+  ApiPublicTranslateRoute: typeof ApiPublicTranslateRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +95,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/$': {
+      id: '/api/$'
+      path: '/api/$'
+      fullPath: '/api/$'
+      preLoaderRoute: typeof ApiSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/transcript': {
+      id: '/api/public/transcript'
+      path: '/api/public/transcript'
+      fullPath: '/api/public/transcript'
+      preLoaderRoute: typeof ApiPublicTranscriptRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/translate': {
+      id: '/api/public/translate'
+      path: '/api/public/translate'
+      fullPath: '/api/public/translate'
+      preLoaderRoute: typeof ApiPublicTranslateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
+  ApiSplatRoute: ApiSplatRoute,
+  ApiPublicTranscriptRoute: ApiPublicTranscriptRoute,
+  ApiPublicTranslateRoute: ApiPublicTranslateRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

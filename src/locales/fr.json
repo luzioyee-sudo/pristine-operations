@@ -1,0 +1,102 @@
+{
+  "common": {
+    "back": "Retour",
+    "clear": "Effacer",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "loading": "Chargement…",
+    "retry": "Réessayer"
+  },
+  "nav": {
+    "lessons": "Vos leçons",
+    "explore": "Explorer",
+    "recommends": "Recommandés",
+    "settings": "Paramètres",
+    "primary": "Navigation principale"
+  },
+  "lessons": {
+    "eyebrow": "Votre bibliothèque",
+    "title": "Vos leçons",
+    "subtitle": "Les vidéos que vous avez regardées récemment. Choisissez-en une pour continuer.",
+    "clearAria": "Effacer l'historique",
+    "emptyTitle": "Aucune leçon pour l'instant",
+    "emptyBody": "Trouvez une vidéo dans Explorer — elle apparaîtra ici après visionnage.",
+    "goExplore": "Aller à Explorer",
+    "metaTitle": "Vos leçons — Historique",
+    "metaDescription": "Les vidéos regardées récemment avec leurs transcriptions."
+  },
+  "explore": {
+    "eyebrow": "Trouvez quelque chose",
+    "title": "Explorer",
+    "subtitle": "Collez un lien YouTube pour l'ouvrir, ou cherchez parmi nos sélections.",
+    "placeholder": "Collez un lien YouTube ou cherchez…",
+    "inputAria": "Lien YouTube ou terme de recherche",
+    "invalidLink": "Impossible de trouver un identifiant de vidéo YouTube dans ce lien.",
+    "resultsFor": "Résultats pour « {{query}} ».",
+    "noResults": "Aucune vidéo ne correspond à votre recherche.",
+    "metaTitle": "Explorer — Trouver des vidéos",
+    "metaDescription": "Cherchez des vidéos YouTube par lien ou parcourez les sélections avec transcription."
+  },
+  "recommends": {
+    "eyebrow": "Sélection",
+    "title": "Recommandés",
+    "subtitle": "Des vidéos choisies avec soin qui devraient vous plaire.",
+    "metaTitle": "Recommandés — Vidéos",
+    "metaDescription": "Vidéos recommandées choisies pour vous."
+  },
+  "watch": {
+    "transcript": "Transcription",
+    "lineCount": "{{count}} lignes",
+    "noVideo": "Aucune vidéo sélectionnée.",
+    "findVideo": "Trouver une vidéo dans Explorer",
+    "noLines": "Aucune ligne de transcription trouvée.",
+    "jumpTo": "Aller à {{time}}",
+    "metaTitle": "Lecture — Lecteur et transcription",
+    "metaDescription": "Regardez une vidéo et suivez sa transcription.",
+    "notes": "Notes",
+    "notesPlaceholder": "Notez les mots, expressions ou idées de cette vidéo…",
+    "notesSaved": "Enregistré",
+    "notesClear": "Effacer",
+    "notesCount": "{{count}} mots",
+    "showNotes": "Notes",
+    "hideNotes": "Masquer les notes",
+    "nowLearning": "En cours d'apprentissage",
+    "untitled": "Vidéo YouTube",
+    "progressPct": "{{pct}} % terminé",
+    "statLines": "Lignes de transcription",
+    "statLineRead": "Ligne",
+    "statRemaining": "Restant",
+    "chapters": "Chapitres",
+    "chapterCount": "{{count}} sections",
+    "vocabulary": "Vocabulaire de cette vidéo",
+    "wordCount": "{{count}} mots",
+    "noVocabulary": "Les expressions clés apparaîtront ici une fois la transcription chargée.",
+    "notesIdle": "Ouvrez les notes pour écrire de nouveaux mots, expressions ou idées pendant la vidéo."
+  },
+  "dictionary": {
+    "lookingUp": "Recherche…",
+    "noDefinition": "Aucune définition trouvée.",
+    "phraseHint": "Touchez le haut-parleur pour écouter cette phrase.",
+    "playPronunciation": "Écouter la prononciation",
+    "translation": "Traduction",
+    "translating": "Traduction en cours…",
+    "noTranslation": "Aucune traduction disponible."
+  },
+  "settings": {
+    "eyebrow": "Préférences",
+    "title": "Paramètres",
+    "subtitle": "Choisissez l'apparence de l'app et la langue dans laquelle vous apprenez.",
+    "language": "Langue de l'application",
+    "languageHelp": "Langue de l'interface. Elle définit aussi la langue de traduction des mots.",
+    "autoDetected": "Détectée depuis votre appareil",
+    "systemDefault": "Utiliser la langue de l'appareil",
+    "prefetch": "Prétraduction intelligente des mots",
+    "prefetchHelp": "L'app lit la transcription à l'avance et prépare les traductions pour un affichage instantané.",
+    "metaTitle": "Paramètres — Langue et préférences",
+    "metaDescription": "Changez la langue de l'application et vos préférences d'apprentissage."
+  },
+  "errors": {
+    "transcript": "Impossible de charger la transcription de cette vidéo.",
+    "generic": "Une erreur est survenue. Veuillez réessayer."
+  }
+}
