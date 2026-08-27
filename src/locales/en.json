@@ -1,0 +1,102 @@
+{
+  "common": {
+    "back": "Back",
+    "clear": "Clear",
+    "open": "Open",
+    "close": "Close",
+    "loading": "Loading…",
+    "retry": "Try again"
+  },
+  "nav": {
+    "lessons": "Your Lessons",
+    "explore": "Explore",
+    "recommends": "Recommends",
+    "settings": "Settings",
+    "primary": "Primary"
+  },
+  "lessons": {
+    "eyebrow": "Your library",
+    "title": "Your Lessons",
+    "subtitle": "The videos you've watched recently. Pick one to keep learning.",
+    "clearAria": "Clear history",
+    "emptyTitle": "No lessons yet",
+    "emptyBody": "Find a video in Explore — it will show up here after you watch it.",
+    "goExplore": "Go to Explore",
+    "metaTitle": "Your Lessons — Watch history",
+    "metaDescription": "Videos you've watched recently with their transcripts."
+  },
+  "explore": {
+    "eyebrow": "Find something",
+    "title": "Explore",
+    "subtitle": "Paste a YouTube link to open it, or search the picks below.",
+    "placeholder": "Paste a YouTube link or search…",
+    "inputAria": "YouTube link or search term",
+    "invalidLink": "Couldn't find a YouTube video ID in that link.",
+    "resultsFor": "Showing results for \"{{query}}\".",
+    "noResults": "No videos match your search.",
+    "metaTitle": "Explore — Find videos",
+    "metaDescription": "Search YouTube videos by link or browse picks to watch with transcripts."
+  },
+  "recommends": {
+    "eyebrow": "Curated",
+    "title": "Recommends",
+    "subtitle": "Hand-picked videos we think you'll enjoy.",
+    "metaTitle": "Recommends — Videos",
+    "metaDescription": "Recommended videos picked for you."
+  },
+  "watch": {
+    "transcript": "Transcript",
+    "lineCount": "{{count}} lines",
+    "noVideo": "No video selected.",
+    "findVideo": "Find a video in Explore",
+    "noLines": "No transcript lines found.",
+    "jumpTo": "Jump to {{time}}",
+    "metaTitle": "Watch — Player & transcript",
+    "metaDescription": "Watch a video and read along with its transcript.",
+    "notes": "Notes",
+    "notesPlaceholder": "Write down new words, phrases or ideas from this video…",
+    "notesSaved": "Saved",
+    "notesClear": "Clear",
+    "notesCount": "{{count}} words",
+    "showNotes": "Notes",
+    "hideNotes": "Hide notes",
+    "nowLearning": "Now learning",
+    "untitled": "YouTube video",
+    "progressPct": "{{pct}}% complete",
+    "statLines": "Transcript lines",
+    "statLineRead": "Line",
+    "statRemaining": "Remaining",
+    "chapters": "Chapters",
+    "chapterCount": "{{count}} sections",
+    "vocabulary": "Vocabulary from this video",
+    "wordCount": "{{count}} words",
+    "noVocabulary": "Key expressions will appear here once the transcript loads.",
+    "notesIdle": "Open notes to write down new words, phrases or ideas while you watch."
+  },
+  "dictionary": {
+    "lookingUp": "Looking up…",
+    "noDefinition": "No definition found.",
+    "phraseHint": "Tap the speaker to hear this phrase.",
+    "playPronunciation": "Play pronunciation",
+    "translation": "Translation",
+    "translating": "Translating…",
+    "noTranslation": "No translation available."
+  },
+  "settings": {
+    "eyebrow": "Preferences",
+    "title": "Settings",
+    "subtitle": "Choose how the app looks and which language you learn in.",
+    "language": "App language",
+    "languageHelp": "Interface language. It also decides which language words are translated into.",
+    "autoDetected": "Auto-detected from your device",
+    "systemDefault": "Use device language",
+    "prefetch": "Smart word pre-translation",
+    "prefetchHelp": "The app reads ahead in the transcript and prepares translations so tapping a word is instant.",
+    "metaTitle": "Settings — Language & preferences",
+    "metaDescription": "Change the app language and learning preferences."
+  },
+  "errors": {
+    "transcript": "Couldn't load the transcript for this video.",
+    "generic": "Something went wrong. Please try again."
+  }
+}
