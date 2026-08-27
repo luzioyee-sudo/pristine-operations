@@ -265,6 +265,24 @@ export async function getTranscript(videoId: string): Promise<TranscriptResult> 
   let sawTracks = false;
   let lastError: string | undefined;
 
+  // 1) Dedicated transcript APIs (work from Vercel/Cloudflare datacenter IPs).
+  try {
+    const { fetchTranscriptFromApis, fetchYouTubeMeta } = await import("./transcript.api.server");
+    const [apiSegments, meta] = await Promise.all([
+      fetchTranscriptFromApis(videoId),
+      fetchYouTubeMeta(videoId),
+    ]);
+    title = title ?? meta.title;
+    channel = channel ?? meta.channel;
+    if (apiSegments.length) {
+      transcriptCache.set(videoId, apiSegments);
+      return { segments: apiSegments, title, channel };
+    }
+  } catch (err) {
+    lastError = err instanceof Error ? err.message : String(err);
+  }
+
+
   for (const client of CLIENTS) {
     try {
       const resp = await fetch(INNERTUBE_URL, {
