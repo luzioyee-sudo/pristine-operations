@@ -358,9 +358,17 @@ export async function getTranscript(videoId: string): Promise<TranscriptResult> 
     lastError = err instanceof Error ? err.message : lastError;
   }
 
+  // Absolute last resort: the bundled hand-written transcript, if any.
+  const curated = getCuratedTranscript(videoId);
+  if (curated) {
+    transcriptCache.set(videoId, curated);
+    return { segments: curated, title, channel };
+  }
+
   if (sawTracks) {
     throw new Error("Transcript could not be loaded for this video");
   }
+
   throw new Error(
     lastError
       ? `Transcript is unavailable for this video (${lastError})`
