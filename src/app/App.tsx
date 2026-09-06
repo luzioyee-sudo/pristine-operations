@@ -2358,7 +2358,7 @@ export default function App() {
       {(['home', 'dictionary', 'all-tools', 'settings', 'practice', 'quizzes', 'writing'].includes(activeView) || (activeView === 'reader' && !activeDocument)) && (
         <nav 
           aria-label="Mobile Navigation" 
-          className="fixed bottom-4 start-1/2 -translate-x-1/2 z-50 w-[310px] max-w-[92vw] mx-auto bg-white/95 text-[#222222] flex items-center justify-between py-2 px-3.5 shadow-lg rounded-full border border-[#D0D2CF] md:hidden transition-all duration-200"
+          className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-1/2 -translate-x-1/2 z-50 w-[330px] max-w-[92vw] mx-auto bg-white/85 backdrop-blur-xl text-[#222222] flex items-center justify-between py-2 px-3 shadow-[0_10px_30px_-10px_rgba(34,34,34,0.35)] rounded-full border border-[#D0D2CF] md:hidden transition-all duration-200"
         >
           {/* 1. Home */}
           <button
