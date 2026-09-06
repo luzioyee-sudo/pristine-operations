@@ -1552,8 +1552,56 @@ export default function App() {
 
         {/* Upper Header (Aligned with Ribble Brand System) - Shown on Home Page for Mobile & Laptop */}
         {activeView === 'home' && (
-          <div className="grid grid-cols-3 items-center px-4 sm:px-6 pt-4 pb-3 bg-[#EFF1EE] border-b border-[#D0D2CF] shrink-0">
-            <div className="justify-self-start flex items-center gap-2">
+          <div className="flex flex-col gap-3 px-4 sm:px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-3 bg-[#EFF1EE]/90 backdrop-blur-xl border-b border-[#D0D2CF] shrink-0 md:grid md:grid-cols-3 md:items-center md:gap-4">
+            <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 md:hidden">
+              <div className="w-11 h-11 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
+                <img
+                  src={getEffectiveAvatar(settings.userAvatar, activeAccount?.id || settings.userEmail || settings.userName)}
+                  alt="Avatar"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="min-w-0">
+                <h2 className="text-[15px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] leading-tight truncate">
+                  Hello {activeAccount?.name || settings.userName || 'User'}
+                </h2>
+                <p className="text-[11px] text-[#666666] font-medium truncate">
+                  Today {new Date().getDate()} {new Date().toLocaleDateString('en-US', { month: 'short' })}.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={() => setIsQuickSearchOpen(true)}
+                  className="w-11 h-11 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center active:scale-95 transition-all shadow-xs"
+                  title="Search"
+                >
+                  <Search className="w-[18px] h-[18px] stroke-[2.2]" />
+                </button>
+                <button
+                  onClick={() => setIsNotificationCenterOpen(true)}
+                  className="relative w-11 h-11 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center active:scale-95 transition-all shadow-xs"
+                  title="Notifications & Messages"
+                >
+                  <Bell className="w-[18px] h-[18px] stroke-[2.2]" />
+                  {unreadNotificationsCount > 0 && (
+                    <span className="absolute -top-1 -end-1 w-4 h-4 bg-[#A4F5A6] text-[#222222] font-bold text-[9px] rounded-full ring-2 ring-white flex items-center justify-center">
+                      {unreadNotificationsCount > 9 ? '9+' : unreadNotificationsCount}
+                    </span>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <div className="md:hidden">
+              <DualFlagLanguageSelector
+                targetLanguage={settings.targetLanguage}
+                interfaceLanguage={settings.interfaceLanguage}
+                onUpdateSettings={handleUpdateSettings}
+                dropDirection="right"
+              />
+            </div>
+
+            <div className="hidden md:flex justify-self-start items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
                 <img 
                   src={getEffectiveAvatar(settings.userAvatar, activeAccount?.id || settings.userEmail || settings.userName)} 
@@ -1568,14 +1616,15 @@ export default function App() {
                 dropDirection="right"
               />
             </div>
-            <div className="justify-self-center text-center">
-              <h2 className="text-sm font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] leading-tight truncate max-w-[160px]">
+            <div className="hidden md:block justify-self-center text-center min-w-0">
+              <h2 className="text-sm font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] leading-tight truncate max-w-[220px]">
                 Hello {activeAccount?.name || settings.userName || 'User'}
               </h2>
               <p className="text-[11px] text-[#666666] font-medium">
                 Today {new Date().getDate()} {new Date().toLocaleDateString('en-US', { month: 'short' })}.
               </p>
             </div>
+
             <div className="justify-self-end flex items-center gap-2">
               <button
                 onClick={() => setIsQuickSearchOpen(true)}
