@@ -1625,7 +1625,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="justify-self-end flex items-center gap-2">
+            <div className="hidden md:flex justify-self-end items-center gap-2">
               <button
                 onClick={() => setIsQuickSearchOpen(true)}
                 className="w-10 h-10 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center hover:bg-[#D0D2CF] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
