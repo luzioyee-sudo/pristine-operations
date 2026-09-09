@@ -17,11 +17,11 @@ export function VideoGrid({
 }) {
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-5xl px-5 py-12 sm:py-16">
-        <header className="mb-10">
+      <div className="mx-auto max-w-5xl px-4 pt-[max(1.75rem,env(safe-area-inset-top))] pb-10 sm:px-5 sm:py-16">
+        <header className="mb-8 sm:mb-10">
           <p className="eyebrow animate-fade-up text-primary-ink">{eyebrow}</p>
           <h1
-            className="font-display animate-blur-in mt-2 text-4xl leading-[1.05] sm:text-5xl"
+            className="font-display animate-blur-in mt-2 text-[2rem] leading-[1.06] sm:text-5xl"
             style={{ animationDelay: "60ms" }}
           >
             {title}

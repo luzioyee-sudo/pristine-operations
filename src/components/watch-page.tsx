@@ -264,7 +264,7 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
 
   return (
     <div className="bg-background">
-      <div className="flex w-full flex-col px-4 py-3 lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4">
+      <div className="flex w-full flex-col px-4 pb-8 pt-[max(0.75rem,env(safe-area-inset-top))] lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4 lg:pb-4">
         <button
           type="button"
           onClick={onBack}
@@ -324,7 +324,7 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
               {!loading && lines && lines.length > 0 && (
                 <ol
                   dir="ltr"
-                  className="max-h-[52vh] min-h-0 flex-1 select-text space-y-1 overflow-y-auto pr-1 text-left text-sm leading-relaxed lg:max-h-none"
+                  className="max-h-[62vh] min-h-[58vh] lg:min-h-0 flex-1 select-text space-y-1 overflow-y-auto pr-1 text-left text-sm leading-relaxed lg:max-h-none"
                 >
                   {lines.map((seg, i) => (
                     <Line
@@ -346,12 +346,13 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
           </section>
 
           {/* Player + learning workspace — center column, independently scrollable */}
-          <section className="order-1 flex min-h-0 flex-col gap-4 overflow-y-auto pr-1 lg:order-2">
-            <div className="animate-rise-in shadow-lift shrink-0 overflow-hidden rounded-3xl border border-border/70 bg-secondary">
+          <section className="order-1 flex min-h-0 flex-col gap-4 lg:order-2 lg:overflow-y-auto lg:pr-1">
+            <div className="animate-rise-in shadow-lift sticky top-0 z-30 shrink-0 overflow-hidden rounded-3xl border border-border/70 bg-secondary lg:static">
               <div className="aspect-video w-full">
                 <div ref={containerRef} className="h-full w-full" />
               </div>
             </div>
+
             {!notesOpen && (
               <button
                 type="button"
