@@ -264,7 +264,7 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
 
   return (
     <div className="bg-background">
-      <div className="flex w-full flex-col px-4 py-3 lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4">
+      <div className="flex w-full flex-col px-4 pb-24 pt-[max(0.75rem,env(safe-area-inset-top))] lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4 lg:pb-4">
         <button
           type="button"
           onClick={onBack}
