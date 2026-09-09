@@ -264,7 +264,7 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
 
   return (
     <div className="bg-background">
-      <div className="flex w-full flex-col px-4 pb-24 pt-[max(0.75rem,env(safe-area-inset-top))] lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4 lg:pb-4">
+      <div className="flex w-full flex-col px-4 pb-8 pt-[max(0.75rem,env(safe-area-inset-top))] lg:h-[calc(100vh-6rem)] lg:px-5 lg:py-4 lg:pb-4">
         <button
           type="button"
           onClick={onBack}
@@ -324,7 +324,7 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
               {!loading && lines && lines.length > 0 && (
                 <ol
                   dir="ltr"
-                  className="max-h-[52vh] min-h-0 flex-1 select-text space-y-1 overflow-y-auto pr-1 text-left text-sm leading-relaxed lg:max-h-none"
+                  className="max-h-[62vh] min-h-[58vh] lg:min-h-0 flex-1 select-text space-y-1 overflow-y-auto pr-1 text-left text-sm leading-relaxed lg:max-h-none"
                 >
                   {lines.map((seg, i) => (
                     <Line
