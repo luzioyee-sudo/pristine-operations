@@ -60,9 +60,9 @@ export function BottomTabs({
   return (
     <nav
       aria-label={t("nav.primary")}
-      className="animate-rise-in sticky bottom-5 z-40 mx-auto w-fit px-3"
-      style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+      className="animate-rise-in pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-3 pb-[max(1.25rem,env(safe-area-inset-bottom))]"
     >
+
       <ul
         ref={listRef}
         className="shadow-lift transition-smooth relative flex items-stretch gap-1 rounded-full border border-border/70 bg-card/85 p-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-card/70"
