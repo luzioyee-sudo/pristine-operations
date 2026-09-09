@@ -346,12 +346,13 @@ export function WatchPage({ videoId, onBack }: { videoId?: string; onBack: () =>
           </section>
 
           {/* Player + learning workspace — center column, independently scrollable */}
-          <section className="order-1 flex min-h-0 flex-col gap-4 overflow-y-auto pr-1 lg:order-2">
-            <div className="animate-rise-in shadow-lift shrink-0 overflow-hidden rounded-3xl border border-border/70 bg-secondary">
+          <section className="order-1 flex min-h-0 flex-col gap-4 lg:order-2 lg:overflow-y-auto lg:pr-1">
+            <div className="animate-rise-in shadow-lift sticky top-0 z-30 shrink-0 overflow-hidden rounded-3xl border border-border/70 bg-secondary lg:static">
               <div className="aspect-video w-full">
                 <div ref={containerRef} className="h-full w-full" />
               </div>
             </div>
+
             {!notesOpen && (
               <button
                 type="button"
