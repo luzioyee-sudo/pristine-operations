@@ -65,8 +65,9 @@ export function BottomTabs({
 
       <ul
         ref={listRef}
-        className="shadow-lift transition-smooth relative flex items-stretch gap-1 rounded-full border border-border/70 bg-card/85 p-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-card/70"
+        className="shadow-lift transition-smooth pointer-events-auto relative flex max-w-full items-stretch gap-1 overflow-hidden rounded-full border border-border/70 bg-card/85 p-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-card/70"
       >
+
         <span
           aria-hidden
           className="shadow-soft pointer-events-none absolute left-0 top-1/2 rounded-full bg-primary"
