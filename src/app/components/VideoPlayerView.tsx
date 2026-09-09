@@ -27,7 +27,7 @@ export const VideoPlayerView: React.FC = () => {
           <WatchPage videoId={videoId} onBack={() => setVideoId(null)} />
         ) : (
           <div className="relative flex min-h-full flex-col">
-            <div className="flex-1 pb-24">
+            <div className="flex-1 pb-32">
               <PlayerTabPanel tab={tab} onOpenVideo={setVideoId} onChangeTab={setTab} />
             </div>
             <BottomTabs active={tab} onChange={setTab} />
