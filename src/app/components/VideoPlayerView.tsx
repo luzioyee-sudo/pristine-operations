@@ -22,13 +22,14 @@ export const VideoPlayerView: React.FC = () => {
 
   return (
     <LanguageProvider>
-      <div className="watch-theme">
+      <div className="watch-theme -mx-4 -my-6 min-h-screen bg-background sm:-mx-6 md:mx-0 md:my-0">
         {videoId ? (
           <WatchPage videoId={videoId} onBack={() => setVideoId(null)} />
         ) : (
-          <div className="relative flex min-h-full flex-col">
-            <div className="flex-1 pb-32">
+          <div className="relative flex min-h-full flex-col bg-background">
+            <div className="flex-1 bg-background pb-32">
               <PlayerTabPanel tab={tab} onOpenVideo={setVideoId} onChangeTab={setTab} />
+
             </div>
             <BottomTabs active={tab} onChange={setTab} />
           </div>
