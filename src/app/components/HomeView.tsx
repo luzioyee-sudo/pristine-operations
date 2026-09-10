@@ -687,15 +687,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </div>
 
-        {/* Heatmap Cell Grid Layout */}
-        <div className={`grid ${gridClass} w-full gap-1.5`}>
+        {/* Heatmap Cell Grid Layout — fills from top-left (LTR) or top-right (RTL) */}
+        <div dir={gridDir} className={`grid ${gridClass} w-full gap-1.5`}>
           {daysData.map((day) => {
             return (
               <motion.div
                 key={day.dateStr}
                 whileHover={{ scale: 1.25, zIndex: 10 }}
-                className={`w-full aspect-square rounded-[6px] ${day.colorClass} cursor-pointer transition-transform`}
-                title={`${day.dateStr}: ${day.label}`}
+                className={`w-full aspect-square rounded-[6px] ${day.colorClass} cursor-pointer transition-transform ${
+                  day.isToday ? 'ring-2 ring-[#222222] ring-offset-1 ring-offset-white' : ''
+                }`}
+                title={`${day.formattedDate}: ${day.label}`}
               />
             );
           })}
