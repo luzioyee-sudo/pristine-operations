@@ -282,10 +282,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
   const totalLapses = globalStats.totalLapsesAll;
   const retentionRate = totalReviews > 0 ? Math.max(0, Math.min(100, Math.round(((totalReviews - totalLapses) / totalReviews) * 100))) : 0;
 
-  // 4. Generate the last N days of activity for Intensity Heatmap in chronological order (oldest to today)
+  // 4. Generate activity from today backwards so the streak starts in the
+  // top-leading corner: top-left for English/LTR, top-right for Arabic/RTL.
   const now = new Date();
   const daysData = [];
-  for (let i = timeframe - 1; i >= 0; i--) {
+  for (let i = 0; i < timeframe; i++) {
     const d = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
     const dStr = getLocalDateString(d);
     const activity = activityHistory[dStr] || 0;
@@ -312,7 +313,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
     daysData.push({
       dateStr: dStr,
-      dayNumber: timeframe - i,
+      dayNumber: i + 1,
       isToday: i === 0,
       activity,
       ratio,
@@ -329,8 +330,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
     ? "grid-cols-10 sm:grid-cols-20 gap-1 sm:gap-1.5 md:gap-2" 
     : "grid-cols-10 sm:grid-cols-30 gap-1 sm:gap-1.5 md:gap-2";
 
-  // Fill direction: English (and other LTR interfaces) start at the top-left,
-  // Arabic (RTL) starts at the top-right. Today is always the last cell.
+  // Fill direction: today starts at the top-left in English/LTR and at the
+  // top-right in Arabic/RTL, followed by progressively older days.
   const gridDir: 'ltr' | 'rtl' = isRTL(currentLang) ? 'rtl' : 'ltr';
 
   // Dynamic search results for vocabulary words
