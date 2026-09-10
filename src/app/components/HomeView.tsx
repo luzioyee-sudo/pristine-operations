@@ -329,6 +329,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
     ? "grid-cols-10 sm:grid-cols-20 gap-1 sm:gap-1.5 md:gap-2" 
     : "grid-cols-10 sm:grid-cols-30 gap-1 sm:gap-1.5 md:gap-2";
 
+  // Fill direction: English (and other LTR interfaces) start at the top-left,
+  // Arabic (RTL) starts at the top-right. Today is always the last cell.
+  const gridDir: 'ltr' | 'rtl' = isRTL(currentLang) ? 'rtl' : 'ltr';
+
   // Dynamic search results for vocabulary words
   const filteredVocabulary = useMemo(() => {
     if (!searchQuery.trim()) return [];
