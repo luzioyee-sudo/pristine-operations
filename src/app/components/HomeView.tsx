@@ -676,7 +676,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           
           {/* Custom Heatmap Legend with 5 Distinct Ribble Steps */}
-          <div className="flex items-center gap-1.5 text-[10px] text-[#666666] uppercase font-bold tracking-wider">
+          <div dir={gridDir} className="flex items-center gap-1.5 text-[10px] text-[#666666] uppercase font-bold tracking-wider">
             <span>{t.less}</span>
             <div className="w-3.5 h-3.5 rounded-[4px] bg-[#EFF1EE] border border-[#D0D2CF]" title="0 actions" />
             <div className="w-3.5 h-3.5 rounded-[4px] bg-[#D4FBD5]" title="1 - 35% goal" />
