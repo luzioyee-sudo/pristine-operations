@@ -3,7 +3,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { UserStats, VocabularyItem, ReaderSettings, AppView, DocumentFile } from '../types';
 import { getLocalDateString, calculateStreak } from '../utils/stats';
-import { getTranslation, SupportedLanguage } from '../utils/i18n';
+import { getTranslation, SupportedLanguage, isRTL } from '../utils/i18n';
 import { getEffectiveAvatar } from '../utils/defaultAvatars';
 import { Search, Bell, BookOpen, GraduationCap, ClipboardCheck, RefreshCw, ChevronDown, ShieldCheck, Plus, ChevronRight } from 'lucide-react';
 import { storage } from '../utils/storage';
@@ -328,6 +328,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
     : timeframe === 100 
     ? "grid-cols-10 sm:grid-cols-20 gap-1 sm:gap-1.5 md:gap-2" 
     : "grid-cols-10 sm:grid-cols-30 gap-1 sm:gap-1.5 md:gap-2";
+
+  // Fill direction: English (and other LTR interfaces) start at the top-left,
+  // Arabic (RTL) starts at the top-right. Today is always the last cell.
+  const gridDir: 'ltr' | 'rtl' = isRTL(currentLang) ? 'rtl' : 'ltr';
 
   // Dynamic search results for vocabulary words
   const filteredVocabulary = useMemo(() => {
@@ -672,7 +676,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           
           {/* Custom Heatmap Legend with 5 Distinct Ribble Steps */}
-          <div className="flex items-center gap-1.5 text-[10px] text-[#666666] uppercase font-bold tracking-wider">
+          <div dir={gridDir} className="flex items-center gap-1.5 text-[10px] text-[#666666] uppercase font-bold tracking-wider">
             <span>{t.less}</span>
             <div className="w-3.5 h-3.5 rounded-[4px] bg-[#EFF1EE] border border-[#D0D2CF]" title="0 actions" />
             <div className="w-3.5 h-3.5 rounded-[4px] bg-[#D4FBD5]" title="1 - 35% goal" />
@@ -683,15 +687,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </div>
 
-        {/* Heatmap Cell Grid Layout */}
-        <div className={`grid ${gridClass} w-full gap-1.5`}>
+        {/* Heatmap Cell Grid Layout — fills from top-left (LTR) or top-right (RTL) */}
+        <div dir={gridDir} className={`grid ${gridClass} w-full gap-1.5`}>
           {daysData.map((day) => {
             return (
               <motion.div
                 key={day.dateStr}
                 whileHover={{ scale: 1.25, zIndex: 10 }}
-                className={`w-full aspect-square rounded-[6px] ${day.colorClass} cursor-pointer transition-transform`}
-                title={`${day.dateStr}: ${day.label}`}
+                className={`w-full aspect-square rounded-[6px] ${day.colorClass} cursor-pointer transition-transform ${
+                  day.isToday ? 'ring-2 ring-[#222222] ring-offset-1 ring-offset-white' : ''
+                }`}
+                title={`${day.formattedDate}: ${day.label}`}
               />
             );
           })}
