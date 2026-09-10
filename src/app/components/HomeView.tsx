@@ -3,7 +3,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { UserStats, VocabularyItem, ReaderSettings, AppView, DocumentFile } from '../types';
 import { getLocalDateString, calculateStreak } from '../utils/stats';
-import { getTranslation, SupportedLanguage } from '../utils/i18n';
+import { getTranslation, SupportedLanguage, isRTL } from '../utils/i18n';
 import { getEffectiveAvatar } from '../utils/defaultAvatars';
 import { Search, Bell, BookOpen, GraduationCap, ClipboardCheck, RefreshCw, ChevronDown, ShieldCheck, Plus, ChevronRight } from 'lucide-react';
 import { storage } from '../utils/storage';
