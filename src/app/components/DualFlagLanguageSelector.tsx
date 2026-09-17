@@ -163,7 +163,7 @@ export const FlagIcon: React.FC<{ code: string; className?: string }> = ({ code,
 
   // Fallback
   return (
-    <div className={`${className} bg-[#EFF1EE] border border-[#D0D2CF] rounded-xs flex items-center justify-center text-[10px] font-black text-[#222222]`}>
+    <div className={`${className} bg-[#DBDBE5] border border-[#DBDBE5] rounded-xs flex items-center justify-center text-[10px] font-black text-[#21222D]`}>
       {code.substring(0, 2).toUpperCase()}
     </div>
   );
@@ -184,7 +184,7 @@ export const DualFlagIcon: React.FC<{
       <FlagIcon code={targetCode} className={`${mainSizeClass} relative z-10 shadow-xs`} />
       
       {/* Secondary Overlapping Flag (Interface / Source Language) */}
-      <div className="absolute -bottom-1 -end-2.5 z-20 ring-1.5 ring-white dark:ring-[#1E1E1E] rounded-2xs overflow-hidden shadow-sm">
+      <div className="absolute -bottom-1 -end-2.5 z-20 ring-1.5 ring-white dark:ring-[#21222D] rounded-2xs overflow-hidden shadow-sm">
         <FlagIcon code={interfaceCode} className={subSizeClass} />
       </div>
     </div>
@@ -245,7 +245,7 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           title={`Learning: ${currentTargetObj.name} | Interface: ${currentInterfaceObj.name}`}
-          className="p-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/10 hover:bg-[#EFF1EE] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs flex items-center justify-center"
+          className="p-1.5 rounded-xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs flex items-center justify-center"
         >
           <DualFlagIcon targetCode={currentTargetObj.code} interfaceCode={currentInterfaceObj.code} size="sm" />
         </button>
@@ -253,18 +253,18 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/10 text-[#222222] dark:text-white hover:bg-[#EFF1EE] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs active:scale-98"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs active:scale-98"
         >
           {/* Dual Flag Icon Stack */}
           <DualFlagIcon targetCode={currentTargetObj.code} interfaceCode={currentInterfaceObj.code} size="md" />
 
           {/* Target Language Name */}
-          <span className="text-sm font-bold tracking-tight text-[#222222] dark:text-white ms-1">
+          <span className="text-sm font-bold tracking-tight text-[#21222D] dark:text-white ms-1">
             {currentTargetObj.name}
           </span>
 
           {/* Dropdown Chevron Arrow */}
-          <ChevronDown className={`w-3.5 h-3.5 text-[#666666] dark:text-stone-400 transition-transform duration-200 ms-0.5 ${isOpen ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-3.5 h-3.5 text-[#545565] dark:text-stone-400 transition-transform duration-200 ms-0.5 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
       )}
 
@@ -283,17 +283,17 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.15 }}
-              className={`absolute ${dropPositionClass} w-64 bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/15 rounded-2xl shadow-xl z-50 p-2 overflow-hidden`}
+              className={`absolute ${dropPositionClass} w-64 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/15 rounded-2xl shadow-xl z-50 p-2 overflow-hidden`}
             >
               {/* Header Tabs: Learning Language vs Interface Language */}
-              <div className="flex items-center gap-1 p-1 bg-[#EFF1EE] dark:bg-white/5 rounded-xl mb-2">
+              <div className="flex items-center gap-1 p-1 bg-[#DBDBE5] dark:bg-white/5 rounded-xl mb-2">
                 <button
                   type="button"
                   onClick={() => setActiveTab('target')}
                   className={`flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition-all ${
                     activeTab === 'target'
-                      ? 'bg-white dark:bg-[#222222] text-[#222222] dark:text-white shadow-xs'
-                      : 'text-[#666666] dark:text-stone-400 hover:text-[#222222]'
+                      ? 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-white shadow-xs'
+                      : 'text-[#545565] dark:text-stone-400 hover:text-[#21222D]'
                   }`}
                 >
                   Learning
@@ -303,8 +303,8 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
                   onClick={() => setActiveTab('interface')}
                   className={`flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition-all ${
                     activeTab === 'interface'
-                      ? 'bg-white dark:bg-[#222222] text-[#222222] dark:text-white shadow-xs'
-                      : 'text-[#666666] dark:text-stone-400 hover:text-[#222222]'
+                      ? 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-white shadow-xs'
+                      : 'text-[#545565] dark:text-stone-400 hover:text-[#21222D]'
                   }`}
                 >
                   Interface
@@ -315,7 +315,7 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
               <div className="max-h-60 overflow-y-auto space-y-0.5 custom-scrollbar pe-0.5">
                 {activeTab === 'target' ? (
                   <>
-                    <div className="text-[9px] font-extrabold uppercase text-[#666666] dark:text-stone-400 px-2 py-1 tracking-wider">
+                    <div className="text-[9px] font-extrabold uppercase text-[#545565] dark:text-stone-400 px-2 py-1 tracking-wider">
                       Target Learning Language
                     </div>
                     {LANGUAGE_OPTIONS.map((lang) => {
@@ -327,22 +327,22 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
                           onClick={() => handleSelectTarget(lang.name)}
                           className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                             isSelected
-                              ? 'bg-[#A4F5A6] text-[#222222] font-bold shadow-xs'
-                              : 'text-[#222222] dark:text-stone-200 hover:bg-[#EFF1EE] dark:hover:bg-white/10'
+                              ? 'bg-[#ACD1FD] text-[#21222D] font-bold shadow-xs'
+                              : 'text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10'
                           }`}
                         >
                           <div className="flex items-center gap-2.5">
                             <FlagIcon code={lang.code} className="w-5 h-3.5" />
                             <span>{lang.name}</span>
                           </div>
-                          {isSelected && <Check className="w-4 h-4 text-[#222222] shrink-0 stroke-[2.5]" />}
+                          {isSelected && <Check className="w-4 h-4 text-[#21222D] shrink-0 stroke-[2.5]" />}
                         </button>
                       );
                     })}
                   </>
                 ) : (
                   <>
-                    <div className="text-[9px] font-extrabold uppercase text-[#666666] dark:text-stone-400 px-2 py-1 tracking-wider">
+                    <div className="text-[9px] font-extrabold uppercase text-[#545565] dark:text-stone-400 px-2 py-1 tracking-wider">
                       Native Interface Language
                     </div>
                     {INTERFACE_LANGUAGE_OPTIONS.map((lang) => {
@@ -354,15 +354,15 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
                           onClick={() => handleSelectInterface(lang.name)}
                           className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                             isSelected
-                              ? 'bg-[#A4F5A6] text-[#222222] font-bold shadow-xs'
-                              : 'text-[#222222] dark:text-stone-200 hover:bg-[#EFF1EE] dark:hover:bg-white/10'
+                              ? 'bg-[#ACD1FD] text-[#21222D] font-bold shadow-xs'
+                              : 'text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10'
                           }`}
                         >
                           <div className="flex items-center gap-2.5">
                             <FlagIcon code={lang.code} className="w-5 h-3.5" />
                             <span>{lang.name}</span>
                           </div>
-                          {isSelected && <Check className="w-4 h-4 text-[#222222] shrink-0 stroke-[2.5]" />}
+                          {isSelected && <Check className="w-4 h-4 text-[#21222D] shrink-0 stroke-[2.5]" />}
                         </button>
                       );
                     })}

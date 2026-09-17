@@ -25,7 +25,7 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onNavigate, on
   }, [onNavigate, onStartLearning]);
 
   return (
-    <div className="w-screen h-screen overflow-hidden m-0 p-0 fixed inset-0 z-50 bg-[#EFF1EE]">
+    <div className="fixed inset-0 z-50 m-0 h-screen w-screen overflow-hidden bg-ribble-softgray p-0">
       <iframe 
         src="/landing.html" 
         className="w-full h-full border-none block" 

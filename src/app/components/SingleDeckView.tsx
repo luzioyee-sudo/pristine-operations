@@ -69,8 +69,8 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
     <div className="w-full space-y-6">
       
       {/* Top Open Sheet Document Tab Bar */}
-      <div className="flex items-center gap-2 border-b border-[#D0D2CF] dark:border-stone-800 pb-2">
-        <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#222222] text-[#EFF1EE] dark:bg-[#1D201A] dark:border dark:border-stone-800 rounded-full text-[11px] font-bold shadow-xs">
+      <div className="flex items-center gap-2 border-b border-[#DBDBE5] dark:border-stone-800 pb-2">
+        <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#21222D] text-[#DBDBE5] dark:bg-[#21222D] dark:border dark:border-stone-800 rounded-full text-[11px] font-bold shadow-xs">
           <span>{deck.name}</span>
           <button
             onClick={onCloseDeck}
@@ -85,7 +85,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
       {/* Deck Header: dropdown trigger + New Deck / Add Word buttons */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-2xl font-black font-serif text-[#222222] dark:text-white leading-tight">
+          <h2 className="text-2xl font-black font-serif text-[#21222D] dark:text-white leading-tight">
             {deck.name}
           </h2>
           <span className="text-stone-400 font-serif text-xl">∨</span>
@@ -94,14 +94,14 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
         <div className="flex items-center gap-2">
           <button
             onClick={onNewDeckClick}
-            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-white dark:bg-stone-900 border border-[#D0D2CF] dark:border-stone-800 rounded-2xl text-xs font-bold text-[#222222] dark:text-white hover:bg-[#EFF1EE] transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-white dark:bg-stone-900 border border-[#DBDBE5] dark:border-stone-800 rounded-2xl text-xs font-bold text-[#21222D] dark:text-white hover:bg-[#DBDBE5] transition-colors cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>{t.newDeck || "New Deck"}</span>
           </button>
           <button
             onClick={onAddWordClick}
-            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#A4F5A6] hover:bg-[#8ee590] rounded-2xl text-xs font-bold text-[#222222] transition-colors cursor-pointer shadow-xs"
+            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
           >
             <Plus className="w-4 h-4" />
             <span>{t.addBookmark?.replace("+", "") || "Add Word"}</span>
@@ -110,9 +110,9 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
       </div>
 
       {/* Sub-Header Filter Bar with Search Input */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 p-3 rounded-2xl shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 p-3 rounded-2xl shadow-xs">
         {/* Filter categories tabs */}
-        <div className="flex items-center bg-[#EFF1EE] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#D0D2CF]/60">
+        <div className="flex items-center bg-[#DBDBE5] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#DBDBE5]/60">
           {(['all', 'new', 'learning', 'mastered'] as const).map(tab => {
             const label = tab.charAt(0).toUpperCase() + tab.slice(1);
             const isActive = activeFilter === tab;
@@ -122,8 +122,8 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
                 onClick={() => setActiveFilter(tab)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-150 cursor-pointer ${
                   isActive
-                    ? 'bg-[#A4F5A6] text-[#222222] shadow-xs'
-                    : 'text-stone-500 hover:text-[#222222] dark:text-stone-400'
+                    ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs'
+                    : 'text-stone-500 hover:text-[#21222D] dark:text-stone-400'
                 }`}
               >
                 {label === 'All' ? 'All Words' : label}
@@ -139,7 +139,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search words..."
-            className="w-full p-2 ps-9 bg-[#EFF1EE] dark:bg-stone-800 border border-[#D0D2CF] dark:border-stone-750 rounded-xl text-xs font-semibold text-[#222222] dark:text-white focus:outline-none focus:border-[#222222]"
+            className="w-full p-2 ps-9 bg-[#DBDBE5] dark:bg-stone-800 border border-[#DBDBE5] dark:border-stone-750 rounded-xl text-xs font-semibold text-[#21222D] dark:text-white focus:outline-none focus:border-[#21222D]"
           />
           <Search className="w-4 h-4 text-stone-400 absolute start-3.5 top-3.5" />
         </div>
@@ -152,12 +152,12 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
 
       {/* Word / Phrase Cards Listing Container */}
       {filteredCards.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-3xl text-center p-8 space-y-4">
-          <div className="w-16 h-16 rounded-full bg-[#EFF1EE] dark:bg-stone-800 flex items-center justify-center text-stone-400">
+        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl text-center p-8 space-y-4">
+          <div className="w-16 h-16 rounded-full bg-[#DBDBE5] dark:bg-stone-800 flex items-center justify-center text-stone-400">
             <FileSpreadsheet className="w-8 h-8" />
           </div>
           <div>
-            <h4 className="text-base font-bold font-serif text-[#222222] dark:text-white">
+            <h4 className="text-base font-bold font-serif text-[#21222D] dark:text-white">
               No words found in this file
             </h4>
             <p className="text-xs text-stone-400 max-w-xs mt-1 leading-relaxed">
@@ -166,7 +166,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
           </div>
           <button
             onClick={onAddWordClick}
-            className="px-5 py-2.5 bg-[#A4F5A6] hover:bg-[#8ee590] text-[#222222] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
+            className="px-5 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>{t.addBookmark?.replace("+", "") || "Add Word"}</span>
@@ -183,12 +183,12 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
             return (
               <div
                 key={card.id}
-                className="p-5 bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs hover:shadow-xs transition-shadow"
+                className="p-5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs hover:shadow-xs transition-shadow"
               >
                 <div className="flex gap-4 items-start">
                   <button
                     onClick={() => handleSpeech(card.word)}
-                    className="p-2.5 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 hover:bg-[#A4F5A6] text-[#222222] dark:text-stone-300 hover:text-[#222222] transition-colors cursor-pointer shrink-0 mt-0.5"
+                    className="p-2.5 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 hover:bg-[#ACD1FD] text-[#21222D] dark:text-stone-300 hover:text-[#21222D] transition-colors cursor-pointer shrink-0 mt-0.5"
                     title="Pronounce"
                   >
                     <Volume2 className="w-4.5 h-4.5" />
@@ -196,7 +196,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
 
                   <div className="space-y-1">
                     <div className="flex flex-wrap items-center gap-2">
-                      <h4 className="text-base font-bold font-serif text-[#222222] dark:text-white">
+                      <h4 className="text-base font-bold font-serif text-[#21222D] dark:text-white">
                         {card.word}
                       </h4>
                       {card.phonetic && (
@@ -209,7 +209,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
                       {card.translation}
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      <span className="px-2 py-0.5 rounded bg-[#EFF1EE] dark:bg-stone-800 text-[9px] font-black uppercase text-stone-600 dark:text-stone-300 border border-[#D0D2CF]/40">
+                      <span className="px-2 py-0.5 rounded bg-[#DBDBE5] dark:bg-stone-800 text-[9px] font-black uppercase text-stone-600 dark:text-stone-300 border border-[#DBDBE5]/40">
                         {card.partOfSpeech || 'noun'}
                       </span>
                       {card.contextSentence && (
@@ -235,7 +235,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
                       </span>
                     )}
                     {isMastered && (
-                      <span className="px-2 py-0.5 rounded bg-[#A4F5A6] text-[#222222] font-bold">
+                      <span className="px-2 py-0.5 rounded bg-[#ACD1FD] text-[#21222D] font-bold">
                         Mastered
                       </span>
                     )}
@@ -244,7 +244,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => onEditCardClick(card)}
-                      className="p-2 text-stone-400 hover:text-[#222222] hover:bg-[#EFF1EE] dark:hover:bg-stone-800 rounded-xl transition-colors cursor-pointer"
+                      className="p-2 text-stone-400 hover:text-[#21222D] hover:bg-[#DBDBE5] dark:hover:bg-stone-800 rounded-xl transition-colors cursor-pointer"
                       title="Edit Card"
                     >
                       <Edit className="w-4 h-4" />

@@ -102,16 +102,16 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold font-serif text-[#222222] dark:text-[#EFF1EE]">
+          <h1 className="text-2xl font-bold font-serif text-[#21222D] dark:text-[#DBDBE5]">
             {titleText}
           </h1>
-          <p className="text-sm font-medium text-[#666666] dark:text-[#D0D2CF] mt-1">
+          <p className="text-sm font-medium text-[#545565] dark:text-[#DBDBE5] mt-1">
             {descriptionText}
           </p>
         </div>
         <button
           onClick={onAddWordClick}
-          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#A4F5A6] hover:bg-[#8ee590] rounded-2xl text-xs font-bold text-[#222222] transition-colors cursor-pointer shadow-xs"
+          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
         >
           <Plus className="w-4.5 h-4.5" />
           <span>{t.addBookmark?.replace('+', '') || 'Add New Word'}</span>
@@ -119,8 +119,8 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/10 p-3 rounded-2xl shadow-xs">
-        <div className="flex items-center bg-[#EFF1EE] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#D0D2CF]/40">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 p-3 rounded-2xl shadow-xs">
+        <div className="flex items-center bg-[#DBDBE5] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#DBDBE5]/40">
           {(['all', 'new', 'learning', 'mastered'] as const).map(tab => {
             const isActive = activeFilter === tab;
             return (
@@ -129,8 +129,8 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
                 onClick={() => setActiveFilter(tab)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-150 cursor-pointer ${
                   isActive
-                    ? 'bg-[#A4F5A6] text-[#222222] shadow-xs'
-                    : 'text-[#666666] hover:text-[#222222] dark:text-stone-400'
+                    ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs'
+                    : 'text-[#545565] hover:text-[#21222D] dark:text-stone-400'
                 }`}
               >
                 {tab === 'all' ? filterAllLabel : tab === 'new' ? (t.filterNew || 'New') : tab === 'learning' ? (t.filterLearning || 'Learning') : (t.filterMastered || 'Mastered')}
@@ -145,17 +145,17 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={searchPlaceholder}
-            className="w-full p-2 ps-9 bg-[#EFF1EE] dark:bg-stone-800 border border-[#D0D2CF] dark:border-stone-750 rounded-xl text-xs font-semibold text-[#222222] dark:text-white focus:outline-none focus:border-[#222222]"
+            className="w-full p-2 ps-9 bg-[#DBDBE5] dark:bg-stone-800 border border-[#DBDBE5] dark:border-stone-750 rounded-xl text-xs font-semibold text-[#21222D] dark:text-white focus:outline-none focus:border-[#21222D]"
           />
-          <Search className="w-4 h-4 text-[#666666] absolute start-3.5 top-3.5" />
+          <Search className="w-4 h-4 text-[#545565] absolute start-3.5 top-3.5" />
         </div>
       </div>
 
       {/* Dictionary List */}
-      <div className="bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/10 rounded-3xl overflow-hidden shadow-2xs">
+      <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-3xl overflow-hidden shadow-2xs">
         <div className="overflow-x-auto">
           <table className="w-full text-start text-xs">
-            <thead className="bg-[#EFF1EE]/60 dark:bg-stone-900/50 text-[#666666] dark:text-stone-400 uppercase tracking-wider font-extrabold border-b border-[#D0D2CF] dark:border-white/10">
+            <thead className="bg-[#DBDBE5]/60 dark:bg-stone-900/50 text-[#545565] dark:text-stone-400 uppercase tracking-wider font-extrabold border-b border-[#DBDBE5] dark:border-white/10">
               <tr>
                 <th className="px-6 py-4">{t.selectedWord || "Word / Term"}</th>
                 <th className="px-6 py-4">{t.translationLabel || "Translation"}</th>
@@ -164,16 +164,16 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
                 <th className="px-6 py-4 text-end">{actionsLabel}</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#D0D2CF]/60 dark:divide-white/10">
+            <tbody className="divide-y divide-[#DBDBE5]/60 dark:divide-white/10">
               {filteredCards.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center">
                     <div className="flex flex-col items-center justify-center space-y-3">
                       <BookMarked className="w-10 h-10 text-stone-300" />
-                      <p className="text-[#666666] font-medium">{noWordsLabel}</p>
+                      <p className="text-[#545565] font-medium">{noWordsLabel}</p>
                       <button
                         onClick={onAddWordClick}
-                        className="text-[#222222] font-extrabold underline hover:text-[#000000] cursor-pointer"
+                        className="text-[#21222D] font-extrabold underline hover:text-[#000000] cursor-pointer"
                       >
                         {addFirstWordLabel}
                       </button>
@@ -187,49 +187,49 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
                   const isLearning = bucket === 'Learning';
                   
                   return (
-                    <tr key={card.id} className="hover:bg-[#EFF1EE] dark:hover:bg-white/5 transition-colors">
+                    <tr key={card.id} className="hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
                           <button
                             onClick={() => handleSpeech(card.word, card.language, card.deckId)}
-                            className="p-1.5 rounded-lg bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-white hover:bg-[#A4F5A6] transition-colors shrink-0 cursor-pointer"
+                            className="p-1.5 rounded-lg bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-white hover:bg-[#ACD1FD] transition-colors shrink-0 cursor-pointer"
                           >
                             <Volume2 className="w-4 h-4" />
                           </button>
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="font-bold text-sm text-[#222222] dark:text-white font-serif">{card.word}</span>
+                              <span className="font-bold text-sm text-[#21222D] dark:text-white font-serif">{card.word}</span>
                               {card.partOfSpeech && (
-                                <span className="text-[9px] uppercase tracking-wider font-extrabold text-[#666666] bg-[#EFF1EE] dark:bg-stone-800 px-1.5 py-0.5 rounded">
+                                <span className="text-[9px] uppercase tracking-wider font-extrabold text-[#545565] bg-[#DBDBE5] dark:bg-stone-800 px-1.5 py-0.5 rounded">
                                   {card.partOfSpeech}
                                 </span>
                               )}
                             </div>
-                            {card.phonetic && <span className="text-[#666666] font-mono mt-0.5 block">{card.phonetic}</span>}
+                            {card.phonetic && <span className="text-[#545565] font-mono mt-0.5 block">{card.phonetic}</span>}
                           </div>
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <span className="font-semibold text-[#222222] dark:text-stone-300">{card.translation}</span>
-                        {card.definition && <span className="text-[#666666] block mt-0.5 truncate max-w-[200px]" title={card.definition}>{card.definition}</span>}
+                        <span className="font-semibold text-[#21222D] dark:text-stone-300">{card.translation}</span>
+                        {card.definition && <span className="text-[#545565] block mt-0.5 truncate max-w-[200px]" title={card.definition}>{card.definition}</span>}
                       </td>
                       <td className="px-6 py-4 hidden sm:table-cell">
                         <span className={`px-2 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase ${
-                          isNew ? 'bg-stone-100 text-[#222222] border border-[#D0D2CF]' :
+                          isNew ? 'bg-stone-100 text-[#21222D] border border-[#DBDBE5]' :
                           isLearning ? 'bg-amber-100 text-amber-900 border border-amber-200' :
-                          'bg-[#A4F5A6] text-[#222222]'
+                          'bg-[#ACD1FD] text-[#21222D]'
                         }`}>
                           {isNew ? (t.filterNew || 'New') : isLearning ? (t.filterLearning || 'Learning') : (t.filterMastered || 'Mastered')}
                         </span>
                       </td>
-                      <td className="px-6 py-4 hidden md:table-cell text-[#666666] font-medium">
+                      <td className="px-6 py-4 hidden md:table-cell text-[#545565] font-medium">
                         {getDeckName(card.deckId)}
                       </td>
                       <td className="px-6 py-4">
                         <div className="flex items-center justify-end gap-1">
                           <button
                             onClick={() => onEditCardClick(card)}
-                            className="p-2 text-[#666666] hover:text-[#222222] hover:bg-[#EFF1EE] dark:hover:bg-stone-800 rounded-xl transition-colors cursor-pointer"
+                            className="p-2 text-[#545565] hover:text-[#21222D] hover:bg-[#DBDBE5] dark:hover:bg-stone-800 rounded-xl transition-colors cursor-pointer"
                             title="Edit Word"
                           >
                             <Edit className="w-4 h-4" />

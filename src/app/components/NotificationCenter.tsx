@@ -132,7 +132,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Vocabulary Mastered
     if (sender.includes('vocab') || title.includes('mastered') || title.includes('flashcard') || badge.includes('mastered')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#1D201A] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-[#222222]/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
           <Brain className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -150,7 +150,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Practice Session
     if (sender.includes('speaking') || sender.includes('tutor') || title.includes('practice') || badge.includes('practice')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#444444] text-white flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-white flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <MessageSquare className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -159,7 +159,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Writing
     if (sender.includes('writing') || title.includes('writing') || title.includes('essay')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#3A3A3A] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#3A3A3A] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <PenLine className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -168,7 +168,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Announcements
     if (sender.includes('curriculum') || title.includes('boost') || notif.type === 'announcement') {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#111111] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <Sparkles className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -176,7 +176,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
     // Default Brand Logo
     return (
-      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#111111] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-[#222222]/20 border border-white/20">
+      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
         <BookOpen className="w-5 h-5 stroke-[2.2]" />
       </div>
     );
@@ -225,14 +225,14 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
             className="relative z-50 w-full max-w-[420px] sm:max-w-[440px] mt-10 sm:mt-6 flex flex-col items-center select-none"
           >
             {/* Top Control Bar */}
-            <div className="w-full flex items-center justify-between px-3.5 py-2 mb-2.5 bg-white/95 dark:bg-[#1D201A]/95 backdrop-blur-xl rounded-2xl border border-[#D0D2CF] dark:border-stone-800 shadow-xs">
+            <div className="w-full flex items-center justify-between px-3.5 py-2 mb-2.5 bg-white/95 dark:bg-[#21222D]/95 backdrop-blur-xl rounded-2xl border border-[#DBDBE5] dark:border-stone-800 shadow-xs">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#222222] dark:bg-[#A4F5A6] animate-pulse" />
-                <span className="text-xs font-bold text-[#222222] dark:text-stone-100 tracking-tight">
+                <div className="w-2 h-2 rounded-full bg-[#21222D] dark:bg-[#ACD1FD] animate-pulse" />
+                <span className="text-xs font-bold text-[#21222D] dark:text-stone-100 tracking-tight">
                   {t.notificationsCenter || 'Notification Center'}
                 </span>
                 {notifications.length > 0 && (
-                  <span className="px-2 py-0.5 rounded-full bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-[#A4F5A6] text-[10px] font-bold">
+                  <span className="px-2 py-0.5 rounded-full bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-[#ACD1FD] text-[10px] font-bold">
                     {notifications.length}
                   </span>
                 )}
@@ -244,8 +244,8 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                   onClick={() => setShowSimulateBar(!showSimulateBar)}
                   className={`p-1.5 rounded-lg text-[11px] font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                     showSimulateBar
-                      ? 'bg-[#222222] dark:bg-[#A4F5A6] text-white dark:text-[#222222]'
-                      : 'bg-white dark:bg-stone-900 text-stone-500 hover:bg-[#EFF1EE]'
+                      ? 'bg-[#21222D] dark:bg-[#ACD1FD] text-white dark:text-[#21222D]'
+                      : 'bg-white dark:bg-stone-900 text-stone-500 hover:bg-[#DBDBE5]'
                   }`}
                   title="Simulate incoming notifications"
                 >
@@ -255,7 +255,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                 {notifications.length > 0 && (
                   <button
                     onClick={handleMarkAllRead}
-                    className="p-1.5 rounded-lg text-stone-400 hover:text-[#222222] dark:hover:text-stone-100 hover:bg-[#EFF1EE] dark:hover:bg-stone-800 transition-all cursor-pointer"
+                    className="p-1.5 rounded-lg text-stone-400 hover:text-[#21222D] dark:hover:text-stone-100 hover:bg-[#DBDBE5] dark:hover:bg-stone-800 transition-all cursor-pointer"
                     title={t.markAllAsRead || "Mark all as read"}
                   >
                     <CheckCheck className="w-3.5 h-3.5" />
@@ -264,7 +264,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
                 <button
                   onClick={onClose}
-                  className="w-6 h-6 rounded-full bg-[#EFF1EE] dark:bg-stone-800 hover:bg-[#D0D2CF] dark:hover:bg-stone-700 text-[#222222] dark:text-stone-200 flex items-center justify-center transition-all cursor-pointer"
+                  className="w-6 h-6 rounded-full bg-[#DBDBE5] dark:bg-stone-800 hover:bg-[#DBDBE5] dark:hover:bg-stone-700 text-[#21222D] dark:text-stone-200 flex items-center justify-center transition-all cursor-pointer"
                   title="Close"
                 >
                   <X className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -279,7 +279,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                   initial={{ opacity: 0, height: 0, marginBottom: 0 }}
                   animate={{ opacity: 1, height: 'auto', marginBottom: 8 }}
                   exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-                  className="w-full overflow-hidden bg-white/90 dark:bg-stone-900/90 backdrop-blur-xl rounded-2xl p-2.5 border border-[#D0D2CF] dark:border-white/10 shadow-md"
+                  className="w-full overflow-hidden bg-white/90 dark:bg-stone-900/90 backdrop-blur-xl rounded-2xl p-2.5 border border-[#DBDBE5] dark:border-white/10 shadow-md"
                 >
                   <div className="text-[10px] font-bold text-stone-500 uppercase tracking-wider mb-1.5 px-1">
                     Push Mock Notification (Language Learning Context)
@@ -287,16 +287,16 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                   <div className="grid grid-cols-2 gap-1.5">
                     <button
                       onClick={() => handleTriggerTest('streak')}
-                      className="px-2.5 py-1.5 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 hover:bg-[#D0D2CF]/50 dark:hover:bg-stone-700 text-[#222222] dark:text-[#EFF1EE] text-xs font-semibold flex items-center gap-1.5 transition-all text-start cursor-pointer border border-[#D0D2CF] dark:border-white/10"
+                      className="px-2.5 py-1.5 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 hover:bg-[#DBDBE5]/50 dark:hover:bg-stone-700 text-[#21222D] dark:text-[#DBDBE5] text-xs font-semibold flex items-center gap-1.5 transition-all text-start cursor-pointer border border-[#DBDBE5] dark:border-white/10"
                     >
-                      <Flame className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                      <Flame className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                       <span className="truncate">Streak Reminder</span>
                     </button>
                     <button
                       onClick={() => handleTriggerTest('vocab')}
-                      className="px-2.5 py-1.5 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 hover:bg-[#D0D2CF]/50 dark:hover:bg-stone-700 text-[#222222] dark:text-[#EFF1EE] text-xs font-semibold flex items-center gap-1.5 transition-all text-start cursor-pointer border border-[#D0D2CF] dark:border-white/10"
+                      className="px-2.5 py-1.5 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 hover:bg-[#DBDBE5]/50 dark:hover:bg-stone-700 text-[#21222D] dark:text-[#DBDBE5] text-xs font-semibold flex items-center gap-1.5 transition-all text-start cursor-pointer border border-[#DBDBE5] dark:border-white/10"
                     >
-                      <Brain className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                      <Brain className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                       <span className="truncate">Word Mastered</span>
                     </button>
                     <button
@@ -320,11 +320,11 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
             {/* EMPTY STATE */}
             {notifications.length === 0 ? (
-              <div className="w-full bg-white/95 dark:bg-[#1D201A]/95 backdrop-blur-2xl rounded-[24px] p-7 shadow-xl border border-[#D0D2CF] dark:border-stone-800 flex flex-col items-center justify-center text-center">
-                <div className="w-12 h-12 rounded-2xl bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-[#A4F5A6] flex items-center justify-center mb-2 font-bold">
+              <div className="w-full bg-white/95 dark:bg-[#21222D]/95 backdrop-blur-2xl rounded-[24px] p-7 shadow-xl border border-[#DBDBE5] dark:border-stone-800 flex flex-col items-center justify-center text-center">
+                <div className="w-12 h-12 rounded-2xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-[#ACD1FD] flex items-center justify-center mb-2 font-bold">
                   <Bell className="w-6 h-6" />
                 </div>
-                <h4 className="font-bold text-sm text-[#222222] dark:text-stone-100 mb-1">
+                <h4 className="font-bold text-sm text-[#21222D] dark:text-stone-100 mb-1">
                   {t.noNotifications || 'No Notifications'}
                 </h4>
                 <p className="text-xs text-stone-500 dark:text-stone-400 max-w-[240px] leading-relaxed">
@@ -351,10 +351,10 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                         exit={{ opacity: 0, scale: 0.85, x: 50 }}
                         transition={springTransition}
                         onClick={() => notif.actionText ? handleActionClick(notif) : handleMarkAsRead(notif.id)}
-                        className={`w-full bg-white/95 backdrop-blur-2xl text-[#222222] dark:text-stone-100 rounded-[22px] p-3.5 sm:p-4 shadow-2xs border transition-all relative group cursor-pointer ${
+                        className={`w-full bg-white/95 backdrop-blur-2xl text-[#21222D] dark:text-stone-100 rounded-[22px] p-3.5 sm:p-4 shadow-2xs border transition-all relative group cursor-pointer ${
                           isUnread
-                            ? 'border-[#222222]/20 dark:border-[#A4F5A6]/30 ring-1 ring-[#222222]/20'
-                            : 'border-[#D0D2CF]/60 hover:border-[#D0D2CF]'
+                            ? 'border-[#21222D]/20 dark:border-[#ACD1FD]/30 ring-1 ring-[#21222D]/20'
+                            : 'border-[#DBDBE5]/60 hover:border-[#DBDBE5]'
                         }`}
                       >
                         <div className="flex items-start gap-3.5">
@@ -362,7 +362,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
                           <div className="flex-1 min-w-0 pe-4">
                             <div className="flex items-center justify-between gap-2 mb-0.5">
-                              <h3 className="font-bold text-[14.5px] text-[#222222] dark:text-stone-100 tracking-tight truncate">
+                              <h3 className="font-bold text-[14.5px] text-[#21222D] dark:text-stone-100 tracking-tight truncate">
                                 {notif.title || notif.senderName || 'Notification'}
                               </h3>
                               <span className="text-[11.5px] text-stone-400 font-normal shrink-0">
@@ -381,7 +381,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                                     e.stopPropagation();
                                     handleActionClick(notif);
                                   }}
-                                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#222222] dark:text-[#A4F5A6] hover:underline cursor-pointer"
+                                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#21222D] dark:text-[#ACD1FD] hover:underline cursor-pointer"
                                 >
                                   <span>{notif.actionText}</span>
                                   <ArrowRight className="w-3 h-3" />
@@ -401,7 +401,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
                         <button
                           onClick={(e) => handleDelete(notif.id, e)}
-                          className="absolute top-3 end-3 w-5.5 h-5.5 rounded-full bg-[#EFF1EE] hover:bg-[#D0D2CF] text-stone-400 hover:text-stone-700 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all cursor-pointer"
+                          className="absolute top-3 end-3 w-5.5 h-5.5 rounded-full bg-[#DBDBE5] hover:bg-[#DBDBE5] text-stone-400 hover:text-stone-700 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all cursor-pointer"
                           title="Dismiss"
                         >
                           <X className="w-3 h-3 stroke-[2.5]" />

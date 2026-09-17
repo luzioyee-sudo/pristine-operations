@@ -26,7 +26,7 @@ export const BlockedScreen: React.FC<BlockedScreenProps> = ({ userEmail }) => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-md bg-white dark:bg-[#1D201A] border border-stone-200 dark:border-stone-800 rounded-2xl p-8 shadow-sm text-center relative z-10"
+        className="w-full max-w-md bg-white dark:bg-[#21222D] border border-stone-200 dark:border-stone-800 rounded-2xl p-8 shadow-sm text-center relative z-10"
       >
         <div className="w-12 h-12 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center mx-auto mb-6 border border-red-100 dark:border-red-900/30">
           <AlertCircle className="w-6 h-6" />

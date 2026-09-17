@@ -79,7 +79,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ settings,  onNavigat
       description: t.settingsSubtitle || 'Preferences and account configuration',
       icon: Settings,
       view: 'settings' as AppView,
-      color: 'bg-[#EFF1EE] text-[#222222] dark:text-stone-300'
+      color: 'bg-[#DBDBE5] text-[#21222D] dark:text-stone-300'
     }
   ];
 
@@ -100,12 +100,12 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ settings,  onNavigat
       <div className="flex items-center gap-3 pt-2">
         <button
           onClick={onBack}
-          className="w-10 h-10 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-[#222222] dark:text-stone-200 hover:bg-stone-200 dark:hover:bg-stone-700 transition-all cursor-pointer shadow-2xs"
+          className="w-10 h-10 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-[#21222D] dark:text-stone-200 hover:bg-stone-200 dark:hover:bg-stone-700 transition-all cursor-pointer shadow-2xs"
           title="Back"
         >
           <ArrowLeft className="w-5 h-5 stroke-[2]" />
         </button>
-        <h1 className="text-xl font-bold tracking-tight text-[#222222] dark:text-stone-100">
+        <h1 className="text-xl font-bold tracking-tight text-[#21222D] dark:text-stone-100">
           {t.allToolsTitle || 'All tools'}
         </h1>
       </div>
@@ -118,7 +118,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ settings,  onNavigat
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={t.searchPlaceholder || 'Search tools...'}
-          className="w-full bg-stone-100 dark:bg-stone-850 border border-[#D0D2CF] dark:border-stone-700/80 rounded-2xl ps-10 pe-4 py-3 text-sm text-[#222222] dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#222222] transition-all shadow-3xs"
+          className="w-full bg-stone-100 dark:bg-stone-850 border border-[#DBDBE5] dark:border-stone-700/80 rounded-2xl ps-10 pe-4 py-3 text-sm text-[#21222D] dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#21222D] transition-all shadow-3xs"
         />
       </div>
 
@@ -130,7 +130,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ settings,  onNavigat
             <button
               key={tool.id}
               onClick={() => tool.path ? window.location.assign(tool.path) : tool.view && onNavigate(tool.view)}
-              className={`w-full items-center justify-between p-4 rounded-2xl bg-white dark:bg-stone-900 border border-[#D0D2CF]/80 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 transition-all cursor-pointer group shadow-2xs hover:shadow-xs ${
+              className={`w-full items-center justify-between p-4 rounded-2xl bg-white dark:bg-stone-900 border border-[#DBDBE5]/80 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 transition-all cursor-pointer group shadow-2xs hover:shadow-xs ${
                 tool.id === 'settings' ? 'hidden sm:flex' : 'flex'
               }`}
             >
@@ -139,7 +139,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ settings,  onNavigat
                   <Icon className="w-5 h-5 stroke-[2]" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#222222] dark:text-stone-100 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] transition-colors">
+                  <h3 className="text-sm font-bold text-[#21222D] dark:text-stone-100 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] transition-colors">
                     {tool.title}
                   </h3>
                   <p className="text-xs text-stone-500 dark:text-stone-400">

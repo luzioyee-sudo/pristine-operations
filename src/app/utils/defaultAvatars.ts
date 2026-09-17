@@ -6,8 +6,8 @@ const createSvgAvatar = (bg: string, fill: string, cx = 50, cy = 40, r = 21, pat
 };
 
 export const DEFAULT_AVATARS = [
-  // 1. Charcoal Avatar (#222222 bg, #A4F5A6 silhouette)
-  createSvgAvatar('#222222', '#A4F5A6', 50, 41, 19, "M 10 100 C 10 66, 30 66, 50 66 C 70 66, 90 66, 90 100 Z")
+  // 1. Charcoal Avatar (#21222D bg, #ACD1FD silhouette)
+  createSvgAvatar('#21222D', '#ACD1FD', 50, 41, 19, "M 10 100 C 10 66, 30 66, 50 66 C 70 66, 90 66, 90 100 Z")
 ];
 
 export function getRandomDefaultAvatar(): string {

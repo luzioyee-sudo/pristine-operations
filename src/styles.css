@@ -63,38 +63,38 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.89437 0.01357 286.12);
+  --foreground: oklch(0.25588 0.02071 280.75);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.25588 0.02071 280.75);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.25588 0.02071 280.75);
+  --primary: oklch(0.68617 0.13331 286.81);
+  --primary-foreground: oklch(0.25588 0.02071 280.75);
+  --secondary: oklch(0.84913 0.07332 253.02);
+  --secondary-foreground: oklch(0.25588 0.02071 280.75);
+  --muted: oklch(0.89437 0.01357 286.12);
+  --muted-foreground: oklch(0.424 0.025 281);
+  --accent: oklch(0.84913 0.07332 253.02);
+  --accent-foreground: oklch(0.25588 0.02071 280.75);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.89437 0.01357 286.12);
+  --input: oklch(0.89437 0.01357 286.12);
+  --ring: oklch(0.68617 0.13331 286.81);
+  --chart-1: oklch(0.68617 0.13331 286.81);
+  --chart-2: oklch(0.84913 0.07332 253.02);
+  --chart-3: oklch(0.25588 0.02071 280.75);
+  --chart-4: oklch(0.89437 0.01357 286.12);
+  --chart-5: oklch(0.55 0.075 270);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.25588 0.02071 280.75);
+  --sidebar-primary: oklch(0.68617 0.13331 286.81);
+  --sidebar-primary-foreground: oklch(0.25588 0.02071 280.75);
+  --sidebar-accent: oklch(0.84913 0.07332 253.02);
+  --sidebar-accent-foreground: oklch(0.25588 0.02071 280.75);
+  --sidebar-border: oklch(0.89437 0.01357 286.12);
+  --sidebar-ring: oklch(0.68617 0.13331 286.81);
 }
 
 .dark {
@@ -146,126 +146,126 @@
 /* ===================== Ribble app design system ===================== */
 
 @theme {
-  --font-sans: "DM Sans", sans-serif;
-  --font-display: "Plus Jakarta Sans", "Outfit", sans-serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Sora", sans-serif;
   --font-serif: "EB Garamond", serif;
   --font-arabic-sans: "IBM Plex Sans Arabic", "Cairo", sans-serif;
   --font-arabic-serif: "Amiri", serif;
 
-  /* Ribble Master 5-Color Palette */
-  --color-ribble-offwhite: #EFF1EE;
-  --color-ribble-softgray: #D0D2CF;
-  --color-ribble-mint: #A4F5A6;
-  --color-ribble-lavender: #B2A1FF;
-  --color-ribble-charcoal: #222222;
+  /* Ribble Master Palette */
+  --color-ribble-offwhite: #DBDBE5;
+  --color-ribble-softgray: #DBDBE5;
+  --color-ribble-mint: #ACD1FD;
+  --color-ribble-lavender: #958CE8;
+  --color-ribble-charcoal: #21222D;
 
   /* Extended Token Variants */
-  --color-ribble-mint-light: #D4FBD5;
-  --color-ribble-mint-hover: #92E894;
-  --color-ribble-lavender-light: #E3DCFF;
-  --color-ribble-lavender-hover: #A08EFF;
-  --color-ribble-gray-light: #E4E6E3;
-  --color-ribble-gray-dark: #B8BAB6;
+  --color-ribble-mint-light: #DBDBE5;
+  --color-ribble-mint-hover: #958CE8;
+  --color-ribble-lavender-light: #DBDBE5;
+  --color-ribble-lavender-hover: #ACD1FD;
+  --color-ribble-gray-light: #DBDBE5;
+  --color-ribble-gray-dark: #ACD1FD;
 
   /* Backward Compatibility Aliases */
-  --color-brand-cream: #EFF1EE;
-  --color-brand-teal: #A4F5A6;
-  --color-brand-coral: #B2A1FF;
-  --color-brand-deep: #222222;
-  --color-brand-primary: #A4F5A6;
-  --color-brand-steel: #D0D2CF;
-  --color-brand-ice: #EFF1EE;
-  --color-brand-mist: #D0D2CF;
-  --color-brand-canvas: #EFF1EE;
+  --color-brand-cream: #DBDBE5;
+  --color-brand-teal: #ACD1FD;
+  --color-brand-coral: #958CE8;
+  --color-brand-deep: #21222D;
+  --color-brand-primary: #958CE8;
+  --color-brand-steel: #DBDBE5;
+  --color-brand-ice: #ACD1FD;
+  --color-brand-mist: #DBDBE5;
+  --color-brand-canvas: #DBDBE5;
 }
 
 
 :root {
-  --bg: #EFF1EE;
+  --bg: #DBDBE5;
   --card-white: #FFFFFF;
-  --card-neutral: #D0D2CF;
-  --card-mint: #A4F5A6;
-  --card-lavender: #B2A1FF;
-  --card-dark: #222222;
-  --primary: #A4F5A6;
-  --secondary: #B2A1FF;
-  --text-main: #222222;
-  --text-muted: #666666;
-  --line-light: #D0D2CF;
+  --card-neutral: #DBDBE5;
+  --card-mint: #ACD1FD;
+  --card-lavender: #958CE8;
+  --card-dark: #21222D;
+  --primary: #958CE8;
+  --secondary: #ACD1FD;
+  --text-main: #21222D;
+  --text-muted: #545565;
+  --line-light: #DBDBE5;
 }
 
 /* Background Atmosphere - Soft warm off-white canvas with restrained breathing room */
 .bg-aura-mesh {
-  background-color: #EFF1EE;
+  background-color: #DBDBE5;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(208, 210, 207, 0.4) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(227, 220, 255, 0.2) 0px, transparent 50%),
-    radial-gradient(at 20% 100%, rgba(164, 245, 166, 0.15) 0px, transparent 50%),
-    radial-gradient(at 80% 100%, rgba(208, 210, 207, 0.3) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(219, 219, 229, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(149, 140, 232, 0.2) 0px, transparent 50%),
+    radial-gradient(at 20% 100%, rgba(172, 209, 253, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(219, 219, 229, 0.3) 0px, transparent 50%);
   background-size: 100% 100%;
   background-attachment: fixed;
 }
 
 /* Canvas Dotted Grid Overlay */
 .bg-grid-canvas {
-  background-image: radial-gradient(rgba(34, 34, 34, 0.06) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(33, 34, 45, 0.06) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
 /* Ribble Standard Cards - Large rounded corners, generous padding, soft surfaces */
 .pearl-card, .frosted-ice-card {
   background-color: #FFFFFF;
-  border: 1px solid #D0D2CF;
-  color: #222222;
+  border: 1px solid #DBDBE5;
+  color: #21222D;
   border-radius: 28px;
-  box-shadow: 0 2px 8px -2px rgba(34, 34, 34, 0.03);
+  box-shadow: 0 2px 8px -2px rgba(33, 34, 45, 0.03);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pearl-card:hover {
-  border-color: #B8BAB6;
-  box-shadow: 0 4px 16px -4px rgba(34, 34, 34, 0.06);
+  border-color: #ACD1FD;
+  box-shadow: 0 4px 16px -4px rgba(33, 34, 45, 0.06);
 }
 
 /* Card Variants */
 .card-neutral {
-  background-color: #D0D2CF;
-  border: 1px solid rgba(184, 186, 182, 0.5);
-  color: #222222;
+  background-color: #DBDBE5;
+  border: 1px solid rgba(172, 209, 253, 0.5);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-mint {
-  background-color: #A4F5A6;
-  border: 1px solid rgba(146, 232, 148, 0.6);
-  color: #222222;
+  background-color: #ACD1FD;
+  border: 1px solid rgba(149, 140, 232, 0.6);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-lavender {
-  background-color: #B2A1FF;
-  border: 1px solid rgba(160, 142, 255, 0.6);
-  color: #222222;
+  background-color: #958CE8;
+  border: 1px solid rgba(172, 209, 253, 0.6);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-dark {
-  background-color: #222222;
-  border: 1px solid #333333;
-  color: #EFF1EE;
+  background-color: #21222D;
+  border: 1px solid #21222D;
+  color: #DBDBE5;
   border-radius: 28px;
 }
 
 /* Active Highlight Card Outline */
 .card-highlight-active {
-  border: 2px solid #222222 !important;
-  box-shadow: 0 0 0 4px rgba(164, 245, 166, 0.6);
+  border: 2px solid #21222D !important;
+  box-shadow: 0 0 0 4px rgba(172, 209, 253, 0.6);
 }
 
 /* Buttons */
 .btn-primary {
-  background-color: #A4F5A6;
-  color: #222222;
+  background-color: #ACD1FD;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -273,15 +273,15 @@
   cursor: pointer;
 }
 .btn-primary:hover {
-  background-color: #92E894;
+  background-color: #958CE8;
 }
 .btn-primary:active {
   transform: scale(0.98);
 }
 
 .btn-secondary {
-  background-color: #D0D2CF;
-  color: #222222;
+  background-color: #DBDBE5;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -289,12 +289,12 @@
   cursor: pointer;
 }
 .btn-secondary:hover {
-  background-color: #C2C4C0;
+  background-color: #DBDBE5;
 }
 
 .btn-dark {
-  background-color: #222222;
-  color: #EFF1EE;
+  background-color: #21222D;
+  color: #DBDBE5;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -302,12 +302,12 @@
   cursor: pointer;
 }
 .btn-dark:hover {
-  background-color: #333333;
+  background-color: #21222D;
 }
 
 .btn-lavender {
-  background-color: #B2A1FF;
-  color: #222222;
+  background-color: #958CE8;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -315,7 +315,7 @@
   cursor: pointer;
 }
 .btn-lavender:hover {
-  background-color: #A08EFF;
+  background-color: #ACD1FD;
 }
 
 /* Scrollbars */
@@ -327,17 +327,17 @@
   background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #D0D2CF; 
+  background: #DBDBE5; 
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8BAB6;
+  background: #ACD1FD;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-main);
-  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -362,14 +362,14 @@ body {
 
 /* Ribble Brand Wordmark & Isometric Logo */
 .ribble-wordmark {
-  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-family: var(--font-display, "Sora", sans-serif);
   letter-spacing: -.03em;
   font-weight: 700;
 }
 
 .ribble-dot {
-  background: #A4F5A6;
-  border: .03em solid #222222;
+  background: #ACD1FD;
+  border: .03em solid #21222D;
   width: .21em;
   height: .21em;
   position: absolute;
@@ -467,16 +467,16 @@ body {
 }
 
 :root {
-  --ribble-offwhite: oklch(0.9558 0.0045 134.85);
-  --ribble-surface: oklch(0.9778 0.0028 128.49);
-  --ribble-gray: oklch(0.8614 0.0046 134.85);
-  --ribble-gray-soft: oklch(0.9192 0.0058 128.53);
-  --ribble-mint: oklch(0.8984 0.133 144.93);
-  --ribble-mint-strong: oklch(0.8351 0.1337 145.09);
-  --ribble-lavender: oklch(0.7602 0.1333 291.19);
-  --ribble-lavender-strong: oklch(0.6872 0.1596 290.25);
-  --ribble-charcoal: oklch(0.252 0 90);
-  --ribble-charcoal-soft: oklch(0.3485 0 90);
+  --ribble-offwhite: oklch(0.89437 0.01357 286.12);
+  --ribble-surface: oklch(1 0 0);
+  --ribble-gray: oklch(0.89437 0.01357 286.12);
+  --ribble-gray-soft: oklch(0.93 0.008 286.12);
+  --ribble-mint: oklch(0.84913 0.07332 253.02);
+  --ribble-mint-strong: oklch(0.68617 0.13331 286.81);
+  --ribble-lavender: oklch(0.68617 0.13331 286.81);
+  --ribble-lavender-strong: oklch(0.61 0.14 286.81);
+  --ribble-charcoal: oklch(0.25588 0.02071 280.75);
+  --ribble-charcoal-soft: oklch(0.34 0.025 280.75);
   --primary-strong: var(--ribble-mint-strong);
   --primary-ink: oklch(0.48 0.09 146);
   --accent-strong: var(--ribble-lavender-strong);
@@ -638,7 +638,7 @@ body {
 }
 
 .watch-theme .font-display {
-  font-family: "EB Garamond", ui-serif, Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
 }

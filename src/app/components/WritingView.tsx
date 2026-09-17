@@ -609,13 +609,13 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
 
     if (!hasErrors) {
       return (
-        <div className="bg-[#EFF1EE] dark:bg-stone-900/40 border border-[#D0D2CF] dark:border-stone-850 rounded-3xl p-5 flex flex-col gap-3">
+        <div className="bg-[#DBDBE5] dark:bg-stone-900/40 border border-[#DBDBE5] dark:border-stone-850 rounded-3xl p-5 flex flex-col gap-3">
           <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
             <CheckCheck className="w-4 h-4" />
             <span>{t.flawlessText || 'Flawless Text — No Errors Found'}</span>
           </div>
-          <div className="bg-white dark:bg-stone-850 p-4 rounded-2xl border border-[#D0D2CF]/60 dark:border-stone-800">
-            <p className="text-sm text-[#222222] dark:text-stone-200 font-serif leading-relaxed">
+          <div className="bg-white dark:bg-stone-850 p-4 rounded-2xl border border-[#DBDBE5]/60 dark:border-stone-800">
+            <p className="text-sm text-[#21222D] dark:text-stone-200 font-serif leading-relaxed">
               {original}
             </p>
           </div>
@@ -648,7 +648,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           </div>
 
           <div className="bg-white dark:bg-stone-900 p-4 rounded-2xl border border-rose-200/60 dark:border-rose-900/40">
-            <p className="text-sm text-[#222222] dark:text-stone-200 font-serif leading-relaxed">
+            <p className="text-sm text-[#21222D] dark:text-stone-200 font-serif leading-relaxed">
               {renderHighlightedParagraph(original, errorHighlights)}
             </p>
           </div>
@@ -664,14 +664,14 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => playTTS(corrected, 'en')}
-                className="p-1.5 border border-emerald-200 dark:border-emerald-900/60 rounded-lg bg-white dark:bg-stone-900 text-[#666666] hover:text-emerald-700 dark:hover:text-emerald-300 shadow-2xs cursor-pointer hover:scale-105 transition-all"
+                className="p-1.5 border border-emerald-200 dark:border-emerald-900/60 rounded-lg bg-white dark:bg-stone-900 text-[#545565] hover:text-emerald-700 dark:hover:text-emerald-300 shadow-2xs cursor-pointer hover:scale-105 transition-all"
                 title="Speak corrected text"
               >
                 <Volume2 className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => handleCopy(corrected)}
-                className="p-1.5 border border-emerald-200 dark:border-emerald-900/60 rounded-lg bg-white dark:bg-stone-900 text-[#666666] hover:text-emerald-700 dark:hover:text-emerald-300 shadow-2xs cursor-pointer hover:scale-105 transition-all"
+                className="p-1.5 border border-emerald-200 dark:border-emerald-900/60 rounded-lg bg-white dark:bg-stone-900 text-[#545565] hover:text-emerald-700 dark:hover:text-emerald-300 shadow-2xs cursor-pointer hover:scale-105 transition-all"
                 title="Copy corrected text"
               >
                 <Copy className="w-3.5 h-3.5" />
@@ -680,14 +680,14 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           </div>
 
           <div className="bg-white dark:bg-stone-900 p-4 rounded-2xl border border-emerald-200/60 dark:border-emerald-900/40">
-            <p className="text-sm text-[#222222] dark:text-stone-200 font-serif leading-relaxed">
+            <p className="text-sm text-[#21222D] dark:text-stone-200 font-serif leading-relaxed">
               {renderHighlightedParagraph(corrected, fixHighlights)}
             </p>
           </div>
 
           <button
             onClick={handleAcceptCorrections}
-            className="w-full mt-1 py-2.5 bg-[#222222] hover:bg-[#A4F5A6] text-[#EFF1EE] hover:text-[#222222] font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs hover:scale-[1.01] transition-all"
+            className="w-full mt-1 py-2.5 bg-[#21222D] hover:bg-[#ACD1FD] text-[#DBDBE5] hover:text-[#21222D] font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs hover:scale-[1.01] transition-all"
           >
             <CheckCheck className="w-4 h-4 stroke-[2.2]" />
             {t.acceptAndApplyCorrections || 'Accept & Apply Corrections'}
@@ -700,13 +700,13 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
   return (
     <div className="flex flex-col gap-3 w-full max-w-none px-0 sm:px-2 lg:px-4 min-h-[calc(100vh-140px)] pb-24 md:pb-8">
       {/* Mobile Tab Switcher */}
-      <div className="flex lg:hidden items-center gap-1.5 bg-[#EFF1EE] dark:bg-stone-900 p-1 rounded-2xl border border-[#D0D2CF] dark:border-stone-800 shrink-0">
+      <div className="flex lg:hidden items-center gap-1.5 bg-[#DBDBE5] dark:bg-stone-900 p-1 rounded-2xl border border-[#DBDBE5] dark:border-stone-800 shrink-0">
         <button
           onClick={() => setMobileTab('editor')}
           className={`flex-1 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mobileTab === 'editor'
-              ? 'bg-white dark:bg-stone-800 text-[#222222] dark:text-stone-100 shadow-2xs'
-              : 'text-stone-500 hover:text-[#222222]'
+              ? 'bg-white dark:bg-stone-800 text-[#21222D] dark:text-stone-100 shadow-2xs'
+              : 'text-stone-500 hover:text-[#21222D]'
           }`}
         >
           <PenTool className="w-3.5 h-3.5" />
@@ -719,8 +719,8 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           }}
           className={`flex-1 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mobileTab === 'drafts'
-              ? 'bg-white dark:bg-stone-800 text-[#222222] dark:text-stone-100 shadow-2xs'
-              : 'text-stone-500 hover:text-[#222222]'
+              ? 'bg-white dark:bg-stone-800 text-[#21222D] dark:text-stone-100 shadow-2xs'
+              : 'text-stone-500 hover:text-[#21222D]'
           }`}
         >
           <History className="w-3.5 h-3.5" />
@@ -733,8 +733,8 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           }}
           className={`flex-1 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mobileTab === 'prompts'
-              ? 'bg-white dark:bg-stone-800 text-[#222222] dark:text-stone-100 shadow-2xs'
-              : 'text-stone-500 hover:text-[#222222]'
+              ? 'bg-white dark:bg-stone-800 text-[#21222D] dark:text-stone-100 shadow-2xs'
+              : 'text-stone-500 hover:text-[#21222D]'
           }`}
         >
           <Sparkles className="w-3.5 h-3.5" />
@@ -758,7 +758,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
               </span>
               <button
                 onClick={() => setMobileTab('editor')}
-                className="text-xs font-bold px-3 py-1 rounded-xl bg-[#222222] text-[#A4F5A6] cursor-pointer"
+                className="text-xs font-bold px-3 py-1 rounded-xl bg-[#21222D] text-[#ACD1FD] cursor-pointer"
               >
                 {t.backToEditor || 'Back to Editor'}
               </button>
@@ -771,7 +771,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
               {!showHistory && (
                 <button
                   onClick={() => setShowHistory(true)}
-                  className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-[#666666] dark:text-stone-300 hover:text-[#222222] border border-[#D0D2CF] dark:border-stone-700 flex items-center gap-1 cursor-pointer transition-all"
+                  className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-[#545565] dark:text-stone-300 hover:text-[#21222D] border border-[#DBDBE5] dark:border-stone-700 flex items-center gap-1 cursor-pointer transition-all"
                   title="Restore Writing History"
                 >
                   <Plus className="w-2.5 h-2.5" /> {t.historyTitle || 'History'}
@@ -780,7 +780,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
               {!showPrompts && (
                 <button
                   onClick={() => setShowPrompts(true)}
-                  className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-[#666666] dark:text-stone-300 hover:text-[#222222] border border-[#D0D2CF] dark:border-stone-700 flex items-center gap-1 cursor-pointer transition-all"
+                  className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-[#545565] dark:text-stone-300 hover:text-[#21222D] border border-[#DBDBE5] dark:border-stone-700 flex items-center gap-1 cursor-pointer transition-all"
                   title="Restore Writing Prompts"
                 >
                   <Plus className="w-2.5 h-2.5" /> {t.writingPrompts || 'Prompts'}
@@ -789,7 +789,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
             </div>
             <button
               onClick={() => setIsSidebarVisible(false)}
-              className="text-[10px] text-stone-400 hover:text-[#222222] dark:hover:text-stone-200 p-1 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 flex items-center gap-1 ms-auto cursor-pointer transition-all"
+              className="text-[10px] text-stone-400 hover:text-[#21222D] dark:hover:text-stone-200 p-1 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 flex items-center gap-1 ms-auto cursor-pointer transition-all"
               title="Hide sidebar panel"
             >
               <PanelLeftClose className="w-3.5 h-3.5" />
@@ -799,12 +799,12 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
 
           {/* Document Drafts List */}
           {(showHistory || (window.innerWidth < 1024 && mobileTab === 'drafts')) && (
-            <div className={`w-full bg-[#EFF1EE] dark:bg-stone-900/40 border border-[#D0D2CF] dark:border-stone-850 rounded-2xl p-3 flex flex-col gap-2.5 text-start items-stretch shadow-3xs transition-all ${
+            <div className={`w-full bg-[#DBDBE5] dark:bg-stone-900/40 border border-[#DBDBE5] dark:border-stone-850 rounded-2xl p-3 flex flex-col gap-2.5 text-start items-stretch shadow-3xs transition-all ${
               window.innerWidth < 1024 ? 'h-[75vh]' : (isHistoryCollapsed ? 'h-auto' : 'h-[300px]')
             }`}>
               <div className="flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-1.5">
-                  <History className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                  <History className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                   <span className="text-[11px] font-bold tracking-wider text-stone-700 dark:text-stone-300 uppercase">
                     {t.historyTitle || 'History'}
                   </span>
@@ -815,14 +815,14 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                       createNewDocument('', t.newWritingDraft || 'New Writing Draft');
                       setMobileTab('editor');
                     }}
-                    className="p-1 rounded-lg bg-white dark:bg-stone-800 hover:bg-[#D0D2CF]/50 dark:hover:bg-stone-750 text-[#222222] dark:text-[#EFF1EE] border border-[#D0D2CF] dark:border-stone-700 transition-all cursor-pointer"
+                    className="p-1 rounded-lg bg-white dark:bg-stone-800 hover:bg-[#DBDBE5]/50 dark:hover:bg-stone-750 text-[#21222D] dark:text-[#DBDBE5] border border-[#DBDBE5] dark:border-stone-700 transition-all cursor-pointer"
                     title="Create New Draft"
                   >
                     <Plus className="w-3 h-3" />
                   </button>
                   <button
                     onClick={() => setIsHistoryCollapsed(!isHistoryCollapsed)}
-                    className="hidden lg:block p-1 rounded-lg text-stone-400 hover:text-[#222222] dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all cursor-pointer"
+                    className="hidden lg:block p-1 rounded-lg text-stone-400 hover:text-[#21222D] dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all cursor-pointer"
                     title={isHistoryCollapsed ? "Expand History" : "Collapse History"}
                   >
                     {isHistoryCollapsed ? <ChevronDown className="w-3 h-3" /> : <ChevronUp className="w-3 h-3" />}
@@ -851,12 +851,12 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                         }}
                         className={`group relative flex flex-col gap-0.5 p-2.5 rounded-xl cursor-pointer transition-all border ${
                           activeDocId === doc.id
-                            ? 'bg-white dark:bg-stone-800 border-[#222222] dark:border-[#A4F5A6] shadow-2xs'
-                            : 'bg-white/60 dark:bg-stone-900/30 border-transparent hover:bg-white dark:hover:bg-stone-800/50 hover:border-[#D0D2CF]'
+                            ? 'bg-white dark:bg-stone-800 border-[#21222D] dark:border-[#ACD1FD] shadow-2xs'
+                            : 'bg-white/60 dark:bg-stone-900/30 border-transparent hover:bg-white dark:hover:bg-stone-800/50 hover:border-[#DBDBE5]'
                         }`}
                       >
                         <div className="flex items-center justify-between pe-5">
-                          <span className="text-[11px] font-bold text-[#222222] dark:text-stone-200 truncate">
+                          <span className="text-[11px] font-bold text-[#21222D] dark:text-stone-200 truncate">
                             {doc.title || t.untitledDraft || 'Untitled Draft'}
                           </span>
                           {doc.score !== undefined && (
@@ -886,12 +886,12 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
 
           {/* Prompt starters catalog */}
           {(showPrompts || (window.innerWidth < 1024 && mobileTab === 'prompts')) && (
-            <div className={`w-full bg-[#EFF1EE] dark:bg-stone-900/40 border border-[#D0D2CF] dark:border-stone-850 rounded-2xl p-3 flex flex-col gap-2.5 text-start items-stretch shadow-3xs transition-all ${
+            <div className={`w-full bg-[#DBDBE5] dark:bg-stone-900/40 border border-[#DBDBE5] dark:border-stone-850 rounded-2xl p-3 flex flex-col gap-2.5 text-start items-stretch shadow-3xs transition-all ${
               window.innerWidth < 1024 ? 'h-[75vh]' : (isPromptsCollapsed ? 'h-auto' : 'h-[339px]')
             }`}>
               <div className="flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6] shrink-0" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD] shrink-0" />
                   <span className="text-[11px] font-bold tracking-wider text-stone-700 dark:text-stone-300 uppercase">
                     {t.writingPrompts || 'Prompts'}
                   </span>
@@ -899,7 +899,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => setIsPromptsCollapsed(!isPromptsCollapsed)}
-                    className="hidden lg:block p-1 rounded-lg text-stone-400 hover:text-[#222222] dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all cursor-pointer"
+                    className="hidden lg:block p-1 rounded-lg text-stone-400 hover:text-[#21222D] dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all cursor-pointer"
                     title={isPromptsCollapsed ? "Expand Prompts" : "Collapse Prompts"}
                   >
                     {isPromptsCollapsed ? <ChevronDown className="w-3 h-3" /> : <ChevronUp className="w-3 h-3" />}
@@ -923,18 +923,18 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                         createNewDocument(prompt.starter, prompt.title);
                         setMobileTab('editor');
                       }}
-                      className="p-2.5 rounded-xl bg-white dark:bg-stone-800 border border-[#D0D2CF]/50 dark:border-stone-750 hover:border-[#222222] hover:shadow-2xs transition-all cursor-pointer flex flex-col gap-1 text-start group"
+                      className="p-2.5 rounded-xl bg-white dark:bg-stone-800 border border-[#DBDBE5]/50 dark:border-stone-750 hover:border-[#21222D] hover:shadow-2xs transition-all cursor-pointer flex flex-col gap-1 text-start group"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-[8px] font-black tracking-wider text-[#222222] dark:text-[#A4F5A6] uppercase">
+                        <span className="text-[8px] font-black tracking-wider text-[#21222D] dark:text-[#ACD1FD] uppercase">
                           {prompt.category}
                         </span>
                         <ChevronRight className="w-2.5 h-2.5 text-stone-400 group-hover:translate-x-0.5 transition-transform" />
                       </div>
-                      <h4 className="text-[11px] font-bold text-[#222222] dark:text-stone-200 leading-tight">
+                      <h4 className="text-[11px] font-bold text-[#21222D] dark:text-stone-200 leading-tight">
                         {prompt.title}
                       </h4>
-                      <p className="text-[9px] text-[#666666] dark:text-stone-400 leading-tight line-clamp-2">
+                      <p className="text-[9px] text-[#545565] dark:text-stone-400 leading-tight line-clamp-2">
                         {prompt.description}
                       </p>
                     </div>
@@ -955,9 +955,9 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
         
         {/* Workspace Block */}
         <div 
-          className="flex-1 bg-[#EFF1EE] dark:bg-stone-900/40 border border-[#D0D2CF] dark:border-stone-850 rounded-2xl sm:rounded-3xl p-3 sm:p-6 flex flex-col gap-5"
+          className="flex-1 bg-[#DBDBE5] dark:bg-stone-900/40 border border-[#DBDBE5] dark:border-stone-850 rounded-2xl sm:rounded-3xl p-3 sm:p-6 flex flex-col gap-5"
         >
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#D0D2CF]/60 dark:border-stone-800">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#DBDBE5]/60 dark:border-stone-800">
             <div className="flex items-center gap-2.5">
               {(!isSidebarVisible || (!showHistory && !showPrompts)) && (
                 <button
@@ -966,15 +966,15 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                     setShowHistory(true);
                     setShowPrompts(true);
                   }}
-                  className="p-2 rounded-xl bg-white dark:bg-stone-800 border border-[#D0D2CF] dark:border-stone-700 text-[#666666] dark:text-stone-300 hover:text-[#222222] shadow-3xs cursor-pointer transition-all flex items-center gap-1.5"
+                  className="p-2 rounded-xl bg-white dark:bg-stone-800 border border-[#DBDBE5] dark:border-stone-700 text-[#545565] dark:text-stone-300 hover:text-[#21222D] shadow-3xs cursor-pointer transition-all flex items-center gap-1.5"
                   title="Open History & Prompts sidebar"
                 >
                   <PanelLeft className="w-4 h-4" />
                   <span className="text-[11px] font-bold hidden md:inline">Sidebar</span>
                 </button>
               )}
-              <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 border border-[#D0D2CF] dark:border-white/10 flex items-center justify-center shrink-0">
-                <PenTool className="w-5 h-5 text-[#222222] dark:text-[#A4F5A6]" />
+              <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 border border-[#DBDBE5] dark:border-white/10 flex items-center justify-center shrink-0">
+                <PenTool className="w-5 h-5 text-[#21222D] dark:text-[#ACD1FD]" />
               </div>
               <div className="flex flex-col min-w-0">
                 <input
@@ -984,7 +984,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                     setDocTitle(e.target.value);
                     saveDocumentState(inputText, e.target.value, selectedTone);
                   }}
-                  className="bg-transparent text-sm font-extrabold text-[#222222] dark:text-stone-100 focus:outline-none focus:border-[#222222] border-b border-transparent pb-0.5"
+                  className="bg-transparent text-sm font-extrabold text-[#21222D] dark:text-stone-100 focus:outline-none focus:border-[#21222D] border-b border-transparent pb-0.5"
                   placeholder={t.draftTitlePlaceholder || 'Draft Title'}
                 />
                 <span className="text-[10px] text-stone-400">
@@ -995,7 +995,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           </div>
 
           {/* Text Area Input */}
-          <div className="relative flex-1 min-h-[300px] flex flex-col bg-white dark:bg-stone-850/40 rounded-2xl border border-[#D0D2CF] dark:border-stone-800 p-4">
+          <div className="relative flex-1 min-h-[300px] flex flex-col bg-white dark:bg-stone-850/40 rounded-2xl border border-[#DBDBE5] dark:border-stone-800 p-4">
             <textarea
               value={inputText}
               onChange={(e) => {
@@ -1005,7 +1005,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                 saveDocumentState(val, docTitle, selectedTone);
               }}
               placeholder={t.typeOrPastePlaceholder || "Start typing or paste your text here to practice writing..."}
-              className="w-full flex-1 min-h-[220px] bg-transparent resize-none border-none outline-none focus:outline-none text-sm text-[#222222] dark:text-stone-100 placeholder:text-stone-400 font-serif leading-relaxed"
+              className="w-full flex-1 min-h-[220px] bg-transparent resize-none border-none outline-none focus:outline-none text-sm text-[#21222D] dark:text-stone-100 placeholder:text-stone-400 font-serif leading-relaxed"
             />
 
             {/* Character, Word counter & Background AI readiness indicator - Hidden on mobile phones */}
@@ -1039,14 +1039,14 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                   setAnalysisResult(null);
                   saveDocumentState('', docTitle, selectedTone, null);
                 }}
-                className="px-4 py-2 text-[#666666] dark:text-stone-400 hover:text-[#222222] dark:hover:text-stone-200 text-xs font-bold rounded-xl transition-colors cursor-pointer"
+                className="px-4 py-2 text-[#545565] dark:text-stone-400 hover:text-[#21222D] dark:hover:text-stone-200 text-xs font-bold rounded-xl transition-colors cursor-pointer"
               >
                 {t.clearCanvas || 'Clear Canvas'}
               </button>
               <button
                 onClick={handleAnalyze}
                 disabled={isAnalyzing || !inputText.trim()}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#A4F5A6] text-[#222222] font-extrabold text-xs shadow-xs hover:bg-[#8ee590] disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#ACD1FD] text-[#21222D] font-extrabold text-xs shadow-xs hover:bg-[#ACD1FD] disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
               >
                 {isAnalyzing ? (
                   <>
@@ -1073,7 +1073,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
           {/* Mobile close button header */}
           <div className="flex lg:hidden items-center justify-between pb-3 border-b border-stone-200 dark:border-stone-800 shrink-0">
             <span className="text-xs font-bold text-stone-800 dark:text-stone-200 uppercase tracking-wider flex items-center gap-1.5">
-              <SpellCheck className="w-4 h-4 text-[#A4F5A6]" />
+              <SpellCheck className="w-4 h-4 text-[#ACD1FD]" />
               {t.writingTitle || 'Writing Assistant'}
             </span>
             <button
@@ -1092,10 +1092,10 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="h-full bg-[#EFF1EE] dark:bg-stone-900/40 border border-dashed border-[#D0D2CF] dark:border-stone-800 rounded-3xl p-6 flex flex-col items-center justify-center text-center gap-3 min-h-[300px]"
+                className="h-full bg-[#DBDBE5] dark:bg-stone-900/40 border border-dashed border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 flex flex-col items-center justify-center text-center gap-3 min-h-[300px]"
               >
-                <div className="w-12 h-12 rounded-2xl bg-[#D0D2CF]/50 dark:bg-stone-800 flex items-center justify-center">
-                  <SpellCheck className="w-6 h-6 text-[#222222] dark:text-[#A4F5A6]" />
+                <div className="w-12 h-12 rounded-2xl bg-[#DBDBE5]/50 dark:bg-stone-800 flex items-center justify-center">
+                  <SpellCheck className="w-6 h-6 text-[#21222D] dark:text-[#ACD1FD]" />
                 </div>
                 <div className="flex flex-col gap-1 items-center">
                   <h3 className="text-xs font-bold text-stone-700 dark:text-stone-300">
@@ -1109,11 +1109,11 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="h-full bg-[#EFF1EE] dark:bg-stone-900/40 border border-[#D0D2CF] dark:border-stone-850 rounded-3xl p-6 flex flex-col items-center justify-center text-center gap-4 min-h-[300px]"
+                className="h-full bg-[#DBDBE5] dark:bg-stone-900/40 border border-[#DBDBE5] dark:border-stone-850 rounded-3xl p-6 flex flex-col items-center justify-center text-center gap-4 min-h-[300px]"
               >
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full border-2 border-[#D0D2CF] dark:border-stone-800 border-t-[#222222] dark:border-t-[#A4F5A6] animate-spin" />
-                  <SpellCheck className="w-5 h-5 text-[#222222] dark:text-[#A4F5A6] absolute inset-0 m-auto animate-pulse" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#DBDBE5] dark:border-stone-800 border-t-[#21222D] dark:border-t-[#ACD1FD] animate-spin" />
+                  <SpellCheck className="w-5 h-5 text-[#21222D] dark:text-[#ACD1FD] absolute inset-0 m-auto animate-pulse" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xs font-bold text-stone-700 dark:text-stone-300">
@@ -1133,17 +1133,17 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                 className="flex flex-col gap-5"
               >
                 {/* Score Card Banner */}
-                <div className="bg-[#EFF1EE] dark:bg-stone-900/60 border border-[#D0D2CF] dark:border-stone-800 rounded-3xl p-5 flex items-center justify-between gap-4 shadow-3xs">
+                <div className="bg-[#DBDBE5] dark:bg-stone-900/60 border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-5 flex items-center justify-between gap-4 shadow-3xs">
                   <div className="flex flex-col gap-1">
-                    <span className="text-[9px] font-black tracking-widest text-[#222222] dark:text-[#A4F5A6] uppercase">
+                    <span className="text-[9px] font-black tracking-widest text-[#21222D] dark:text-[#ACD1FD] uppercase">
                       {t.writingQualityScore || 'Writing Quality Score'}
                     </span>
-                    <p className="text-[10px] text-[#666666] dark:text-stone-400 leading-normal">
+                    <p className="text-[10px] text-[#545565] dark:text-stone-400 leading-normal">
                       {analysisResult.scoreFeedback}
                     </p>
                   </div>
-                  <div className="flex flex-col items-center shrink-0 bg-white dark:bg-stone-900 border border-[#A4F5A6] dark:border-[#A4F5A6]/40 w-16 h-16 rounded-2xl justify-center shadow-3xs">
-                    <span className="text-lg font-black text-[#222222] dark:text-[#A4F5A6] leading-none">
+                  <div className="flex flex-col items-center shrink-0 bg-white dark:bg-stone-900 border border-[#ACD1FD] dark:border-[#ACD1FD]/40 w-16 h-16 rounded-2xl justify-center shadow-3xs">
+                    <span className="text-lg font-black text-[#21222D] dark:text-[#ACD1FD] leading-none">
                       {analysisResult.score}
                     </span>
                     <span className="text-[9px] text-stone-400 font-bold mt-1">/ 100</span>
@@ -1166,17 +1166,17 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                         return (
                           <div
                             key={idx}
-                            className="bg-[#EFF1EE] dark:bg-stone-900/60 border border-[#D0D2CF] dark:border-stone-800 rounded-2xl p-4 flex flex-col gap-3 shadow-3xs transition-all"
+                            className="bg-[#DBDBE5] dark:bg-stone-900/60 border border-[#DBDBE5] dark:border-stone-800 rounded-2xl p-4 flex flex-col gap-3 shadow-3xs transition-all"
                           >
                             {/* Top row: Category pill on the left, rounded "Fix →" button on the right */}
                             <div className="flex items-center justify-between">
-                              <span className="text-[10px] font-extrabold tracking-wider text-[#222222] dark:text-[#A4F5A6] bg-[#A4F5A6] dark:bg-[#A4F5A6]/20 px-2.5 py-1 rounded-md uppercase">
+                              <span className="text-[10px] font-extrabold tracking-wider text-[#21222D] dark:text-[#ACD1FD] bg-[#ACD1FD] dark:bg-[#ACD1FD]/20 px-2.5 py-1 rounded-md uppercase">
                                 {categoryLabel}
                               </span>
 
                               <button
                                 onClick={() => handleApplySingleFix(issue.original, issue.fix, idx)}
-                                className="px-3.5 py-0.5 rounded-full border border-[#222222] dark:border-[#A4F5A6] bg-white dark:bg-stone-900 text-[#222222] dark:text-[#A4F5A6] hover:bg-[#A4F5A6] hover:text-[#222222] text-[11px] font-bold flex items-center gap-1 cursor-pointer transition-all shadow-3xs hover:scale-105 active:scale-95"
+                                className="px-3.5 py-0.5 rounded-full border border-[#21222D] dark:border-[#ACD1FD] bg-white dark:bg-stone-900 text-[#21222D] dark:text-[#ACD1FD] hover:bg-[#ACD1FD] hover:text-[#21222D] text-[11px] font-bold flex items-center gap-1 cursor-pointer transition-all shadow-3xs hover:scale-105 active:scale-95"
                                 title={`Fix "${issue.original}" with "${issue.fix}"`}
                               >
                                 <span>{t.fixBtn || 'Fix'}</span>
@@ -1190,13 +1190,13 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
                                 {issue.original}
                               </span>
                               <span className="text-stone-400 text-xs">→</span>
-                              <span className="font-bold text-[#222222] dark:text-[#222222] bg-[#A4F5A6] px-2 py-0.5 rounded-md">
+                              <span className="font-bold text-[#21222D] dark:text-[#21222D] bg-[#ACD1FD] px-2 py-0.5 rounded-md">
                                 {issue.fix}
                               </span>
                             </div>
 
                             {/* Bottom row: explanation paragraph */}
-                            <p className="text-[11px] text-[#666666] dark:text-stone-300 leading-relaxed font-sans">
+                            <p className="text-[11px] text-[#545565] dark:text-stone-300 leading-relaxed font-sans">
                               {issue.reason}
                             </p>
                           </div>

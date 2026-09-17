@@ -68,7 +68,7 @@ export const StackedNotificationGroup: React.FC<StackedNotificationGroupProps> =
 
     if (sender.includes('streak') || title.includes('streak')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#333333] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-[#222222]/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
           <Flame className="w-5 h-5 fill-current stroke-[2.3]" />
         </div>
       );
@@ -76,7 +76,7 @@ export const StackedNotificationGroup: React.FC<StackedNotificationGroupProps> =
 
     if (sender.includes('vocab') || title.includes('mastered') || title.includes('flashcard')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#1D201A] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-[#222222]/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
           <Brain className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -92,7 +92,7 @@ export const StackedNotificationGroup: React.FC<StackedNotificationGroupProps> =
 
     if (sender.includes('speaking') || sender.includes('tutor') || title.includes('practice')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#444444] text-white flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-white flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <MessageSquare className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -100,14 +100,14 @@ export const StackedNotificationGroup: React.FC<StackedNotificationGroupProps> =
 
     if (sender.includes('writing') || title.includes('writing')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#3A3A3A] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#3A3A3A] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <PenLine className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
     }
 
     return (
-      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#222222] to-[#111111] text-[#A4F5A6] flex items-center justify-center shrink-0 shadow-md shadow-[#222222]/20 border border-white/20">
+      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
         <BookOpen className="w-5 h-5 stroke-[2.2]" />
       </div>
     );

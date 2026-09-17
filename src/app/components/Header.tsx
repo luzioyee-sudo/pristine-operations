@@ -104,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`hidden md:flex h-screen sticky top-0 bg-[#EFF1EE] border-e border-[#D0D2CF] py-5 flex-col justify-between items-center select-none z-40 shrink-0 transition-all duration-300 ${
+      className={`hidden md:flex h-screen sticky top-0 bg-[#DBDBE5] border-e border-[#DBDBE5] py-5 flex-col justify-between items-center select-none z-40 shrink-0 transition-all duration-300 ${
         isCollapsed ? 'w-16 px-2' : 'w-64 px-4'
       }`}
     >
@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Toggle Sidebar Panel Button */}
               <button
                 onClick={onToggleSidebar}
-                className="w-8 h-8 rounded-xl bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center hover:bg-[#D0D2CF] transition-all cursor-pointer active:scale-95 shrink-0"
+                className="w-8 h-8 rounded-xl bg-white border border-[#DBDBE5] text-[#21222D] flex items-center justify-center hover:bg-[#DBDBE5] transition-all cursor-pointer active:scale-95 shrink-0"
                 title={isCollapsed ? (t.expandSidebar || "Expand Sidebar") : (t.collapseSidebar || "Collapse Sidebar")}
               >
                 <PanelLeft className="w-4 h-4 stroke-[1.8]" />
@@ -137,13 +137,13 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex flex-col gap-1 w-full">
             <button
               onClick={onOpenSearch}
-              className={`flex items-center gap-2 p-2 rounded-xl text-[#222222] hover:bg-white transition-all cursor-pointer text-start ${
-                isCollapsed ? 'justify-center w-8 h-8 self-center' : 'w-full px-2.5 bg-white border border-[#D0D2CF]'
+              className={`flex items-center gap-2 p-2 rounded-xl text-[#21222D] hover:bg-white transition-all cursor-pointer text-start ${
+                isCollapsed ? 'justify-center w-8 h-8 self-center' : 'w-full px-2.5 bg-white border border-[#DBDBE5]'
               }`}
               title={t.search || "Search Documents & Vocabulary"}
             >
-              <Search className="w-4 h-4 stroke-[1.8] shrink-0 text-[#666666]" />
-              {!isCollapsed && <span className="text-[11px] font-semibold text-[#666666] truncate">{t.search || "Search..."}</span>}
+              <Search className="w-4 h-4 stroke-[1.8] shrink-0 text-[#545565]" />
+              {!isCollapsed && <span className="text-[11px] font-semibold text-[#545565] truncate">{t.search || "Search..."}</span>}
             </button>
           </div>
         </div>
@@ -157,8 +157,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'home'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navHome || 'Dashboard'}
           >
@@ -173,8 +173,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'reader'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navLibrary || 'Library'}
           >
@@ -189,8 +189,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'flashcards'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navFlashcards || 'Flashcards'}
           >
@@ -205,8 +205,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'dictionary'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navDictionary || 'Dictionary'}
           >
@@ -221,8 +221,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'practice'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navPractice || 'Practicing & Active Retrieval'}
           >
@@ -237,8 +237,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'writing'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navWriting || 'Writing Assistant'}
           >
@@ -253,12 +253,12 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'video'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title="Video player"
           >
-            <Youtube className="w-4 h-4 stroke-[2] shrink-0 text-[#222222]" />
+            <Youtube className="w-4 h-4 stroke-[2] shrink-0 text-[#21222D]" />
             {!isCollapsed && <span className="text-xs truncate font-medium">Video player</span>}
           </button>
 
@@ -269,8 +269,8 @@ export const Header: React.FC<HeaderProps> = ({
               isCollapsed ? 'justify-center' : 'px-3.5'
             } ${
               activeView === 'settings'
-                ? 'text-[#222222] bg-[#A4F5A6] font-bold shadow-xs'
-                : 'text-[#222222]/80 hover:text-[#222222] hover:bg-[#D0D2CF]/40'
+                ? 'text-[#21222D] bg-[#ACD1FD] font-bold shadow-xs'
+                : 'text-[#21222D]/80 hover:text-[#21222D] hover:bg-[#DBDBE5]/40'
             }`}
             title={t.navSettings || 'Settings'}
           >
@@ -287,7 +287,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={() => setIsAccountSwitcherOpen(!isAccountSwitcherOpen)}
               title={`${currentName} (${currentEmail})`}
-              className="w-9 h-9 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-bold text-xs tracking-wide shadow-xs hover:scale-105 transition-transform cursor-pointer border border-[#D0D2CF] overflow-hidden"
+              className="w-9 h-9 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-bold text-xs tracking-wide shadow-xs hover:scale-105 transition-transform cursor-pointer border border-[#DBDBE5] overflow-hidden"
             >
               <img 
                 src={getEffectiveAvatar(activeAccount?.avatar || userAvatar, activeAccount?.id || activeAccount?.name || userName)} 
@@ -299,10 +299,10 @@ export const Header: React.FC<HeaderProps> = ({
         ) : (
           <button
             onClick={() => setIsAccountSwitcherOpen(!isAccountSwitcherOpen)}
-            className="w-full flex items-center justify-between p-2 rounded-2xl bg-white border border-[#D0D2CF] hover:bg-[#EFF1EE] transition-all cursor-pointer text-start"
+            className="w-full flex items-center justify-between p-2 rounded-2xl bg-white border border-[#DBDBE5] hover:bg-[#DBDBE5] transition-all cursor-pointer text-start"
           >
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-8 h-8 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-extrabold text-xs shrink-0 overflow-hidden ring-2 ring-white">
+              <div className="w-8 h-8 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-extrabold text-xs shrink-0 overflow-hidden ring-2 ring-white">
                 <img 
                   src={getEffectiveAvatar(activeAccount?.avatar || userAvatar, activeAccount?.id || activeAccount?.name || userName)} 
                   alt={currentName} 
@@ -310,25 +310,25 @@ export const Header: React.FC<HeaderProps> = ({
                 />
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-xs font-extrabold text-[#222222] truncate">
+                <span className="text-xs font-extrabold text-[#21222D] truncate">
                   {currentName}
                 </span>
-                <span className="text-[10px] text-[#666666] truncate font-medium">
+                <span className="text-[10px] text-[#545565] truncate font-medium">
                   {currentEmail}
                 </span>
               </div>
             </div>
-            <ChevronDown className={`w-4 h-4 text-[#666666] shrink-0 transition-transform ${isAccountSwitcherOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-4 h-4 text-[#545565] shrink-0 transition-transform ${isAccountSwitcherOpen ? 'rotate-180' : ''}`} />
           </button>
         )}
 
         {/* User Info Popover */}
         {isAccountSwitcherOpen && (
-          <div className={`absolute bottom-full mb-3 bg-white border border-[#D0D2CF] rounded-2xl shadow-xl p-3.5 z-50 flex flex-col gap-3 ${
+          <div className={`absolute bottom-full mb-3 bg-white border border-[#DBDBE5] rounded-2xl shadow-xl p-3.5 z-50 flex flex-col gap-3 ${
             isCollapsed ? 'start-0 w-64' : 'inset-x-0'
           }`}>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-extrabold text-xs shrink-0 overflow-hidden ring-2 ring-[#EFF1EE] shadow-xs">
+              <div className="w-10 h-10 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-extrabold text-xs shrink-0 overflow-hidden ring-2 ring-[#DBDBE5] shadow-xs">
                 <img 
                   src={getEffectiveAvatar(activeAccount?.avatar || userAvatar, activeAccount?.id || activeAccount?.name || userName)} 
                   alt={currentName} 
@@ -336,17 +336,17 @@ export const Header: React.FC<HeaderProps> = ({
                 />
               </div>
               <div className="flex flex-col min-w-0 flex-1">
-                <span className="text-sm font-bold text-[#222222] truncate">
+                <span className="text-sm font-bold text-[#21222D] truncate">
                   {currentName}
                 </span>
-                <span className="text-xs text-[#666666] truncate font-medium">
+                <span className="text-xs text-[#545565] truncate font-medium">
                   {currentEmail}
                 </span>
               </div>
             </div>
 
             {onSignOut && (
-              <div className="pt-2 border-t border-[#D0D2CF]">
+              <div className="pt-2 border-t border-[#DBDBE5]">
                 <button
                   onClick={() => {
                     setIsAccountSwitcherOpen(false);

@@ -193,9 +193,9 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
   ];
 
   return (
-    <div className="min-h-[100dvh] w-full flex items-center justify-center bg-[#EFF1EE] dark:bg-[#121312] relative overflow-y-auto text-[#222222] dark:text-[#EFF1EE] p-4 sm:p-6 md:p-12">
+    <div className="min-h-[100dvh] w-full flex items-center justify-center bg-[#DBDBE5] dark:bg-[#121312] relative overflow-y-auto text-[#21222D] dark:text-[#DBDBE5] p-4 sm:p-6 md:p-12">
       {/* Subtle brand ambient glow */}
-      <div className="absolute top-0 end-0 w-[500px] sm:w-[800px] h-[500px] sm:h-[800px] bg-gradient-to-bl from-[#A4F5A6]/20 via-[#EFF1EE]/0 to-transparent dark:from-[#A4F5A6]/10 dark:via-[#121312]/0 blur-3xl pointer-events-none transform translate-x-1/3 -translate-y-1/3 rounded-full" />
+      <div className="absolute top-0 end-0 w-[500px] sm:w-[800px] h-[500px] sm:h-[800px] bg-gradient-to-bl from-[#ACD1FD]/20 via-[#DBDBE5]/0 to-transparent dark:from-[#ACD1FD]/10 dark:via-[#121312]/0 blur-3xl pointer-events-none transform translate-x-1/3 -translate-y-1/3 rounded-full" />
       
       <div className="w-full max-w-xl md:max-w-2xl px-2 sm:px-6 md:px-10 relative z-10 flex flex-col justify-center my-auto py-6">
         <AnimatePresence mode="wait">
@@ -208,10 +208,10 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex-1 flex flex-col justify-center"
             >
-              <div className="mb-6 sm:mb-10 text-[#222222] dark:text-[#A4F5A6]">
+              <div className="mb-6 sm:mb-10 text-[#21222D] dark:text-[#ACD1FD]">
                 <RibbleLogo showWordmark={false} size="lg" animated />
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] dark:text-white leading-tight flex flex-wrap gap-x-[0.3em] overflow-hidden">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] dark:text-white leading-tight flex flex-wrap gap-x-[0.3em] overflow-hidden">
                 {(t.whatShouldWeCallYou || "What should we call you?").split(' ').map((word, wordIndex) => (
                   <span key={wordIndex} className="flex overflow-hidden">
                     {word.split('').map((char, charIndex) => (
@@ -239,7 +239,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && name.trim() && setStep(1)}
-                className="mt-8 sm:mt-12 w-full bg-transparent border-b border-[#D0D2CF] dark:border-[#2C2E2A] pb-3 sm:pb-4 text-2xl sm:text-3xl md:text-4xl text-[#222222] dark:text-white placeholder:text-[#999999] dark:placeholder:text-[#666666] outline-none focus:border-[#222222] dark:focus:border-[#A4F5A6] transition-colors font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] min-h-[48px]"
+                className="mt-8 sm:mt-12 w-full bg-transparent border-b border-[#DBDBE5] dark:border-[#2C2E2A] pb-3 sm:pb-4 text-2xl sm:text-3xl md:text-4xl text-[#21222D] dark:text-white placeholder:text-[#545565] dark:placeholder:text-[#545565] outline-none focus:border-[#21222D] dark:focus:border-[#ACD1FD] transition-colors font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] min-h-[48px]"
                 autoFocus
               />
               
@@ -249,8 +249,8 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                   disabled={!name.trim()}
                   className={`px-8 py-3.5 rounded-full text-sm font-bold transition-all min-h-[48px] ${
                     name.trim() 
-                      ? 'bg-[#222222] dark:bg-[#A4F5A6] hover:bg-[#333333] dark:hover:bg-[#8AE88D] text-[#EFF1EE] dark:text-[#222222] cursor-pointer shadow-sm active:scale-95' 
-                      : 'bg-[#D0D2CF] dark:bg-[#1E201D] text-[#999999] dark:text-[#666666] cursor-not-allowed'
+                      ? 'bg-[#21222D] dark:bg-[#ACD1FD] hover:bg-[#21222D] dark:hover:bg-[#8AE88D] text-[#DBDBE5] dark:text-[#21222D] cursor-pointer shadow-sm active:scale-95' 
+                      : 'bg-[#DBDBE5] dark:bg-[#1E201D] text-[#545565] dark:text-[#545565] cursor-not-allowed'
                   }`}
                 >
                   {t.continue || "Continue"}
@@ -259,7 +259,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                 {/* Direct skip to login / guest option */}
                 <button
                   onClick={() => setStep(3)}
-                  className="text-xs font-bold text-[#666666] hover:text-[#222222] dark:text-[#999999] dark:hover:text-[#A4F5A6] transition-colors cursor-pointer py-2 px-1"
+                  className="text-xs font-bold text-[#545565] hover:text-[#21222D] dark:text-[#545565] dark:hover:text-[#ACD1FD] transition-colors cursor-pointer py-2 px-1"
                 >
                   {t.alreadyHaveAccount || "Already have an account? Sign In →"}
                 </button>
@@ -276,10 +276,10 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="flex-1 flex flex-col items-center justify-center text-center py-8"
             >
-              <div className="text-[11px] font-bold tracking-[0.25em] text-[#666666] dark:text-[#999999] uppercase">
+              <div className="text-[11px] font-bold tracking-[0.25em] text-[#545565] dark:text-[#545565] uppercase">
                 {t.welcome || "WELCOME"}
               </div>
-              <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-7xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] dark:text-white tracking-tight flex justify-center flex-wrap gap-x-[0.3em]">
+              <h1 className="mt-6 sm:mt-8 text-4xl sm:text-5xl md:text-7xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] dark:text-white tracking-tight flex justify-center flex-wrap gap-x-[0.3em]">
                 {name.split(' ').map((word, wordIndex) => (
                   <span key={wordIndex} className="flex overflow-hidden">
                     {word.split('').map((char, charIndex) => (
@@ -300,8 +300,8 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                   </span>
                 ))}
               </h1>
-              <div className="w-20 sm:w-24 h-[1.5px] bg-[#222222] dark:bg-[#A4F5A6] my-6 sm:my-10" />
-              <p className="text-[#666666] dark:text-[#999999] text-sm sm:text-[15px] max-w-sm leading-relaxed">
+              <div className="w-20 sm:w-24 h-[1.5px] bg-[#21222D] dark:bg-[#ACD1FD] my-6 sm:my-10" />
+              <p className="text-[#545565] dark:text-[#545565] text-sm sm:text-[15px] max-w-sm leading-relaxed">
                 {t.onboardingWelcomeDesc || "Lovely to meet you. Let's shape a reading habit that actually fits your days."}
               </p>
             </motion.div>
@@ -316,11 +316,11 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex-1 flex flex-col justify-center py-6 sm:py-10"
             >
-              <div className="self-start px-2.5 py-1 bg-[#D0D2CF]/40 dark:bg-[#1E201D] text-[#222222] dark:text-[#A4F5A6] text-[10px] font-bold tracking-[0.15em] uppercase rounded-full border border-[#D0D2CF]/60 dark:border-[#2C2E2A]">
+              <div className="self-start px-2.5 py-1 bg-[#DBDBE5]/40 dark:bg-[#1E201D] text-[#21222D] dark:text-[#ACD1FD] text-[10px] font-bold tracking-[0.15em] uppercase rounded-full border border-[#DBDBE5]/60 dark:border-[#2C2E2A]">
                 {t.preference || "PREFERENCE"}
               </div>
               
-              <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-[40px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] dark:text-white leading-tight flex flex-wrap gap-x-[0.3em] overflow-hidden">
+              <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-[40px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] dark:text-white leading-tight flex flex-wrap gap-x-[0.3em] overflow-hidden">
                 {(t.whatsYourNativeLanguage || "What's your native language?").split(' ').map((word, wordIndex) => (
                   <span key={wordIndex} className="flex overflow-hidden">
                     {word.split('').map((char, charIndex) => (
@@ -342,7 +342,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                 ))}
               </h1>
               
-              <p className="mt-2 sm:mt-4 text-[#666666] dark:text-[#999999] text-xs sm:text-[15px]">
+              <p className="mt-2 sm:mt-4 text-[#545565] dark:text-[#545565] text-xs sm:text-[15px]">
                 {t.nativeLanguageDesc || "Explanations and definitions will be adapted to this language."}
               </p>
               
@@ -355,13 +355,13 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                       setLanguage(lang.id);
                       setStep(3);
                     }}
-                    className="px-5 sm:px-6 py-5 sm:py-6 rounded-[20px] border border-[#D0D2CF] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#EFF1EE] dark:hover:bg-[#252824] hover:border-[#222222] dark:hover:border-[#A4F5A6] transition-all text-start group cursor-pointer shadow-xs hover:shadow-md"
+                    className="px-5 sm:px-6 py-5 sm:py-6 rounded-[20px] border border-[#DBDBE5] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#DBDBE5] dark:hover:bg-[#252824] hover:border-[#21222D] dark:hover:border-[#ACD1FD] transition-all text-start group cursor-pointer shadow-xs hover:shadow-md"
                   >
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <span className="text-xs font-bold tracking-wide text-[#222222] dark:text-[#EFF1EE]">{lang.code}</span>
-                      <span className="text-2xl sm:text-3xl font-serif text-[#222222] dark:text-white">{lang.name}</span>
+                      <span className="text-xs font-bold tracking-wide text-[#21222D] dark:text-[#DBDBE5]">{lang.code}</span>
+                      <span className="text-2xl sm:text-3xl font-serif text-[#21222D] dark:text-white">{lang.name}</span>
                     </div>
-                    <div className="mt-2 sm:mt-3 text-[10px] font-bold tracking-[0.15em] uppercase text-[#666666] dark:text-[#999999]">
+                    <div className="mt-2 sm:mt-3 text-[10px] font-bold tracking-[0.15em] uppercase text-[#545565] dark:text-[#545565]">
                       {lang.sub}
                     </div>
                   </button>
@@ -371,7 +371,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               <div className="mt-8 sm:mt-10 flex items-center justify-start">
                 <button
                   onClick={() => setStep(0)}
-                  className="text-[#666666] dark:text-[#999999] text-sm hover:text-[#222222] dark:hover:text-white transition-colors cursor-pointer py-2"
+                  className="text-[#545565] dark:text-[#545565] text-sm hover:text-[#21222D] dark:hover:text-white transition-colors cursor-pointer py-2"
                 >
                   ← {t.back || "Back"}
                 </button>
@@ -388,15 +388,15 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex-1 flex flex-col justify-center py-4 sm:py-8"
             >
-              <div className="mb-4 sm:mb-6 text-[#222222] dark:text-[#EFF1EE] flex items-center justify-start">
+              <div className="mb-4 sm:mb-6 text-[#21222D] dark:text-[#DBDBE5] flex items-center justify-start">
                 <RibbleLogo showWordmark={false} size="md" animated />
               </div>
               
-              <h1 className="text-2xl sm:text-3xl md:text-[36px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] dark:text-white leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-[36px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] dark:text-white leading-tight">
                 {isLogin ? (t.welcomeBack || 'Welcome back to Ribble') : (t.createYourAccount || 'Create your account')}
               </h1>
               
-              <p className="mt-2 sm:mt-3 text-[#666666] dark:text-[#999999] text-xs sm:text-[14px]">
+              <p className="mt-2 sm:mt-3 text-[#545565] dark:text-[#545565] text-xs sm:text-[14px]">
                 {isLogin ? (t.signInToAccessLibrary || 'Sign in to access your library, vocabulary, and decks.') : (t.syncLibraryDescription || 'Sync your reading library, flashcards, and progress across all your devices.')}
               </p>
 
@@ -409,7 +409,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                     disabled={isLoading}
                     aria-label="Continue with Google"
                     title="Continue with Google"
-                    className="w-full flex items-center justify-center gap-2 px-3 py-3.5 rounded-2xl border border-[#D0D2CF] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#EFF1EE] dark:hover:bg-[#252824] text-[#222222] dark:text-[#EFF1EE] text-sm font-semibold transition-all cursor-pointer shadow-xs min-h-[48px] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-3.5 rounded-2xl border border-[#DBDBE5] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#DBDBE5] dark:hover:bg-[#252824] text-[#21222D] dark:text-[#DBDBE5] text-sm font-semibold transition-all cursor-pointer shadow-xs min-h-[48px] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" aria-hidden="true">
                       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -425,7 +425,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                     disabled={isLoading}
                     aria-label="Continue with Apple"
                     title="Continue with Apple"
-                    className="w-full flex items-center justify-center gap-2 px-3 py-3.5 rounded-2xl border border-[#D0D2CF] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#EFF1EE] dark:hover:bg-[#252824] text-[#222222] dark:text-[#EFF1EE] text-sm font-semibold transition-all cursor-pointer shadow-xs min-h-[48px] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-3.5 rounded-2xl border border-[#DBDBE5] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] hover:bg-[#DBDBE5] dark:hover:bg-[#252824] text-[#21222D] dark:text-[#DBDBE5] text-sm font-semibold transition-all cursor-pointer shadow-xs min-h-[48px] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Apple className="w-5 h-5 shrink-0" aria-hidden="true" />
                     <span className="hidden sm:inline">{t.continueWithApple || "Apple"}</span>
@@ -434,23 +434,23 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
 
                 <div className="relative my-2 sm:my-3">
                   <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-[#D0D2CF] dark:border-[#2C2E2A]"></div>
+                    <div className="w-full border-t border-[#DBDBE5] dark:border-[#2C2E2A]"></div>
                   </div>
                   <div className="relative flex justify-center text-[10px] font-bold tracking-wider uppercase">
-                    <span className="px-3 bg-[#EFF1EE] dark:bg-[#121312] text-[#666666] dark:text-[#999999]">{t.orContinueWithEmail || "Or continue with email"}</span>
+                    <span className="px-3 bg-[#DBDBE5] dark:bg-[#121312] text-[#545565] dark:text-[#545565]">{t.orContinueWithEmail || "Or continue with email"}</span>
                   </div>
                 </div>
 
                 {/* Email Input */}
                 <div className="relative">
-                  <Mail className="w-4 h-4 absolute start-4 top-3.5 text-[#666666] dark:text-[#999999]" />
+                  <Mail className="w-4 h-4 absolute start-4 top-3.5 text-[#545565] dark:text-[#545565]" />
                   <input
                     type="email"
                     placeholder={t.emailAddress || "Email address"}
                     autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full ps-11 pe-4 py-3.5 rounded-2xl border border-[#D0D2CF] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] text-sm text-[#222222] dark:text-white placeholder:text-[#999999] dark:placeholder:text-[#666666] focus:border-[#222222] dark:focus:border-[#A4F5A6] outline-none transition-all min-h-[48px]"
+                    className="w-full ps-11 pe-4 py-3.5 rounded-2xl border border-[#DBDBE5] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] text-sm text-[#21222D] dark:text-white placeholder:text-[#545565] dark:placeholder:text-[#545565] focus:border-[#21222D] dark:focus:border-[#ACD1FD] outline-none transition-all min-h-[48px]"
                   />
                 </div>
                 
@@ -467,12 +467,12 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                         handleEmailAuth();
                       }
                     }}
-                    className="w-full ps-4 pe-11 py-3.5 rounded-2xl border border-[#D0D2CF] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] text-sm text-[#222222] dark:text-white placeholder:text-[#999999] dark:placeholder:text-[#666666] focus:border-[#222222] dark:focus:border-[#A4F5A6] outline-none transition-all min-h-[48px]"
+                    className="w-full ps-4 pe-11 py-3.5 rounded-2xl border border-[#DBDBE5] dark:border-[#2C2E2A] bg-white dark:bg-[#1A1C19] text-sm text-[#21222D] dark:text-white placeholder:text-[#545565] dark:placeholder:text-[#545565] focus:border-[#21222D] dark:focus:border-[#ACD1FD] outline-none transition-all min-h-[48px]"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute end-3.5 top-3.5 p-1 text-[#666666] hover:text-[#222222] dark:text-[#999999] dark:hover:text-white transition-colors cursor-pointer"
+                    className="absolute end-3.5 top-3.5 p-1 text-[#545565] hover:text-[#21222D] dark:text-[#545565] dark:hover:text-white transition-colors cursor-pointer"
                     title={showPassword ? "Hide password" : "Show password"}
                   >
                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -484,7 +484,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                 )}
 
                 {authNotice && (
-                  <p className="text-emerald-600 dark:text-[#A4F5A6] text-xs font-semibold px-1">{authNotice}</p>
+                  <p className="text-emerald-600 dark:text-[#ACD1FD] text-xs font-semibold px-1">{authNotice}</p>
                 )}
 
                 {needsConfirmation && email.trim() && (
@@ -492,7 +492,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                     type="button"
                     onClick={() => void handleResendConfirmation()}
                     disabled={isLoading}
-                    className="self-start text-xs font-bold underline text-[#222222] dark:text-[#A4F5A6] disabled:opacity-60 cursor-pointer px-1 py-1"
+                    className="self-start text-xs font-bold underline text-[#21222D] dark:text-[#ACD1FD] disabled:opacity-60 cursor-pointer px-1 py-1"
                   >
                     Resend confirmation email
                   </button>
@@ -503,21 +503,21 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                   disabled={isLoading || !email.trim() || !password.trim()}
                   className={`w-full px-6 py-3.5 rounded-2xl text-sm font-semibold transition-all shadow-xs min-h-[48px] flex items-center justify-center gap-2 ${
                     !email.trim() || !password.trim() || isLoading
-                      ? 'bg-[#D0D2CF] dark:bg-[#1E201D] text-[#999999] dark:text-[#666666] cursor-not-allowed'
-                      : 'bg-[#222222] dark:bg-[#A4F5A6] text-[#EFF1EE] dark:text-[#222222] hover:bg-[#333333] dark:hover:bg-[#8AE88D] cursor-pointer active:scale-[0.98]'
+                      ? 'bg-[#DBDBE5] dark:bg-[#1E201D] text-[#545565] dark:text-[#545565] cursor-not-allowed'
+                      : 'bg-[#21222D] dark:bg-[#ACD1FD] text-[#DBDBE5] dark:text-[#21222D] hover:bg-[#21222D] dark:hover:bg-[#8AE88D] cursor-pointer active:scale-[0.98]'
                   }`}
                 >
                   {isLoading ? (t.pleaseWait || 'Please wait...') : (isLogin ? (t.login || 'Sign In') : (t.createAccount || 'Create Account'))}
                 </button>
 
-                <p className="text-center text-xs text-[#666666] dark:text-[#999999] mt-1">
+                <p className="text-center text-xs text-[#545565] dark:text-[#545565] mt-1">
                   {isLogin ? (t.dontHaveAccount || "Don't have an account? ") : (t.alreadyHaveAccount || "Already have an account? ")}
                   <button
                     onClick={() => {
                       setIsLogin(!isLogin);
                       setAuthError('');
                     }}
-                    className="font-bold text-[#222222] dark:text-[#A4F5A6] hover:underline cursor-pointer py-1"
+                    className="font-bold text-[#21222D] dark:text-[#ACD1FD] hover:underline cursor-pointer py-1"
                   >
                     {isLogin ? (t.signUp || 'Sign up') : (t.logIn || 'Log in')}
                   </button>
@@ -531,11 +531,11 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
                     onComplete(name.trim() || 'Guest', language);
                   }}
                   disabled={isLoading}
-                  className="w-full py-3.5 rounded-full border border-[#D0D2CF] dark:border-[#2C2E2A] bg-transparent text-[#222222] dark:text-[#EFF1EE] text-sm font-bold hover:bg-white dark:hover:bg-[#1A1C19] transition-all cursor-pointer disabled:opacity-50"
+                  className="w-full py-3.5 rounded-full border border-[#DBDBE5] dark:border-[#2C2E2A] bg-transparent text-[#21222D] dark:text-[#DBDBE5] text-sm font-bold hover:bg-white dark:hover:bg-[#1A1C19] transition-all cursor-pointer disabled:opacity-50"
                 >
                   {t.continueAsGuest || 'Continue without an account'}
                 </button>
-                <p className="mt-2 text-center text-[11px] text-[#666666] dark:text-[#999999]">
+                <p className="mt-2 text-center text-[11px] text-[#545565] dark:text-[#545565]">
                   {t.guestNotice || 'Your data stays on this device until you sign in.'}
                 </p>
               </div>
@@ -543,7 +543,7 @@ export const OnboardingView: React.FC<OnboardingViewProps> = ({ onComplete, sett
               <div className="mt-6 sm:mt-8 flex items-center justify-start">
                 <button
                   onClick={() => setStep(2)}
-                  className="text-[#666666] dark:text-[#999999] text-sm hover:text-[#222222] dark:hover:text-white transition-colors cursor-pointer py-1"
+                  className="text-[#545565] dark:text-[#545565] text-sm hover:text-[#21222D] dark:hover:text-white transition-colors cursor-pointer py-1"
                 >
                   ← {t.back || "Back"}
                 </button>

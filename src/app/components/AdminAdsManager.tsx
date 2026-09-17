@@ -541,7 +541,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-            <Megaphone className="w-5 h-5 text-[#334DAF]" />
+            <Megaphone className="w-5 h-5 text-[#958CE8]" />
             Ads Campaign, Scheduling & User Messaging Hub
           </h2>
           <p className="text-xs text-stone-400">
@@ -550,12 +550,12 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
         </div>
 
         {/* Sub-tab Pill Switcher */}
-        <div className="flex items-center gap-1.5 p-1 bg-stone-100 dark:bg-stone-850 rounded-2xl border border-[#D0E4FE]/80 dark:border-stone-800">
+        <div className="flex items-center gap-1.5 p-1 bg-stone-100 dark:bg-stone-850 rounded-2xl border border-[#DBDBE5]/80 dark:border-stone-800">
           <button
             onClick={() => setSubTab('ads')}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
               subTab === 'ads'
-                ? 'bg-[#334DAF] text-white shadow-2xs'
+                ? 'bg-[#958CE8] text-white shadow-2xs'
                 : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100'
             }`}
           >
@@ -567,7 +567,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
             onClick={() => setSubTab('messages')}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
               subTab === 'messages'
-                ? 'bg-[#334DAF] text-white shadow-2xs'
+                ? 'bg-[#958CE8] text-white shadow-2xs'
                 : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100'
             }`}
           >
@@ -579,7 +579,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
 
       {/* KPI Cards Strip */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 shadow-2xs">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-2xs">
           <div className="flex items-center justify-between text-stone-400 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider">Active Live</span>
             <Zap className="w-4 h-4 text-emerald-500" />
@@ -589,7 +589,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 shadow-2xs">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-2xs">
           <div className="flex items-center justify-between text-stone-400 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider">Paused / Scheduled</span>
             <Clock className="w-4 h-4 text-amber-500" />
@@ -599,7 +599,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 shadow-2xs">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-2xs">
           <div className="flex items-center justify-between text-stone-400 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider">Impressions & CTR</span>
             <MousePointerClick className="w-4 h-4 text-blue-500" />
@@ -609,10 +609,10 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 shadow-2xs">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-2xs">
           <div className="flex items-center justify-between text-stone-400 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider">Total Clicks</span>
-            <TrendingUp className="w-4 h-4 text-[#334DAF]" />
+            <TrendingUp className="w-4 h-4 text-[#958CE8]" />
           </div>
           <div className="text-xl font-black text-stone-900 dark:text-stone-100">
             {totalClicks} <span className="text-xs text-stone-400 font-normal">clicks</span>
@@ -626,7 +626,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
       {subTab === 'ads' && (
         <div className="space-y-6">
           {/* Main Action Bar */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 rounded-2xl p-3.5 shadow-xs">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-3.5 shadow-xs">
             {/* Filter Tabs */}
             <div className="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0">
               {(
@@ -643,7 +643,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   onClick={() => setFilterTab(tab.id)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                     filterTab === tab.id
-                      ? 'bg-[#E8F2FE] dark:bg-[#E8F2FE] text-[#334DAF] border border-[#334DAF]/30'
+                      ? 'bg-[#DBDBE5] dark:bg-[#DBDBE5] text-[#958CE8] border border-[#958CE8]/30'
                       : 'text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800'
                   }`}
                 >
@@ -661,13 +661,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   placeholder="Search ads by title, page, type..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full ps-8 pe-3 py-1.5 text-xs rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-1 focus:ring-[#334DAF]"
+                  className="w-full ps-8 pe-3 py-1.5 text-xs rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-1 focus:ring-[#958CE8]"
                 />
               </div>
 
               <button
                 onClick={handleOpenCreateAd}
-                className="px-4 py-2 rounded-xl bg-[#334DAF] hover:bg-[#091F5C] text-white font-extrabold text-xs flex items-center gap-1.5 shadow-md cursor-pointer transition-transform active:scale-95 shrink-0"
+                className="px-4 py-2 rounded-xl bg-[#958CE8] hover:bg-[#21222D] text-white font-extrabold text-xs flex items-center gap-1.5 shadow-md cursor-pointer transition-transform active:scale-95 shrink-0"
               >
                 <Plus className="w-4 h-4" />
                 <span>Create New Ad</span>
@@ -684,7 +684,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
           )}
 
           {/* ADS TABLE & HISTORY LIST */}
-          <div className="bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-3xl p-6 shadow-sm space-y-4">
             <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
               <div>
                 <h3 className="font-bold text-stone-900 dark:text-stone-100 text-sm">
@@ -721,7 +721,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     const isTemporaryPause = ad.pausedUntil && new Date(ad.pausedUntil).getTime() > nowTime;
 
                     return (
-                      <tr key={ad.id} className="hover:bg-[#E8F2FE]/50 dark:hover:bg-stone-900/50">
+                      <tr key={ad.id} className="hover:bg-[#DBDBE5]/50 dark:hover:bg-stone-900/50">
                         {/* 1. Campaign Details with Thumbnail */}
                         <td className="py-3.5 px-3">
                           <div className="flex items-start gap-3 max-w-xs">
@@ -729,16 +729,16 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                               <img
                                 src={ad.imageUrl}
                                 alt=""
-                                className="w-12 h-12 rounded-xl object-cover shrink-0 border border-[#D0E4FE] dark:border-stone-700"
+                                className="w-12 h-12 rounded-xl object-cover shrink-0 border border-[#DBDBE5] dark:border-stone-700"
                               />
                             ) : (
                               <div className="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-400 shrink-0 border border-dashed border-stone-300 dark:border-stone-700">
-                                <Sparkles className="w-4 h-4 text-[#334DAF]" />
+                                <Sparkles className="w-4 h-4 text-[#958CE8]" />
                               </div>
                             )}
                             <div className="min-w-0">
                               <div className="flex items-center gap-1.5 mb-0.5">
-                                <span className="px-1.5 py-0.5 rounded-md bg-[#E8F2FE] dark:bg-[#E8F2FE] text-[#334DAF] text-[9px] font-black uppercase">
+                                <span className="px-1.5 py-0.5 rounded-md bg-[#DBDBE5] dark:bg-[#DBDBE5] text-[#958CE8] text-[9px] font-black uppercase">
                                   {ad.badgeText || 'Promo'}
                                 </span>
                               </div>
@@ -755,18 +755,18 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         {/* 2. Format & Page Target */}
                         <td className="py-3.5 px-3">
                           <div className="space-y-1">
-                            <span className="inline-block px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-[#7096D1] font-bold text-[10px]">
+                            <span className="inline-block px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-[#ACD1FD] font-bold text-[10px]">
                               {ad.placement}
                             </span>
                             <div className="text-[11px] text-stone-500 font-medium">
-                              Page: <strong className="text-[#091F5C] dark:text-stone-200">{ad.targetPage}</strong>
+                              Page: <strong className="text-[#21222D] dark:text-stone-200">{ad.targetPage}</strong>
                             </div>
                           </div>
                         </td>
 
                         {/* 3. Timing & Delay */}
                         <td className="py-3.5 px-3">
-                          <div className="space-y-1 text-[11px] text-stone-600 dark:text-[#7096D1]">
+                          <div className="space-y-1 text-[11px] text-stone-600 dark:text-[#ACD1FD]">
                             <div>Delay: <strong>{ad.delaySeconds ? `${ad.delaySeconds}s` : 'Instant'}</strong></div>
                             <div className="text-stone-400 text-[10px]">Freq: {ad.frequency || 'Always'}</div>
                           </div>
@@ -811,7 +811,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         {/* 5. Metrics */}
                         <td className="py-3.5 px-3">
                           <div className="space-y-0.5">
-                            <div className="font-bold text-[#091F5C] dark:text-stone-200">
+                            <div className="font-bold text-[#21222D] dark:text-stone-200">
                               {ad.impressionsCount || 0} <span className="text-[10px] font-normal text-stone-400">views</span>
                             </div>
                             <div className="text-emerald-600 dark:text-emerald-400 font-bold text-[11px]">
@@ -847,7 +847,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             {/* Inspect Styled Card */}
                             <button
                               onClick={() => setInspectAd(ad)}
-                              className="p-1.5 rounded-lg border border-[#334DAF]/30 bg-[#E8F2FE]/60 dark:bg-[#E8F2FE]/40 text-[#334DAF] hover:bg-[#E8F2FE] transition-colors cursor-pointer"
+                              className="p-1.5 rounded-lg border border-[#958CE8]/30 bg-[#DBDBE5]/60 dark:bg-[#DBDBE5]/40 text-[#958CE8] hover:bg-[#DBDBE5] transition-colors cursor-pointer"
                               title="Inspect Live Styled Card"
                             >
                               <Eye className="w-3.5 h-3.5" />
@@ -856,7 +856,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             {/* Edit Ad */}
                             <button
                               onClick={() => handleOpenEditAd(ad)}
-                              className="p-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-[#7096D1] transition-colors cursor-pointer"
+                              className="p-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-[#ACD1FD] transition-colors cursor-pointer"
                               title="Edit Ad Parameters"
                             >
                               <Edit3 className="w-3.5 h-3.5" />
@@ -865,7 +865,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             {/* Duplicate / Clone */}
                             <button
                               onClick={() => handleDuplicateAd(ad.id)}
-                              className="p-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-[#7096D1] transition-colors cursor-pointer"
+                              className="p-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-[#ACD1FD] transition-colors cursor-pointer"
                               title="Clone / Duplicate Ad"
                             >
                               <Copy className="w-3.5 h-3.5" />
@@ -874,7 +874,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             {/* Reset Stats */}
                             <button
                               onClick={() => handleResetStats(ad.id)}
-                              className="p-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-400 hover:text-stone-700 transition-colors cursor-pointer"
+                              className="p-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-400 hover:text-stone-700 transition-colors cursor-pointer"
                               title="Reset Impressions & Clicks"
                             >
                               <RotateCcw className="w-3.5 h-3.5" />
@@ -915,10 +915,10 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
         <div className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Compose Notification Form */}
-            <div className="lg:col-span-7 bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 rounded-3xl p-6 shadow-sm space-y-5">
+            <div className="lg:col-span-7 bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-3xl p-6 shadow-sm space-y-5">
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
                 <h3 className="font-bold text-stone-900 dark:text-stone-100 text-sm flex items-center gap-2">
-                  <Send className="w-4 h-4 text-[#334DAF]" />
+                  <Send className="w-4 h-4 text-[#958CE8]" />
                   Compose Notification or Direct Message
                 </h3>
                 <span className="text-[10px] text-stone-400 font-bold uppercase">Direct Dispatch</span>
@@ -934,13 +934,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
               <form onSubmit={handleSendMessage} className="space-y-4 text-xs font-medium">
                 {/* Recipient Selection */}
                 <div>
-                  <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                  <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                     Send Target (All Users or Specific User) *
                   </label>
                   <select
                     value={msgRecipient}
                     onChange={(e) => setMsgRecipient(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none focus:ring-2 focus:ring-[#334DAF]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none focus:ring-2 focus:ring-[#958CE8]"
                   >
                     <option value="all">📢 Broadcast to All Users (All Registered Accounts)</option>
                     <optgroup label="Direct Message to Specific User">
@@ -955,7 +955,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                    <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                       Notification Subject / Title *
                     </label>
                     <input
@@ -964,18 +964,18 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       placeholder="e.g. Welcome Gift: Free 200 Flashcards unlocked!"
                       value={msgTitle}
                       onChange={(e) => setMsgTitle(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#334DAF]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#958CE8]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                    <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                       Priority Level
                     </label>
                     <select
                       value={msgPriority}
                       onChange={(e) => setMsgPriority(e.target.value as any)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
                     >
                       <option value="normal">Normal (Standard)</option>
                       <option value="high">High (Highlighted in drawer)</option>
@@ -985,7 +985,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                  <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                     Message Body Text *
                   </label>
                   <textarea
@@ -994,7 +994,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     placeholder="Write detailed instructions, notes, or personalized message..."
                     value={msgBody}
                     onChange={(e) => setMsgBody(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#334DAF] resize-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#958CE8] resize-none"
                   />
                 </div>
 
@@ -1008,7 +1008,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                    <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                       Action Button Label (Optional)
                     </label>
                     <input
@@ -1016,12 +1016,12 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       placeholder="e.g. Open Reader, Study Decks"
                       value={msgActionText}
                       onChange={(e) => setMsgActionText(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                    <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                       Action Destination Route / Link
                     </label>
                     <input
@@ -1029,14 +1029,14 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       placeholder="#reader, #flashcards, #practice, or https://"
                       value={msgActionUrl}
                       onChange={(e) => setMsgActionUrl(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
                     />
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-[#334DAF] hover:bg-[#091F5C] text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer active:scale-98"
+                  className="w-full py-3 rounded-xl bg-[#958CE8] hover:bg-[#21222D] text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer active:scale-98"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Notification Immediately</span>
@@ -1045,10 +1045,10 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
             </div>
 
             {/* Notification History Log */}
-            <div className="lg:col-span-5 bg-white dark:bg-[#1D201A] border border-[#D0E4FE]/80 dark:border-stone-800 rounded-3xl p-5 shadow-sm space-y-4">
+            <div className="lg:col-span-5 bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-3xl p-5 shadow-sm space-y-4">
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-2.5">
-                <h4 className="font-bold text-[#091F5C] dark:text-stone-200 text-xs flex items-center gap-2">
-                  <Bell className="w-3.5 h-3.5 text-[#334DAF]" />
+                <h4 className="font-bold text-[#21222D] dark:text-stone-200 text-xs flex items-center gap-2">
+                  <Bell className="w-3.5 h-3.5 text-[#958CE8]" />
                   Dispatched Notifications History
                 </h4>
                 <span className="text-[10px] text-stone-400 font-semibold">
@@ -1060,7 +1060,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                 {notifications.map((notif) => (
                   <div
                     key={notif.id}
-                    className="p-3.5 rounded-2xl bg-[#E8F2FE] dark:bg-stone-900/60 border border-[#D0E4FE]/80 dark:border-stone-800 space-y-2 relative"
+                    className="p-3.5 rounded-2xl bg-[#DBDBE5] dark:bg-stone-900/60 border border-[#DBDBE5]/80 dark:border-stone-800 space-y-2 relative"
                   >
                     <button
                       onClick={() => handleDeleteNotification(notif.id)}
@@ -1071,7 +1071,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     </button>
 
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-[#E8F2FE] dark:bg-[#E8F2FE] text-[#334DAF] font-black text-[9px] uppercase">
+                      <span className="px-2 py-0.5 rounded-md bg-[#DBDBE5] dark:bg-[#DBDBE5] text-[#958CE8] font-black text-[9px] uppercase">
                         {notif.targetUserId === 'all' ? 'BROADCAST' : 'DIRECT'}
                       </span>
                       <span className="text-[10px] text-stone-400">
@@ -1082,7 +1082,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     <h5 className="font-bold text-xs text-stone-900 dark:text-stone-100 pe-6">
                       {notif.title}
                     </h5>
-                    <p className="text-[11px] text-stone-600 dark:text-[#7096D1]">
+                    <p className="text-[11px] text-stone-600 dark:text-[#ACD1FD]">
                       {notif.message}
                     </p>
 
@@ -1115,11 +1115,11 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1E221B] border border-[#D0E4FE] dark:border-stone-800 rounded-3xl p-6 w-full max-w-4xl shadow-2xl space-y-5 my-8 max-h-[90vh] overflow-y-auto"
+              className="bg-white dark:bg-[#1E221B] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-4xl shadow-2xl space-y-5 my-8 max-h-[90vh] overflow-y-auto"
             >
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-[#334DAF]" />
+                  <Sparkles className="w-5 h-5 text-[#958CE8]" />
                   <h3 className="font-black text-stone-900 dark:text-stone-100 text-base">
                     {editingAdId ? 'Edit Ad Campaign' : 'Create & Schedule New Ad'}
                   </h3>
@@ -1138,7 +1138,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   {/* Title & Badge */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         Ad Headline / Title *
                       </label>
                       <input
@@ -1147,12 +1147,12 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         placeholder="e.g. 50% Off Fluent English Mastery Deck"
                         value={adTitle}
                         onChange={(e) => setAdTitle(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#334DAF]"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#958CE8]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         Badge Tag
                       </label>
                       <input
@@ -1160,14 +1160,14 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         placeholder="e.g. Special Offer, Sponsored, Limited Deal"
                         value={adBadgeText}
                         onChange={(e) => setAdBadgeText(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#334DAF]"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#958CE8]"
                       />
                     </div>
                   </div>
 
                   {/* Description */}
                   <div>
-                    <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                    <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                       Ad Description / Pitch *
                     </label>
                     <textarea
@@ -1176,20 +1176,20 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       placeholder="Short pitch highlighting the key benefit, discount, or feature announcement..."
                       value={adDescription}
                       onChange={(e) => setAdDescription(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#334DAF] resize-none"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#958CE8] resize-none"
                     />
                   </div>
 
                   {/* Where to Display (Target Page) */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         Target Page (Where to Display)
                       </label>
                       <select
                         value={adTargetPage}
                         onChange={(e) => setAdTargetPage(e.target.value as any)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
                       >
                         {targetPageOptions.map((opt) => (
                           <option key={opt.value} value={opt.value}>
@@ -1200,13 +1200,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         Ad Format / Placement
                       </label>
                       <select
                         value={adPlacement}
                         onChange={(e) => setAdPlacement(e.target.value as any)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 font-bold focus:outline-none"
                       >
                         {placementOptions.map((opt) => (
                           <option key={opt.value} value={opt.value}>
@@ -1218,9 +1218,9 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   </div>
 
                   {/* When to Display (Scheduling & Timing) */}
-                  <div className="p-3.5 rounded-2xl bg-[#E8F2FE] dark:bg-stone-900 border border-[#D0E4FE]/80 dark:border-stone-800 space-y-3">
-                    <div className="flex items-center gap-2 font-bold text-[#091F5C] dark:text-stone-200 text-xs">
-                      <Clock className="w-4 h-4 text-[#334DAF]" />
+                  <div className="p-3.5 rounded-2xl bg-[#DBDBE5] dark:bg-stone-900 border border-[#DBDBE5]/80 dark:border-stone-800 space-y-3">
+                    <div className="flex items-center gap-2 font-bold text-[#21222D] dark:text-stone-200 text-xs">
+                      <Clock className="w-4 h-4 text-[#958CE8]" />
                       <span>When to Appear (Scheduling & Display Timing)</span>
                     </div>
 
@@ -1233,7 +1233,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                           type="datetime-local"
                           value={adStartDate}
                           onChange={(e) => setAdStartDate(e.target.value)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         />
                       </div>
 
@@ -1245,7 +1245,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                           type="datetime-local"
                           value={adExpiresAt}
                           onChange={(e) => setAdExpiresAt(e.target.value)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         />
                       </div>
                     </div>
@@ -1258,7 +1258,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         <select
                           value={adDelaySeconds}
                           onChange={(e) => setAdDelaySeconds(Number(e.target.value))}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           <option value={0}>0s (Instant on Page Load)</option>
                           <option value={3}>3 seconds delay</option>
@@ -1276,7 +1276,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         <select
                           value={adFrequency}
                           onChange={(e) => setAdFrequency(e.target.value as any)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           <option value="always">Always (Every time page opens)</option>
                           <option value="once-per-session">Once per user session</option>
@@ -1298,22 +1298,22 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   {/* ======================================================== */}
                   {/* CARD STYLING, COLORS, FONTS & LAYOUT CONTROLS */}
                   {/* ======================================================== */}
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-stone-50 via-white to-stone-50 dark:from-stone-900 dark:via-[#1D201A] dark:to-stone-900 border border-[#334DAF]/30 space-y-4 shadow-xs">
-                    <div className="flex items-center justify-between border-b border-[#D0E4FE]/80 dark:border-stone-800 pb-2.5">
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-stone-50 via-white to-stone-50 dark:from-stone-900 dark:via-[#21222D] dark:to-stone-900 border border-[#958CE8]/30 space-y-4 shadow-xs">
+                    <div className="flex items-center justify-between border-b border-[#DBDBE5]/80 dark:border-stone-800 pb-2.5">
                       <div className="flex items-center gap-2">
-                        <Palette className="w-4 h-4 text-[#334DAF]" />
+                        <Palette className="w-4 h-4 text-[#958CE8]" />
                         <h4 className="font-bold text-stone-900 dark:text-stone-100 text-xs">
                           Card Styling, Colors, Typography & Layout
                         </h4>
                       </div>
-                      <span className="text-[10px] font-bold text-[#334DAF] bg-[#E8F2FE] dark:bg-[#E8F2FE] px-2 py-0.5 rounded-md">
+                      <span className="text-[10px] font-bold text-[#958CE8] bg-[#DBDBE5] dark:bg-[#DBDBE5] px-2 py-0.5 rounded-md">
                         Visual Builder
                       </span>
                     </div>
 
                     {/* 1. PALETTE & COLORS */}
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1.5">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1.5">
                         Card Color Theme
                       </label>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -1324,8 +1324,8 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             onClick={() => setAdCardTheme(key as any)}
                             className={`p-2 rounded-xl border text-start flex items-center gap-2 transition-all cursor-pointer ${
                               adCardTheme === key
-                                ? 'border-[#334DAF] ring-2 ring-[#334DAF]/30 shadow-xs'
-                                : 'border-[#D0E4FE] dark:border-stone-700 hover:border-stone-300'
+                                ? 'border-[#958CE8] ring-2 ring-[#958CE8]/30 shadow-xs'
+                                : 'border-[#DBDBE5] dark:border-stone-700 hover:border-stone-300'
                             }`}
                             style={{ background: palette.gradient }}
                           >
@@ -1344,14 +1344,14 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       </div>
 
                       {/* Custom Color Overrides */}
-                      <div className="mt-2.5 pt-2 border-t border-[#D0E4FE]/60 dark:border-stone-800 flex items-center gap-3 flex-wrap">
+                      <div className="mt-2.5 pt-2 border-t border-[#DBDBE5]/60 dark:border-stone-800 flex items-center gap-3 flex-wrap">
                         <label className="flex items-center gap-1.5 text-[11px] text-stone-600 dark:text-stone-400 font-semibold cursor-pointer">
                           <input
                             type="radio"
                             name="themeChoice"
                             checked={adCardTheme === 'custom'}
                             onChange={() => setAdCardTheme('custom')}
-                            className="text-[#334DAF] focus:ring-[#334DAF]"
+                            className="text-[#958CE8] focus:ring-[#958CE8]"
                           />
                           <span>Custom Colors:</span>
                         </label>
@@ -1395,13 +1395,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     {/* 2. LAYOUT & TEXT ALIGNMENT ("WHERE TO WRITE") */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Card Layout Structure
                         </label>
                         <select
                           value={adCardLayout}
                           onChange={(e) => setAdCardLayout(e.target.value as any)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-semibold"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-semibold"
                         >
                           <option value="horizontal-split">Horizontal Split (Pro Plan Style - Image 1)</option>
                           <option value="icon-card">Status Icon Squircle (Pastel Card - Image 2)</option>
@@ -1411,17 +1411,17 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       </div>
 
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Where to Write (Text Alignment)
                         </label>
-                        <div className="flex items-center gap-1 bg-stone-100 dark:bg-stone-800 p-1 rounded-lg border border-[#D0E4FE] dark:border-stone-700">
+                        <div className="flex items-center gap-1 bg-stone-100 dark:bg-stone-800 p-1 rounded-lg border border-[#DBDBE5] dark:border-stone-700">
                           <button
                             type="button"
                             onClick={() => setAdTextAlign('left')}
                             className={`flex-1 py-1 rounded text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer ${
                               adTextAlign === 'left'
-                                ? 'bg-white dark:bg-stone-900 text-[#334DAF] shadow-xs'
-                                : 'text-stone-500 hover:text-[#091F5C]'
+                                ? 'bg-white dark:bg-stone-900 text-[#958CE8] shadow-xs'
+                                : 'text-stone-500 hover:text-[#21222D]'
                             }`}
                           >
                             <AlignLeft className="w-3.5 h-3.5" />
@@ -1433,8 +1433,8 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             onClick={() => setAdTextAlign('center')}
                             className={`flex-1 py-1 rounded text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer ${
                               adTextAlign === 'center'
-                                ? 'bg-white dark:bg-stone-900 text-[#334DAF] shadow-xs'
-                                : 'text-stone-500 hover:text-[#091F5C]'
+                                ? 'bg-white dark:bg-stone-900 text-[#958CE8] shadow-xs'
+                                : 'text-stone-500 hover:text-[#21222D]'
                             }`}
                           >
                             <AlignCenter className="w-3.5 h-3.5" />
@@ -1446,8 +1446,8 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                             onClick={() => setAdTextAlign('right')}
                             className={`flex-1 py-1 rounded text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer ${
                               adTextAlign === 'right'
-                                ? 'bg-white dark:bg-stone-900 text-[#334DAF] shadow-xs'
-                                : 'text-stone-500 hover:text-[#091F5C]'
+                                ? 'bg-white dark:bg-stone-900 text-[#958CE8] shadow-xs'
+                                : 'text-stone-500 hover:text-[#21222D]'
                             }`}
                           >
                             <AlignRight className="w-3.5 h-3.5" />
@@ -1460,13 +1460,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     {/* 3. TYPOGRAPHY FONT & SIZES */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Font Family
                         </label>
                         <select
                           value={adCardFont}
                           onChange={(e) => setAdCardFont(e.target.value as any)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           <option value="serif">High-Contrast Serif (Plan Style)</option>
                           <option value="sans">Clean Geometric Sans (SF Pro)</option>
@@ -1476,13 +1476,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       </div>
 
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Title Font Size
                         </label>
                         <select
                           value={adTitleSize}
                           onChange={(e) => setAdTitleSize(e.target.value as any)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           <option value="sm">Small (14px)</option>
                           <option value="md">Medium (18px)</option>
@@ -1492,13 +1492,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       </div>
 
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Corner Squircle
                         </label>
                         <select
                           value={adCardRadius}
                           onChange={(e) => setAdCardRadius(e.target.value as any)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           <option value="normal">Subtle (14px)</option>
                           <option value="rounded">Smooth (20px)</option>
@@ -1511,13 +1511,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     {/* 4. TOP ICON CHIP & SUBTITLE / PRICE */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Top Circular Icon Badge (Image 2 Style)
                         </label>
                         <select
                           value={adIconBadge}
                           onChange={(e) => setAdIconBadge(e.target.value)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         >
                           {ICON_OPTIONS.map((opt) => (
                             <option key={opt.id} value={opt.id}>
@@ -1528,7 +1528,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       </div>
 
                       <div>
-                        <label className="block text-stone-700 dark:text-[#7096D1] font-bold text-[11px] mb-1">
+                        <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px] mb-1">
                           Price / Sub-metric Tag (e.g. $89/Month, +3 points)
                         </label>
                         <input
@@ -1536,7 +1536,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                           placeholder="e.g. $89 / Month or +3 points"
                           value={adSubtitlePrice}
                           onChange={(e) => setAdSubtitlePrice(e.target.value)}
-                          className="w-full px-3 py-1.5 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                          className="w-full px-3 py-1.5 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                         />
                       </div>
                     </div>
@@ -1544,13 +1544,13 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     {/* 5. PERK BULLET POINTS WITH CHECKMARKS */}
                     <div className="space-y-2 pt-1">
                       <div className="flex items-center justify-between">
-                        <label className="text-stone-700 dark:text-[#7096D1] font-bold text-[11px]">
+                        <label className="text-stone-700 dark:text-[#ACD1FD] font-bold text-[11px]">
                           Feature Bullet Points (With Checkmarks - Image 1 Style)
                         </label>
                         <button
                           type="button"
                           onClick={() => setAdBulletPoints([...adBulletPoints, ''])}
-                          className="text-[10px] text-[#334DAF] hover:underline font-bold flex items-center gap-1 cursor-pointer"
+                          className="text-[10px] text-[#958CE8] hover:underline font-bold flex items-center gap-1 cursor-pointer"
                         >
                           <PlusCircle className="w-3.5 h-3.5" />
                           <span>Add Perk Bullet</span>
@@ -1569,7 +1569,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                               copy[idx] = e.target.value;
                               setAdBulletPoints(copy);
                             }}
-                            className="flex-1 px-3 py-1 rounded-lg border border-[#D0E4FE] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
+                            className="flex-1 px-3 py-1 rounded-lg border border-[#DBDBE5] dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs"
                           />
                           <button
                             type="button"
@@ -1589,7 +1589,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   {/* CTA Label & Destination URL */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         CTA Button Label
                       </label>
                       <input
@@ -1597,12 +1597,12 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         placeholder="e.g. Claim 50% Off, Try Now, Open Deck"
                         value={adCtaText}
                         onChange={(e) => setAdCtaText(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                      <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                         CTA Destination Route / Link
                       </label>
                       <input
@@ -1610,7 +1610,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         placeholder="e.g. #practice, #reader, #flashcards, or https://"
                         value={adCtaUrl}
                         onChange={(e) => setAdCtaUrl(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -1630,7 +1630,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         key={chip.route}
                         type="button"
                         onClick={() => setAdCtaUrl(chip.route)}
-                        className="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-[#7096D1] text-[10px] font-semibold hover:bg-stone-200 cursor-pointer"
+                        className="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-[#ACD1FD] text-[10px] font-semibold hover:bg-stone-200 cursor-pointer"
                       >
                         {chip.label}
                       </button>
@@ -1638,17 +1638,17 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   </div>
 
                   {!editingAdId && (
-                    <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#E8F2FE] dark:bg-stone-900 border border-[#D0E4FE]/80 dark:border-stone-800">
+                    <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#DBDBE5] dark:bg-stone-900 border border-[#DBDBE5]/80 dark:border-stone-800">
                       <input
                         type="checkbox"
                         id="sendNotificationCheckModal"
                         checked={adSendNotification}
                         onChange={(e) => setAdSendNotification(e.target.checked)}
-                        className="w-4 h-4 rounded text-[#334DAF] focus:ring-[#334DAF] cursor-pointer"
+                        className="w-4 h-4 rounded text-[#958CE8] focus:ring-[#958CE8] cursor-pointer"
                       />
                       <label
                         htmlFor="sendNotificationCheckModal"
-                        className="text-xs text-stone-700 dark:text-[#7096D1] font-medium cursor-pointer"
+                        className="text-xs text-stone-700 dark:text-[#ACD1FD] font-medium cursor-pointer"
                       >
                         Also broadcast this ad to all users&apos; notification bell 🔔
                       </label>
@@ -1658,7 +1658,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                   <div className="flex items-center gap-3 pt-2">
                     <button
                       type="submit"
-                      className="flex-1 py-3 rounded-xl bg-[#334DAF] hover:bg-[#091F5C] text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-transform active:scale-98"
+                      className="flex-1 py-3 rounded-xl bg-[#958CE8] hover:bg-[#21222D] text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-transform active:scale-98"
                     >
                       <Sparkles className="w-4 h-4" />
                       <span>{editingAdId ? 'Save & Update Ad' : 'Publish Ad Campaign'}</span>
@@ -1675,10 +1675,10 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
 
                 {/* Right Column: Live Visual Preview */}
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="bg-[#E8F2FE] dark:bg-stone-900 border border-[#D0E4FE]/80 dark:border-stone-800 rounded-2xl p-4 space-y-3 sticky top-4">
-                    <div className="flex items-center justify-between border-b border-[#D0E4FE] dark:border-stone-800 pb-2">
-                      <h4 className="font-bold text-[#091F5C] dark:text-stone-200 text-xs flex items-center gap-2">
-                        <Eye className="w-3.5 h-3.5 text-[#334DAF]" />
+                  <div className="bg-[#DBDBE5] dark:bg-stone-900 border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 space-y-3 sticky top-4">
+                    <div className="flex items-center justify-between border-b border-[#DBDBE5] dark:border-stone-800 pb-2">
+                      <h4 className="font-bold text-[#21222D] dark:text-stone-200 text-xs flex items-center gap-2">
+                        <Eye className="w-3.5 h-3.5 text-[#958CE8]" />
                         Live Styled Card Preview
                       </h4>
                       <span className="text-[10px] text-stone-400 font-semibold uppercase">
@@ -1741,7 +1741,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                       />
                     </div>
 
-                    <div className="bg-white dark:bg-stone-800/80 rounded-xl p-3 border border-[#D0E4FE]/80 dark:border-stone-700 text-[10px] space-y-1 text-stone-500">
+                    <div className="bg-white dark:bg-stone-800/80 rounded-xl p-3 border border-[#DBDBE5]/80 dark:border-stone-700 text-[10px] space-y-1 text-stone-500">
                       <div className="flex justify-between">
                         <span className="font-bold">Theme:</span>
                         <span className="capitalize">{adCardTheme}</span>
@@ -1773,7 +1773,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1E221B] border border-[#D0E4FE] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-4"
+              className="bg-white dark:bg-[#1E221B] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-4"
             >
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
                 <div className="flex items-center gap-2">
@@ -1800,7 +1800,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
               <form onSubmit={handleApplyPause} className="space-y-4 text-xs">
                 {/* 1-Click Duration Presets */}
                 <div>
-                  <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1.5">
+                  <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1.5">
                     Select Pause Duration
                   </label>
                   <div className="grid grid-cols-3 gap-2">
@@ -1821,8 +1821,8 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         }}
                         className={`p-2 rounded-xl text-xs font-bold border transition-all cursor-pointer text-center ${
                           pauseDurationHours === preset.hours && !customResumeDate
-                            ? 'border-[#222222] bg-[#A4F5A6] text-[#222222] font-bold'
-                            : 'border-[#D0D2CF] dark:border-stone-800 hover:bg-[#EFF1EE] dark:hover:bg-stone-900 text-stone-700 dark:text-stone-300'
+                            ? 'border-[#21222D] bg-[#ACD1FD] text-[#21222D] font-bold'
+                            : 'border-[#DBDBE5] dark:border-stone-800 hover:bg-[#DBDBE5] dark:hover:bg-stone-900 text-stone-700 dark:text-stone-300'
                         }`}
                       >
                         {preset.label}
@@ -1833,19 +1833,19 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
 
                 {/* Custom Resume Timestamp */}
                 <div>
-                  <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                  <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                     Or Resume at Specific Date & Time
                   </label>
                   <input
                     type="datetime-local"
                     value={customResumeDate}
                     onChange={(e) => setCustomResumeDate(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs"
+                    className="w-full px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-stone-700 dark:text-[#7096D1] font-bold mb-1">
+                  <label className="block text-stone-700 dark:text-[#ACD1FD] font-bold mb-1">
                     Reason / Note (Optional)
                   </label>
                   <input
@@ -1853,7 +1853,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     placeholder="e.g. Updating discount links, seasonal break"
                     value={pauseReason}
                     onChange={(e) => setPauseReason(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs"
+                    className="w-full px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs"
                   />
                 </div>
 
@@ -1893,11 +1893,11 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1E221B] border border-[#D0E4FE] dark:border-stone-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl space-y-4"
+              className="bg-white dark:bg-[#1E221B] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl space-y-4"
             >
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
                 <div className="flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-[#334DAF]" />
+                  <Eye className="w-4 h-4 text-[#958CE8]" />
                   <h4 className="font-extrabold text-stone-900 dark:text-stone-100 text-sm">
                     Campaign Card Preview & Styling
                   </h4>
@@ -1934,7 +1934,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     setInspectAd(null);
                     handleOpenEditAd(adToEdit);
                   }}
-                  className="px-4 py-2 rounded-xl bg-[#222222] hover:bg-[#A4F5A6] text-[#EFF1EE] hover:text-[#222222] font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-colors"
+                  className="px-4 py-2 rounded-xl bg-[#21222D] hover:bg-[#ACD1FD] text-[#DBDBE5] hover:text-[#21222D] font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-colors"
                 >
                   <Edit3 className="w-3.5 h-3.5" />
                   <span>Edit Styling & Content</span>
