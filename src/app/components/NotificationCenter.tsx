@@ -132,7 +132,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Vocabulary Mastered
     if (sender.includes('vocab') || title.includes('mastered') || title.includes('flashcard') || badge.includes('mastered')) {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#1D201A] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
           <Brain className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -168,7 +168,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     // Announcements
     if (sender.includes('curriculum') || title.includes('boost') || notif.type === 'announcement') {
       return (
-        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#111111] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
+        <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-black/20 border border-white/20">
           <Sparkles className="w-5 h-5 stroke-[2.2]" />
         </div>
       );
@@ -176,7 +176,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
     // Default Brand Logo
     return (
-      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#111111] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
+      <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#21222D] to-[#21222D] text-[#ACD1FD] flex items-center justify-center shrink-0 shadow-md shadow-[#21222D]/20 border border-white/20">
         <BookOpen className="w-5 h-5 stroke-[2.2]" />
       </div>
     );
@@ -225,7 +225,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
             className="relative z-50 w-full max-w-[420px] sm:max-w-[440px] mt-10 sm:mt-6 flex flex-col items-center select-none"
           >
             {/* Top Control Bar */}
-            <div className="w-full flex items-center justify-between px-3.5 py-2 mb-2.5 bg-white/95 dark:bg-[#1D201A]/95 backdrop-blur-xl rounded-2xl border border-[#DBDBE5] dark:border-stone-800 shadow-xs">
+            <div className="w-full flex items-center justify-between px-3.5 py-2 mb-2.5 bg-white/95 dark:bg-[#21222D]/95 backdrop-blur-xl rounded-2xl border border-[#DBDBE5] dark:border-stone-800 shadow-xs">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#21222D] dark:bg-[#ACD1FD] animate-pulse" />
                 <span className="text-xs font-bold text-[#21222D] dark:text-stone-100 tracking-tight">
@@ -320,7 +320,7 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 
             {/* EMPTY STATE */}
             {notifications.length === 0 ? (
-              <div className="w-full bg-white/95 dark:bg-[#1D201A]/95 backdrop-blur-2xl rounded-[24px] p-7 shadow-xl border border-[#DBDBE5] dark:border-stone-800 flex flex-col items-center justify-center text-center">
+              <div className="w-full bg-white/95 dark:bg-[#21222D]/95 backdrop-blur-2xl rounded-[24px] p-7 shadow-xl border border-[#DBDBE5] dark:border-stone-800 flex flex-col items-center justify-center text-center">
                 <div className="w-12 h-12 rounded-2xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-[#ACD1FD] flex items-center justify-center mb-2 font-bold">
                   <Bell className="w-6 h-6" />
                 </div>

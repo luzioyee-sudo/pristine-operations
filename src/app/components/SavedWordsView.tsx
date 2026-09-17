@@ -111,7 +111,7 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
         </div>
         <button
           onClick={onAddWordClick}
-          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
+          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
         >
           <Plus className="w-4.5 h-4.5" />
           <span>{t.addBookmark?.replace('+', '') || 'Add New Word'}</span>
@@ -119,7 +119,7 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 p-3 rounded-2xl shadow-xs">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 p-3 rounded-2xl shadow-xs">
         <div className="flex items-center bg-[#DBDBE5] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#DBDBE5]/40">
           {(['all', 'new', 'learning', 'mastered'] as const).map(tab => {
             const isActive = activeFilter === tab;
@@ -152,7 +152,7 @@ export const SavedWordsView: React.FC<SavedWordsViewProps> = ({
       </div>
 
       {/* Dictionary List */}
-      <div className="bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-3xl overflow-hidden shadow-2xs">
+      <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-3xl overflow-hidden shadow-2xs">
         <div className="overflow-x-auto">
           <table className="w-full text-start text-xs">
             <thead className="bg-[#DBDBE5]/60 dark:bg-stone-900/50 text-[#545565] dark:text-stone-400 uppercase tracking-wider font-extrabold border-b border-[#DBDBE5] dark:border-white/10">

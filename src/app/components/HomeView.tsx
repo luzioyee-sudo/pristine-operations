@@ -641,7 +641,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                           onNavigate?.('reader');
                         }
                       }}
-                      className="bg-[#1F2620] hover:bg-[#111111] text-white px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1 transition-all group-hover:scale-105 shadow-xs shrink-0 cursor-pointer"
+                      className="bg-[#1F2620] hover:bg-[#21222D] text-white px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1 transition-all group-hover:scale-105 shadow-xs shrink-0 cursor-pointer"
                     >
                       <span>Continue</span>
                       <ChevronRight className="w-3.5 h-3.5 text-[#ACD1FD]" />
@@ -893,8 +893,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Status of Each Language Section */}
-        <div ref={languageProfilesRef} className="mt-8 bg-white dark:bg-[#2C2C2E] p-5 sm:p-6 rounded-2xl border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs">
-          <div className="flex items-center justify-between mb-4 border-b border-[#E6DFD3] dark:border-[#3A3A3C] pb-2.5">
+        <div ref={languageProfilesRef} className="mt-8 bg-white dark:bg-[#2C2C2E] p-5 sm:p-6 rounded-2xl border border-[#E6DFD3] dark:border-[#21222D] shadow-xs">
+          <div className="flex items-center justify-between mb-4 border-b border-[#E6DFD3] dark:border-[#21222D] pb-2.5">
             <h3 className="text-base font-bold text-[#21222D] dark:text-[#DBDBE5] flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               Active Languages Status
@@ -907,7 +907,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {globalStats.langStatuses.map((lang) => {
               const percent = Math.min(100, Math.max(1, Math.round((lang.vocab / 1000) * 100) + (lang.books * 5)));
               return (
-                <div key={lang.name} className="group relative overflow-hidden p-4 rounded-xl bg-[#F9F8F6] dark:bg-[#1E1E1E] border border-[#E6DFD3] dark:border-white/10 flex flex-col gap-3 hover:border-[#1856B7] dark:hover:border-[#ACD1FD] transition-all shadow-2xs">
+                <div key={lang.name} className="group relative overflow-hidden p-4 rounded-xl bg-[#F9F8F6] dark:bg-[#21222D] border border-[#E6DFD3] dark:border-white/10 flex flex-col gap-3 hover:border-[#1856B7] dark:hover:border-[#ACD1FD] transition-all shadow-2xs">
                   <div className="flex items-center justify-between min-w-0">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span className="text-2xl shrink-0">{lang.flag}</span>

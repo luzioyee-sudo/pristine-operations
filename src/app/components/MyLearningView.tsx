@@ -68,7 +68,7 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
 
       {/* Global Stable Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs flex flex-col items-center text-center">
+        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#21222D] shadow-xs flex flex-col items-center text-center">
            <div className="w-14 h-14 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-4">
               <Flame className="w-7 h-7 text-orange-500" />
            </div>
@@ -76,7 +76,7 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
            <span className="text-[#545565] dark:text-[#A1A1AA] text-sm font-bold uppercase tracking-wider">Global Streak</span>
         </div>
         
-        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs flex flex-col items-center text-center">
+        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#21222D] shadow-xs flex flex-col items-center text-center">
            <div className="w-14 h-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-4">
               <Brain className="w-7 h-7 text-blue-500" />
            </div>
@@ -84,7 +84,7 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
            <span className="text-[#545565] dark:text-[#A1A1AA] text-sm font-bold uppercase tracking-wider">Total Words Learned</span>
         </div>
 
-        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs flex flex-col items-center text-center">
+        <div className="bg-white dark:bg-[#2C2C2E] rounded-3xl p-6 border border-[#E6DFD3] dark:border-[#21222D] shadow-xs flex flex-col items-center text-center">
            <div className="w-14 h-14 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-4">
               <BookOpen className="w-7 h-7 text-emerald-500" />
            </div>
@@ -94,7 +94,7 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
       </div>
 
       {/* Status of Each Language Section */}
-      <div className="flex items-center justify-between mb-6 border-b border-[#E6DFD3] dark:border-[#3A3A3C] pb-2">
+      <div className="flex items-center justify-between mb-6 border-b border-[#E6DFD3] dark:border-[#21222D] pb-2">
         <h2 className="text-xl font-bold text-[#21222D] dark:text-[#DBDBE5]">
           Status of Each Language
         </h2>
@@ -105,7 +105,7 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {Object.entries(aggregatedStats.langStats).map(([langName, stats]: [string, any]) => (
-          <div key={langName} className="bg-white dark:bg-[#2C2C2E] p-5 rounded-2xl border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs flex items-center justify-between hover:border-[#1856B7] dark:hover:border-[#ACD1FD] transition-colors">
+          <div key={langName} className="bg-white dark:bg-[#2C2C2E] p-5 rounded-2xl border border-[#E6DFD3] dark:border-[#21222D] shadow-xs flex items-center justify-between hover:border-[#1856B7] dark:hover:border-[#ACD1FD] transition-colors">
             <div className="flex items-center gap-4">
                <span className="text-4xl">{stats.flag}</span>
                <div>
@@ -126,10 +126,10 @@ export const MyLearningView: React.FC<MyLearningViewProps> = ({ settings, userSt
             </div>
             <div className="flex items-center gap-2">
                <div className="flex flex-col items-end gap-1">
-                  <span className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] bg-[#F4F4F5] dark:bg-[#3A3A3C] px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] bg-[#F4F4F5] dark:bg-[#21222D] px-3 py-1 rounded-full">
                      {stats.vocab} words
                   </span>
-                  <span className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] bg-[#F4F4F5] dark:bg-[#3A3A3C] px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] bg-[#F4F4F5] dark:bg-[#21222D] px-3 py-1 rounded-full">
                      {stats.docs} books
                   </span>
                </div>

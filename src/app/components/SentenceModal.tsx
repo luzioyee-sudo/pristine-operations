@@ -91,15 +91,15 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
         transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-        className="relative w-full max-w-2xl bg-white dark:bg-[#1D201A] rounded-3xl shadow-2xl border-2 border-[#334DAF]/30 dark:border-stone-800 p-6 sm:p-7 overflow-y-auto max-h-[85vh] custom-scrollbar"
+        className="relative w-full max-w-2xl bg-white dark:bg-[#21222D] rounded-3xl shadow-2xl border-2 border-[#958CE8]/30 dark:border-stone-800 p-6 sm:p-7 overflow-y-auto max-h-[85vh] custom-scrollbar"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="absolute top-0 start-0 end-0 h-2 bg-[#334DAF]" />
+        <div className="absolute top-0 start-0 end-0 h-2 bg-[#958CE8]" />
 
         {/* Header */}
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-[#334DAF]" />
+            <Sparkles className="w-5 h-5 text-[#958CE8]" />
             <h2 className="text-lg font-bold text-stone-900 dark:text-white font-serif-classic">
               Sentence Translation
             </h2>
@@ -115,7 +115,7 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
         {/* Content */}
         {isLoading ? (
           <div className="py-16 text-center space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-full bg-[#334DAF]/10 flex items-center justify-center text-[#334DAF] animate-spin">
+            <div className="w-12 h-12 mx-auto rounded-full bg-[#958CE8]/10 flex items-center justify-center text-[#958CE8] animate-spin">
               <Sparkles className="w-6 h-6" />
             </div>
             <div className="space-y-1">
@@ -139,14 +139,14 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
                 <button
                   onClick={() => handlePlayTTS(sentence)}
                   className={`p-1.5 rounded-lg transition-colors ${
-                    isPlayingAudio ? 'bg-[#334DAF] text-white' : 'bg-[#E8F2FE] dark:bg-stone-800 text-[#334DAF] hover:bg-[#D0E4FE]'
+                    isPlayingAudio ? 'bg-[#958CE8] text-white' : 'bg-[#DBDBE5] dark:bg-stone-800 text-[#958CE8] hover:bg-[#DBDBE5]'
                   }`}
                   title="Listen to pronunciation"
                 >
                   <Volume2 className="w-4 h-4" />
                 </button>
               </div>
-              <p className={`text-xl font-bold p-4 rounded-2xl bg-[#E8F2FE] dark:bg-stone-800/60 border border-[#E9E5DE] dark:border-stone-800 leading-relaxed ${
+              <p className={`text-xl font-bold p-4 rounded-2xl bg-[#DBDBE5] dark:bg-stone-800/60 border border-[#E9E5DE] dark:border-stone-800 leading-relaxed ${
                 sentenceIsAr ? 'font-arabic-serif text-end rtl' : 'font-serif-classic'
               }`} dir={sentenceIsAr ? 'rtl' : 'ltr'}>
                 "{sentence}"
@@ -155,11 +155,11 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
 
             {/* Translation Card */}
             <div className="space-y-2">
-              <span className="text-xs font-extrabold text-[#334DAF] tracking-wider uppercase flex items-center gap-1.5">
+              <span className="text-xs font-extrabold text-[#958CE8] tracking-wider uppercase flex items-center gap-1.5">
                 <Globe className="w-3.5 h-3.5" />
                 Natural Translation
               </span>
-              <p className="text-lg font-bold text-[#091F5C] dark:text-stone-100 p-4 rounded-2xl bg-[#334DAF]/5 border border-[#334DAF]/20 leading-relaxed">
+              <p className="text-lg font-bold text-[#21222D] dark:text-stone-100 p-4 rounded-2xl bg-[#958CE8]/5 border border-[#958CE8]/20 leading-relaxed">
                 {explanation.fullTranslation}
               </p>
             </div>
@@ -194,16 +194,16 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
                 <span className="text-xs font-extrabold text-stone-500 tracking-wider uppercase block">
                   Grammar & Vocabulary Breakdown
                 </span>
-                <div className="divide-y divide-stone-100 dark:divide-stone-800 border border-stone-200/60 dark:border-stone-800 rounded-2xl overflow-hidden bg-white dark:bg-[#1D201A]">
+                <div className="divide-y divide-stone-100 dark:divide-stone-800 border border-stone-200/60 dark:border-stone-800 rounded-2xl overflow-hidden bg-white dark:bg-[#21222D]">
                   {explanation.grammarBreakdown.map((item, idx) => (
                     <div key={idx} className="p-3 sm:p-4 hover:bg-stone-50/50 dark:hover:bg-stone-800/20 transition-colors flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 justify-between">
                       <div className="flex items-center gap-2 shrink-0 min-w-[100px]">
-                        <span className="font-bold text-[#334DAF] text-sm shrink-0">
+                        <span className="font-bold text-[#958CE8] text-sm shrink-0">
                           {item.segment}
                         </span>
                         <button
                           onClick={() => handlePlayTTS(item.segment)}
-                          className="p-1 rounded-md bg-[#E8F2FE] dark:bg-stone-800 text-[#334DAF] hover:bg-[#D0E4FE] transition-colors cursor-pointer"
+                          className="p-1 rounded-md bg-[#DBDBE5] dark:bg-stone-800 text-[#958CE8] hover:bg-[#DBDBE5] transition-colors cursor-pointer"
                           title="Listen to segment pronunciation"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -240,13 +240,13 @@ export const SentenceModal: React.FC<SentenceModalProps> = ({
                 onClick={handleCopy}
                 className="px-4 py-2 rounded-xl text-sm font-semibold text-stone-600 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors flex items-center gap-2"
               >
-                {copied ? <Check className="w-4 h-4 text-[#334DAF]" /> : <Copy className="w-4 h-4" />}
+                {copied ? <Check className="w-4 h-4 text-[#958CE8]" /> : <Copy className="w-4 h-4" />}
                 {copied ? 'Copied Details' : 'Copy Breakdown'}
               </button>
               
               <button
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-2xl text-sm font-bold bg-[#334DAF] hover:bg-[#091F5C] text-white shadow-md transition-all"
+                className="px-5 py-2.5 rounded-2xl text-sm font-bold bg-[#958CE8] hover:bg-[#21222D] text-white shadow-md transition-all"
               >
                 Got It
               </button>

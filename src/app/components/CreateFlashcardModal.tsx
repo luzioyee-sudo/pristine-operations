@@ -159,7 +159,7 @@ export const CreateFlashcardModal: React.FC<CreateFlashcardModalProps> = ({
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
-        className="w-full max-w-xl bg-white dark:bg-[#1D201A] rounded-[28px] shadow-2xl border border-[#DBDBE5] dark:border-stone-800 overflow-hidden"
+        className="w-full max-w-xl bg-white dark:bg-[#21222D] rounded-[28px] shadow-2xl border border-[#DBDBE5] dark:border-stone-800 overflow-hidden"
       >
         {/* Modal Header */}
         <div className="flex items-center justify-between p-6 pb-4 border-b border-[#DBDBE5] dark:border-stone-800">

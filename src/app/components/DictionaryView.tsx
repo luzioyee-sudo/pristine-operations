@@ -621,7 +621,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
             <button 
               onClick={() => handleSearch()}
               disabled={isLoading}
-              className="bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-xs cursor-pointer active:scale-95 shrink-0"
+              className="bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-xs cursor-pointer active:scale-95 shrink-0"
             >
               {isLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin text-[#21222D]" /> : (t.lookup || 'Lookup')}
             </button>
@@ -665,7 +665,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                               }}
                               className={`flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                                 isSelected
-                                  ? 'bg-[#091F5C] text-white font-bold shadow-xs'
+                                  ? 'bg-[#21222D] text-white font-bold shadow-xs'
                                   : 'text-slate-700 hover:bg-slate-100'
                               }`}
                             >
@@ -689,7 +689,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
         </div>
 
         {/* Word Display Area */}
-        <div className="pearl-card bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 shadow-xs rounded-3xl p-5 sm:p-6 relative order-1 md:order-2 space-y-4">
+        <div className="pearl-card bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 shadow-xs rounded-3xl p-5 sm:p-6 relative order-1 md:order-2 space-y-4">
           {isLoading && (
             <div className="absolute inset-0 bg-[#21222D]/80 backdrop-blur-xs rounded-3xl z-10 flex items-center justify-center gap-2 text-white font-semibold text-xs">
               <Loader2 className="w-4 h-4 animate-spin text-[#ACD1FD]" />

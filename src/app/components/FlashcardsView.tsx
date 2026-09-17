@@ -141,7 +141,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
               selectedFilter === 'all'
                 ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-                : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+                : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
             }`}
           >
             {t.filterAll} {vocabulary.length}
@@ -151,7 +151,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
               selectedFilter === 'new'
                 ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-                : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+                : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
             }`}
           >
             {t.filterNew} {newCount}
@@ -161,7 +161,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
               selectedFilter === 'learning'
                 ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-                : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+                : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
             }`}
           >
             {t.filterLearning} {learningCount}
@@ -171,14 +171,14 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
               selectedFilter === 'mastered'
                 ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-                : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+                : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
             }`}
           >
             {t.filterMastered} {masteredCount}
           </button>
         </div>
 
-        <div className="p-12 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-3xl space-y-4">
+        <div className="p-12 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-3xl space-y-4">
           <div className="w-12 h-12 rounded-full bg-[#DBDBE5] dark:bg-white/10 flex items-center justify-center mx-auto text-[#545565]">
             <Sparkles className="w-6 h-6" />
           </div>
@@ -213,11 +213,11 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10">
+          <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10">
             <span className="text-2xl font-black text-[#21222D] dark:text-[#DBDBE5]">{reviewedCount}</span>
             <span className="block text-[11px] font-bold text-[#545565] dark:text-[#DBDBE5] uppercase mt-1">{t.cardsReviewed}</span>
           </div>
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10">
+          <div className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10">
             <span className="text-2xl font-black text-[#21222D] dark:text-[#DBDBE5]">{Math.round((vocabulary.filter(v => getCardBucket(v) === 'Mastered').length / vocabulary.length) * 100)}%</span>
             <span className="block text-[11px] font-bold text-[#545565] dark:text-[#DBDBE5] uppercase mt-1">{t.masteryRate}</span>
           </div>
@@ -244,7 +244,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
             selectedFilter === 'all'
               ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-              : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+              : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
           }`}
         >
           {t.filterAll} {vocabulary.length}
@@ -254,7 +254,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
             selectedFilter === 'new'
               ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-              : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+              : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
           }`}
         >
           {t.filterNew} {newCount}
@@ -264,7 +264,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
             selectedFilter === 'learning'
               ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-              : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+              : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
           }`}
         >
           {t.filterLearning} {learningCount}
@@ -274,7 +274,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-wider transition-all duration-200 border cursor-pointer ${
             selectedFilter === 'mastered'
               ? 'bg-[#21222D] text-[#DBDBE5] border-[#21222D] shadow-xs'
-              : 'bg-white dark:bg-[#1E1E1E] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
+              : 'bg-white dark:bg-[#21222D] text-[#545565] dark:text-[#DBDBE5] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D]'
           }`}
         >
           {t.filterMastered} {masteredCount}
@@ -318,7 +318,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           {/* FRONT OF CARD */}
           <div
             style={{ backfaceVisibility: "hidden" }}
-            className="absolute inset-0 w-full h-full p-8 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-[32px] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
+            className="absolute inset-0 w-full h-full p-8 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-[32px] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
           >
             {/* Top Mint Accent Bar */}
             <div className="absolute top-0 start-0 end-0 h-1.5 bg-[#ACD1FD]" />
@@ -367,7 +367,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
               backfaceVisibility: "hidden", 
               transform: "rotateY(180deg)" 
             }}
-            className="absolute inset-0 w-full h-full p-8 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-[32px] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
+            className="absolute inset-0 w-full h-full p-8 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-[32px] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
           >
             {/* Top Lavender Accent Bar */}
             <div className="absolute top-0 start-0 end-0 h-1.5 bg-[#958CE8]" />
@@ -384,7 +384,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
                       handlePlayTTS(currentItem.translation);
                     }}
                     title="Pronounce translation"
-                    className="p-1.5 rounded-full bg-white dark:bg-[#1E1E1E] text-[#21222D] dark:text-white hover:bg-[#ACD1FD] transition-colors cursor-pointer shadow-2xs"
+                    className="p-1.5 rounded-full bg-white dark:bg-[#21222D] text-[#21222D] dark:text-white hover:bg-[#ACD1FD] transition-colors cursor-pointer shadow-2xs"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
                   </button>
@@ -432,7 +432,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           
           <button
             onClick={() => handleGrade(1)}
-            className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-rose-200 dark:border-rose-900/40 text-rose-600 text-center hover:bg-rose-50 dark:hover:bg-rose-950/20 transition-all shadow-2xs group cursor-pointer"
+            className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-rose-200 dark:border-rose-900/40 text-rose-600 text-center hover:bg-rose-50 dark:hover:bg-rose-950/20 transition-all shadow-2xs group cursor-pointer"
           >
             <span className="block text-xs font-bold">{t.srsAgain}</span>
             <span className="block text-[9px] opacity-70 font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'again')}</span>
@@ -440,7 +440,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
 
           <button
             onClick={() => handleGrade(2)}
-            className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#545565] dark:text-[#DBDBE5] text-center hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-all shadow-2xs group cursor-pointer"
+            className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#545565] dark:text-[#DBDBE5] text-center hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-all shadow-2xs group cursor-pointer"
           >
             <span className="block text-xs font-bold">{t.srsHard}</span>
             <span className="block text-[9px] opacity-70 font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'hard')}</span>
@@ -448,7 +448,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
 
           <button
             onClick={() => handleGrade(3)}
-            className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#958CE8]/50 text-[#21222D] dark:text-white text-center hover:bg-[#958CE8]/10 transition-all shadow-2xs group cursor-pointer"
+            className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#958CE8]/50 text-[#21222D] dark:text-white text-center hover:bg-[#958CE8]/10 transition-all shadow-2xs group cursor-pointer"
           >
             <span className="block text-xs font-bold">{t.srsGood}</span>
             <span className="block text-[9px] opacity-70 font-mono mt-0.5">
@@ -458,7 +458,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
 
           <button
             onClick={() => handleGrade(4)}
-            className="p-3 rounded-2xl bg-[#ACD1FD] border border-[#ACD1FD] text-[#21222D] text-center hover:bg-[#8ee590] transition-all shadow-xs group cursor-pointer"
+            className="p-3 rounded-2xl bg-[#ACD1FD] border border-[#ACD1FD] text-[#21222D] text-center hover:bg-[#ACD1FD] transition-all shadow-xs group cursor-pointer"
           >
             <span className="block text-xs font-bold">{t.srsEasy}</span>
             <span className="block text-[9px] opacity-70 font-mono mt-0.5">

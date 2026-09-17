@@ -1128,7 +1128,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     <div className="max-w-7xl mx-auto space-y-8 pb-16">
       
       {/* Top Banner / System Status */}
-      <div className="bg-[#1D201A] text-stone-100 rounded-3xl p-6 md:p-8 shadow-xl border border-stone-800 relative overflow-hidden">
+      <div className="bg-[#21222D] text-stone-100 rounded-3xl p-6 md:p-8 shadow-xl border border-stone-800 relative overflow-hidden">
         <div className="absolute -end-10 -bottom-10 opacity-10 pointer-events-none">
           <ShieldCheck className="w-80 h-80 text-[#21222D] dark:text-[#ACD1FD]" />
         </div>
@@ -1255,7 +1255,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         <div className="space-y-8">
           {/* Key Metrics Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
               <div className="p-3 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
                 <Users className="w-6 h-6" />
               </div>
@@ -1268,7 +1268,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
               <div className="p-3 rounded-2xl bg-[#21222D]/10 dark:bg-[#ACD1FD]/10 text-[#21222D] dark:text-[#ACD1FD]">
                 <Database className="w-6 h-6" />
               </div>
@@ -1281,7 +1281,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
               <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
                 <Lock className="w-6 h-6" />
               </div>
@@ -1296,7 +1296,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs flex items-center gap-4">
               <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                 <HardDrive className="w-6 h-6" />
               </div>
@@ -1314,7 +1314,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
             {/* Left 2 Cols: Activity History Bar Chart */}
-            <div className="lg:col-span-2 bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-4">
+            <div className="lg:col-span-2 bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-4">
               <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
                 <div>
                   <h3 className="font-extrabold text-[#21222D] dark:text-stone-100 text-sm">System Action Activity Logs</h3>
@@ -1358,7 +1358,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
 
             {/* Right Col: Language Distribution */}
-            <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-4">
+            <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-4">
               <div className="border-b border-stone-100 dark:border-stone-800 pb-3">
                 <h3 className="font-extrabold text-[#21222D] dark:text-stone-100 text-sm">Language Distribution</h3>
                 <p className="text-xs text-stone-400">Vocabulary cards per target language</p>
@@ -1394,11 +1394,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       {activeTab === 'analytics' && (
         <div className="space-y-6">
           {/* Header & Controls bar */}
-          <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
+          <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h2 className="text-xl font-bold font-serif-classic text-[#21222D] dark:text-stone-100 flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-[#334DAF] dark:text-[#ACD1FD]" />
+                  <Activity className="w-5 h-5 text-[#958CE8] dark:text-[#ACD1FD]" />
                   <span>Global Action Analytics & Observation</span>
                 </h2>
                 <p className="text-xs text-stone-400 mt-0.5">
@@ -1434,7 +1434,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   <select
                     value={analyticsTimeRange}
                     onChange={(e) => setAnalyticsTimeRange(e.target.value as any)}
-                    className="w-full pl-3 pr-8 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#E8F2FE]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#334DAF] appearance-none"
+                    className="w-full pl-3 pr-8 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#DBDBE5]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#958CE8] appearance-none"
                   >
                     <option value="today">Today</option>
                     <option value="yesterday">Yesterday</option>
@@ -1452,7 +1452,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <select
                   value={analyticsLanguageFilter}
                   onChange={(e) => setAnalyticsLanguageFilter(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#E8F2FE]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#334DAF]"
+                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#DBDBE5]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#958CE8]"
                 >
                   <option value="all">All Languages</option>
                   <option value="french">French</option>
@@ -1469,7 +1469,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <select
                   value={analyticsPageFilter}
                   onChange={(e) => setAnalyticsPageFilter(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#E8F2FE]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#334DAF]"
+                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#DBDBE5]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#958CE8]"
                 >
                   <option value="all">All Pages</option>
                   <option value="Home">Home View</option>
@@ -1489,7 +1489,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <select
                   value={analyticsDeviceFilter}
                   onChange={(e) => setAnalyticsDeviceFilter(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#E8F2FE]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#334DAF]"
+                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#DBDBE5]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#958CE8]"
                 >
                   <option value="all">All Devices</option>
                   <option value="Desktop">Desktop</option>
@@ -1504,7 +1504,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <select
                   value={analyticsUserFilter}
                   onChange={(e) => setAnalyticsUserFilter(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#E8F2FE]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#334DAF]"
+                  className="w-full px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-[#DBDBE5]/40 dark:bg-stone-900/40 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-[#958CE8]"
                 >
                   <option value="all">All Users</option>
                   <option value="authenticated">Authenticated Only</option>
@@ -1579,7 +1579,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           {/* Main SubTab Content Area */}
           {isAnalyticsLoading && !analyticsData && !analyticsEventsList.length ? (
             <div className="h-64 flex flex-col items-center justify-center gap-3">
-              <div className="w-8 h-8 border-2 border-[#334DAF] dark:border-[#ACD1FD] border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-2 border-[#958CE8] dark:border-[#ACD1FD] border-t-transparent rounded-full animate-spin" />
               <p className="text-xs text-stone-400 font-bold uppercase tracking-widest animate-pulse">Running Server Aggregation...</p>
             </div>
           ) : (
@@ -1590,7 +1590,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   {/* KPI Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {/* Unique active users */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
                       <div className="flex justify-between items-center text-stone-400">
                         <span className="text-[10px] font-black uppercase tracking-widest">Active Visitors</span>
                         <Users className="w-4.5 h-4.5" />
@@ -1606,7 +1606,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     </div>
 
                     {/* Total sessions */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
                       <div className="flex justify-between items-center text-stone-400">
                         <span className="text-[10px] font-black uppercase tracking-widest">Aggregate Sessions</span>
                         <Database className="w-4.5 h-4.5" />
@@ -1620,7 +1620,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     </div>
 
                     {/* Session duration */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
                       <div className="flex justify-between items-center text-stone-400">
                         <span className="text-[10px] font-black uppercase tracking-widest">Avg Session Duration</span>
                         <Clock className="w-4.5 h-4.5" />
@@ -1639,7 +1639,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     </div>
 
                     {/* Onboarding conversion */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-2">
                       <div className="flex justify-between items-center text-stone-400">
                         <span className="text-[10px] font-black uppercase tracking-widest">Onboard Conversion Rate</span>
                         <TrendingUp className="w-4.5 h-4.5 text-emerald-500" />
@@ -1662,7 +1662,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   {/* Grid metrics charts */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                     {/* Most viewed pages */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
                       <div>
                         <h4 className="text-sm font-black text-stone-800 dark:text-stone-100 uppercase tracking-wider">Most Visited Pages</h4>
                         <p className="text-xs text-stone-400">Distribution of page_viewed hits</p>
@@ -1693,7 +1693,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     </div>
 
                     {/* Most clicked buttons */}
-                    <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
                       <div>
                         <h4 className="text-sm font-black text-stone-800 dark:text-stone-100 uppercase tracking-wider">Top Button Interactions</h4>
                         <p className="text-xs text-stone-400">Frequency of button_clicked actions</p>
@@ -1725,7 +1725,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </div>
 
                   {/* Scroll depth distribution */}
-                  <div className="p-5 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
+                  <div className="p-5 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-xs space-y-4">
                     <div>
                       <h4 className="text-sm font-black text-stone-800 dark:text-stone-100 uppercase tracking-wider">Scroll Milestone Depth Distribution</h4>
                       <p className="text-xs text-stone-400">Drop-off as users scroll down reading pages</p>
@@ -1759,13 +1759,13 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
               {/* SUB TAB 2: LIVE EVENTS FEED */}
               {analyticsSubTab === 'live' && (
-                <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs space-y-4 animate-fadeIn">
+                <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs space-y-4 animate-fadeIn">
                   <div className="flex justify-between items-center pb-2 border-b border-stone-100 dark:border-stone-800">
                     <div>
                       <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Live Activity Timeline</h4>
                       <p className="text-xs text-stone-400">Real-time chronologically recorded analytic actions</p>
                     </div>
-                    <span className="text-[10px] font-black text-[#334DAF] bg-[#334DAF]/10 px-3 py-1 rounded-full animate-pulse">
+                    <span className="text-[10px] font-black text-[#958CE8] bg-[#958CE8]/10 px-3 py-1 rounded-full animate-pulse">
                       LIVE CHANNEL ACTIVE
                     </span>
                   </div>
@@ -1841,7 +1841,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                                     </div>
                                     <div className="space-y-1.5">
                                       <p className="text-stone-400 font-black uppercase text-[10px]">Structured Event Metadata</p>
-                                      <pre className="font-mono bg-stone-100 dark:bg-stone-900 p-2.5 rounded-xl text-[11px] overflow-x-auto text-[#334DAF] dark:text-[#ACD1FD] max-h-40">
+                                      <pre className="font-mono bg-stone-100 dark:bg-stone-900 p-2.5 rounded-xl text-[11px] overflow-x-auto text-[#958CE8] dark:text-[#ACD1FD] max-h-40">
                                         {ev.metadata ? JSON.stringify(JSON.parse(ev.metadata), null, 2) : '{}'}
                                       </pre>
                                     </div>
@@ -1868,7 +1868,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               {analyticsSubTab === 'funnels' && analyticsData && (
                 <div className="space-y-6 animate-fadeIn">
                   {/* Onboarding Funnel */}
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-5">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-5">
                     <div>
                       <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">User Onboarding Funnel</h4>
                       <p className="text-xs text-stone-400">Retention and drop-offs during initial welcome/setup sequence</p>
@@ -1886,9 +1886,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                         const pctOfPrev = index > 0 ? Math.round((stepItem.count / (prevCount || 1)) * 100) : 100;
                         
                         return (
-                          <div key={stepItem.step} className="p-4 rounded-xl border border-stone-100 dark:border-stone-800 bg-[#E8F2FE]/10 dark:bg-[#ACD1FD]/5 relative">
+                          <div key={stepItem.step} className="p-4 rounded-xl border border-stone-100 dark:border-stone-800 bg-[#DBDBE5]/10 dark:bg-[#ACD1FD]/5 relative">
                             <span className="absolute top-3 end-3 text-stone-300 font-serif-classic font-black text-2xl">0{stepItem.step}</span>
-                            <p className="text-[10px] font-black uppercase text-[#334DAF] dark:text-emerald-400">Step {stepItem.step}</p>
+                            <p className="text-[10px] font-black uppercase text-[#958CE8] dark:text-emerald-400">Step {stepItem.step}</p>
                             <h5 className="font-extrabold text-stone-800 dark:text-stone-100 mt-0.5">{stepItem.name}</h5>
                             <p className="text-2xl font-black text-stone-950 dark:text-stone-50 mt-2">{stepItem.count} sessions</p>
                             <p className="text-[10px] text-stone-400 mt-1 leading-relaxed">{stepItem.desc}</p>
@@ -1910,7 +1910,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </div>
 
                   {/* Core Study Loop Funnel */}
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-5">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-5">
                     <div>
                       <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Interactions & Assessment Study Funnel</h4>
                       <p className="text-xs text-stone-400">Conversion of general visitors to completed assessment assessments</p>
@@ -1929,7 +1929,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                         const pctOfPrev = index > 0 ? Math.round((stepItem.count / (prevCount || 1)) * 100) : 100;
 
                         return (
-                          <div key={stepItem.step} className="p-4 rounded-xl border border-stone-100 dark:border-stone-800 bg-[#E8F2FE]/10 dark:bg-stone-900/10">
+                          <div key={stepItem.step} className="p-4 rounded-xl border border-stone-100 dark:border-stone-800 bg-[#DBDBE5]/10 dark:bg-stone-900/10">
                             <p className="text-[10px] font-black uppercase text-amber-600">Funnel Node</p>
                             <h5 className="font-extrabold text-stone-800 dark:text-stone-100 mt-0.5">{stepItem.name}</h5>
                             <p className="text-2xl font-black text-stone-950 dark:text-stone-50 mt-1">{stepItem.count} sessions</p>
@@ -1937,7 +1937,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
                             <div className="mt-4 pt-3.5 border-t border-stone-100 dark:border-stone-800/80 flex justify-between items-center text-[10px] font-black uppercase tracking-wider text-stone-500">
                               <span>Conversion</span>
-                              <span className="text-[#334DAF] dark:text-[#ACD1FD] font-bold">{pctOfFirst}% conversion</span>
+                              <span className="text-[#958CE8] dark:text-[#ACD1FD] font-bold">{pctOfFirst}% conversion</span>
                             </div>
                             {index > 0 && (
                               <div className="text-[10px] text-stone-400 flex justify-between items-center mt-0.5 font-bold">
@@ -1957,7 +1957,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               {analyticsSubTab === 'pages' && analyticsData && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 animate-fadeIn">
                   {/* Pages hits breakdown */}
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
                     <div>
                       <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Page View Metrics</h4>
                       <p className="text-xs text-stone-400">Where traffic concentrates across the application</p>
@@ -1992,7 +1992,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </div>
 
                   {/* Feature metrics breakdown */}
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4">
                     <div>
                       <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Feature Usage & Actions</h4>
                       <p className="text-xs text-stone-400">Actions triggered grouped by system modules</p>
@@ -2039,7 +2039,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
               {/* SUB TAB 5: LANGUAGE ANALYTICS */}
               {analyticsSubTab === 'languages' && analyticsData && (
-                <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-6 animate-fadeIn">
+                <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-xs space-y-6 animate-fadeIn">
                   <div>
                     <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Language Profiles Learning Metrics</h4>
                     <p className="text-xs text-stone-400">Compare learner volume and study activity across target languages</p>
@@ -2095,7 +2095,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
               {/* SUB TAB 6: ERROR LOGS */}
               {analyticsSubTab === 'errors' && analyticsData && (
-                <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4 animate-fadeIn">
+                <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-xs space-y-4 animate-fadeIn">
                   <div>
                     <h4 className="text-sm font-black text-[#21222D] dark:text-stone-50 uppercase tracking-wider">Application Quality & Error Logs</h4>
                     <p className="text-xs text-stone-400">Captured clientside script faults and AI API execution errors</p>
@@ -2143,7 +2143,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               {analyticsSubTab === 'sandbox' && (
                 <div className="space-y-4 animate-fadeIn">
                   {/* Controls bar for export / sandbox */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs">
                     <div>
                       <h4 className="text-xs font-black text-[#21222D] dark:text-stone-50 uppercase tracking-widest">Matched events: {analyticsTotalEvents}</h4>
                       <p className="text-[11px] text-stone-400 mt-0.5">Use top filter widgets to adjust the sandbox registry</p>
@@ -2167,7 +2167,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </div>
 
                   {/* Sandbox Events Table */}
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-4 shadow-xs">
                     <div className="overflow-x-auto">
                       <table className="w-full text-left text-xs">
                         <thead>
@@ -2189,7 +2189,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                                 <td className="py-3 px-2 text-stone-400 whitespace-nowrap">{new Date(ev.timestamp).toLocaleString()}</td>
                                 <td className="py-3 px-2">
                                   {ev.userId ? (
-                                    <span className="font-bold text-[#334DAF] dark:text-[#ACD1FD]">Authed: {ev.userId}</span>
+                                    <span className="font-bold text-[#958CE8] dark:text-[#ACD1FD]">Authed: {ev.userId}</span>
                                   ) : (
                                     <span className="text-stone-400">Guest: {ev.anonymousId?.substring(0,8)}...</span>
                                   )}
@@ -2222,7 +2222,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                                       </div>
                                       <div className="space-y-1.5">
                                         <p className="text-stone-400 font-black uppercase text-[10px]">Metadata Parameters</p>
-                                        <pre className="font-mono bg-stone-100 dark:bg-stone-900 p-2.5 rounded-xl text-[11px] overflow-x-auto text-[#334DAF] dark:text-[#ACD1FD] max-h-40">
+                                        <pre className="font-mono bg-stone-100 dark:bg-stone-900 p-2.5 rounded-xl text-[11px] overflow-x-auto text-[#958CE8] dark:text-[#ACD1FD] max-h-40">
                                           {ev.metadata ? JSON.stringify(JSON.parse(ev.metadata), null, 2) : '{}'}
                                         </pre>
                                       </div>
@@ -2317,7 +2317,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   placeholder="Search name, email, or ID..."
                   value={userSearch}
                   onChange={(e) => setUserSearch(e.target.value)}
-                  className="w-full ps-9 pe-4 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-medium text-[#21222D] dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#21222D]"
+                  className="w-full ps-9 pe-4 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#21222D]"
                 />
               </div>
 
@@ -2331,7 +2331,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           </div>
 
           {/* User Table with Clickable Profile Row */}
-          <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-xs">
+          <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
               <table className="w-full text-start text-xs">
                 <thead className="bg-[#DBDBE5] dark:bg-stone-900/60 border-b border-[#DBDBE5]/80 dark:border-stone-800 text-stone-500 font-extrabold uppercase text-[10px] tracking-wider">
@@ -2478,7 +2478,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             <p className="text-xs text-stone-400 mt-0.5">Control password access protection for Ribble, set or change password credentials</p>
           </div>
 
-          <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-3xl p-6 shadow-xs space-y-6">
+          <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-3xl p-6 shadow-xs space-y-6">
             
             {/* Toggle Passcode Protection */}
             <div className="flex items-center justify-between p-4 rounded-2xl bg-[#DBDBE5] dark:bg-stone-900/60 border border-[#DBDBE5] dark:border-stone-800">
@@ -2599,7 +2599,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <select
                 value={selectedVocabUser}
                 onChange={(e) => setSelectedVocabUser(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
+                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
               >
                 <option value="all">All Users</option>
                 {userAccounts.map(u => (
@@ -2610,7 +2610,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
+                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
               >
                 <option value="all">All Languages</option>
                 <option value="French">French</option>
@@ -2627,7 +2627,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   placeholder="Search word or translation..."
                   value={vocabSearch}
                   onChange={(e) => setVocabSearch(e.target.value)}
-                  className="w-full ps-9 pe-4 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-medium text-[#21222D] dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#21222D]"
+                  className="w-full ps-9 pe-4 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-[#21222D]"
                 />
               </div>
 
@@ -2644,7 +2644,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             {filteredVocab.map((item) => (
               <div
                 key={item.id}
-                className="p-4 rounded-2xl bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-3xs hover:border-[#21222D]/40 transition-all flex flex-col justify-between gap-3 group"
+                className="p-4 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 shadow-3xs hover:border-[#21222D]/40 transition-all flex flex-col justify-between gap-3 group"
               >
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
@@ -2694,7 +2694,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <select
                 value={selectedDecksUser}
                 onChange={(e) => setSelectedDecksUser(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
+                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
               >
                 <option value="all">All Users</option>
                 {userAccounts.map(u => (
@@ -2705,7 +2705,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-sm space-y-4">
               <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-sm">
                 Active Folders ({selectedDecksUser === 'all' ? allUsersFolders.length : allUsersFolders.filter(f => f.userId === selectedDecksUser).length})
               </h3>
@@ -2730,7 +2730,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-5 shadow-sm space-y-4">
               <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-sm">
                 Active Decks ({selectedDecksUser === 'all' ? allUsersDecks.length : allUsersDecks.filter(d => d.userId === selectedDecksUser).length})
               </h3>
@@ -2771,7 +2771,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <select
                 value={selectedDocsUser}
                 onChange={(e) => setSelectedDocsUser(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#1D201A] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
+                className="px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-white dark:bg-[#21222D] text-xs font-bold text-stone-700 dark:text-stone-300 focus:outline-none"
               >
                 <option value="all">All Users</option>
                 {userAccounts.map(u => (
@@ -2781,7 +2781,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
 
-          <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm">
+          <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm">
             <table className="w-full text-start text-xs">
               <thead className="bg-[#DBDBE5] dark:bg-stone-900/60 border-b border-[#DBDBE5]/80 dark:border-stone-800 text-stone-500 font-extrabold uppercase text-[10px]">
                 <tr>
@@ -2806,7 +2806,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       <div className="flex items-center justify-end gap-2">
                         <button
                           onClick={() => setInspectingDocument(doc)}
-                          className="px-3 py-1.5 rounded-xl bg-[#ACD1FD] text-[#21222D] font-bold text-xs hover:bg-[#8ee590] cursor-pointer flex items-center gap-1.5 shadow-2xs"
+                          className="px-3 py-1.5 rounded-xl bg-[#ACD1FD] text-[#21222D] font-bold text-xs hover:bg-[#ACD1FD] cursor-pointer flex items-center gap-1.5 shadow-2xs"
                           title="Open & Read Book in Admin Inspector"
                         >
                           <BookOpen className="w-3.5 h-3.5" />
@@ -2839,7 +2839,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         <div className="space-y-6">
           <h2 className="text-lg font-bold text-[#21222D] dark:text-stone-100">System Rules & AI Engine</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm space-y-4">
               <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-sm">Gemini AI Engine</h3>
               <div className="flex items-center justify-between text-xs font-medium">
                 <span>Auto Context Definition Lookup</span>
@@ -2847,7 +2847,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm space-y-4">
               <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-sm">Maintenance</h3>
               <button
                 type="button"
@@ -2872,7 +2872,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-4xl shadow-2xl space-y-6 my-8 max-h-[90vh] flex flex-col"
+              className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-4xl shadow-2xl space-y-6 my-8 max-h-[90vh] flex flex-col"
             >
               {/* Modal Header */}
               <div className="flex justify-between items-start border-b border-stone-100 dark:border-stone-800 pb-4 shrink-0">
@@ -3215,7 +3215,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                           : 'border-[#DBDBE5]/80 dark:border-stone-800/80 hover:border-[#21222D]/50';
                         const cardBgClass = isCritical 
                           ? criticalBgColor 
-                          : 'bg-white dark:bg-[#1D201A]';
+                          : 'bg-white dark:bg-[#21222D]';
                         const nodeDotBgClass = isCritical 
                           ? timelineNodeDotBg 
                           : 'bg-[#21222D] dark:bg-[#ACD1FD]';
@@ -3226,7 +3226,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                             className={`relative ps-11 p-4 rounded-2xl border transition-all space-y-2 group ${cardBgClass} ${cardBorderClass} shadow-xs`}
                           >
                             {/* Timeline Node Dot */}
-                            <div className={`absolute start-2.5 top-4.5 w-5 h-5 rounded-full border-2 border-white dark:border-[#1D201A] ${nodeDotBgClass} shadow-xs flex items-center justify-center z-10`}>
+                            <div className={`absolute start-2.5 top-4.5 w-5 h-5 rounded-full border-2 border-white dark:border-[#21222D] ${nodeDotBgClass} shadow-xs flex items-center justify-center z-10`}>
                               {isCritical && criticalIcon ? (
                                 <div className="text-white scale-75 flex items-center justify-center">{criticalIcon}</div>
                               ) : (
@@ -3394,7 +3394,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-5"
+              className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-5"
             >
               <div className="flex justify-between items-center border-b border-stone-100 dark:border-stone-800 pb-3">
                 <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-base">Add New Account</h3>
@@ -3468,7 +3468,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-xl bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] font-bold cursor-pointer shadow-xs"
+                    className="px-5 py-2 rounded-xl bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] font-bold cursor-pointer shadow-xs"
                   >
                     Create Account
                   </button>
@@ -3487,7 +3487,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-5"
+              className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 w-full max-w-md shadow-2xl space-y-5"
             >
               <div className="flex justify-between items-center border-b border-stone-100 dark:border-stone-800 pb-3">
                 <h3 className="font-bold text-[#21222D] dark:text-stone-100 text-base">Add Vocabulary Card</h3>
@@ -3562,7 +3562,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-xl bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] font-bold cursor-pointer shadow-xs"
+                    className="px-5 py-2 rounded-xl bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] font-bold cursor-pointer shadow-xs"
                   >
                     Add Card
                   </button>
@@ -3581,7 +3581,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl w-full max-w-6xl shadow-2xl overflow-hidden my-6 flex flex-col h-[90vh]"
+              className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl w-full max-w-6xl shadow-2xl overflow-hidden my-6 flex flex-col h-[90vh]"
             >
               {/* Modal Header */}
               <div className="px-6 py-4 bg-[#DBDBE5] dark:bg-stone-900 border-b border-[#DBDBE5]/80 dark:border-stone-800 flex items-center justify-between shrink-0">
@@ -3614,13 +3614,13 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       Page {inspectingDocument.currentPage || 1} of {inspectingDocument.totalPages || 1}
                     </span>
                   </div>
-                  <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm font-serif text-sm leading-relaxed text-stone-800 dark:text-stone-200 whitespace-pre-wrap select-text">
+                  <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5]/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm font-serif text-sm leading-relaxed text-stone-800 dark:text-stone-200 whitespace-pre-wrap select-text">
                     {inspectingDocument.content || inspectingDocument.pages?.[(inspectingDocument.currentPage || 1) - 1] || 'No text content extracted for this document.'}
                   </div>
                 </div>
 
                 {/* Right Col: User Translation Lookups & Action Inspector */}
-                <div className="lg:col-span-1 p-6 overflow-y-auto space-y-5 bg-white dark:bg-[#1D201A]">
+                <div className="lg:col-span-1 p-6 overflow-y-auto space-y-5 bg-white dark:bg-[#21222D]">
                   <div>
                     <h4 className="font-bold text-sm text-[#21222D] dark:text-stone-100 flex items-center gap-2 mb-1">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

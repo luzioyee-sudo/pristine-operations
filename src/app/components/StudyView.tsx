@@ -187,7 +187,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <div className="relative shrink-0">
             <button
               onClick={() => setIsDeckDropdownOpen(!isDeckDropdownOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 md:px-5 md:py-2.5 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-xl md:rounded-2xl shadow-xs text-xs md:text-sm font-bold text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-all cursor-pointer shrink-0"
+              className="flex items-center gap-1.5 px-3 py-1.5 md:px-5 md:py-2.5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-xl md:rounded-2xl shadow-xs text-xs md:text-sm font-bold text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-all cursor-pointer shrink-0"
             >
               <span>{currentDeckName}</span>
               <ChevronDown className={`w-3.5 h-3.5 md:w-4 md:h-4 text-[#545565] dark:text-[#DBDBE5] transition-transform ${isDeckDropdownOpen ? 'rotate-180' : ''}`} />
@@ -201,7 +201,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute start-0 mt-2 w-64 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-2xl shadow-xl z-20 overflow-hidden whitespace-normal"
+                    className="absolute start-0 mt-2 w-64 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-2xl shadow-xl z-20 overflow-hidden whitespace-normal"
                   >
                     <button
                       onClick={() => {
@@ -244,7 +244,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <div className="flex md:hidden items-center gap-1 shrink-0">
             <button
               onClick={onNewDeckClick}
-              className="flex items-center gap-1 px-2.5 py-1.5 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white rounded-xl text-[10px] font-black hover:bg-[#DBDBE5] cursor-pointer shrink-0"
+              className="flex items-center gap-1 px-2.5 py-1.5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white rounded-xl text-[10px] font-black hover:bg-[#DBDBE5] cursor-pointer shrink-0"
               title={t.newDeck || "New Deck"}
             >
               <Plus className="w-3 h-3" />
@@ -252,7 +252,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             </button>
             <button
               onClick={onAddWordClick}
-              className="flex items-center gap-1 px-2.5 py-1.5 bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] rounded-xl text-[10px] font-black cursor-pointer shadow-xs shrink-0"
+              className="flex items-center gap-1 px-2.5 py-1.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] rounded-xl text-[10px] font-black cursor-pointer shadow-xs shrink-0"
               title={t.addBookmark?.replace("+", "") || "Add Word"}
             >
               <Plus className="w-3 h-3" />
@@ -261,7 +261,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           </div>
 
           {/* Phone-only compact filters */}
-          <div className="flex md:hidden items-center gap-1 bg-[#DBDBE5] dark:bg-[#1E1E1E] p-0.5 rounded-full border border-[#DBDBE5] dark:border-white/10 shrink-0">
+          <div className="flex md:hidden items-center gap-1 bg-[#DBDBE5] dark:bg-[#21222D] p-0.5 rounded-full border border-[#DBDBE5] dark:border-white/10 shrink-0">
             <button
               onClick={() => setSelectedFilter('all')}
               className={`px-2.5 py-1 rounded-full text-[9px] font-extrabold tracking-wider uppercase transition-all duration-150 ${
@@ -306,7 +306,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
         </div>
 
         {/* Center: Filters ALL / NEW / LEARNING / MASTERED */}
-        <div className="hidden md:flex items-center justify-center gap-1.5 self-center bg-[#DBDBE5] dark:bg-[#1E1E1E] p-1 rounded-full border border-[#DBDBE5] dark:border-white/10">
+        <div className="hidden md:flex items-center justify-center gap-1.5 self-center bg-[#DBDBE5] dark:bg-[#21222D] p-1 rounded-full border border-[#DBDBE5] dark:border-white/10">
           <button
             onClick={() => setSelectedFilter('all')}
             className={`px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-wider uppercase transition-all duration-150 ${
@@ -353,14 +353,14 @@ export const StudyView: React.FC<StudyViewProps> = ({
         <div className="hidden md:flex items-center gap-2 self-end md:self-auto">
           <button
             onClick={onNewDeckClick}
-            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-2xl text-xs font-bold text-[#21222D] dark:text-white hover:bg-[#DBDBE5] transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-2xl text-xs font-bold text-[#21222D] dark:text-white hover:bg-[#DBDBE5] transition-colors cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>{t.newDeck || "New Deck"}</span>
           </button>
           <button
             onClick={onAddWordClick}
-            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
+            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
           >
             <Plus className="w-4 h-4" />
             <span>{t.addBookmark?.replace("+", "") || "Add Word"}</span>
@@ -370,7 +370,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
 
       {/* Main Flashcard review container */}
       {itemsToReview.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#1E1E1E] rounded-[28px] border border-[#DBDBE5] dark:border-white/10 text-center p-8 space-y-4 shadow-xs">
+        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#21222D] rounded-[28px] border border-[#DBDBE5] dark:border-white/10 text-center p-8 space-y-4 shadow-xs">
           <div className="w-16 h-16 rounded-full bg-[#DBDBE5] dark:bg-white/10 flex items-center justify-center text-[#21222D] dark:text-white">
             <FolderOpen className="w-8 h-8" />
           </div>
@@ -382,7 +382,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           </p>
           <button
             onClick={onAddWordClick}
-            className="px-5 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] text-xs font-bold rounded-xl shadow-md transition-colors cursor-pointer"
+            className="px-5 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] text-xs font-bold rounded-xl shadow-md transition-colors cursor-pointer"
           >
             Add First Word
           </button>
@@ -396,7 +396,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => onEditCardClick(currentItem)}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white rounded-lg hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white rounded-lg hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-colors cursor-pointer"
               >
                 <Edit className="w-3.5 h-3.5" />
                 <span>{t.edit || "Edit"}</span>
@@ -410,7 +410,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                     }
                   }
                 }}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#1E1E1E] border border-rose-200 text-rose-500 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950 transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#21222D] border border-rose-200 text-rose-500 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950 transition-colors cursor-pointer"
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>{t.deleteItem || "Delete"}</span>
@@ -434,7 +434,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
               {/* CARD FRONT */}
               <div
                 style={{ backfaceVisibility: 'hidden' }}
-                className="absolute inset-0 w-full h-full p-8 sm:p-12 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-[28px] shadow-lg flex flex-col justify-between overflow-hidden"
+                className="absolute inset-0 w-full h-full p-8 sm:p-12 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-[28px] shadow-lg flex flex-col justify-between overflow-hidden"
               >
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase bg-[#DBDBE5] text-[#21222D] dark:bg-white/10 dark:text-stone-300">
@@ -491,7 +491,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
                 }}
-                className="absolute inset-0 w-full h-full p-8 sm:p-12 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-[28px] shadow-lg flex flex-col justify-between overflow-hidden"
+                className="absolute inset-0 w-full h-full p-8 sm:p-12 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-[28px] shadow-lg flex flex-col justify-between overflow-hidden"
               >
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase bg-[#ACD1FD] text-[#21222D]">{t.translationLabel || "Answer Revealed"}</span>
@@ -591,7 +591,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             {!isFlipped ? (
               <button
                 onClick={() => setIsFlipped(true)}
-                className="px-10 py-3.5 rounded-full bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] font-black text-xs shadow-xs transition-all cursor-pointer"
+                className="px-10 py-3.5 rounded-full bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] font-black text-xs shadow-xs transition-all cursor-pointer"
               >
                 {t.showAnswer || "Show Answer"}
               </button>
@@ -599,7 +599,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
               <div className="grid grid-cols-4 gap-3 w-full max-w-xl">
                 <button
                   onClick={() => handleGrade(1)}
-                  className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
+                  className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
                 >
                   <span className="block text-xs font-bold text-[#21222D] dark:text-white">{t.srsAgain}</span>
                   <span className="block text-[9px] text-[#545565] font-semibold font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'again')}</span>
@@ -607,7 +607,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
 
                 <button
                   onClick={() => handleGrade(2)}
-                  className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
+                  className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
                 >
                   <span className="block text-xs font-bold text-[#21222D] dark:text-white">{t.srsHard}</span>
                   <span className="block text-[9px] text-[#545565] font-semibold font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'hard')}</span>
@@ -615,7 +615,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
 
                 <button
                   onClick={() => handleGrade(3)}
-                  className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#ACD1FD]/30 transition-all text-center cursor-pointer"
+                  className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#ACD1FD]/30 transition-all text-center cursor-pointer"
                 >
                   <span className="block text-xs font-bold text-[#21222D] dark:text-white">{t.srsGood}</span>
                   <span className="block text-[9px] text-[#545565] font-semibold font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'good')}</span>
@@ -623,7 +623,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
 
                 <button
                   onClick={() => handleGrade(4)}
-                  className="p-3 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
+                  className="p-3 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all text-center cursor-pointer"
                 >
                   <span className="block text-xs font-bold text-[#21222D] dark:text-white">{t.srsEasy}</span>
                   <span className="block text-[9px] text-[#545565] font-semibold font-mono mt-0.5">{getDueIntervalLabel(currentItem, 'easy')}</span>

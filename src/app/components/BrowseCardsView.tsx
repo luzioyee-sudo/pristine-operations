@@ -117,7 +117,7 @@ const InteractiveDeck: React.FC<{
 
   if (!isReady) {
     return (
-      <div className="fixed inset-0 z-[60] bg-[#DBDBE5] dark:bg-[#1E1E1E] flex flex-col items-center justify-center">
+      <div className="fixed inset-0 z-[60] bg-[#DBDBE5] dark:bg-[#21222D] flex flex-col items-center justify-center">
         <div className="w-8 h-8 border-4 border-[#ACD1FD] border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
@@ -146,7 +146,7 @@ const InteractiveDeck: React.FC<{
     <div className="fixed inset-0 z-[60] bg-[#DBDBE5] dark:bg-[#121212] flex flex-col overflow-hidden">
       {/* Header */}
       <div className="pt-4 sm:pt-8 px-4 py-4 flex items-center justify-between z-30">
-        <button onClick={onClose} className="p-2 text-[#545565] hover:text-[#21222D] dark:hover:text-white transition-colors bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-full shadow-xs cursor-pointer">
+        <button onClick={onClose} className="p-2 text-[#545565] hover:text-[#21222D] dark:hover:text-white transition-colors bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-full shadow-xs cursor-pointer">
           <ArrowLeft className="w-5 h-5" />
         </button>
         <div className="flex flex-col items-center">
@@ -160,7 +160,7 @@ const InteractiveDeck: React.FC<{
         
         <div className="flex items-center gap-2 z-50">
           {/* View Mode Toggle Pill */}
-          <div className="flex items-center bg-white dark:bg-[#1E1E1E] p-1 rounded-2xl border border-[#DBDBE5] dark:border-white/10 shadow-xs">
+          <div className="flex items-center bg-white dark:bg-[#21222D] p-1 rounded-2xl border border-[#DBDBE5] dark:border-white/10 shadow-xs">
             <button
               onClick={() => setViewMode('swipe')}
               title="Flashcards Stack Mode"
@@ -188,7 +188,7 @@ const InteractiveDeck: React.FC<{
           </div>
 
           <div className="relative">
-            <button onClick={() => setShowOptions(!showOptions)} className="p-2 text-[#545565] hover:text-[#21222D] dark:hover:text-white transition-colors bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-full shadow-xs cursor-pointer">
+            <button onClick={() => setShowOptions(!showOptions)} className="p-2 text-[#545565] hover:text-[#21222D] dark:hover:text-white transition-colors bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-full shadow-xs cursor-pointer">
               <MoreVertical className="w-5 h-5" />
             </button>
             
@@ -200,7 +200,7 @@ const InteractiveDeck: React.FC<{
                   exit={{ opacity: 0, scale: 0.95, y: -10, rotateX: -10 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   style={{ transformOrigin: 'top right' }}
-                  className="absolute end-0 top-full mt-2 w-64 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-2xl shadow-xl overflow-hidden py-2"
+                  className="absolute end-0 top-full mt-2 w-64 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-2xl shadow-xl overflow-hidden py-2"
                 >
                   <div className="px-4 py-2 border-b border-[#DBDBE5] dark:border-white/10">
                     <h4 className="text-[10px] font-bold text-[#545565] uppercase tracking-wider">{t.displayOptions || 'Display Options'}</h4>
@@ -272,7 +272,7 @@ const InteractiveDeck: React.FC<{
                 return (
                   <div 
                     key={card.id} 
-                    className="bg-white dark:bg-[#1E1E1E] rounded-3xl overflow-hidden shadow-xs hover:shadow-md border border-[#DBDBE5] dark:border-white/10 flex flex-col h-full transition-all relative group"
+                    className="bg-white dark:bg-[#21222D] rounded-3xl overflow-hidden shadow-xs hover:shadow-md border border-[#DBDBE5] dark:border-white/10 flex flex-col h-full transition-all relative group"
                   >
                     {/* Topic Picture Header */}
                     <div className="relative h-36 w-full overflow-hidden bg-[#DBDBE5] dark:bg-stone-800 shrink-0">
@@ -365,7 +365,7 @@ const InteractiveDeck: React.FC<{
                       <button 
                         onClick={() => handleAction(card, 'up')}
                         title={t.addToLearnDeck || "Add to Learn Deck"}
-                        className="flex-1 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] active:scale-95 text-[#21222D] rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all cursor-pointer"
+                        className="flex-1 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] active:scale-95 text-[#21222D] rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all cursor-pointer"
                       >
                         <BookOpen className="w-4 h-4" />
                         <span>{t.learn || 'Learn'}</span>
@@ -414,7 +414,7 @@ const InteractiveDeck: React.FC<{
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-[#1E1E1E] rounded-3xl shadow-xl border border-[#DBDBE5] dark:border-white/10 pointer-events-auto"
+                className="flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-[#21222D] rounded-3xl shadow-xl border border-[#DBDBE5] dark:border-white/10 pointer-events-auto"
               >
                 <div className="w-20 h-20 bg-[#ACD1FD] text-[#21222D] rounded-full flex items-center justify-center mb-6">
                   <Check className="w-10 h-10 stroke-[3]" />
@@ -475,7 +475,7 @@ const InteractiveDeck: React.FC<{
                     >
                       {/* --- FRONT FACE --- */}
                       <div 
-                        className="absolute inset-0 bg-white dark:bg-[#1E1E1E] rounded-3xl shadow-2xl overflow-hidden p-5 flex flex-col justify-between border border-[#DBDBE5] dark:border-white/10"
+                        className="absolute inset-0 bg-white dark:bg-[#21222D] rounded-3xl shadow-2xl overflow-hidden p-5 flex flex-col justify-between border border-[#DBDBE5] dark:border-white/10"
                         style={{ backfaceVisibility: 'hidden' }}
                       >
                         {/* Photo Banner with Controls */}
@@ -511,7 +511,7 @@ const InteractiveDeck: React.FC<{
                                   e
                                 );
                               }}
-                              className="p-2.5 bg-white/95 dark:bg-[#1E1E1E]/95 text-[#21222D] dark:text-white rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform cursor-pointer"
+                              className="p-2.5 bg-white/95 dark:bg-[#21222D]/95 text-[#21222D] dark:text-white rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform cursor-pointer"
                             >
                               <Volume2 className="w-4 h-4" />
                             </button>
@@ -546,7 +546,7 @@ const InteractiveDeck: React.FC<{
 
                       {/* --- BACK FACE --- */}
                       <div 
-                        className="absolute inset-0 bg-[#DBDBE5] dark:bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 flex flex-col items-center justify-center border border-[#DBDBE5] dark:border-white/10"
+                        className="absolute inset-0 bg-[#DBDBE5] dark:bg-[#21222D] rounded-3xl shadow-2xl p-6 flex flex-col items-center justify-center border border-[#DBDBE5] dark:border-white/10"
                         style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                       >
                         <span className="text-[10px] uppercase font-bold text-[#545565] tracking-widest mb-3">
@@ -575,13 +575,13 @@ const InteractiveDeck: React.FC<{
           <div className="absolute bottom-8 start-0 w-full flex justify-center gap-6 z-30 pointer-events-auto">
             <button 
               onClick={() => handleAction(stack[stack.length - 1], 'down')} 
-              className="w-16 h-16 bg-white dark:bg-[#1E1E1E] rounded-full shadow-xl flex items-center justify-center text-[#545565] hover:text-[#21222D] dark:hover:text-white hover:scale-105 transition-all border border-[#DBDBE5] dark:border-white/10 cursor-pointer"
+              className="w-16 h-16 bg-white dark:bg-[#21222D] rounded-full shadow-xl flex items-center justify-center text-[#545565] hover:text-[#21222D] dark:hover:text-white hover:scale-105 transition-all border border-[#DBDBE5] dark:border-white/10 cursor-pointer"
             >
               <X className="w-8 h-8" />
             </button>
             <button 
               onClick={() => handleAction(stack[stack.length - 1], 'up')} 
-              className="w-16 h-16 bg-[#ACD1FD] rounded-full shadow-xl flex items-center justify-center text-[#21222D] hover:bg-[#8ee590] hover:scale-105 transition-all cursor-pointer"
+              className="w-16 h-16 bg-[#ACD1FD] rounded-full shadow-xl flex items-center justify-center text-[#21222D] hover:bg-[#ACD1FD] hover:scale-105 transition-all cursor-pointer"
             >
               <BookOpen className="w-7 h-7" />
             </button>
@@ -763,7 +763,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
                 if (e.target.value && viewStep !== 'libraryHome') setViewStep('libraryHome');
               }}
               placeholder={t.quickSearchPlaceholder || "Search words, phrases, or topics..."}
-              className="w-full ps-11 pe-4 py-3 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-2xl text-sm text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD] transition-shadow shadow-xs"
+              className="w-full ps-11 pe-4 py-3 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-2xl text-sm text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD] transition-shadow shadow-xs"
             />
           </div>
         </div>
@@ -793,7 +793,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all cursor-pointer ${
                     activeLanguage === lang
                       ? 'bg-[#21222D] text-[#DBDBE5] shadow-xs font-bold'
-                      : 'bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#545565] dark:text-[#DBDBE5] hover:border-[#21222D]'
+                      : 'bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#545565] dark:text-[#DBDBE5] hover:border-[#21222D]'
                   }`}
                 >
                   {getLangLabel(lang)}
@@ -812,7 +812,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
                     key={level}
                     id={`browse-level-btn-${level.replace('/', '-').toLowerCase()}`}
                     onClick={() => handleNavLevel(level)}
-                    className="group flex flex-col items-start p-5 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-3xl hover:border-[#21222D] dark:hover:border-white/30 transition-all text-start shadow-xs hover:shadow-md cursor-pointer"
+                    className="group flex flex-col items-start p-5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-3xl hover:border-[#21222D] dark:hover:border-white/30 transition-all text-start shadow-xs hover:shadow-md cursor-pointer"
                   >
                     <FolderOpen className="w-6 h-6 text-[#545565] group-hover:text-[#21222D] dark:group-hover:text-white transition-colors mb-4" />
                     <h3 className="text-2xl font-bold text-[#21222D] dark:text-[#DBDBE5] tracking-tight">{level}</h3>
@@ -837,7 +837,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
           </div>
 
           {topicsInActiveLevel.length === 0 ? (
-            <div id="browse-no-decks-state" className="p-12 bg-white dark:bg-[#1E1E1E] rounded-3xl border border-[#DBDBE5] dark:border-white/10 text-center">
+            <div id="browse-no-decks-state" className="p-12 bg-white dark:bg-[#21222D] rounded-3xl border border-[#DBDBE5] dark:border-white/10 text-center">
               <Inbox className="w-10 h-10 text-[#545565] mx-auto mb-3" />
               <p className="text-[#545565] font-medium">{t.noDecks || 'No topics available for this level yet.'}</p>
             </div>
@@ -851,7 +851,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
                     key={topic.name}
                     id={`browse-topic-card-${topic.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                     onClick={() => handleNavDeck(topic.name)}
-                    className="group bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 rounded-3xl overflow-hidden hover:border-[#21222D] dark:hover:border-white/30 transition-all cursor-pointer shadow-xs hover:shadow-xl flex flex-col"
+                    className="group bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 rounded-3xl overflow-hidden hover:border-[#21222D] dark:hover:border-white/30 transition-all cursor-pointer shadow-xs hover:shadow-xl flex flex-col"
                   >
                     {/* Visual Topic Header Image */}
                     <div className="relative h-44 w-full overflow-hidden bg-[#DBDBE5] dark:bg-stone-800">
@@ -883,7 +883,7 @@ export const BrowseCardsView: React.FC<BrowseCardsViewProps> = ({
                     </div>
 
                     {/* Bottom Metadata Bar */}
-                    <div className="p-4 sm:p-5 flex items-center justify-end bg-white dark:bg-[#1E1E1E]">
+                    <div className="p-4 sm:p-5 flex items-center justify-end bg-white dark:bg-[#21222D]">
                       <div className="p-2 rounded-xl bg-[#DBDBE5] dark:bg-white/10 text-[#21222D] dark:text-white group-hover:bg-[#21222D] group-hover:text-[#DBDBE5] transition-colors">
                         <ChevronRight className="w-4 h-4" />
                       </div>

@@ -43,28 +43,28 @@ export const LockScreen: React.FC<LockScreenProps> = ({
   return (
     <div className="fixed inset-0 z-50 bg-[#121310] text-stone-100 flex flex-col items-center justify-center p-4 sm:p-6 select-none overflow-y-auto min-h-[100dvh]">
       {/* Subtle Background Glows */}
-      <div className="absolute top-1/4 start-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-[#334DAF]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 start-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-[#958CE8]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 start-10 w-60 sm:w-72 h-60 sm:h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`w-full max-w-sm sm:max-w-md bg-[#1D201A] border border-stone-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 space-y-5 sm:space-y-6 text-center my-auto ${
+        className={`w-full max-w-sm sm:max-w-md bg-[#21222D] border border-stone-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 space-y-5 sm:space-y-6 text-center my-auto ${
           isShaking ? 'animate-shake' : ''
         }`}
       >
         {/* User Avatar / Lock Icon Header */}
         <div className="flex flex-col items-center gap-3">
           <div className="relative">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-stone-900 border-2 border-[#334DAF] text-white flex items-center justify-center font-bold text-xl sm:text-2xl shadow-lg overflow-hidden">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-stone-900 border-2 border-[#958CE8] text-white flex items-center justify-center font-bold text-xl sm:text-2xl shadow-lg overflow-hidden">
               <img 
                 src={getEffectiveAvatar(userAvatar, userName)} 
                 alt={userName} 
                 className="w-full h-full object-cover" 
               />
             </div>
-            <div className="absolute -bottom-1 -end-1 p-1.5 sm:p-2 rounded-full bg-[#334DAF] text-white shadow-md border-2 border-[#1D201A]">
+            <div className="absolute -bottom-1 -end-1 p-1.5 sm:p-2 rounded-full bg-[#958CE8] text-white shadow-md border-2 border-[#21222D]">
               <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </div>
           </div>
@@ -92,7 +92,7 @@ export const LockScreen: React.FC<LockScreenProps> = ({
               }}
               placeholder="Enter Access Passcode"
               autoFocus
-              className="w-full ps-11 pe-11 py-3.5 rounded-2xl bg-stone-900 border border-stone-700 text-stone-100 placeholder-stone-500 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#334DAF] focus:border-transparent transition-all min-h-[48px]"
+              className="w-full ps-11 pe-11 py-3.5 rounded-2xl bg-stone-900 border border-stone-700 text-stone-100 placeholder-stone-500 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#958CE8] focus:border-transparent transition-all min-h-[48px]"
             />
             <button
               type="button"
@@ -120,7 +120,7 @@ export const LockScreen: React.FC<LockScreenProps> = ({
 
           <button
             type="submit"
-            className="w-full py-3.5 rounded-2xl bg-[#334DAF] hover:bg-[#091F5C] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer hover:scale-[1.01] active:scale-[0.98] min-h-[48px]"
+            className="w-full py-3.5 rounded-2xl bg-[#958CE8] hover:bg-[#21222D] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer hover:scale-[1.01] active:scale-[0.98] min-h-[48px]"
           >
             <span>Unlock Ribble</span>
             <ArrowRight className="w-4 h-4" />
@@ -151,7 +151,7 @@ export const LockScreen: React.FC<LockScreenProps> = ({
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="w-full max-w-sm bg-[#1D201A] border border-stone-800 rounded-3xl p-6 text-stone-200 shadow-2xl relative space-y-4"
+              className="w-full max-w-sm bg-[#21222D] border border-stone-800 rounded-3xl p-6 text-stone-200 shadow-2xl relative space-y-4"
             >
               <button
                 onClick={() => setShowHintModal(false)}

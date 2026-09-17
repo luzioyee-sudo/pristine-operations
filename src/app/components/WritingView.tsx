@@ -1046,7 +1046,7 @@ export const WritingView: React.FC<WritingViewProps> = ({ settings, onNavigate }
               <button
                 onClick={handleAnalyze}
                 disabled={isAnalyzing || !inputText.trim()}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#ACD1FD] text-[#21222D] font-extrabold text-xs shadow-xs hover:bg-[#8ee590] disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#ACD1FD] text-[#21222D] font-extrabold text-xs shadow-xs hover:bg-[#ACD1FD] disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
               >
                 {isAnalyzing ? (
                   <>

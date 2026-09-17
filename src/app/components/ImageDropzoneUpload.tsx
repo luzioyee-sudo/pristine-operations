@@ -231,14 +231,14 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
       </div>
 
       {/* Mode Selector Tabs */}
-      <div className="flex items-center gap-1 p-0.5 rounded-xl bg-stone-100 dark:bg-stone-850 border border-[#D0E4FE] dark:border-stone-800 text-[11px]">
+      <div className="flex items-center gap-1 p-0.5 rounded-xl bg-stone-100 dark:bg-stone-850 border border-[#DBDBE5] dark:border-stone-800 text-[11px]">
         <button
           type="button"
           onClick={() => setMode('upload')}
           className={`flex-1 py-1 px-2.5 rounded-lg font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mode === 'upload'
-              ? 'bg-white dark:bg-stone-750 text-[#334DAF] shadow-xs'
-              : 'text-[#5D7BBE] hover:text-[#091F5C] dark:hover:text-stone-200'
+              ? 'bg-white dark:bg-stone-750 text-[#958CE8] shadow-xs'
+              : 'text-[#5D7BBE] hover:text-[#21222D] dark:hover:text-stone-200'
           }`}
         >
           <Upload className="w-3 h-3" />
@@ -250,8 +250,8 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
           onClick={() => setMode('url')}
           className={`flex-1 py-1 px-2.5 rounded-lg font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mode === 'url'
-              ? 'bg-white dark:bg-stone-750 text-[#334DAF] shadow-xs'
-              : 'text-[#5D7BBE] hover:text-[#091F5C] dark:hover:text-stone-200'
+              ? 'bg-white dark:bg-stone-750 text-[#958CE8] shadow-xs'
+              : 'text-[#5D7BBE] hover:text-[#21222D] dark:hover:text-stone-200'
           }`}
         >
           <LinkIcon className="w-3 h-3" />
@@ -263,8 +263,8 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
           onClick={() => setMode('presets')}
           className={`flex-1 py-1 px-2.5 rounded-lg font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
             mode === 'presets'
-              ? 'bg-white dark:bg-stone-750 text-[#334DAF] shadow-xs'
-              : 'text-[#5D7BBE] hover:text-[#091F5C] dark:hover:text-stone-200'
+              ? 'bg-white dark:bg-stone-750 text-[#958CE8] shadow-xs'
+              : 'text-[#5D7BBE] hover:text-[#21222D] dark:hover:text-stone-200'
           }`}
         >
           <Sparkles className="w-3 h-3" />
@@ -282,10 +282,10 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
           onPaste={handlePaste}
           tabIndex={0}
           onClick={() => fileInputRef.current?.click()}
-          className={`relative border-2 border-dashed rounded-2xl p-4 text-center cursor-pointer transition-all focus:outline-none focus:ring-2 focus:ring-[#334DAF] ${
+          className={`relative border-2 border-dashed rounded-2xl p-4 text-center cursor-pointer transition-all focus:outline-none focus:ring-2 focus:ring-[#958CE8] ${
             isDragging
-              ? 'border-[#334DAF] bg-[#E8F2FE] dark:bg-[#3d2416]/50'
-              : 'border-[#D0E4FE] dark:border-stone-700 hover:border-[#334DAF]/60 bg-[#E8F2FE]/50 dark:bg-stone-900/50'
+              ? 'border-[#958CE8] bg-[#DBDBE5] dark:bg-[#3d2416]/50'
+              : 'border-[#DBDBE5] dark:border-stone-700 hover:border-[#958CE8]/60 bg-[#DBDBE5]/50 dark:bg-stone-900/50'
           }`}
         >
           <input
@@ -313,15 +313,15 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
             </div>
           ) : (
             <div className="space-y-1.5 py-1">
-              <div className="w-10 h-10 rounded-full bg-[#E8F2FE] dark:bg-[#3d2416] text-[#334DAF] flex items-center justify-center mx-auto shadow-2xs">
+              <div className="w-10 h-10 rounded-full bg-[#DBDBE5] dark:bg-[#3d2416] text-[#958CE8] flex items-center justify-center mx-auto shadow-2xs">
                 {isProcessing ? (
-                  <div className="w-5 h-5 border-2 border-[#334DAF] border-t-transparent rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 border-[#958CE8] border-t-transparent rounded-full animate-spin" />
                 ) : (
                   <Upload className="w-5 h-5" />
                 )}
               </div>
-              <div className="text-xs font-bold text-[#091F5C] dark:text-stone-200">
-                <span className="text-[#334DAF] underline">Click to upload from device</span> or drag & drop
+              <div className="text-xs font-bold text-[#21222D] dark:text-stone-200">
+                <span className="text-[#958CE8] underline">Click to upload from device</span> or drag & drop
               </div>
               <p className="text-[10px] text-stone-400 flex items-center justify-center gap-1">
                 <Clipboard className="w-3 h-3 inline" /> Or directly paste from clipboard (<kbd className="px-1 py-0.5 bg-stone-200 dark:bg-stone-800 rounded font-mono text-[9px]">Ctrl+V</kbd>)
@@ -345,12 +345,12 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
             placeholder="https://images.unsplash.com/..."
             value={urlInput}
             onChange={(e) => setUrlInput(e.target.value)}
-            className="flex-1 px-3 py-2 rounded-xl border border-[#D0E4FE] dark:border-stone-800 bg-[#E8F2FE] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs focus:outline-none focus:ring-2 focus:ring-[#334DAF]"
+            className="flex-1 px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-stone-800 bg-[#DBDBE5] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs focus:outline-none focus:ring-2 focus:ring-[#958CE8]"
           />
           <button
             type="button"
             onClick={handleApplyUrl}
-            className="px-3.5 py-2 rounded-xl bg-[#334DAF] text-white text-xs font-bold hover:bg-[#091F5C] transition-colors cursor-pointer shrink-0"
+            className="px-3.5 py-2 rounded-xl bg-[#958CE8] text-white text-xs font-bold hover:bg-[#21222D] transition-colors cursor-pointer shrink-0"
           >
             Apply
           </button>
@@ -370,8 +370,8 @@ export const ImageDropzoneUpload: React.FC<ImageDropzoneUploadProps> = ({
               }}
               className={`group rounded-xl overflow-hidden border p-1 text-start transition-all cursor-pointer flex flex-col items-center gap-1 ${
                 value === preset.url
-                  ? 'border-[#334DAF] ring-2 ring-[#334DAF]/30 bg-[#E8F2FE] dark:bg-[#3d2416]/40'
-                  : 'border-[#D0E4FE] dark:border-stone-800 hover:border-stone-300 bg-[#E8F2FE] dark:bg-stone-900'
+                  ? 'border-[#958CE8] ring-2 ring-[#958CE8]/30 bg-[#DBDBE5] dark:bg-[#3d2416]/40'
+                  : 'border-[#DBDBE5] dark:border-stone-800 hover:border-stone-300 bg-[#DBDBE5] dark:bg-stone-900'
               }`}
             >
               <div className="w-full h-12 rounded-lg overflow-hidden bg-stone-200 dark:bg-stone-800">

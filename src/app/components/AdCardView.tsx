@@ -174,14 +174,14 @@ export const CARD_PALETTES: Record<string, CardStylePreset> = {
   'pastel-terracotta': {
     id: 'pastel-terracotta',
     name: 'Ribble Warm Terracotta',
-    gradient: 'linear-gradient(135deg, #E8F2FE 0%, #F5DFD4 100%)',
-    bgSolid: '#E8F2FE',
+    gradient: 'linear-gradient(135deg, #DBDBE5 0%, #F5DFD4 100%)',
+    bgSolid: '#DBDBE5',
     textColor: '#422011',
     subtextColor: '#7C4E3A',
-    accentBg: '#334DAF',
+    accentBg: '#958CE8',
     accentText: '#FFFFFF',
     badgeBg: '#FFFFFF',
-    badgeText: '#334DAF',
+    badgeText: '#958CE8',
     borderColor: '#E8C5B3',
   },
 };
@@ -377,7 +377,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
         <div className="relative z-30 bg-stone-900/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 flex items-center justify-between gap-1.5 border-b border-white/15 flex-wrap">
           <div className="flex items-center gap-1">
             <Edit3 className="w-3 h-3 text-[#EAB59A]" />
-            <span className="font-bold text-[#E8F2FE]">Touch to Edit:</span>
+            <span className="font-bold text-[#DBDBE5]">Touch to Edit:</span>
           </div>
 
           <div className="flex items-center gap-1 flex-wrap">
@@ -388,7 +388,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   key={sz}
                   type="button"
                   onClick={() => handleInlineChange('titleSize', sz)}
-                  className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${ad.titleSize === sz ? 'bg-[#334DAF] text-white' : 'text-stone-300'}`}
+                  className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${ad.titleSize === sz ? 'bg-[#958CE8] text-white' : 'text-stone-300'}`}
                 >
                   {sz.toUpperCase()}
                 </button>
@@ -475,7 +475,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
               {(ad.chatBubbles && ad.chatBubbles.length > 0 ? ad.chatBubbles : ['Hey ChatGPT!', 'Describe me based on our chats']).map((bubble, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/95 text-[#091F5C] text-xs font-semibold px-4 py-2 rounded-2xl shadow-sm border border-black/5 flex items-center gap-1.5"
+                  className="bg-white/95 text-[#21222D] text-xs font-semibold px-4 py-2 rounded-2xl shadow-sm border border-black/5 flex items-center gap-1.5"
                 >
                   {isInteractiveEditable ? (
                     <div className="flex items-center gap-1 w-full">
@@ -487,7 +487,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                           copy[idx] = e.target.value;
                           handleInlineChange('chatBubbles', copy);
                         }}
-                        className="bg-stone-100 rounded px-1.5 py-0.5 text-xs text-[#091F5C] w-full focus:outline-none"
+                        className="bg-stone-100 rounded px-1.5 py-0.5 text-xs text-[#21222D] w-full focus:outline-none"
                         onClick={(e) => e.stopPropagation()}
                       />
                       <button
@@ -514,7 +514,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                     const copy = [...(ad.chatBubbles || ['Hey ChatGPT!', 'Describe me based on our chats']), 'New chat message...'];
                     handleInlineChange('chatBubbles', copy);
                   }}
-                  className="text-[10px] font-bold text-[#334DAF] bg-white/80 px-2 py-0.5 rounded-full self-center cursor-pointer shadow-2xs hover:bg-white"
+                  className="text-[10px] font-bold text-[#958CE8] bg-white/80 px-2 py-0.5 rounded-full self-center cursor-pointer shadow-2xs hover:bg-white"
                 >
                   + Add Chat Bubble
                 </button>
@@ -531,12 +531,12 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.title || ''}
                   onChange={(e) => handleInlineChange('title', e.target.value)}
                   placeholder="Introducing new, improved memory"
-                  className={`w-full text-center bg-black/5 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-[#334DAF] ${fontClass} ${titleSizeClass}`}
+                  className={`w-full text-center bg-black/5 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-[#958CE8] ${fontClass} ${titleSizeClass}`}
                   style={{ color: '#0F172A' }}
                   onClick={(e) => e.stopPropagation()}
                 />
               ) : (
-                <h3 className={`${fontClass} ${titleSizeClass} text-[#091F5C] dark:text-stone-100`}>
+                <h3 className={`${fontClass} ${titleSizeClass} text-[#21222D] dark:text-stone-100`}>
                   {ad.title || 'Introducing new, improved memory'}
                 </h3>
               )}
@@ -596,7 +596,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                     <button
                       type="button"
                       onClick={onSecondaryCtaClick || onDismiss}
-                      className="w-full py-2 text-stone-600 hover:text-[#091F5C] dark:text-stone-400 dark:hover:text-stone-200 font-semibold text-xs transition-colors cursor-pointer"
+                      className="w-full py-2 text-stone-600 hover:text-[#21222D] dark:text-stone-400 dark:hover:text-stone-200 font-semibold text-xs transition-colors cursor-pointer"
                     >
                       {ad.secondaryCtaText}
                     </button>
@@ -612,7 +612,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
       {/* 2. FOOD / RESTAURANT DELIVERY CAPSULE (Image 2 Reference) */}
       {/* ======================================================== */}
       {layout === 'wave-capsule' && (
-        <div className="relative z-10 flex flex-col sm:flex-row items-stretch bg-white dark:bg-[#1E221B] rounded-[inherit] overflow-hidden shadow-lg border border-[#D0E4FE] dark:border-stone-800">
+        <div className="relative z-10 flex flex-col sm:flex-row items-stretch bg-white dark:bg-[#1E221B] rounded-[inherit] overflow-hidden shadow-lg border border-[#DBDBE5] dark:border-stone-800">
           {/* Left Content Column */}
           <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between space-y-3 z-10">
             <div>
@@ -623,11 +623,11 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.title || ''}
                   onChange={(e) => handleInlineChange('title', e.target.value)}
                   placeholder="Copper Kitchen"
-                  className="w-full font-black text-lg sm:text-xl text-[#091F5C] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none"
+                  className="w-full font-black text-lg sm:text-xl text-[#21222D] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none"
                   onClick={(e) => e.stopPropagation()}
                 />
               ) : (
-                <h3 className="font-black text-lg sm:text-xl text-[#091F5C] dark:text-stone-100">
+                <h3 className="font-black text-lg sm:text-xl text-[#21222D] dark:text-stone-100">
                   {ad.title || 'Copper Kitchen'}
                 </h3>
               )}
@@ -717,7 +717,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                     const copy = [...(ad.tagPills || ['RECOMENDING 🔥', 'FREE DELIVERY 🛵']), 'HOT DEAL ⭐'];
                     handleInlineChange('tagPills', copy);
                   }}
-                  className="text-[10px] font-bold text-[#334DAF] hover:underline cursor-pointer"
+                  className="text-[10px] font-bold text-[#958CE8] hover:underline cursor-pointer"
                 >
                   + Add Tag
                 </button>
@@ -761,7 +761,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
       {/* 3. PRODUCT / GROCERY COUNTER PILL (Image 3 Reference) */}
       {/* ======================================================== */}
       {layout === 'product-counter' && (
-        <div className="relative z-10 p-5 sm:p-6 bg-white dark:bg-[#1E221B] rounded-[inherit] flex items-center gap-5 shadow-lg border border-[#D0E4FE] dark:border-stone-800">
+        <div className="relative z-10 p-5 sm:p-6 bg-white dark:bg-[#1E221B] rounded-[inherit] flex items-center gap-5 shadow-lg border border-[#DBDBE5] dark:border-stone-800">
           {/* Left Floating Product Cutout Picture */}
           <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 flex items-center justify-center">
             <img
@@ -780,11 +780,11 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.title || ''}
                   onChange={(e) => handleInlineChange('title', e.target.value)}
                   placeholder="Banana 5 pcs"
-                  className="font-black text-base sm:text-lg text-[#091F5C] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none w-full"
+                  className="font-black text-base sm:text-lg text-[#21222D] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none w-full"
                   onClick={(e) => e.stopPropagation()}
                 />
               ) : (
-                <h3 className="font-black text-base sm:text-lg text-[#091F5C] dark:text-stone-100">
+                <h3 className="font-black text-base sm:text-lg text-[#21222D] dark:text-stone-100">
                   {ad.title || 'Banana 5 pcs'}
                 </h3>
               )}
@@ -815,11 +815,11 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.subtitlePrice || '$00.00'}
                   onChange={(e) => handleInlineChange('subtitlePrice', e.target.value)}
                   placeholder="$00.00"
-                  className="font-black text-sm text-[#091F5C] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 w-24 focus:outline-none"
+                  className="font-black text-sm text-[#21222D] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 w-24 focus:outline-none"
                   onClick={(e) => e.stopPropagation()}
                 />
               ) : (
-                <span className="font-black text-sm sm:text-base text-[#091F5C] dark:text-stone-100">
+                <span className="font-black text-sm sm:text-base text-[#21222D] dark:text-stone-100">
                   {ad.subtitlePrice || '$00.00'}
                 </span>
               )}
@@ -966,7 +966,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
       {/* 5. INVITE & PROFIT / REFERRAL STEP CARD (Image 5 Reference) */}
       {/* ======================================================== */}
       {layout === 'invite-profit' && (
-        <div className="relative z-10 bg-white dark:bg-[#1E221B] rounded-[inherit] overflow-hidden shadow-lg border border-[#D0E4FE] dark:border-stone-800 flex flex-col">
+        <div className="relative z-10 bg-white dark:bg-[#1E221B] rounded-[inherit] overflow-hidden shadow-lg border border-[#DBDBE5] dark:border-stone-800 flex flex-col">
           {/* Top Banner Rounded Fluid Image */}
           <div className="p-4 pb-0">
             <div className="w-full h-32 sm:h-36 rounded-2xl overflow-hidden shadow-inner bg-gradient-to-r from-blue-100 via-pink-100 to-amber-100">
@@ -987,11 +987,11 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.title || 'Invite & Profit'}
                   onChange={(e) => handleInlineChange('title', e.target.value)}
                   placeholder="Invite & Profit"
-                  className="font-black text-xl sm:text-2xl text-[#091F5C] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none w-full"
+                  className="font-black text-xl sm:text-2xl text-[#21222D] dark:text-stone-100 bg-black/5 rounded px-2 py-0.5 focus:outline-none w-full"
                   onClick={(e) => e.stopPropagation()}
                 />
               ) : (
-                <h3 className="font-black text-xl sm:text-2xl text-[#091F5C] dark:text-stone-100">
+                <h3 className="font-black text-xl sm:text-2xl text-[#21222D] dark:text-stone-100">
                   {ad.title || 'Invite & Profit'}
                 </h3>
               )}
@@ -1024,9 +1024,9 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
               ).map((step, idx) => {
                 const StepIcon = getStepIcon(step.icon);
                 return (
-                  <div key={idx} className="flex items-center gap-3 text-xs text-[#091F5C] dark:text-stone-200">
+                  <div key={idx} className="flex items-center gap-3 text-xs text-[#21222D] dark:text-stone-200">
                     <div className="w-7 h-7 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center shrink-0 shadow-2xs">
-                      <StepIcon className="w-3.5 h-3.5 text-[#091F5C] dark:text-stone-100" />
+                      <StepIcon className="w-3.5 h-3.5 text-[#21222D] dark:text-stone-100" />
                     </div>
                     {isInteractiveEditable ? (
                       <div className="flex items-center gap-1 flex-1">
@@ -1038,7 +1038,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                             copy[idx] = { ...copy[idx], text: e.target.value };
                             handleInlineChange('stepItems', copy);
                           }}
-                          className="flex-1 bg-black/5 rounded px-2 py-0.5 text-xs text-[#091F5C] dark:text-stone-200 focus:outline-none"
+                          className="flex-1 bg-black/5 rounded px-2 py-0.5 text-xs text-[#21222D] dark:text-stone-200 focus:outline-none"
                           onClick={(e) => e.stopPropagation()}
                         />
                       </div>
@@ -1055,7 +1055,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
               <span className="text-[11px] font-bold text-stone-400 dark:text-stone-500 block mb-1.5">
                 Your invite link:
               </span>
-              <div className="bg-stone-100 dark:bg-stone-800/80 rounded-2xl p-1.5 ps-3 flex items-center justify-between gap-2 border border-[#D0E4FE] dark:border-stone-700">
+              <div className="bg-stone-100 dark:bg-stone-800/80 rounded-2xl p-1.5 ps-3 flex items-center justify-between gap-2 border border-[#DBDBE5] dark:border-stone-700">
                 <div className="flex items-center gap-2 overflow-hidden flex-1">
                   <Link className="w-3.5 h-3.5 text-stone-400 shrink-0" />
                   {isInteractiveEditable ? (
@@ -1130,7 +1130,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   value={ad.title || ''}
                   onChange={(e) => handleInlineChange('title', e.target.value)}
                   placeholder="Campaign Title"
-                  className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 ${fontClass} ${titleSizeClass}`}
+                  className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 ${fontClass} ${titleSizeClass}`}
                   style={{ color: textColor }}
                   onClick={(e) => e.stopPropagation()}
                 />
@@ -1170,7 +1170,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                   onChange={(e) => handleInlineChange('description', e.target.value)}
                   placeholder="Write description here..."
                   rows={2}
-                  className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
+                  className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
                   style={{ color: subtextColor }}
                   onClick={(e) => e.stopPropagation()}
                 />
@@ -1243,7 +1243,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                     const copy = [...(ad.bulletPoints || []), 'New perk point'];
                     handleInlineChange('bulletPoints', copy);
                   }}
-                  className="text-[10px] font-bold text-[#334DAF] flex items-center gap-1 hover:underline pt-0.5 cursor-pointer"
+                  className="text-[10px] font-bold text-[#958CE8] flex items-center gap-1 hover:underline pt-0.5 cursor-pointer"
                 >
                   <Plus className="w-3 h-3" />
                   <span>Add Feature Point</span>
@@ -1360,7 +1360,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 value={ad.title || ''}
                 onChange={(e) => handleInlineChange('title', e.target.value)}
                 placeholder="Title"
-                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 ${fontClass} ${titleSizeClass}`}
+                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 ${fontClass} ${titleSizeClass}`}
                 style={{ color: textColor }}
                 onClick={(e) => e.stopPropagation()}
               />
@@ -1396,7 +1396,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 onChange={(e) => handleInlineChange('description', e.target.value)}
                 placeholder="Description"
                 rows={2}
-                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
+                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
                 style={{ color: subtextColor }}
                 onClick={(e) => e.stopPropagation()}
               />
@@ -1479,7 +1479,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 value={ad.title || ''}
                 onChange={(e) => handleInlineChange('title', e.target.value)}
                 placeholder="Campaign Headline"
-                className={`w-full text-center bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 ${fontClass} ${titleSizeClass}`}
+                className={`w-full text-center bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 ${fontClass} ${titleSizeClass}`}
                 style={{ color: textColor }}
                 onClick={(e) => e.stopPropagation()}
               />
@@ -1515,7 +1515,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 onChange={(e) => handleInlineChange('description', e.target.value)}
                 placeholder="Description"
                 rows={2}
-                className={`w-full text-center bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
+                className={`w-full text-center bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 resize-none ${fontClass} ${bodySizeClass}`}
                 style={{ color: subtextColor }}
                 onClick={(e) => e.stopPropagation()}
               />
@@ -1617,7 +1617,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 value={ad.title || ''}
                 onChange={(e) => handleInlineChange('title', e.target.value)}
                 placeholder="Campaign Headline"
-                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 ${fontClass} ${titleSizeClass}`}
+                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 ${fontClass} ${titleSizeClass}`}
                 style={{ color: textColor }}
                 onClick={(e) => e.stopPropagation()}
               />
@@ -1633,7 +1633,7 @@ export const AdCardView: React.FC<AdCardViewProps> = ({
                 onChange={(e) => handleInlineChange('description', e.target.value)}
                 placeholder="Description text..."
                 rows={2}
-                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#334DAF] border border-black/10 resize-none mt-1 ${fontClass} ${bodySizeClass}`}
+                className={`w-full bg-black/5 hover:bg-black/10 rounded-lg p-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#958CE8] border border-black/10 resize-none mt-1 ${fontClass} ${bodySizeClass}`}
                 style={{ color: subtextColor }}
                 onClick={(e) => e.stopPropagation()}
               />

@@ -70,7 +70,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
       
       {/* Top Open Sheet Document Tab Bar */}
       <div className="flex items-center gap-2 border-b border-[#DBDBE5] dark:border-stone-800 pb-2">
-        <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#21222D] text-[#DBDBE5] dark:bg-[#1D201A] dark:border dark:border-stone-800 rounded-full text-[11px] font-bold shadow-xs">
+        <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#21222D] text-[#DBDBE5] dark:bg-[#21222D] dark:border dark:border-stone-800 rounded-full text-[11px] font-bold shadow-xs">
           <span>{deck.name}</span>
           <button
             onClick={onCloseDeck}
@@ -101,7 +101,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
           </button>
           <button
             onClick={onAddWordClick}
-            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
+            className="flex items-center gap-1.5 px-4 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] rounded-2xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
           >
             <Plus className="w-4 h-4" />
             <span>{t.addBookmark?.replace("+", "") || "Add Word"}</span>
@@ -110,7 +110,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
       </div>
 
       {/* Sub-Header Filter Bar with Search Input */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 p-3 rounded-2xl shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 p-3 rounded-2xl shadow-xs">
         {/* Filter categories tabs */}
         <div className="flex items-center bg-[#DBDBE5] dark:bg-stone-900 p-1 rounded-xl w-fit border border-[#DBDBE5]/60">
           {(['all', 'new', 'learning', 'mastered'] as const).map(tab => {
@@ -152,7 +152,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
 
       {/* Word / Phrase Cards Listing Container */}
       {filteredCards.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl text-center p-8 space-y-4">
+        <div className="flex flex-col items-center justify-center py-20 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl text-center p-8 space-y-4">
           <div className="w-16 h-16 rounded-full bg-[#DBDBE5] dark:bg-stone-800 flex items-center justify-center text-stone-400">
             <FileSpreadsheet className="w-8 h-8" />
           </div>
@@ -166,7 +166,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
           </div>
           <button
             onClick={onAddWordClick}
-            className="px-5 py-2.5 bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
+            className="px-5 py-2.5 bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>{t.addBookmark?.replace("+", "") || "Add Word"}</span>
@@ -183,7 +183,7 @@ export const SingleDeckView: React.FC<SingleDeckViewProps> = ({
             return (
               <div
                 key={card.id}
-                className="p-5 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs hover:shadow-xs transition-shadow"
+                className="p-5 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs hover:shadow-xs transition-shadow"
               >
                 <div className="flex gap-4 items-start">
                   <button

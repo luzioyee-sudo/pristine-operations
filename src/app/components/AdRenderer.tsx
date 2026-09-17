@@ -126,7 +126,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="w-full bg-gradient-to-r from-[#091F5C] via-[#142C6E] to-[#091F5C] text-white border-b border-[#334DAF]/40 px-3.5 py-2 text-xs relative z-30 shadow-sm shrink-0"
+            className="w-full bg-gradient-to-r from-[#21222D] via-[#142C6E] to-[#21222D] text-white border-b border-[#958CE8]/40 px-3.5 py-2 text-xs relative z-30 shadow-sm shrink-0"
           >
             <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
               <div className="flex items-center gap-2.5 min-w-0">
@@ -134,17 +134,17 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                   <img
                     src={ad.imageUrl}
                     alt=""
-                    className="w-8 h-8 rounded-lg object-cover shrink-0 border border-[#7096D1]/40"
+                    className="w-8 h-8 rounded-lg object-cover shrink-0 border border-[#ACD1FD]/40"
                   />
                 )}
-                <span className="px-2 py-0.5 rounded-full bg-[#334DAF]/40 text-[#D0E4FE] border border-[#7096D1]/30 font-bold text-[9px] uppercase tracking-wider flex items-center gap-1 shrink-0">
-                  <Sparkles className="w-3 h-3 text-[#D0E4FE]" />
+                <span className="px-2 py-0.5 rounded-full bg-[#958CE8]/40 text-[#DBDBE5] border border-[#ACD1FD]/30 font-bold text-[9px] uppercase tracking-wider flex items-center gap-1 shrink-0">
+                  <Sparkles className="w-3 h-3 text-[#DBDBE5]" />
                   {ad.badgeText || 'Sponsored'}
                 </span>
                 <span className="font-bold text-white truncate text-xs">
                   {ad.title}
                 </span>
-                <span className="hidden md:inline text-[#D0E4FE]/80 truncate text-[11px]">
+                <span className="hidden md:inline text-[#DBDBE5]/80 truncate text-[11px]">
                   — {ad.description}
                 </span>
               </div>
@@ -153,7 +153,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                 {ad.ctaText && (
                   <button
                     onClick={() => handleAdClick(ad)}
-                    className="px-3 py-1 rounded-xl bg-[#334DAF] hover:bg-[#283e91] text-white font-bold text-[11px] flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95"
+                    className="px-3 py-1 rounded-xl bg-[#958CE8] hover:bg-[#283e91] text-white font-bold text-[11px] flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95"
                   >
                     <span>{ad.ctaText}</span>
                     <ArrowRight className="w-3 h-3" />
@@ -161,7 +161,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                 )}
                 <button
                   onClick={(e) => handleDismiss(ad.id, e)}
-                  className="p-1 rounded-lg text-[#D0E4FE]/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  className="p-1 rounded-lg text-[#DBDBE5]/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   title="Dismiss ad"
                 >
                   <X className="w-3.5 h-3.5" />
@@ -180,7 +180,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-0 start-0 end-0 z-40 bg-[#091F5C]/95 backdrop-blur-md text-white border-t border-[#334DAF]/40 px-4 py-2.5 text-xs shadow-2xl"
+            className="fixed bottom-0 start-0 end-0 z-40 bg-[#21222D]/95 backdrop-blur-md text-white border-t border-[#958CE8]/40 px-4 py-2.5 text-xs shadow-2xl"
           >
             <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
               <div className="flex items-center gap-3 min-w-0">
@@ -188,19 +188,19 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                   <img
                     src={ad.imageUrl}
                     alt=""
-                    className="w-10 h-10 rounded-xl object-cover shrink-0 border border-[#7096D1]/40"
+                    className="w-10 h-10 rounded-xl object-cover shrink-0 border border-[#ACD1FD]/40"
                   />
                 )}
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 mb-0.5">
-                    <span className="px-2 py-0.5 rounded-md bg-[#E8F2FE] text-[#091F5C] font-bold text-[9px] uppercase tracking-wider">
+                    <span className="px-2 py-0.5 rounded-md bg-[#DBDBE5] text-[#21222D] font-bold text-[9px] uppercase tracking-wider">
                       {ad.badgeText || 'Special Offer'}
                     </span>
                     <span className="font-bold text-white text-xs truncate">
                       {ad.title}
                     </span>
                   </div>
-                  <p className="text-[#D0E4FE]/80 text-[11px] truncate">{ad.description}</p>
+                  <p className="text-[#DBDBE5]/80 text-[11px] truncate">{ad.description}</p>
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                 {ad.ctaText && (
                   <button
                     onClick={() => handleAdClick(ad)}
-                    className="px-4 py-1.5 rounded-xl bg-[#334DAF] hover:bg-[#283e91] text-white font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer transition-all active:scale-95"
+                    className="px-4 py-1.5 rounded-xl bg-[#958CE8] hover:bg-[#283e91] text-white font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer transition-all active:scale-95"
                   >
                     <span>{ad.ctaText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -216,7 +216,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                 )}
                 <button
                   onClick={(e) => handleDismiss(ad.id, e)}
-                  className="p-1.5 rounded-lg text-[#D0E4FE]/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  className="p-1.5 rounded-lg text-[#DBDBE5]/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   title="Dismiss"
                 >
                   <X className="w-4 h-4" />
@@ -319,10 +319,10 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
               </button>
 
               {ad.imageUrl && (
-                <div className="w-full h-48 sm:h-56 bg-[#E8F2FE] relative">
+                <div className="w-full h-48 sm:h-56 bg-[#DBDBE5] relative">
                   <img src={ad.imageUrl} alt="" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 start-4 px-3 py-1 rounded-full bg-[#334DAF] text-white font-bold text-[10px] uppercase tracking-wider shadow-md">
+                  <span className="absolute bottom-3 start-4 px-3 py-1 rounded-full bg-[#958CE8] text-white font-bold text-[10px] uppercase tracking-wider shadow-md">
                     {ad.badgeText || 'Exclusive Presentation'}
                   </span>
                 </div>
@@ -330,16 +330,16 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
 
               <div className="p-6 space-y-4">
                 {!ad.imageUrl && (
-                  <span className="inline-block px-3 py-1 rounded-full bg-[#E8F2FE] text-[#091F5C] font-bold text-[10px] uppercase tracking-wider border border-[#D0E4FE]">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#DBDBE5] text-[#21222D] font-bold text-[10px] uppercase tracking-wider border border-[#DBDBE5]">
                     {ad.badgeText || 'Exclusive Presentation'}
                   </span>
                 )}
 
                 <div>
-                  <h2 className="text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#091F5C] dark:text-white mb-2">
+                  <h2 className="text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] dark:text-white mb-2">
                     {ad.title}
                   </h2>
-                  <p className="text-[#7096D1] dark:text-[#D0E4FE] text-xs leading-relaxed">
+                  <p className="text-[#ACD1FD] dark:text-[#DBDBE5] text-xs leading-relaxed">
                     {ad.description}
                   </p>
                 </div>
@@ -352,7 +352,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                         notificationManager.dismissAd(ad.id, activeUserId);
                         refreshAds();
                       }}
-                      className="flex-1 py-3 rounded-2xl bg-[#334DAF] hover:bg-[#283e91] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg cursor-pointer transition-transform active:scale-98"
+                      className="flex-1 py-3 rounded-2xl bg-[#958CE8] hover:bg-[#283e91] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg cursor-pointer transition-transform active:scale-98"
                     >
                       <span>{ad.ctaText}</span>
                       <ArrowRight className="w-4 h-4" />
@@ -360,7 +360,7 @@ export const AdRenderer: React.FC<AdRendererProps> = ({
                   )}
                   <button
                     onClick={(e) => handleDismiss(ad.id, e)}
-                    className="px-5 py-3 rounded-2xl bg-[#E8F2FE] dark:bg-stone-800 text-[#091F5C] dark:text-stone-400 hover:bg-[#D0E4FE] font-bold text-xs cursor-pointer"
+                    className="px-5 py-3 rounded-2xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-400 hover:bg-[#DBDBE5] font-bold text-xs cursor-pointer"
                   >
                     Skip
                   </button>

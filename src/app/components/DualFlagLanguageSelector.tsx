@@ -184,7 +184,7 @@ export const DualFlagIcon: React.FC<{
       <FlagIcon code={targetCode} className={`${mainSizeClass} relative z-10 shadow-xs`} />
       
       {/* Secondary Overlapping Flag (Interface / Source Language) */}
-      <div className="absolute -bottom-1 -end-2.5 z-20 ring-1.5 ring-white dark:ring-[#1E1E1E] rounded-2xs overflow-hidden shadow-sm">
+      <div className="absolute -bottom-1 -end-2.5 z-20 ring-1.5 ring-white dark:ring-[#21222D] rounded-2xs overflow-hidden shadow-sm">
         <FlagIcon code={interfaceCode} className={subSizeClass} />
       </div>
     </div>
@@ -245,7 +245,7 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           title={`Learning: ${currentTargetObj.name} | Interface: ${currentInterfaceObj.name}`}
-          className="p-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs flex items-center justify-center"
+          className="p-1.5 rounded-xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs flex items-center justify-center"
         >
           <DualFlagIcon targetCode={currentTargetObj.code} interfaceCode={currentInterfaceObj.code} size="sm" />
         </button>
@@ -253,7 +253,7 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs active:scale-98"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-white/10 transition-all cursor-pointer shadow-2xs active:scale-98"
         >
           {/* Dual Flag Icon Stack */}
           <DualFlagIcon targetCode={currentTargetObj.code} interfaceCode={currentInterfaceObj.code} size="md" />
@@ -283,7 +283,7 @@ export const DualFlagLanguageSelector: React.FC<DualFlagLanguageSelectorProps> =
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.15 }}
-              className={`absolute ${dropPositionClass} w-64 bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/15 rounded-2xl shadow-xl z-50 p-2 overflow-hidden`}
+              className={`absolute ${dropPositionClass} w-64 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/15 rounded-2xl shadow-xl z-50 p-2 overflow-hidden`}
             >
               {/* Header Tabs: Learning Language vs Interface Language */}
               <div className="flex items-center gap-1 p-1 bg-[#DBDBE5] dark:bg-white/5 rounded-xl mb-2">

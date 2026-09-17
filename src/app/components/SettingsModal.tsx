@@ -202,7 +202,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
     { id: 'paper', name: 'Pure Clean', bg: 'bg-white', text: 'text-[#21222D]' },
     { id: 'azure', name: 'Lavender Soft', bg: 'bg-[#958CE8]/10', text: 'text-[#21222D]' },
     { id: 'sepia', name: 'Warm Cream', bg: 'bg-[#F5F4EF]', text: 'text-[#21222D]' },
-    { id: 'dark', name: 'Charcoal Dark', bg: 'bg-[#1E1E1E]', text: 'text-[#DBDBE5]' },
+    { id: 'dark', name: 'Charcoal Dark', bg: 'bg-[#21222D]', text: 'text-[#DBDBE5]' },
   ];
 
   const renderDetailPanel = (tab: SettingsTab) => {
@@ -228,7 +228,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center pt-2">
               <div className="sm:col-span-4 flex flex-col items-center gap-3">
                 <div className="relative group">
-                  <div className="w-24 h-24 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-bold text-3xl shadow-md border-4 border-white dark:border-[#1E1E1E] overflow-hidden">
+                  <div className="w-24 h-24 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-bold text-3xl shadow-md border-4 border-white dark:border-[#21222D] overflow-hidden">
                     <img 
                       src={getEffectiveAvatar(profileAvatar, profileEmail || profileName)} 
                       alt={profileName} 
@@ -249,7 +249,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="px-3 py-1 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] hover:bg-[#DBDBE5] transition-colors flex items-center gap-1.5 cursor-pointer"
+                    className="px-3 py-1 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] hover:bg-[#DBDBE5] transition-colors flex items-center gap-1.5 cursor-pointer"
                   >
                     <Upload className="w-3 h-3" />
                     <span>{t.uploadAvatar || 'Upload'}</span>
@@ -273,7 +273,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     type="text"
                     value={profileName}
                     onChange={(e) => setProfileName(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
                   />
                 </div>
 
@@ -283,7 +283,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     type="email"
                     value={profileEmail}
                     onChange={(e) => setProfileEmail(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
                   />
                 </div>
               </div>
@@ -363,7 +363,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#DBDBE5]/60 dark:bg-[#1E1E1E]/60 border border-[#DBDBE5] dark:border-white/10 space-y-4">
+            <div className="p-4 rounded-2xl bg-[#DBDBE5]/60 dark:bg-[#21222D]/60 border border-[#DBDBE5] dark:border-white/10 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-xl ${settings.isPasswordProtected ? 'bg-[#ACD1FD] text-[#21222D]' : 'bg-[#DBDBE5] dark:bg-white/10 text-[#545565]'}`}>
@@ -406,7 +406,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     placeholder={t.enterPasscodePlaceholder || 'Enter passcode'}
                     defaultValue={settings.appPassword || ''}
                     id="setting-app-password-input"
-                    className="flex-1 px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5]"
+                    className="flex-1 px-3 py-2 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5]"
                   />
                   <button
                     type="button"
@@ -488,7 +488,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <select
                   value={settings.interfaceLanguage || 'English'}
                   onChange={(e) => onUpdateSettings({ interfaceLanguage: e.target.value })}
-                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
+                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
                 >
                   <option value="English">English 🇬🇧</option>
                   <option value="French">French (Français) 🇫🇷</option>
@@ -507,7 +507,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <select
                   value={settings.targetLanguage || 'English'}
                   onChange={(e) => onUpdateSettings({ targetLanguage: e.target.value })}
-                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
+                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
                 >
                   <option value="English">English</option>
                   <option value="French">French (Français)</option>
@@ -526,7 +526,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <select
                   value={settings.translationLanguage || 'French'}
                   onChange={(e) => onUpdateSettings({ translationLanguage: e.target.value })}
-                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
+                  className="px-3 py-1.5 rounded-xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] text-xs font-medium text-[#21222D] dark:text-[#DBDBE5] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD]"
                 >
                   <option value="French">French (Français) 🇫🇷</option>
                   <option value="Arabic">Arabic (العربية) 🇪🇬</option>
@@ -655,7 +655,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             {/* AI Language Coach */}
-            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] space-y-4">
+            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                   <h3 className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] flex items-center gap-1.5">
@@ -710,7 +710,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             {/* API Key */}
-            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] space-y-3">
+            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] space-y-3">
               <h3 className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] flex items-center gap-1.5">
                 <Key className="w-4 h-4 text-[#958CE8]" />
                 {t.developerApiKey || 'Developer API Key'}
@@ -734,7 +734,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             {/* Supabase Database Integration */}
-            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] space-y-3">
+            <div className="p-4 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] space-y-3">
               <div className="flex items-center justify-between">
                 <h3 className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] flex items-center gap-1.5">
                   <Database className="w-4 h-4 text-[#958CE8]" />
@@ -771,14 +771,14 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             <div className="space-y-3">
-              <div className="p-3.5 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] space-y-1">
+              <div className="p-3.5 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] space-y-1">
                 <h4 className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5]">{t.faqTranslationTitle || 'How does Instant Translation work?'}</h4>
                 <p className="text-xs text-[#545565] dark:text-[#DBDBE5]">
                   {t.faqTranslationDesc || 'Click or tap any word inside your reader document to view grammatical breakdowns and saved notes.'}
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#1E1E1E] space-y-1">
+              <div className="p-3.5 rounded-2xl border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-[#21222D] space-y-1">
                 <h4 className="text-xs font-bold text-[#21222D] dark:text-[#DBDBE5]">{t.faqExportTitle || 'How do I export my study statistics?'}</h4>
                 <p className="text-xs text-[#545565] dark:text-[#DBDBE5]">
                   {t.faqExportDesc || 'Navigate to the Developer API tab to copy raw JSON progress metrics or sync with external tools.'}
@@ -818,20 +818,20 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         <div className="space-y-4">
           <button
             onClick={() => setSelectedDetailView(null)}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-[#DBDBE5] hover:bg-[#DBDBE5] text-xs font-bold transition-all cursor-pointer group shadow-2xs"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-[#DBDBE5] hover:bg-[#DBDBE5] text-xs font-bold transition-all cursor-pointer group shadow-2xs"
           >
             <ChevronDown className="w-4 h-4 text-[#21222D] dark:text-[#DBDBE5] rotate-90 group-hover:-translate-x-0.5 transition-transform" />
             <span>{t.backToProfile || '← Back to Profile'}</span>
           </button>
 
-          <div className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-5 border border-[#DBDBE5] dark:border-white/10 shadow-xs">
+          <div className="bg-white dark:bg-[#21222D] rounded-3xl p-5 border border-[#DBDBE5] dark:border-white/10 shadow-xs">
             {renderDetailPanel(selectedDetailView)}
           </div>
         </div>
       ) : (
         <div className="space-y-5 animate-fade-in">
           {/* Top Profile Summary Card */}
-          <div className="bg-white dark:bg-[#1E1E1E] p-4 rounded-3xl border border-[#DBDBE5] dark:border-white/10 flex items-center gap-4 shadow-xs">
+          <div className="bg-white dark:bg-[#21222D] p-4 rounded-3xl border border-[#DBDBE5] dark:border-white/10 flex items-center gap-4 shadow-xs">
             <input
               type="file"
               ref={fileInputRef}
@@ -867,7 +867,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <h3 className="text-xs font-semibold text-[#545565] dark:text-[#DBDBE5] px-1 tracking-wide">
               {t.accountSection || 'Account'}
             </h3>
-            <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
+            <div className="bg-white dark:bg-[#21222D] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
               {accountItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -902,7 +902,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <h3 className="text-xs font-semibold text-[#545565] dark:text-[#DBDBE5] px-1 tracking-wide">
               {t.preferencesSection || 'Preferences'}
             </h3>
-            <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
+            <div className="bg-white dark:bg-[#21222D] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
               {preferenceItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -937,7 +937,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <h3 className="text-xs font-semibold text-[#545565] dark:text-[#DBDBE5] px-1 tracking-wide">
               {t.supportSection || 'Support'}
             </h3>
-            <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
+            <div className="bg-white dark:bg-[#21222D] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5]/50 dark:divide-white/10 shadow-xs overflow-hidden">
               {supportItems.map((item) => {
                 const Icon = item.icon;
                 return (

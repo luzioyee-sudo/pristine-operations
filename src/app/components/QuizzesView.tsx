@@ -430,7 +430,7 @@ export const QuizzesView: React.FC<QuizzesViewProps> = ({ settings,  onNavigate,
               <g transform="translate(90, 100)">
                 <polygon points="0,-15 25,-30 50,-15 25,0" fill="#21222D" />
                 <polygon points="0,-15 25,0 25,30 0,15" fill="#21222D" />
-                <polygon points="25,0 50,-15 50,15 25,30" fill="#111111" />
+                <polygon points="25,0 50,-15 50,15 25,30" fill="#21222D" />
               </g>
               <g transform="translate(70, 70)">
                 <polygon points="0,-15 25,-30 50,-15 25,0" fill="#FFFFFF" />

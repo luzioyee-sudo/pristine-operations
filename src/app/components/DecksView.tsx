@@ -106,7 +106,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
         <div className="flex items-center gap-2.5">
           <button
             onClick={onNewFolderClick}
-            className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-xl text-xs font-bold text-[#21222D] dark:text-stone-300 hover:bg-[#DBDBE5] transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-xl text-xs font-bold text-[#21222D] dark:text-stone-300 hover:bg-[#DBDBE5] transition-colors cursor-pointer"
           >
             <FolderPlus className="w-4.5 h-4.5 text-[#21222D] dark:text-stone-300" />
             <span>{t.newFolder || "New Folder"}</span>
@@ -133,7 +133,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
           className={`px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-wider uppercase border transition-all cursor-pointer ${
             !selectedFilterId || selectedFilterId === 'all'
               ? 'bg-[#ACD1FD] text-[#21222D] border-[#21222D] shadow-xs'
-              : 'bg-white dark:bg-[#1D201A] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
+              : 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
           }`}
         >
           {allWordsMainDeckLabel} {vocabulary.length}
@@ -150,7 +150,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
               className={`px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-wider uppercase border transition-all cursor-pointer ${
                 isActive
                   ? 'bg-[#ACD1FD] text-[#21222D] border-[#21222D] shadow-xs'
-                  : 'bg-white dark:bg-[#1D201A] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
+                  : 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
               }`}
             >
               {deck.name} {cardsCount}
@@ -160,7 +160,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
       </div>
 
       {/* Selected Deck Details Hero Card */}
-      <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
+      <div className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
           <div className="flex gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#ACD1FD]/30 dark:bg-[#ACD1FD]/20 flex items-center justify-center text-[#21222D] dark:text-[#ACD1FD] shrink-0">
@@ -237,7 +237,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
           {folders.map(folder => (
             <div
               key={folder.id}
-              className="w-full flex items-center justify-between p-4 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl hover:bg-[#DBDBE5] dark:hover:bg-stone-800/50 transition-colors"
+              className="w-full flex items-center justify-between p-4 bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl hover:bg-[#DBDBE5] dark:hover:bg-stone-800/50 transition-colors"
             >
               <div className="flex items-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: folder.color || '#958CE8' }} />
@@ -283,7 +283,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
             return (
               <div
                 key={deck.id}
-                className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl p-5 shadow-xs hover:shadow-sm transition-shadow flex flex-col justify-between"
+                className="bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl p-5 shadow-xs hover:shadow-sm transition-shadow flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
@@ -331,7 +331,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
           })}
 
           {decks.length === 0 && (
-            <div className="col-span-full py-12 text-center border-2 border-dashed border-[#DBDBE5] dark:border-stone-800 rounded-2xl bg-white dark:bg-[#1D201A]">
+            <div className="col-span-full py-12 text-center border-2 border-dashed border-[#DBDBE5] dark:border-stone-800 rounded-2xl bg-white dark:bg-[#21222D]">
               <p className="text-xs text-stone-400 font-medium">{t.noDecks || "No custom decks found."}</p>
             </div>
           )}

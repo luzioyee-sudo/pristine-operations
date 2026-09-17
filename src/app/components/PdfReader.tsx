@@ -880,7 +880,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
     sunset: 'bg-[#F9F7F2] text-[#2D3027] border-[#E5E2D9] shadow-md',
     azure: 'bg-[#F4F8FA] text-[#1E2C38] border-[#D1E0E8] shadow-md',
     sepia: 'bg-[#F4EFE6] text-[#3D3225] border-[#E2D8C8] shadow-md',
-    dark: 'bg-[#1D201A] text-[#E8E6DF] border-[#2A2E26] shadow-md',
+    dark: 'bg-[#21222D] text-[#E8E6DF] border-[#2A2E26] shadow-md',
   };
 
   // Font Family Mapping
@@ -959,7 +959,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
                   className={`w-full flex items-center justify-between p-2 rounded-xl border text-start cursor-pointer transition-all ${
                     currentPage === p
                       ? 'bg-[#ACD1FD]/20 border-[#ACD1FD] text-[#21222D] font-bold dark:text-[#DBDBE5]'
-                      : 'bg-white dark:bg-[#1E1E1E] border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] text-[#21222D] dark:text-[#DBDBE5]'
+                      : 'bg-white dark:bg-[#21222D] border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] text-[#21222D] dark:text-[#DBDBE5]'
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -984,7 +984,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
                 className={`w-full flex items-start gap-2.5 p-2 rounded-xl text-start border transition-all ${
                   currentPage === sec.page
                     ? 'bg-[#21222D] text-[#DBDBE5] font-bold border-[#21222D] shadow-xs'
-                    : 'bg-white dark:bg-[#1E1E1E] border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] text-[#21222D] dark:text-[#DBDBE5]'
+                    : 'bg-white dark:bg-[#21222D] border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] text-[#21222D] dark:text-[#DBDBE5]'
                 }`}
               >
                 <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-black/10 dark:bg-white/10 font-mono shrink-0">
@@ -1026,7 +1026,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
                 className={`p-3 rounded-2xl border text-start cursor-pointer transition-all ${
                   isCurrent
                     ? 'ring-2 ring-[#21222D] bg-[#ACD1FD]/10 border-[#21222D] shadow-xs'
-                    : 'bg-white dark:bg-[#1E1E1E] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D] hover:shadow-2xs'
+                    : 'bg-white dark:bg-[#21222D] border-[#DBDBE5] dark:border-white/10 hover:border-[#21222D] hover:shadow-2xs'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1.5">
@@ -1077,7 +1077,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
             value={annotationSearchQuery}
             onChange={(e) => setAnnotationSearchQuery(e.target.value)}
             placeholder={t.searchHighlightsNotes}
-            className="w-full ps-8 pe-3 py-1.5 rounded-xl bg-white dark:bg-[#1E1E1E] text-xs text-[#21222D] dark:text-white border border-[#DBDBE5] dark:border-white/10 outline-none focus:ring-1 focus:ring-[#21222D]"
+            className="w-full ps-8 pe-3 py-1.5 rounded-xl bg-white dark:bg-[#21222D] text-xs text-[#21222D] dark:text-white border border-[#DBDBE5] dark:border-white/10 outline-none focus:ring-1 focus:ring-[#21222D]"
           />
         </div>
 
@@ -1458,7 +1458,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
       return (
         <blockquote
           key={pIdx}
-          className="ps-4 sm:ps-6 py-2 my-4 border-s-4 border-[#091F5C] dark:border-[#7096D1] italic opacity-90 rounded-e-xl bg-black/5 dark:bg-white/5"
+          className="ps-4 sm:ps-6 py-2 my-4 border-s-4 border-[#21222D] dark:border-[#ACD1FD] italic opacity-90 rounded-e-xl bg-black/5 dark:bg-white/5"
           style={{ fontSize: `${settings.fontSize}px` }}
         >
           {renderInlineWords(quoteText, pIdx, pageNum)}
@@ -1622,7 +1622,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
             {isMobileMenuOpen && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)} />
-                <div className="absolute end-0 top-full mt-2 w-56 p-2 rounded-2xl bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute end-0 top-full mt-2 w-56 p-2 rounded-2xl bg-white dark:bg-[#21222D] border border-[#DBDBE5] dark:border-white/10 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2">
                   <span className="block text-[9px] font-bold text-[#545565] dark:text-[#DBDBE5] uppercase tracking-wider px-2 py-1">
                     Theme
                   </span>
@@ -1678,7 +1678,7 @@ export const PdfReader: React.FC<PdfReaderProps> = ({
         <div className="hidden md:flex items-center justify-between gap-4 flex-wrap">
           <button
             onClick={onBackToLibrary}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white dark:bg-[#1E1E1E] hover:bg-[#DBDBE5] dark:hover:bg-white/5 border border-[#DBDBE5] dark:border-white/10 text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] transition-all shadow-xs cursor-pointer hover:translate-x-[-2px] rtl:hover:translate-x-[2px]"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white dark:bg-[#21222D] hover:bg-[#DBDBE5] dark:hover:bg-white/5 border border-[#DBDBE5] dark:border-white/10 text-xs font-bold text-[#21222D] dark:text-[#DBDBE5] transition-all shadow-xs cursor-pointer hover:translate-x-[-2px] rtl:hover:translate-x-[2px]"
           >
             <ChevronLeft className="w-4 h-4 shrink-0 rtl:rotate-180" />
             <span>{t.backToLibrary}</span>

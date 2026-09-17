@@ -218,7 +218,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   key={doc.id}
                   whileHover={{ y: -3, scale: 1.01 }}
                   onClick={() => onSelectDocument(doc)}
-                  className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 border-2 border-[#ACD1FD]/60 dark:border-[#ACD1FD]/35 hover:border-[#ACD1FD] dark:hover:border-[#ACD1FD] shadow-xs hover:shadow-md transition-all group relative overflow-hidden flex items-center gap-4 cursor-pointer"
+                  className="bg-white dark:bg-[#21222D] rounded-3xl p-4 border-2 border-[#ACD1FD]/60 dark:border-[#ACD1FD]/35 hover:border-[#ACD1FD] dark:hover:border-[#ACD1FD] shadow-xs hover:shadow-md transition-all group relative overflow-hidden flex items-center gap-4 cursor-pointer"
                 >
                   {/* Subtle Brand Mint Accent Glow in background */}
                   <div className="absolute top-0 end-0 w-24 h-24 bg-[#ACD1FD]/15 dark:bg-[#ACD1FD]/8 rounded-bl-full pointer-events-none transition-opacity group-hover:opacity-100" />
@@ -316,7 +316,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
       )}
 
       {/* 2. MAIN TOOLBAR: "MY BOOKSHELF" & FILTER TABS */}
-      <div id="bookshelf-toolbar" className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 sm:p-5 border border-[#DBDBE5] dark:border-white/10 shadow-xs space-y-4">
+      <div id="bookshelf-toolbar" className="bg-white dark:bg-[#21222D] rounded-3xl p-4 sm:p-5 border border-[#DBDBE5] dark:border-white/10 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Left Title & Plus Button */}
           <div className="flex items-center gap-3">
@@ -409,7 +409,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                 onClick={() => setViewMode('grid')}
                 className={`p-1.5 rounded-md transition-colors cursor-pointer ${
                   viewMode === 'grid'
-                    ? 'bg-white dark:bg-[#1E1E1E] text-[#21222D] dark:text-white shadow-xs'
+                    ? 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-white shadow-xs'
                     : 'text-[#545565] hover:text-[#21222D]'
                 }`}
                 title={t.gridShelfView || "Grid / Shelf View"}
@@ -421,7 +421,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                 onClick={() => setViewMode('list')}
                 className={`p-1.5 rounded-md transition-colors cursor-pointer ${
                   viewMode === 'list'
-                    ? 'bg-white dark:bg-[#1E1E1E] text-[#21222D] dark:text-white shadow-xs'
+                    ? 'bg-white dark:bg-[#21222D] text-[#21222D] dark:text-white shadow-xs'
                     : 'text-[#545565] hover:text-[#21222D]'
                 }`}
                 title={t.listView || "List View"}
@@ -483,7 +483,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                             className={`p-1.5 rounded-full shadow-md transition-all cursor-pointer ${
                               doc.favorite
                                 ? 'bg-amber-400 text-stone-900'
-                                : 'bg-white/95 dark:bg-[#1E1E1E]/95 text-stone-600 dark:text-stone-300 hover:bg-amber-100'
+                                : 'bg-white/95 dark:bg-[#21222D]/95 text-stone-600 dark:text-stone-300 hover:bg-amber-100'
                             }`}
                             title={doc.favorite ? "Remove from Favorites" : "Add to Favorites"}
                           >
@@ -494,7 +494,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                             className={`p-1.5 rounded-full shadow-md transition-all cursor-pointer ${
                               doc.planToRead
                                 ? 'bg-[#958CE8] text-[#21222D]'
-                                : 'bg-white/95 dark:bg-[#1E1E1E]/95 text-stone-600 dark:text-stone-300 hover:bg-[#958CE8]/30'
+                                : 'bg-white/95 dark:bg-[#21222D]/95 text-stone-600 dark:text-stone-300 hover:bg-[#958CE8]/30'
                             }`}
                             title={doc.planToRead ? "Remove from Plan to Read" : "Plan to Read"}
                           >
@@ -505,7 +505,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                             className={`p-1.5 rounded-full shadow-md transition-all cursor-pointer ${
                               doc.completed
                                 ? 'bg-emerald-500 text-white'
-                                : 'bg-white/95 dark:bg-[#1E1E1E]/95 text-stone-600 dark:text-stone-300 hover:bg-emerald-100'
+                                : 'bg-white/95 dark:bg-[#21222D]/95 text-stone-600 dark:text-stone-300 hover:bg-emerald-100'
                             }`}
                             title={doc.completed ? "Mark as Uncompleted" : "Mark as Completed"}
                           >
@@ -516,7 +516,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                               e.stopPropagation();
                               setActiveMenuDocId(activeMenuDocId === doc.id ? null : doc.id);
                             }}
-                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#1E1E1E]/95 text-[#21222D] dark:text-white hover:bg-[#ACD1FD] hover:text-[#21222D] shadow-md transition-all cursor-pointer"
+                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#21222D]/95 text-[#21222D] dark:text-white hover:bg-[#ACD1FD] hover:text-[#21222D] shadow-md transition-all cursor-pointer"
                             title={t.chooseBookCoverColor || "Choose book cover color"}
                           >
                             <Palette className="w-3 h-3" />
@@ -526,7 +526,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                               e.stopPropagation();
                               onDeleteDocument(doc.id);
                             }}
-                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#1E1E1E]/95 text-rose-600 hover:bg-rose-500 hover:text-white shadow-md transition-all cursor-pointer"
+                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#21222D]/95 text-rose-600 hover:bg-rose-500 hover:text-white shadow-md transition-all cursor-pointer"
                             title={t.deleteDoc || "Delete book"}
                           >
                             <Trash2 className="w-3 h-3" />
@@ -559,7 +559,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
           </div>
         ) : (
           /* LIST VIEW */
-          <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5] dark:divide-white/10 overflow-hidden shadow-xs">
+          <div className="bg-white dark:bg-[#21222D] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5] dark:divide-white/10 overflow-hidden shadow-xs">
             {filteredDocuments.map((doc) => {
               const palette = getCoverPalette(doc);
               const cleanTitle = cleanBookTitle(doc.title || doc.name);
@@ -658,7 +658,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                         e.stopPropagation();
                         onSelectDocument(doc);
                       }}
-                      className="px-3 py-1.5 rounded-xl bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] text-xs font-bold transition-all flex items-center gap-1 shadow-xs cursor-pointer"
+                      className="px-3 py-1.5 rounded-xl bg-[#ACD1FD] hover:bg-[#ACD1FD] text-[#21222D] text-xs font-bold transition-all flex items-center gap-1 shadow-xs cursor-pointer"
                     >
                       <span>{t.readNow || 'Read'}</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -672,7 +672,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
 
         {/* Empty Search Result State */}
         {filteredDocuments.length === 0 && (
-          <div className="text-center py-16 bg-white dark:bg-[#1E1E1E] rounded-3xl border border-dashed border-[#DBDBE5] dark:border-white/10 space-y-3">
+          <div className="text-center py-16 bg-white dark:bg-[#21222D] rounded-3xl border border-dashed border-[#DBDBE5] dark:border-white/10 space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-[#DBDBE5] dark:bg-black/40 text-[#545565] flex items-center justify-center mx-auto">
               <BookOpen className="w-6 h-6" />
             </div>
@@ -684,7 +684,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
             </p>
             <button
               onClick={onUploadClick}
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#ACD1FD] text-[#21222D] text-xs font-bold shadow-xs hover:bg-[#8ee590] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#ACD1FD] text-[#21222D] text-xs font-bold shadow-xs hover:bg-[#ACD1FD] transition-colors cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>{t.uploadBook || 'Upload Book'}</span>
@@ -716,7 +716,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-3xl max-h-[85vh] bg-white dark:bg-[#1E1E1E] rounded-3xl border border-[#DBDBE5] dark:border-white/10 shadow-2xl flex flex-col overflow-hidden"
+              className="w-full max-w-3xl max-h-[85vh] bg-white dark:bg-[#21222D] rounded-3xl border border-[#DBDBE5] dark:border-white/10 shadow-2xl flex flex-col overflow-hidden"
             >
               {/* Modal Header */}
               <div className="p-4 sm:p-5 border-b border-[#DBDBE5] dark:border-white/10 flex items-center justify-between bg-slate-50/80 dark:bg-black/30 shrink-0">

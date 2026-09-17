@@ -312,7 +312,7 @@ export const UploadModal: React.FC<UploadModalProps> = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className={`relative w-full ${pendingFile && !isProcessing ? 'max-w-2xl' : 'max-w-xl'} bg-white dark:bg-[#1D201A] rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-[#DBDBE5] dark:border-stone-800 space-y-6 max-h-[90vh] overflow-y-auto transition-all duration-300`}
+        className={`relative w-full ${pendingFile && !isProcessing ? 'max-w-2xl' : 'max-w-xl'} bg-white dark:bg-[#21222D] rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-[#DBDBE5] dark:border-stone-800 space-y-6 max-h-[90vh] overflow-y-auto transition-all duration-300`}
       >
         
         {isProcessing ? (

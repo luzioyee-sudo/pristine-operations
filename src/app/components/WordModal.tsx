@@ -130,7 +130,7 @@ export const WordModal: React.FC<WordModalProps> = ({
               maxHeight: '80vh',
               zIndex: 50
             }}
-            className="bg-white dark:bg-[#1E1E1E] rounded-t-[2.25rem] shadow-[0_-16px_48px_rgba(0,0,0,0.15)] dark:shadow-[0_-16px_48px_rgba(0,0,0,0.4)] border-t border-[#DBDBE5] dark:border-white/10 overflow-hidden flex flex-col pb-8"
+            className="bg-white dark:bg-[#21222D] rounded-t-[2.25rem] shadow-[0_-16px_48px_rgba(0,0,0,0.15)] dark:shadow-[0_-16px_48px_rgba(0,0,0,0.4)] border-t border-[#DBDBE5] dark:border-white/10 overflow-hidden flex flex-col pb-8"
             onClick={(e) => e.stopPropagation()} // Prevent close on self click
           >
             {/* Top Decorative Branding Accent Strip */}
@@ -342,7 +342,7 @@ export const WordModal: React.FC<WordModalProps> = ({
           maxHeight: maxHeight,
           zIndex: 50
         }}
-        className="bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl border border-[#DBDBE5] dark:border-white/10 overflow-hidden flex flex-col"
+        className="bg-white dark:bg-[#21222D] rounded-2xl shadow-2xl border border-[#DBDBE5] dark:border-white/10 overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
         <div className="absolute top-0 start-0 end-0 h-1 bg-[#21222D] z-10 shrink-0" />
@@ -439,7 +439,7 @@ export const WordModal: React.FC<WordModalProps> = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className="relative w-full max-w-lg bg-white dark:bg-[#1E1E1E] rounded-3xl shadow-2xl border border-[#DBDBE5] dark:border-white/10 p-6 overflow-hidden"
+        className="relative w-full max-w-lg bg-white dark:bg-[#21222D] rounded-3xl shadow-2xl border border-[#DBDBE5] dark:border-white/10 p-6 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="absolute top-0 start-0 end-0 h-2 bg-[#21222D]" />

@@ -291,7 +291,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
       <div className="absolute inset-0 -z-10 cursor-default" onClick={onClose} />
 
       <div
-        className="w-full max-w-xl bg-white dark:bg-[#1E1E1E] border border-stone-200/90 dark:border-stone-800/80 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] md:max-h-[80vh] animate-in zoom-in-95 duration-150"
+        className="w-full max-w-xl bg-white dark:bg-[#21222D] border border-stone-200/90 dark:border-stone-800/80 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] md:max-h-[80vh] animate-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Header Input bar */}
@@ -345,7 +345,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
         </div>
 
         {/* Scrollable results section */}
-        <div className="p-4 overflow-y-auto space-y-5 custom-scrollbar bg-white dark:bg-[#1E1E1E]">
+        <div className="p-4 overflow-y-auto space-y-5 custom-scrollbar bg-white dark:bg-[#21222D]">
           
           {totalResults === 0 && (
             <div className="py-12 text-center">

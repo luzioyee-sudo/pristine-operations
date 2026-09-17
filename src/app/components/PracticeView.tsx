@@ -1068,7 +1068,7 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
                     <g transform="translate(90, 100)">
                       <polygon points="0,-15 25,-30 50,-15 25,0" fill="#21222D" />
                       <polygon points="0,-15 25,0 25,30 0,15" fill="#21222D" />
-                      <polygon points="25,0 50,-15 50,15 25,30" fill="#111111" />
+                      <polygon points="25,0 50,-15 50,15 25,30" fill="#21222D" />
                     </g>
                     <g transform="translate(70, 70)">
                       <polygon points="0,-15 25,-30 50,-15 25,0" fill="#FFFFFF" />
@@ -1260,7 +1260,7 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
                       onChange={(e) => setManualWordsInput(e.target.value)}
                       placeholder="e.g. Pernicious, Serendipity, Resilient"
                       rows={3}
-                      className="w-full bg-[#111111]/60 text-white rounded-lg p-2 font-semibold text-xs border border-white/10 focus:outline-none focus:border-[#ACD1FD] placeholder:text-stone-500 resize-none"
+                      className="w-full bg-[#21222D]/60 text-white rounded-lg p-2 font-semibold text-xs border border-white/10 focus:outline-none focus:border-[#ACD1FD] placeholder:text-stone-500 resize-none"
                     />
                     <p className="text-[10px] text-stone-400 leading-normal">
                       {t.separateWordsDesc || "Separate words with commas, semicolons, or newlines. We'll automatically generate definitions for them!"}
