@@ -64,7 +64,7 @@ export const BookCover: React.FC<BookCoverProps> = ({
         </div>
       ) : palette.patternType === 'geometric-grid' ? (
         /* 2. THE POWER OF YOUR SUBCONSCIOUS MIND STYLE (Cream & Mosaic Grid) */
-        <div className="w-full h-full rounded-xl bg-[#FDF8EE] p-3 sm:p-3.5 flex flex-col justify-between text-[#222222] relative overflow-hidden ring-1 ring-black/10 z-10">
+        <div className="w-full h-full rounded-xl bg-[#FDF8EE] p-3 sm:p-3.5 flex flex-col justify-between text-[#21222D] relative overflow-hidden ring-1 ring-black/10 z-10">
           <div className="absolute top-0 bottom-0 start-0 w-2.5 bg-gradient-to-r from-black/20 via-black/5 to-transparent pointer-events-none" />
           <div className="z-10 flex items-center justify-between">
             <span className="px-1.5 py-0.5 rounded bg-amber-900/10 text-amber-900 text-[6.5px] font-black uppercase">
@@ -77,7 +77,7 @@ export const BookCover: React.FC<BookCoverProps> = ({
             )}
           </div>
           <div className="z-10 text-center my-0.5">
-            <h4 className="text-xs sm:text-xs font-serif font-black leading-tight text-[#222222] line-clamp-2">
+            <h4 className="text-xs sm:text-xs font-serif font-black leading-tight text-[#21222D] line-clamp-2">
               {cleanTitle}
             </h4>
           </div>

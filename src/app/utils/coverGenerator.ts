@@ -36,10 +36,10 @@ export const BRAND_COVER_PALETTES: CoverPalette[] = [
     spineGradient: 'from-black/15 via-black/5 to-transparent',
     spineHighlight: 'bg-amber-800/10',
     accentColor: 'text-amber-900',
-    textColor: 'text-[#222222]',
+    textColor: 'text-[#21222D]',
     patternType: 'geometric-grid',
     bgHex: '#FDF8EE',
-    titleHex: '#222222'
+    titleHex: '#21222D'
   },
   {
     id: 'color-E6DFD3',
@@ -77,11 +77,11 @@ export const BRAND_COVER_PALETTES: CoverPalette[] = [
     spineGradient: 'from-black/20 via-black/5 to-transparent',
     spineHighlight: 'bg-white/30',
     accentColor: 'text-[#2B2B2B]',
-    textColor: 'text-[#222222]',
+    textColor: 'text-[#21222D]',
     patternType: 'diagonal-split',
     bgHex: '#F3C623',
     subColorHex: '#F2A183',
-    titleHex: '#222222'
+    titleHex: '#21222D'
   },
   {
     id: 'color-E5B770',

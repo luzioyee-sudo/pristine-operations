@@ -292,21 +292,21 @@ export const HomeView: React.FC<HomeViewProps> = ({
     const activity = activityHistory[dStr] || 0;
     const ratio = dailyGoal > 0 ? activity / dailyGoal : 0;
 
-    let colorClass = "bg-[#EFF1EE] border border-[#D0D2CF]"; // 0% activity
+    let colorClass = "bg-[#DBDBE5] border border-[#DBDBE5]"; // 0% activity
     let label = t.noActivity || "No activity";
 
     if (activity > 0) {
       if (ratio < 0.35) {
-        colorClass = "bg-[#D4FBD5]"; // Light green level (< 35%)
+        colorClass = "bg-[#DBDBE5]"; // Light green level (< 35%)
         label = `${activity} ${t.actionsCount || 'actions'}`;
       } else if (ratio < 0.75) {
-        colorClass = "bg-[#A4F5A6]"; // Medium green level (35% - 75%)
+        colorClass = "bg-[#ACD1FD]"; // Medium green level (35% - 75%)
         label = `${activity} ${t.actionsCount || 'actions'}`;
       } else if (ratio < 1.15) {
-        colorClass = "bg-[#92E894]"; // Bright green level (75% - 115%)
+        colorClass = "bg-[#958CE8]"; // Bright green level (75% - 115%)
         label = `${activity} ${t.actionsCount || 'actions'}`;
       } else {
-        colorClass = "bg-[#222222] text-[#EFF1EE] shadow-xs"; // Solid dark level (115%+)
+        colorClass = "bg-[#21222D] text-[#DBDBE5] shadow-xs"; // Solid dark level (115%+)
         label = `${activity} ${t.actionsCount || 'actions'} (${t.dailyGoalMet || 'daily goal met!'})`;
       }
     }
@@ -468,12 +468,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
           onClick={() => onNavigate?.('flashcards')}
           className="pearl-card p-2.5 sm:p-7 flex flex-col justify-between min-h-[109px] sm:min-h-[9rem] cursor-pointer"
         >
-          <span className="text-[9px] sm:text-[11px] font-bold text-[#666666] tracking-wider sm:tracking-widest uppercase truncate">{t.currentStreak}</span>
+          <span className="text-[9px] sm:text-[11px] font-bold text-[#545565] tracking-wider sm:tracking-widest uppercase truncate">{t.currentStreak}</span>
           <div className="flex items-baseline gap-1 sm:gap-2 mt-1 sm:mt-4 mb-0.5">
-            <span className="text-2xl sm:text-5xl font-['EB_Garamond','Playfair_Display',serif] font-bold text-[#222222]">
+            <span className="text-2xl sm:text-5xl font-['EB_Garamond','Playfair_Display',serif] font-bold text-[#21222D]">
               {currentStreak}
             </span>
-            <span className="text-sm sm:text-2xl font-['EB_Garamond','Playfair_Display',serif] text-[#666666]">{t.days}</span>
+            <span className="text-sm sm:text-2xl font-['EB_Garamond','Playfair_Display',serif] text-[#545565]">{t.days}</span>
           </div>
         </motion.div>
 
@@ -484,12 +484,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
           whileHover={{ y: -2 }}
           className="pearl-card p-2.5 sm:p-7 flex flex-col justify-between min-h-[109px] sm:min-h-[9rem]"
         >
-          <span className="text-[9px] sm:text-[11px] font-bold text-[#666666] tracking-wider sm:tracking-widest uppercase truncate">{t.todaysGoal}</span>
+          <span className="text-[9px] sm:text-[11px] font-bold text-[#545565] tracking-wider sm:tracking-widest uppercase truncate">{t.todaysGoal}</span>
           <div className="flex flex-col mt-0.5 sm:mt-2">
-            <span className="text-xl sm:text-4xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#222222]">
+            <span className="text-xl sm:text-4xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#21222D]">
               {goalProgress}%
             </span>
-            <span className="text-[9px] sm:text-xs text-[#666666] font-semibold mt-0.5 sm:mt-1 truncate">
+            <span className="text-[9px] sm:text-xs text-[#545565] font-semibold mt-0.5 sm:mt-1 truncate">
               {todayActivity}/{dailyGoal}
             </span>
             <button
@@ -501,7 +501,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 });
                 onNavigate?.('reader');
               }}
-              className="mt-1 sm:mt-2.5 inline-flex items-center gap-1 text-[9px] sm:text-xs font-bold text-[#222222] hover:text-[#92E894] transition-colors cursor-pointer group text-start truncate z-10 relative"
+              className="mt-1 sm:mt-2.5 inline-flex items-center gap-1 text-[9px] sm:text-xs font-bold text-[#21222D] hover:text-[#958CE8] transition-colors cursor-pointer group text-start truncate z-10 relative"
             >
               <span className="group-hover:underline truncate">{t.startReading || "Start lesson"}</span>
               <span className="group-hover:translate-x-0.5 transition-transform shrink-0">→</span>
@@ -516,12 +516,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
           whileHover={{ y: -2 }}
           className="pearl-card p-2.5 sm:p-7 flex flex-col justify-between min-h-[109px] sm:min-h-[9rem] cursor-pointer"
         >
-          <span className="text-[9px] sm:text-[11px] font-bold text-[#666666] tracking-wider sm:tracking-widest uppercase truncate">{t.wordsMastered}</span>
+          <span className="text-[9px] sm:text-[11px] font-bold text-[#545565] tracking-wider sm:tracking-widest uppercase truncate">{t.wordsMastered}</span>
           <div className="flex flex-col mt-0.5 sm:mt-2">
-            <span className="text-xl sm:text-4xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#222222]">
+            <span className="text-xl sm:text-4xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#21222D]">
               {wordsMastered}
             </span>
-            <span className="text-[9px] sm:text-xs text-[#666666] font-semibold mt-0.5 sm:mt-1 truncate">
+            <span className="text-[9px] sm:text-xs text-[#545565] font-semibold mt-0.5 sm:mt-1 truncate">
               {wordsMastered === 0 ? (t.keepGoing || 'Keep going!') : `${wordsMastered} ${t.totalSaved}`}
             </span>
           </div>
@@ -531,7 +531,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
       {/* CONTINUE READING SECTION - Hidden on mobile phone view */}
       <div className="hidden sm:flex flex-col gap-3.5 w-full">
-        <h2 className="text-xs font-bold text-[#666666] tracking-wider uppercase px-0.5">
+        <h2 className="text-xs font-bold text-[#545565] tracking-wider uppercase px-0.5">
           {t.continueReading || 'CONTINUE READING'}
         </h2>
 
@@ -561,10 +561,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     onNavigate?.('reader');
                   }
                 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border-2 border-[#A4F5A6] p-3.5 sm:p-4 flex items-center gap-3.5 sm:gap-4 relative overflow-hidden shadow-2xs cursor-pointer group hover:shadow-md transition-all min-h-[120px]"
+                className="bg-white rounded-2xl sm:rounded-3xl border-2 border-[#ACD1FD] p-3.5 sm:p-4 flex items-center gap-3.5 sm:gap-4 relative overflow-hidden shadow-2xs cursor-pointer group hover:shadow-md transition-all min-h-[120px]"
               >
                 {/* Soft Mint Decorative Glow */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#A4F5A6]/20 rounded-full blur-xl pointer-events-none" />
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#ACD1FD]/20 rounded-full blur-xl pointer-events-none" />
 
                 {/* 3D Realistic Book Cover Graphic */}
                 <div className={`w-20 h-28 sm:w-22 sm:h-30 rounded-lg shadow-md shrink-0 relative overflow-hidden flex flex-col justify-between p-2 text-white bg-gradient-to-br ${coverGradient} border-l-2 border-white/25`}>
@@ -594,18 +594,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <div className="flex flex-col justify-between h-full min-w-0 flex-1 py-0.5 z-10">
                   {/* Top Row: Progress Pill */}
                   <div className="flex items-center justify-start">
-                    <span className="bg-[#A4F5A6] text-[#222222] font-extrabold text-[11px] sm:text-xs px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 shadow-2xs">
-                      <BookOpen className="w-3 h-3 text-[#222222]" />
+                    <span className="bg-[#ACD1FD] text-[#21222D] font-extrabold text-[11px] sm:text-xs px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 shadow-2xs">
+                      <BookOpen className="w-3 h-3 text-[#21222D]" />
                       {pageProgress}%
                     </span>
                   </div>
 
                   {/* Middle: Title & Author */}
                   <div className="my-1.5 min-w-0">
-                    <h3 className="text-xs sm:text-sm font-bold font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] text-[#222222] group-hover:text-[#222222] line-clamp-1 leading-snug">
+                    <h3 className="text-xs sm:text-sm font-bold font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] text-[#21222D] group-hover:text-[#21222D] line-clamp-1 leading-snug">
                       {book.title || book.name}
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-[#666666] font-medium truncate mt-0.5">
+                    <p className="text-[10px] sm:text-xs text-[#545565] font-medium truncate mt-0.5">
                       {book.author || book.category || 'Author'}
                     </p>
                   </div>
@@ -613,20 +613,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   {/* Bottom Row: Page Number & Continue Button */}
                   <div className="flex items-center justify-between gap-2 mt-auto pt-1">
                     {/* SVG Circular Progress Ring + Pages Text */}
-                    <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#222222] shrink-0">
-                      <svg className="w-3.5 h-3.5 text-[#222222] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#21222D] shrink-0">
+                      <svg className="w-3.5 h-3.5 text-[#21222D] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                         <circle cx="12" cy="12" r="9" stroke="#E5E7E4" />
                         <circle 
                           cx="12" 
                           cy="12" 
                           r="9" 
-                          stroke="#A4F5A6" 
+                          stroke="#ACD1FD" 
                           strokeDasharray="56.5" 
                           strokeDashoffset={56.5 - (56.5 * pageProgress) / 100} 
                           strokeLinecap="round" 
                         />
                       </svg>
-                      <span className="text-[10px] sm:text-[11px] font-bold text-[#222222]">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-[#21222D]">
                         p. {currP}/{totalP}
                       </span>
                     </div>
@@ -644,7 +644,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       className="bg-[#1F2620] hover:bg-[#111111] text-white px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1 transition-all group-hover:scale-105 shadow-xs shrink-0 cursor-pointer"
                     >
                       <span>Continue</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-[#A4F5A6]" />
+                      <ChevronRight className="w-3.5 h-3.5 text-[#ACD1FD]" />
                     </button>
                   </div>
                 </div>
@@ -658,16 +658,16 @@ export const HomeView: React.FC<HomeViewProps> = ({
         animate={{ opacity: 1, y: 0 }} 
         className="pearl-card p-6 sm:p-7 flex flex-col gap-5"
       >
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-[#D0D2CF]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-[#DBDBE5]">
           <div className="flex items-center gap-4">
-            <span className="text-[11px] font-bold text-[#222222] tracking-widest uppercase">{t.intensityGrid}</span>
-            <div className="flex bg-[#EFF1EE] p-1 rounded-full border border-[#D0D2CF]">
+            <span className="text-[11px] font-bold text-[#21222D] tracking-widest uppercase">{t.intensityGrid}</span>
+            <div className="flex bg-[#DBDBE5] p-1 rounded-full border border-[#DBDBE5]">
               {[30, 100, 150].map(val => (
                 <button
                   key={val}
                   onClick={() => setTimeframe(val as 30 | 100 | 150)}
                   className={`px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-colors duration-200 cursor-pointer ${
-                    timeframe === val ? 'bg-[#222222] text-[#EFF1EE] shadow-xs' : 'text-[#222222] hover:text-[#555555]'
+                    timeframe === val ? 'bg-[#21222D] text-[#DBDBE5] shadow-xs' : 'text-[#21222D] hover:text-[#21222D]'
                   }`}
                 >
                   {val}D
@@ -677,13 +677,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           
           {/* Custom Heatmap Legend with 5 Distinct Ribble Steps */}
-          <div dir={gridDir} className="flex items-center gap-1.5 text-[10px] text-[#666666] uppercase font-bold tracking-wider">
+          <div dir={gridDir} className="flex items-center gap-1.5 text-[10px] text-[#545565] uppercase font-bold tracking-wider">
             <span>{t.less}</span>
-            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#EFF1EE] border border-[#D0D2CF]" title="0 actions" />
-            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#D4FBD5]" title="1 - 35% goal" />
-            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#A4F5A6]" title="35% - 75% goal" />
-            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#92E894]" title="75% - 115% goal" />
-            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#222222] shadow-xs" title="115%+ goal" />
+            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#DBDBE5] border border-[#DBDBE5]" title="0 actions" />
+            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#DBDBE5]" title="1 - 35% goal" />
+            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#ACD1FD]" title="35% - 75% goal" />
+            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#958CE8]" title="75% - 115% goal" />
+            <div className="w-3.5 h-3.5 rounded-[4px] bg-[#21222D] shadow-xs" title="115%+ goal" />
             <span>{t.more}</span>
           </div>
         </div>
@@ -696,7 +696,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 key={day.dateStr}
                 whileHover={{ scale: 1.25, zIndex: 10 }}
                 className={`w-full aspect-square rounded-[6px] ${day.colorClass} cursor-pointer transition-transform ${
-                  day.isToday ? 'ring-2 ring-[#222222] ring-offset-1 ring-offset-white' : ''
+                  day.isToday ? 'ring-2 ring-[#21222D] ring-offset-1 ring-offset-white' : ''
                 }`}
                 title={`${day.formattedDate}: ${day.label}`}
               />
@@ -708,19 +708,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* Progress Section */}
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
-          <span className="text-[11px] font-bold text-[#222222] tracking-widest uppercase">
+          <span className="text-[11px] font-bold text-[#21222D] tracking-widest uppercase">
             {t.yourProgress}
           </span>
 
           <div className="relative">
             <button
               onClick={() => setShowTimeframeDropdown(!showTimeframeDropdown)}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#D0D2CF] text-xs font-semibold text-[#222222] hover:bg-[#EFF1EE] transition-colors cursor-pointer shadow-xs"
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#DBDBE5] text-xs font-semibold text-[#21222D] hover:bg-[#DBDBE5] transition-colors cursor-pointer shadow-xs"
             >
               <span>
                 {progressTimeframe === 'month' ? t.thisMonth : progressTimeframe === 'week' ? t.thisWeek : t.thisYear}
               </span>
-              <ChevronDown className="w-3.5 h-3.5 text-[#666666]" />
+              <ChevronDown className="w-3.5 h-3.5 text-[#545565]" />
             </button>
 
             <AnimatePresence>
@@ -729,7 +729,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
-                  className="absolute end-0 mt-2 w-36 bg-[#FFFFFF] border border-[#D0D2CF] rounded-2xl shadow-lg z-50 overflow-hidden p-1.5 space-y-1"
+                  className="absolute end-0 mt-2 w-36 bg-[#FFFFFF] border border-[#DBDBE5] rounded-2xl shadow-lg z-50 overflow-hidden p-1.5 space-y-1"
                 >
                   {(['week', 'month', 'year'] as ProgressTimeframe[]).map((tf) => (
                     <button
@@ -740,8 +740,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       }}
                       className={`w-full text-start px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors cursor-pointer ${
                         progressTimeframe === tf
-                          ? 'bg-[#A4F5A6] text-[#222222]'
-                          : 'text-[#222222] hover:bg-[#EFF1EE]'
+                          ? 'bg-[#ACD1FD] text-[#21222D]'
+                          : 'text-[#21222D] hover:bg-[#DBDBE5]'
                       }`}
                     >
                       {tf === 'month' ? t.thisMonth : tf === 'week' ? t.thisWeek : t.thisYear}
@@ -757,49 +757,49 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div ref={statsOverviewRef} className="lg:col-span-1 grid grid-cols-3 lg:grid-cols-1 gap-3 lg:gap-4">
             <div className="pearl-card p-3 sm:p-5 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 text-center sm:text-start">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#A4F5A6] text-[#222222] flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#ACD1FD] text-[#21222D] flex items-center justify-center shrink-0">
                 <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#222222] truncate">
-                  {wordsLearned} <span className="text-[10px] sm:text-xs font-sans text-[#666666] font-semibold">/ {totalWords}</span>
+                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#21222D] truncate">
+                  {wordsLearned} <span className="text-[10px] sm:text-xs font-sans text-[#545565] font-semibold">/ {totalWords}</span>
                 </div>
-                <div className="text-[10px] sm:text-xs text-[#666666] font-medium truncate">{t.wordsLearned}</div>
+                <div className="text-[10px] sm:text-xs text-[#545565] font-medium truncate">{t.wordsLearned}</div>
               </div>
             </div>
 
             <div className="pearl-card p-3 sm:p-5 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 text-center sm:text-start">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#B2A1FF] text-[#222222] flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#958CE8] text-[#21222D] flex items-center justify-center shrink-0">
                 <ClipboardCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#222222] truncate">
+                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#21222D] truncate">
                   {retentionRate}%
                 </div>
-                <div className="text-[10px] sm:text-xs text-[#666666] font-medium truncate">{t.retentionRate}</div>
+                <div className="text-[10px] sm:text-xs text-[#545565] font-medium truncate">{t.retentionRate}</div>
               </div>
             </div>
 
             <div className="pearl-card p-3 sm:p-5 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 text-center sm:text-start">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#D0D2CF] text-[#222222] flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#DBDBE5] text-[#21222D] flex items-center justify-center shrink-0">
                 <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#222222] truncate">
+                <div className="text-sm sm:text-xl font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-[800] text-[#21222D] truncate">
                   {totalReviews}
                 </div>
-                <div className="text-[10px] sm:text-xs text-[#666666] font-medium truncate">{t.wordsReviewed}</div>
+                <div className="text-[10px] sm:text-xs text-[#545565] font-medium truncate">{t.wordsReviewed}</div>
               </div>
             </div>
           </div>
 
           <div ref={vocabChartRef} className="lg:col-span-2 pearl-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-bold text-[#222222]">
+              <span className="text-sm font-bold text-[#21222D]">
                 {chartData.title}
               </span>
               {hoveredPointIndex !== null && (
-                <span className="text-xs font-bold text-[#222222] bg-[#A4F5A6] px-2 py-0.5 rounded-full">
+                <span className="text-xs font-bold text-[#21222D] bg-[#ACD1FD] px-2 py-0.5 rounded-full">
                   {chartData.labels[hoveredPointIndex]}: {chartData.values[hoveredPointIndex]} {t.words}
                 </span>
               )}
@@ -812,8 +812,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
               >
                 <defs>
                   <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#A4F5A6" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#EFF1EE" stopOpacity="0.0" />
+                    <stop offset="0%" stopColor="#ACD1FD" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#DBDBE5" stopOpacity="0.0" />
                   </linearGradient>
                 </defs>
 
@@ -826,7 +826,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       y1={y}
                       x2={chartWidth - paddingRight}
                       y2={y}
-                      stroke="rgba(34, 34, 34, 0.08)"
+                      stroke="rgba(33, 34, 45, 0.08)"
                       strokeDasharray="4 4"
                       strokeWidth="1"
                     />
@@ -841,7 +841,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <path
                     d={pathD}
                     fill="none"
-                    stroke="#222222"
+                    stroke="#21222D"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -871,8 +871,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         cx={cx}
                         cy={cy}
                         r={isHovered ? "6.5" : "4"}
-                        fill="#A4F5A6"
-                        stroke="#222222"
+                        fill="#ACD1FD"
+                        stroke="#21222D"
                         strokeWidth="2"
                         className="transition-all duration-200"
                       />
@@ -880,7 +880,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         x={cx}
                         y={chartHeight - 5}
                         textAnchor="middle"
-                        className="text-[10px] fill-[#666666] font-semibold"
+                        className="text-[10px] fill-[#545565] font-semibold"
                       >
                         {chartData.labels[idx]}
                       </text>
@@ -895,11 +895,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Status of Each Language Section */}
         <div ref={languageProfilesRef} className="mt-8 bg-white dark:bg-[#2C2C2E] p-5 sm:p-6 rounded-2xl border border-[#E6DFD3] dark:border-[#3A3A3C] shadow-xs">
           <div className="flex items-center justify-between mb-4 border-b border-[#E6DFD3] dark:border-[#3A3A3C] pb-2.5">
-            <h3 className="text-base font-bold text-[#222222] dark:text-[#EFF1EE] flex items-center gap-2">
+            <h3 className="text-base font-bold text-[#21222D] dark:text-[#DBDBE5] flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               Active Languages Status
             </h3>
-            <span className="text-[11px] font-bold text-[#666666] dark:text-stone-400 bg-[#F4F4F5] dark:bg-white/5 px-2.5 py-0.5 rounded-full">
+            <span className="text-[11px] font-bold text-[#545565] dark:text-stone-400 bg-[#F4F4F5] dark:bg-white/5 px-2.5 py-0.5 rounded-full">
               {globalStats.langStatuses.length} Active
             </span>
           </div>
@@ -907,13 +907,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {globalStats.langStatuses.map((lang) => {
               const percent = Math.min(100, Math.max(1, Math.round((lang.vocab / 1000) * 100) + (lang.books * 5)));
               return (
-                <div key={lang.name} className="group relative overflow-hidden p-4 rounded-xl bg-[#F9F8F6] dark:bg-[#1E1E1E] border border-[#E6DFD3] dark:border-white/10 flex flex-col gap-3 hover:border-[#1856B7] dark:hover:border-[#A4F5A6] transition-all shadow-2xs">
+                <div key={lang.name} className="group relative overflow-hidden p-4 rounded-xl bg-[#F9F8F6] dark:bg-[#1E1E1E] border border-[#E6DFD3] dark:border-white/10 flex flex-col gap-3 hover:border-[#1856B7] dark:hover:border-[#ACD1FD] transition-all shadow-2xs">
                   <div className="flex items-center justify-between min-w-0">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span className="text-2xl shrink-0">{lang.flag}</span>
                       <div className="min-w-0">
                         <div className="flex items-center gap-1.5">
-                          <h4 className="font-bold text-xs text-[#222222] dark:text-[#EFF1EE] truncate">{lang.name}</h4>
+                          <h4 className="font-bold text-xs text-[#21222D] dark:text-[#DBDBE5] truncate">{lang.name}</h4>
                           <span className="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">
                             Active
                           </span>
@@ -925,10 +925,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     </div>
 
                     <div className="flex flex-col items-end text-right">
-                      <span className="text-xs font-black text-[#222222] dark:text-[#A4F5A6]">
+                      <span className="text-xs font-black text-[#21222D] dark:text-[#ACD1FD]">
                         {percent}%
                       </span>
-                      <span className="text-[9px] font-bold text-[#666666] dark:text-stone-400 uppercase tracking-wider">
+                      <span className="text-[9px] font-bold text-[#545565] dark:text-stone-400 uppercase tracking-wider">
                         Learned
                       </span>
                     </div>
@@ -938,11 +938,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <div className="w-full">
                     <div className="w-full bg-[#E1DDD5] dark:bg-stone-800 rounded-full h-1.5 overflow-hidden">
                       <div 
-                        className="bg-emerald-500 dark:bg-[#A4F5A6] h-full rounded-full transition-all duration-500"
+                        className="bg-emerald-500 dark:bg-[#ACD1FD] h-full rounded-full transition-all duration-500"
                         style={{ width: `${percent}%` }}
                       />
                     </div>
-                    <div className="flex justify-between items-center mt-1.5 text-[10px] font-bold text-[#666666] dark:text-stone-400">
+                    <div className="flex justify-between items-center mt-1.5 text-[10px] font-bold text-[#545565] dark:text-stone-400">
                       <span>{lang.vocab} words</span>
                       <span>{lang.books} books</span>
                     </div>
@@ -951,7 +951,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               );
             })}
             {globalStats.langStatuses.length === 0 && (
-              <div className="col-span-full py-6 text-center text-[#666666] dark:text-stone-400 text-xs font-medium">
+              <div className="col-span-full py-6 text-center text-[#545565] dark:text-stone-400 text-xs font-medium">
                 No active languages yet. Start learning words or reading books to see them here!
               </div>
             )}

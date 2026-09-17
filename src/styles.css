@@ -196,76 +196,76 @@
 
 /* Background Atmosphere - Soft warm off-white canvas with restrained breathing room */
 .bg-aura-mesh {
-  background-color: #EFF1EE;
+  background-color: #DBDBE5;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(208, 210, 207, 0.4) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(227, 220, 255, 0.2) 0px, transparent 50%),
-    radial-gradient(at 20% 100%, rgba(164, 245, 166, 0.15) 0px, transparent 50%),
-    radial-gradient(at 80% 100%, rgba(208, 210, 207, 0.3) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(219, 219, 229, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(149, 140, 232, 0.2) 0px, transparent 50%),
+    radial-gradient(at 20% 100%, rgba(172, 209, 253, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(219, 219, 229, 0.3) 0px, transparent 50%);
   background-size: 100% 100%;
   background-attachment: fixed;
 }
 
 /* Canvas Dotted Grid Overlay */
 .bg-grid-canvas {
-  background-image: radial-gradient(rgba(34, 34, 34, 0.06) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(33, 34, 45, 0.06) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
 /* Ribble Standard Cards - Large rounded corners, generous padding, soft surfaces */
 .pearl-card, .frosted-ice-card {
   background-color: #FFFFFF;
-  border: 1px solid #D0D2CF;
-  color: #222222;
+  border: 1px solid #DBDBE5;
+  color: #21222D;
   border-radius: 28px;
-  box-shadow: 0 2px 8px -2px rgba(34, 34, 34, 0.03);
+  box-shadow: 0 2px 8px -2px rgba(33, 34, 45, 0.03);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pearl-card:hover {
-  border-color: #B8BAB6;
-  box-shadow: 0 4px 16px -4px rgba(34, 34, 34, 0.06);
+  border-color: #ACD1FD;
+  box-shadow: 0 4px 16px -4px rgba(33, 34, 45, 0.06);
 }
 
 /* Card Variants */
 .card-neutral {
-  background-color: #D0D2CF;
-  border: 1px solid rgba(184, 186, 182, 0.5);
-  color: #222222;
+  background-color: #DBDBE5;
+  border: 1px solid rgba(172, 209, 253, 0.5);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-mint {
-  background-color: #A4F5A6;
-  border: 1px solid rgba(146, 232, 148, 0.6);
-  color: #222222;
+  background-color: #ACD1FD;
+  border: 1px solid rgba(149, 140, 232, 0.6);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-lavender {
-  background-color: #B2A1FF;
-  border: 1px solid rgba(160, 142, 255, 0.6);
-  color: #222222;
+  background-color: #958CE8;
+  border: 1px solid rgba(172, 209, 253, 0.6);
+  color: #21222D;
   border-radius: 28px;
 }
 
 .card-dark {
-  background-color: #222222;
-  border: 1px solid #333333;
-  color: #EFF1EE;
+  background-color: #21222D;
+  border: 1px solid #21222D;
+  color: #DBDBE5;
   border-radius: 28px;
 }
 
 /* Active Highlight Card Outline */
 .card-highlight-active {
-  border: 2px solid #222222 !important;
-  box-shadow: 0 0 0 4px rgba(164, 245, 166, 0.6);
+  border: 2px solid #21222D !important;
+  box-shadow: 0 0 0 4px rgba(172, 209, 253, 0.6);
 }
 
 /* Buttons */
 .btn-primary {
-  background-color: #A4F5A6;
-  color: #222222;
+  background-color: #ACD1FD;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -273,15 +273,15 @@
   cursor: pointer;
 }
 .btn-primary:hover {
-  background-color: #92E894;
+  background-color: #958CE8;
 }
 .btn-primary:active {
   transform: scale(0.98);
 }
 
 .btn-secondary {
-  background-color: #D0D2CF;
-  color: #222222;
+  background-color: #DBDBE5;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -289,12 +289,12 @@
   cursor: pointer;
 }
 .btn-secondary:hover {
-  background-color: #C2C4C0;
+  background-color: #DBDBE5;
 }
 
 .btn-dark {
-  background-color: #222222;
-  color: #EFF1EE;
+  background-color: #21222D;
+  color: #DBDBE5;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -302,12 +302,12 @@
   cursor: pointer;
 }
 .btn-dark:hover {
-  background-color: #333333;
+  background-color: #21222D;
 }
 
 .btn-lavender {
-  background-color: #B2A1FF;
-  color: #222222;
+  background-color: #958CE8;
+  color: #21222D;
   font-weight: 700;
   border-radius: 16px;
   padding: 10px 20px;
@@ -315,7 +315,7 @@
   cursor: pointer;
 }
 .btn-lavender:hover {
-  background-color: #A08EFF;
+  background-color: #ACD1FD;
 }
 
 /* Scrollbars */
@@ -327,11 +327,11 @@
   background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #D0D2CF; 
+  background: #DBDBE5; 
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8BAB6;
+  background: #ACD1FD;
 }
 
 body {
@@ -368,8 +368,8 @@ body {
 }
 
 .ribble-dot {
-  background: #A4F5A6;
-  border: .03em solid #222222;
+  background: #ACD1FD;
+  border: .03em solid #21222D;
   width: .21em;
   height: .21em;
   position: absolute;

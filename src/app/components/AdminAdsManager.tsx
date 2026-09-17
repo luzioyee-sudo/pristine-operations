@@ -1821,8 +1821,8 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                         }}
                         className={`p-2 rounded-xl text-xs font-bold border transition-all cursor-pointer text-center ${
                           pauseDurationHours === preset.hours && !customResumeDate
-                            ? 'border-[#222222] bg-[#A4F5A6] text-[#222222] font-bold'
-                            : 'border-[#D0D2CF] dark:border-stone-800 hover:bg-[#EFF1EE] dark:hover:bg-stone-900 text-stone-700 dark:text-stone-300'
+                            ? 'border-[#21222D] bg-[#ACD1FD] text-[#21222D] font-bold'
+                            : 'border-[#DBDBE5] dark:border-stone-800 hover:bg-[#DBDBE5] dark:hover:bg-stone-900 text-stone-700 dark:text-stone-300'
                         }`}
                       >
                         {preset.label}
@@ -1934,7 +1934,7 @@ export const AdminAdsManager: React.FC<AdminAdsManagerProps> = ({
                     setInspectAd(null);
                     handleOpenEditAd(adToEdit);
                   }}
-                  className="px-4 py-2 rounded-xl bg-[#222222] hover:bg-[#A4F5A6] text-[#EFF1EE] hover:text-[#222222] font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-colors"
+                  className="px-4 py-2 rounded-xl bg-[#21222D] hover:bg-[#ACD1FD] text-[#DBDBE5] hover:text-[#21222D] font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-colors"
                 >
                   <Edit3 className="w-3.5 h-3.5" />
                   <span>Edit Styling & Content</span>

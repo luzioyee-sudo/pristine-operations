@@ -157,7 +157,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
       action: () => onSelectSettingsTab('notifications')
     },
     {
-      id: 'set-[#A4F5A6]',
+      id: 'set-[#ACD1FD]',
       name: 'Interface & Content Language',
       description: 'Choose your native and foreign target study language',
       category: 'pages',
@@ -166,7 +166,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
       action: () => onSelectSettingsTab('languages')
     },
     {
-      id: 'set-[#222222]',
+      id: 'set-[#21222D]',
       name: 'Appearance Theme Options',
       description: 'Toggle Light, Dark, or System visual themes easily',
       category: 'pages',
@@ -296,7 +296,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
       >
         {/* Search Header Input bar */}
         <div className="p-4 border-b border-stone-100 dark:border-stone-800 flex items-center gap-3 bg-stone-50/50 dark:bg-stone-900/50">
-          <Search className="w-5 h-5 text-[#222222] dark:text-[#A4F5A6] shrink-0 stroke-[2.2]" />
+          <Search className="w-5 h-5 text-[#21222D] dark:text-[#ACD1FD] shrink-0 stroke-[2.2]" />
           <input
             type="text"
             value={query}
@@ -315,7 +315,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
           )}
           <button
             onClick={onClose}
-            className="px-2.5 py-1 rounded-xl bg-[#EFF1EE] hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-[11px] font-bold text-[#222222] dark:text-stone-300 transition-all cursor-pointer"
+            className="px-2.5 py-1 rounded-xl bg-[#DBDBE5] hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-[11px] font-bold text-[#21222D] dark:text-stone-300 transition-all cursor-pointer"
           >
             Esc
           </button>
@@ -335,8 +335,8 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
               onClick={() => setActiveCategory(cat.id as SearchCategory)}
               className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-[#222222] text-[#A4F5A6] dark:bg-[#A4F5A6] dark:text-[#222222] shadow-2xs font-extrabold'
-                  : 'bg-[#EFF1EE] dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700'
+                  ? 'bg-[#21222D] text-[#ACD1FD] dark:bg-[#ACD1FD] dark:text-[#21222D] shadow-2xs font-extrabold'
+                  : 'bg-[#DBDBE5] dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700'
               }`}
             >
               {cat.label}
@@ -358,7 +358,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
           {showPages && filteredStatic.filter(s => s.category === 'pages').length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-2 px-1">
-                <LayoutGrid className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                <LayoutGrid className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                 <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                   Pages & Navigation ({filteredStatic.filter(s => s.category === 'pages').length})
                 </span>
@@ -373,16 +373,16 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                         item.action();
                         onClose();
                       }}
-                      className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                      className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                     >
                       <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-8 h-8 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#A4F5A6] group-hover:text-[#222222] transition-all">
+                        <div className="w-8 h-8 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#ACD1FD] group-hover:text-[#21222D] transition-all">
                           <IconComp className="w-4 h-4 stroke-[2]" />
                         </div>
                         <div className="min-w-0">
-                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] flex items-center gap-1.5">
+                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] flex items-center gap-1.5">
                             {item.name}
-                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-md bg-[#EFF1EE] dark:bg-stone-800 text-stone-600 dark:text-stone-400">
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-md bg-[#DBDBE5] dark:bg-stone-800 text-stone-600 dark:text-stone-400">
                               {item.type}
                             </span>
                           </p>
@@ -391,7 +391,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] group-hover:translate-x-1 transition-all shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] group-hover:translate-x-1 transition-all shrink-0" />
                     </button>
                   );
                 })}
@@ -403,7 +403,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
           {showDocs && filteredDocs.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-2 px-1">
-                <BookOpen className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                <BookOpen className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                 <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                   Documents & Books ({filteredDocs.length})
                 </span>
@@ -416,14 +416,14 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                       onSelectDocument(doc);
                       onClose();
                     }}
-                    className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                    className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                   >
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-8 h-8 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#A4F5A6] group-hover:text-[#222222] transition-all">
+                      <div className="w-8 h-8 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#ACD1FD] group-hover:text-[#21222D] transition-all">
                         <FileText className="w-4 h-4 stroke-[2]" />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6]">
+                        <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD]">
                           {doc.name}
                         </p>
                         <p className="text-[10px] text-stone-400 truncate mt-0.5">
@@ -431,7 +431,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                         </p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] group-hover:translate-x-1 transition-all shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] group-hover:translate-x-1 transition-all shrink-0" />
                   </button>
                 ))}
               </div>
@@ -444,7 +444,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
               {filteredFolders.length > 0 && (
                 <div>
                   <div className="flex items-center gap-2 mb-2 px-1">
-                    <FolderIcon className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                    <FolderIcon className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                     <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                       Folders ({filteredFolders.length})
                     </span>
@@ -457,11 +457,11 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                           onNavigateView('reader');
                           onClose();
                         }}
-                        className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                        className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                       >
                         <div className="min-w-0 flex items-center gap-2">
-                          <FolderIcon className="w-4 h-4 text-[#222222] dark:text-[#A4F5A6] shrink-0" />
-                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6]">
+                          <FolderIcon className="w-4 h-4 text-[#21222D] dark:text-[#ACD1FD] shrink-0" />
+                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD]">
                             {fold.name}
                           </p>
                         </div>
@@ -475,7 +475,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
               {filteredDecks.length > 0 && (
                 <div>
                   <div className="flex items-center gap-2 mb-2 px-1">
-                    <Layers className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                    <Layers className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                     <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                       Decks ({filteredDecks.length})
                     </span>
@@ -488,11 +488,11 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                           onNavigateView('flashcards-view');
                           onClose();
                         }}
-                        className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                        className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                       >
                         <div className="min-w-0 flex items-center gap-2">
-                          <Layers className="w-4 h-4 text-[#222222] dark:text-[#A4F5A6] shrink-0" />
-                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6]">
+                          <Layers className="w-4 h-4 text-[#21222D] dark:text-[#ACD1FD] shrink-0" />
+                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 truncate group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD]">
                             {deck.name}
                           </p>
                         </div>
@@ -509,7 +509,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
           {showWords && filteredVocab.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-2 px-1">
-                <HelpCircle className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                <HelpCircle className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                 <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                   Vocabulary & Definitions ({filteredVocab.length})
                 </span>
@@ -522,13 +522,13 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                       onSelectWord(v.word);
                       onClose();
                     }}
-                    className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                    className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                   >
                     <div className="min-w-0 flex-1 pe-3">
-                      <p className="text-xs font-black text-stone-800 dark:text-stone-100 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6]">
+                      <p className="text-xs font-black text-stone-800 dark:text-stone-100 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD]">
                         {v.word} <span className="text-[10px] font-bold text-stone-400">({v.partOfSpeech || 'Word'})</span>
                       </p>
-                      <p className="text-[11px] text-[#222222] dark:text-[#A4F5A6] font-bold truncate mt-0.5">
+                      <p className="text-[11px] text-[#21222D] dark:text-[#ACD1FD] font-bold truncate mt-0.5">
                         {v.translation || v.definition}
                       </p>
                       {v.contextSentence && (
@@ -537,7 +537,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                         </p>
                       )}
                     </div>
-                    <span className="text-[10px] font-extrabold text-[#222222] dark:text-[#A4F5A6] px-2.5 py-1 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 group-hover:bg-[#222222] group-hover:text-[#A4F5A6] transition-all shrink-0">
+                    <span className="text-[10px] font-extrabold text-[#21222D] dark:text-[#ACD1FD] px-2.5 py-1 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 group-hover:bg-[#21222D] group-hover:text-[#ACD1FD] transition-all shrink-0">
                       Explain
                     </span>
                   </button>
@@ -550,7 +550,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
           {showActions && filteredStatic.filter(s => s.category === 'actions').length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-2 px-1">
-                <Terminal className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+                <Terminal className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                 <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 dark:text-stone-400">
                   App Actions & Shortcuts ({filteredStatic.filter(s => s.category === 'actions').length})
                 </span>
@@ -565,19 +565,19 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                         item.action();
                         onClose();
                       }}
-                      className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#A4F5A6]/20 dark:hover:bg-[#A4F5A6]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#A4F5A6]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
+                      className="w-full p-2.5 rounded-2xl bg-stone-50/60 dark:bg-stone-800/40 hover:bg-[#ACD1FD]/20 dark:hover:bg-[#ACD1FD]/10 border border-stone-200/50 dark:border-stone-800/50 hover:border-[#ACD1FD]/60 flex items-center justify-between transition-all cursor-pointer text-start group"
                     >
                       <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-8 h-8 rounded-xl bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#A4F5A6] group-hover:text-[#222222] transition-all">
+                        <div className="w-8 h-8 rounded-xl bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-300 flex items-center justify-center group-hover:bg-[#ACD1FD] group-hover:text-[#21222D] transition-all">
                           <IconComp className="w-4 h-4 stroke-[2]" />
                         </div>
                         <div className="min-w-0">
-                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] flex items-center gap-1.5">
+                          <p className="text-xs font-extrabold text-stone-800 dark:text-stone-100 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] flex items-center gap-1.5">
                             {item.name}
                             <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md ${
                               item.type.includes('Danger')
                                 ? 'bg-red-500/10 text-red-600 dark:text-red-400'
-                                : 'bg-[#A4F5A6] text-[#222222]'
+                                : 'bg-[#ACD1FD] text-[#21222D]'
                             }`}>
                               {item.type}
                             </span>
@@ -587,7 +587,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] group-hover:translate-x-1 transition-all shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] group-hover:translate-x-1 transition-all shrink-0" />
                     </button>
                   );
                 })}

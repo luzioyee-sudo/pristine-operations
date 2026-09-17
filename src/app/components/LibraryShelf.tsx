@@ -69,7 +69,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
   const t = getTranslation(settings?.interfaceLanguage || settings?.targetLanguage);
 
   // Accent color line map for book covers beneath title (matching reference image)
-  const accentLineColors = ['bg-amber-400', 'bg-sky-400', 'bg-emerald-400', 'bg-stone-700 dark:bg-[#A4F5A6]', 'bg-purple-400', 'bg-rose-400'];
+  const accentLineColors = ['bg-amber-400', 'bg-sky-400', 'bg-emerald-400', 'bg-stone-700 dark:bg-[#ACD1FD]', 'bg-purple-400', 'bg-rose-400'];
 
   // Calculate top/recent in-progress books for "Continue Reading" top carousel
   const continuingBooks = useMemo(() => {
@@ -203,7 +203,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
       {featuredBooks.length > 0 && (
         <div className="hidden md:block space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#666666] dark:text-[#D0D2CF]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#545565] dark:text-[#DBDBE5]">
               {t.continueReading || 'Continue Reading'}
             </span>
           </div>
@@ -218,10 +218,10 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   key={doc.id}
                   whileHover={{ y: -3, scale: 1.01 }}
                   onClick={() => onSelectDocument(doc)}
-                  className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 border-2 border-[#A4F5A6]/60 dark:border-[#A4F5A6]/35 hover:border-[#A4F5A6] dark:hover:border-[#A4F5A6] shadow-xs hover:shadow-md transition-all group relative overflow-hidden flex items-center gap-4 cursor-pointer"
+                  className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 border-2 border-[#ACD1FD]/60 dark:border-[#ACD1FD]/35 hover:border-[#ACD1FD] dark:hover:border-[#ACD1FD] shadow-xs hover:shadow-md transition-all group relative overflow-hidden flex items-center gap-4 cursor-pointer"
                 >
                   {/* Subtle Brand Mint Accent Glow in background */}
-                  <div className="absolute top-0 end-0 w-24 h-24 bg-[#A4F5A6]/15 dark:bg-[#A4F5A6]/8 rounded-bl-full pointer-events-none transition-opacity group-hover:opacity-100" />
+                  <div className="absolute top-0 end-0 w-24 h-24 bg-[#ACD1FD]/15 dark:bg-[#ACD1FD]/8 rounded-bl-full pointer-events-none transition-opacity group-hover:opacity-100" />
 
                   {/* Miniature 3D Floating Book Cover */}
                   <div className="relative shrink-0 select-none">
@@ -254,15 +254,15 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5 space-y-2 z-10">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between gap-1">
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#A4F5A6] text-[#222222] text-[10px] font-black uppercase tracking-wider">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#ACD1FD] text-[#21222D] text-[10px] font-black uppercase tracking-wider">
                           <BookOpen className="w-2.5 h-2.5 stroke-[2.5]" />
                           {progressPercent > 0 ? `${progressPercent}%` : 'New'}
                         </span>
                       </div>
-                      <h3 className="text-sm font-bold text-[#222222] dark:text-white line-clamp-2 leading-snug group-hover:text-[#222222] dark:group-hover:text-[#A4F5A6] transition-colors">
+                      <h3 className="text-sm font-bold text-[#21222D] dark:text-white line-clamp-2 leading-snug group-hover:text-[#21222D] dark:group-hover:text-[#ACD1FD] transition-colors">
                         {cleanTitle}
                       </h3>
-                      <span className="text-[11px] text-[#666666] dark:text-[#D0D2CF] font-medium block truncate">
+                      <span className="text-[11px] text-[#545565] dark:text-[#DBDBE5] font-medium block truncate">
                         {doc.author || (t.author || 'Author')}
                       </span>
                     </div>
@@ -276,14 +276,14 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                               cx="12"
                               cy="12"
                               r="9"
-                              className="stroke-[#D0D2CF] dark:stroke-slate-700 fill-none"
+                              className="stroke-[#DBDBE5] dark:stroke-slate-700 fill-none"
                               strokeWidth="2.5"
                             />
                             <circle
                               cx="12"
                               cy="12"
                               r="9"
-                              className="stroke-[#222222] dark:stroke-[#A4F5A6] fill-none transition-all duration-500"
+                              className="stroke-[#21222D] dark:stroke-[#ACD1FD] fill-none transition-all duration-500"
                               strokeWidth="2.5"
                               strokeDasharray={56.5}
                               strokeDashoffset={56.5 - (56.5 * progressPercent) / 100}
@@ -291,7 +291,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                             />
                           </svg>
                         </div>
-                        <span className="text-[10.5px] font-bold text-[#222222] dark:text-white">
+                        <span className="text-[10.5px] font-bold text-[#21222D] dark:text-white">
                           p. {doc.currentPage || 1}/{doc.totalPages || 1}
                         </span>
                       </div>
@@ -301,7 +301,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                           e.stopPropagation();
                           onSelectDocument(doc);
                         }}
-                        className="px-3 py-1 rounded-full bg-[#222222] hover:bg-black text-[#A4F5A6] text-xs font-bold transition-all cursor-pointer flex items-center gap-1 shadow-2xs group-hover:bg-[#A4F5A6] group-hover:text-[#222222]"
+                        className="px-3 py-1 rounded-full bg-[#21222D] hover:bg-black text-[#ACD1FD] text-xs font-bold transition-all cursor-pointer flex items-center gap-1 shadow-2xs group-hover:bg-[#ACD1FD] group-hover:text-[#21222D]"
                       >
                         <span>{t.continue || 'Continue'}</span>
                         <ChevronRight className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -316,25 +316,25 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
       )}
 
       {/* 2. MAIN TOOLBAR: "MY BOOKSHELF" & FILTER TABS */}
-      <div id="bookshelf-toolbar" className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 sm:p-5 border border-[#D0D2CF] dark:border-white/10 shadow-xs space-y-4">
+      <div id="bookshelf-toolbar" className="bg-white dark:bg-[#1E1E1E] rounded-3xl p-4 sm:p-5 border border-[#DBDBE5] dark:border-white/10 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Left Title & Plus Button */}
           <div className="flex items-center gap-3">
             <button
               id="bookshelf-add-book-btn"
               onClick={onUploadClick}
-              className="w-8 h-8 rounded-full bg-[#222222] hover:bg-black text-[#EFF1EE] flex items-center justify-center shadow-xs cursor-pointer transition-transform hover:scale-105 active:scale-95 shrink-0"
+              className="w-8 h-8 rounded-full bg-[#21222D] hover:bg-black text-[#DBDBE5] flex items-center justify-center shadow-xs cursor-pointer transition-transform hover:scale-105 active:scale-95 shrink-0"
               title={t.uploadPdf || "Upload PDF / Book"}
             >
               <Plus className="w-4 h-4 stroke-[2.5]" />
             </button>
-            <h1 id="bookshelf-title" className="text-xl sm:text-2xl font-black text-[#222222] dark:text-white tracking-tight">
+            <h1 id="bookshelf-title" className="text-xl sm:text-2xl font-black text-[#21222D] dark:text-white tracking-tight">
               {t.myBookshelf || 'My Bookshelf'}
             </h1>
           </div>
 
           {/* Center Tabs Navigation */}
-          <div id="bookshelf-filter-tabs" className="flex items-center gap-6 overflow-x-auto border-b md:border-b-0 border-[#D0D2CF] dark:border-white/10 pb-2 md:pb-0 text-xs font-semibold">
+          <div id="bookshelf-filter-tabs" className="flex items-center gap-6 overflow-x-auto border-b md:border-b-0 border-[#DBDBE5] dark:border-white/10 pb-2 md:pb-0 text-xs font-semibold">
             {(['all', 'favorites', 'plan-to-read', 'completed'] as BookshelfTab[]).map((tab) => {
               const label =
                 tab === 'all'
@@ -361,8 +361,8 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   onClick={() => setActiveTab(tab)}
                   className={`relative py-1 cursor-pointer transition-colors whitespace-nowrap ${
                     isActive
-                      ? 'text-[#222222] dark:text-white font-extrabold'
-                      : 'text-[#666666] dark:text-[#D0D2CF] hover:text-[#222222] dark:hover:text-white'
+                      ? 'text-[#21222D] dark:text-white font-extrabold'
+                      : 'text-[#545565] dark:text-[#DBDBE5] hover:text-[#21222D] dark:hover:text-white'
                   }`}
                 >
                   <span>{label}</span>
@@ -370,7 +370,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   {isActive && (
                     <motion.div
                       layoutId="activeTabUnderline"
-                      className="absolute bottom-0 inset-x-0 h-0.5 bg-[#A4F5A6] rounded-full"
+                      className="absolute bottom-0 inset-x-0 h-0.5 bg-[#ACD1FD] rounded-full"
                     />
                   )}
                 </button>
@@ -382,20 +382,20 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
           <div className="flex items-center gap-2 shrink-0">
             {/* Find Books Search Input */}
             <div className="relative flex-1 sm:w-56">
-              <Search className="w-3.5 h-3.5 text-[#666666] absolute start-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-3.5 h-3.5 text-[#545565] absolute start-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 id="bookshelf-search-input"
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t.findBooksPlaceholder || "Find books..."}
-                className="w-full ps-8 pe-7 py-1.5 rounded-full bg-[#EFF1EE] dark:bg-black/40 border border-[#D0D2CF] dark:border-white/10 text-xs text-[#222222] dark:text-[#EFF1EE] placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#A4F5A6] transition-all"
+                className="w-full ps-8 pe-7 py-1.5 rounded-full bg-[#DBDBE5] dark:bg-black/40 border border-[#DBDBE5] dark:border-white/10 text-xs text-[#21222D] dark:text-[#DBDBE5] placeholder:text-[#545565] focus:outline-none focus:ring-2 focus:ring-[#ACD1FD] transition-all"
               />
               {searchQuery && (
                 <button
                   id="bookshelf-clear-search-btn"
                   onClick={() => setSearchQuery('')}
-                  className="absolute end-2.5 top-1/2 -translate-y-1/2 text-[#666666] hover:text-[#222222] cursor-pointer"
+                  className="absolute end-2.5 top-1/2 -translate-y-1/2 text-[#545565] hover:text-[#21222D] cursor-pointer"
                 >
                   <X className="w-3 h-3" />
                 </button>
@@ -403,14 +403,14 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
             </div>
 
             {/* Grid / List Layout Switcher */}
-            <div id="bookshelf-view-switcher" className="flex items-center gap-0.5 bg-[#EFF1EE] dark:bg-black/40 p-0.5 rounded-lg border border-[#D0D2CF] dark:border-white/10">
+            <div id="bookshelf-view-switcher" className="flex items-center gap-0.5 bg-[#DBDBE5] dark:bg-black/40 p-0.5 rounded-lg border border-[#DBDBE5] dark:border-white/10">
               <button
                 id="bookshelf-grid-view-btn"
                 onClick={() => setViewMode('grid')}
                 className={`p-1.5 rounded-md transition-colors cursor-pointer ${
                   viewMode === 'grid'
-                    ? 'bg-white dark:bg-[#1E1E1E] text-[#222222] dark:text-white shadow-xs'
-                    : 'text-[#666666] hover:text-[#222222]'
+                    ? 'bg-white dark:bg-[#1E1E1E] text-[#21222D] dark:text-white shadow-xs'
+                    : 'text-[#545565] hover:text-[#21222D]'
                 }`}
                 title={t.gridShelfView || "Grid / Shelf View"}
               >
@@ -421,8 +421,8 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                 onClick={() => setViewMode('list')}
                 className={`p-1.5 rounded-md transition-colors cursor-pointer ${
                   viewMode === 'list'
-                    ? 'bg-white dark:bg-[#1E1E1E] text-[#222222] dark:text-white shadow-xs'
-                    : 'text-[#666666] hover:text-[#222222]'
+                    ? 'bg-white dark:bg-[#1E1E1E] text-[#21222D] dark:text-white shadow-xs'
+                    : 'text-[#545565] hover:text-[#21222D]'
                 }`}
                 title={t.listView || "List View"}
               >
@@ -441,7 +441,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
             {shelfRows.map((shelfBooks, shelfIdx) => (
               <div
                 key={`shelf-row-${shelfIdx}`}
-                className="relative bg-[#FAF9F6] dark:bg-[#161815] rounded-3xl p-6 sm:p-8 sm:pb-10 border border-[#D0D2CF] dark:border-white/10 shadow-xs overflow-visible"
+                className="relative bg-[#FAF9F6] dark:bg-[#161815] rounded-3xl p-6 sm:p-8 sm:pb-10 border border-[#DBDBE5] dark:border-white/10 shadow-xs overflow-visible"
               >
                 {/* Books Standing Upright on the Shelf */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 items-end relative z-10 pb-4">
@@ -468,10 +468,10 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
 
                         {/* Title & Author details under book */}
                         <div className="mt-2 space-y-0.5 px-0.5">
-                          <span className="text-[10px] text-[#666666] dark:text-[#D0D2CF] font-medium block truncate">
+                          <span className="text-[10px] text-[#545565] dark:text-[#DBDBE5] font-medium block truncate">
                             {doc.author || (t.author || 'Author')}
                           </span>
-                          <h3 className="text-xs font-bold text-[#222222] dark:text-white line-clamp-1 group-hover:text-[#666666] transition-colors">
+                          <h3 className="text-xs font-bold text-[#21222D] dark:text-white line-clamp-1 group-hover:text-[#545565] transition-colors">
                             {cleanTitle}
                           </h3>
                         </div>
@@ -493,8 +493,8 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                             onClick={(e) => togglePlanToRead(e, doc)}
                             className={`p-1.5 rounded-full shadow-md transition-all cursor-pointer ${
                               doc.planToRead
-                                ? 'bg-[#B2A1FF] text-[#222222]'
-                                : 'bg-white/95 dark:bg-[#1E1E1E]/95 text-stone-600 dark:text-stone-300 hover:bg-[#B2A1FF]/30'
+                                ? 'bg-[#958CE8] text-[#21222D]'
+                                : 'bg-white/95 dark:bg-[#1E1E1E]/95 text-stone-600 dark:text-stone-300 hover:bg-[#958CE8]/30'
                             }`}
                             title={doc.planToRead ? "Remove from Plan to Read" : "Plan to Read"}
                           >
@@ -516,7 +516,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                               e.stopPropagation();
                               setActiveMenuDocId(activeMenuDocId === doc.id ? null : doc.id);
                             }}
-                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#1E1E1E]/95 text-[#222222] dark:text-white hover:bg-[#A4F5A6] hover:text-[#222222] shadow-md transition-all cursor-pointer"
+                            className="p-1.5 rounded-full bg-white/95 dark:bg-[#1E1E1E]/95 text-[#21222D] dark:text-white hover:bg-[#ACD1FD] hover:text-[#21222D] shadow-md transition-all cursor-pointer"
                             title={t.chooseBookCoverColor || "Choose book cover color"}
                           >
                             <Palette className="w-3 h-3" />
@@ -538,7 +538,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                 </div>
 
                 {/* Translucent Brand Mint/Pistachio Acrylic Glass Shelf Lip with Metallic Mounting Screws */}
-                <div className="absolute bottom-3 inset-x-2 sm:inset-x-4 h-26 sm:h-30 bg-[#A4F5A6]/45 dark:bg-[#15803D]/40 backdrop-blur-[6px] border-t-2 border-white/90 dark:border-white/60 border-b border-[#86EFAC]/60 rounded-xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),0_8px_16px_rgba(0,0,0,0.1)] pointer-events-none z-20 flex items-center justify-between px-3 sm:px-4">
+                <div className="absolute bottom-3 inset-x-2 sm:inset-x-4 h-26 sm:h-30 bg-[#ACD1FD]/45 dark:bg-[#15803D]/40 backdrop-blur-[6px] border-t-2 border-white/90 dark:border-white/60 border-b border-[#86EFAC]/60 rounded-xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),0_8px_16px_rgba(0,0,0,0.1)] pointer-events-none z-20 flex items-center justify-between px-3 sm:px-4">
                   {/* Left Silver Metallic Screw / Rivet */}
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-slate-100 via-slate-300 to-slate-500 border border-slate-200/90 shadow-[0_2px_4px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.9)] flex items-center justify-center relative shrink-0">
                     <div className="w-3.5 h-0.5 bg-slate-700/80 rounded-full" />
@@ -559,7 +559,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
           </div>
         ) : (
           /* LIST VIEW */
-          <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#D0D2CF] dark:border-white/10 divide-y divide-[#D0D2CF] dark:divide-white/10 overflow-hidden shadow-xs">
+          <div className="bg-white dark:bg-[#1E1E1E] rounded-2xl border border-[#DBDBE5] dark:border-white/10 divide-y divide-[#DBDBE5] dark:divide-white/10 overflow-hidden shadow-xs">
             {filteredDocuments.map((doc) => {
               const palette = getCoverPalette(doc);
               const cleanTitle = cleanBookTitle(doc.title || doc.name);
@@ -569,7 +569,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                 <div
                   key={doc.id}
                   onClick={() => onSelectDocument(doc)}
-                  className="p-3.5 flex items-center justify-between gap-4 hover:bg-[#EFF1EE] dark:hover:bg-white/5 transition-colors cursor-pointer group"
+                  className="p-3.5 flex items-center justify-between gap-4 hover:bg-[#DBDBE5] dark:hover:bg-white/5 transition-colors cursor-pointer group"
                 >
                   <div className="flex items-center gap-3.5 min-w-0">
                     {/* Modern 3D Thumbnail */}
@@ -578,10 +578,10 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="text-xs sm:text-sm font-bold text-[#222222] dark:text-white truncate group-hover:text-[#666666] transition-colors">
+                      <h4 className="text-xs sm:text-sm font-bold text-[#21222D] dark:text-white truncate group-hover:text-[#545565] transition-colors">
                         {cleanTitle}
                       </h4>
-                      <p className="text-[11px] text-[#666666] dark:text-[#D0D2CF] font-medium truncate mt-0.5">
+                      <p className="text-[11px] text-[#545565] dark:text-[#DBDBE5] font-medium truncate mt-0.5">
                         {doc.author || (t.author || 'Unknown Author')} • {doc.language}
                       </p>
                     </div>
@@ -590,12 +590,12 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                   {/* Progress & Actions */}
                   <div className="flex items-center gap-4 shrink-0">
                     <div className="hidden sm:flex flex-col items-end w-28">
-                      <span className="text-[10px] font-bold text-[#666666] dark:text-[#D0D2CF]">
+                      <span className="text-[10px] font-bold text-[#545565] dark:text-[#DBDBE5]">
                         {progressPercent}% {t.completed || 'completed'}
                       </span>
-                      <div className="w-full h-1 bg-[#EFF1EE] dark:bg-black/40 rounded-full mt-1 overflow-hidden">
+                      <div className="w-full h-1 bg-[#DBDBE5] dark:bg-black/40 rounded-full mt-1 overflow-hidden">
                         <div
-                          className="h-full bg-[#A4F5A6] rounded-full"
+                          className="h-full bg-[#ACD1FD] rounded-full"
                           style={{ width: `${progressPercent}%` }}
                         />
                       </div>
@@ -614,7 +614,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                     <button
                       onClick={(e) => togglePlanToRead(e, doc)}
                       className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
-                        doc.planToRead ? 'text-[#7C65C1] bg-[#B2A1FF]/20' : 'text-slate-300 hover:text-[#7C65C1]'
+                        doc.planToRead ? 'text-[#7C65C1] bg-[#958CE8]/20' : 'text-slate-300 hover:text-[#7C65C1]'
                       }`}
                       title={doc.planToRead ? "Remove from Plan to Read" : "Plan to Read"}
                     >
@@ -658,7 +658,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                         e.stopPropagation();
                         onSelectDocument(doc);
                       }}
-                      className="px-3 py-1.5 rounded-xl bg-[#A4F5A6] hover:bg-[#8ee590] text-[#222222] text-xs font-bold transition-all flex items-center gap-1 shadow-xs cursor-pointer"
+                      className="px-3 py-1.5 rounded-xl bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] text-xs font-bold transition-all flex items-center gap-1 shadow-xs cursor-pointer"
                     >
                       <span>{t.readNow || 'Read'}</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -672,19 +672,19 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
 
         {/* Empty Search Result State */}
         {filteredDocuments.length === 0 && (
-          <div className="text-center py-16 bg-white dark:bg-[#1E1E1E] rounded-3xl border border-dashed border-[#D0D2CF] dark:border-white/10 space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-[#EFF1EE] dark:bg-black/40 text-[#666666] flex items-center justify-center mx-auto">
+          <div className="text-center py-16 bg-white dark:bg-[#1E1E1E] rounded-3xl border border-dashed border-[#DBDBE5] dark:border-white/10 space-y-3">
+            <div className="w-12 h-12 rounded-2xl bg-[#DBDBE5] dark:bg-black/40 text-[#545565] flex items-center justify-center mx-auto">
               <BookOpen className="w-6 h-6" />
             </div>
-            <h3 className="text-sm font-bold text-[#222222] dark:text-white">
+            <h3 className="text-sm font-bold text-[#21222D] dark:text-white">
               {t.noBooksMatch || 'No books match your criteria'}
             </h3>
-            <p className="text-xs text-[#666666] dark:text-[#D0D2CF] max-w-sm mx-auto">
+            <p className="text-xs text-[#545565] dark:text-[#DBDBE5] max-w-sm mx-auto">
               {t.noBooksMatchDesc || 'Try adjusting your filter or search query, or upload a new book to your bookshelf.'}
             </p>
             <button
               onClick={onUploadClick}
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#A4F5A6] text-[#222222] text-xs font-bold shadow-xs hover:bg-[#8ee590] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#ACD1FD] text-[#21222D] text-xs font-bold shadow-xs hover:bg-[#8ee590] transition-colors cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>{t.uploadBook || 'Upload Book'}</span>
@@ -697,7 +697,7 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
       <div className="fixed bottom-6 end-6 z-40">
         <button
           onClick={onUploadClick}
-          className="w-11 h-11 rounded-full bg-[#222222] hover:bg-black text-[#EFF1EE] flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all cursor-pointer group relative"
+          className="w-11 h-11 rounded-full bg-[#21222D] hover:bg-black text-[#DBDBE5] flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all cursor-pointer group relative"
           title={t.uploadPdf || "Upload or Get Reading Assistance"}
         >
           <HelpCircle className="w-5 h-5" />
@@ -716,26 +716,26 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-3xl max-h-[85vh] bg-white dark:bg-[#1E1E1E] rounded-3xl border border-[#D0D2CF] dark:border-white/10 shadow-2xl flex flex-col overflow-hidden"
+              className="w-full max-w-3xl max-h-[85vh] bg-white dark:bg-[#1E1E1E] rounded-3xl border border-[#DBDBE5] dark:border-white/10 shadow-2xl flex flex-col overflow-hidden"
             >
               {/* Modal Header */}
-              <div className="p-4 sm:p-5 border-b border-[#D0D2CF] dark:border-white/10 flex items-center justify-between bg-slate-50/80 dark:bg-black/30 shrink-0">
+              <div className="p-4 sm:p-5 border-b border-[#DBDBE5] dark:border-white/10 flex items-center justify-between bg-slate-50/80 dark:bg-black/30 shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-[#A4F5A6] text-[#222222] shadow-xs">
+                  <div className="p-2.5 rounded-2xl bg-[#ACD1FD] text-[#21222D] shadow-xs">
                     <Palette className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-[#222222] dark:text-white">
+                    <h3 className="text-sm sm:text-base font-bold text-[#21222D] dark:text-white">
                       {t.selectCoverDesign || 'Select Cover Design'}
                     </h3>
-                    <p className="text-xs text-[#666666] dark:text-[#D0D2CF] truncate max-w-xs sm:max-w-md">
+                    <p className="text-xs text-[#545565] dark:text-[#DBDBE5] truncate max-w-xs sm:max-w-md">
                       Choose artwork style for "{cleanBookTitle(documents.find(d => d.id === activeMenuDocId)?.title || '')}"
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setActiveMenuDocId(null)}
-                  className="p-2 rounded-full text-[#666666] hover:text-[#222222] dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors cursor-pointer"
+                  className="p-2 rounded-full text-[#545565] hover:text-[#21222D] dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -756,19 +756,19 @@ export const LibraryShelf: React.FC<LibraryShelfProps> = ({
                         onClick={(e) => handleSelectBookColor(e, activeDoc, p.id)}
                         className={`group relative p-2.5 rounded-2xl border text-start transition-all cursor-pointer flex flex-col items-center justify-between ${
                           isSelected
-                            ? 'border-[#222222] dark:border-emerald-400 bg-white dark:bg-white/10 ring-2 ring-[#222222] dark:ring-emerald-400 shadow-lg scale-[1.03]'
+                            ? 'border-[#21222D] dark:border-emerald-400 bg-white dark:bg-white/10 ring-2 ring-[#21222D] dark:ring-emerald-400 shadow-lg scale-[1.03]'
                             : 'border-stone-200 dark:border-white/10 bg-white dark:bg-[#252525] hover:border-stone-400 dark:hover:border-white/30 hover:scale-[1.02] shadow-xs hover:shadow-md'
                         }`}
                       >
                         <div className="w-20 sm:w-24 aspect-[1/1.45] relative rounded-xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
                           <BookCover doc={activeDoc} palette={p} showSpine3D={false} />
                           {isSelected && (
-                            <div className="absolute top-1.5 end-1.5 z-30 w-5 h-5 rounded-full bg-[#222222] dark:bg-emerald-500 text-white flex items-center justify-center shadow-md">
+                            <div className="absolute top-1.5 end-1.5 z-30 w-5 h-5 rounded-full bg-[#21222D] dark:bg-emerald-500 text-white flex items-center justify-center shadow-md">
                               <Check className="w-3.5 h-3.5 stroke-[3]" />
                             </div>
                           )}
                         </div>
-                        <span className="mt-2.5 text-[10.5px] font-bold text-[#222222] dark:text-white text-center leading-tight line-clamp-2 px-0.5">
+                        <span className="mt-2.5 text-[10.5px] font-bold text-[#21222D] dark:text-white text-center leading-tight line-clamp-2 px-0.5">
                           {p.name}
                         </span>
                       </button>

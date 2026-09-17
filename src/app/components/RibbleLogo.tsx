@@ -24,26 +24,26 @@ export const RibbleLogo: React.FC<RibbleLogoProps> = ({
     xl: { width: 72, height: 132, textSize: 'text-4xl' },
   }[size];
 
-  let faceA = '#A4F5A6';
-  let faceB = '#B2A1FF';
-  let faceLeft = '#EFF1EE';
-  let faceRight = '#222222';
-  let edge = '#222222';
+  let faceA = '#ACD1FD';
+  let faceB = '#958CE8';
+  let faceLeft = '#DBDBE5';
+  let faceRight = '#21222D';
+  let edge = '#21222D';
 
   if (variant === 'mint') {
-    faceA = '#A4F5A6';
-    faceB = '#A4F5A6';
+    faceA = '#ACD1FD';
+    faceB = '#ACD1FD';
   } else if (variant === 'lavender') {
-    faceA = '#B2A1FF';
-    faceB = '#B2A1FF';
+    faceA = '#958CE8';
+    faceB = '#958CE8';
   } else if (variant === 'minimal') {
-    faceA = '#EFF1EE';
-    faceB = '#EFF1EE';
+    faceA = '#DBDBE5';
+    faceB = '#DBDBE5';
   } else if (variant === 'monochrome') {
-    faceA = '#222222';
-    faceB = '#222222';
+    faceA = '#21222D';
+    faceB = '#21222D';
   } else if (variant === 'reverse') {
-    edge = '#EFF1EE';
+    edge = '#DBDBE5';
   }
 
   return (
@@ -115,7 +115,7 @@ export const RibbleLogo: React.FC<RibbleLogoProps> = ({
       </svg>
 
       {showWordmark && (
-        <span className={`ribble-wordmark text-[#222222] ${dimensions.textSize} tracking-tight font-black`}>
+        <span className={`ribble-wordmark text-[#21222D] ${dimensions.textSize} tracking-tight font-black`}>
           R<span className="relative">i<span className="ribble-dot" aria-hidden="true" /></span>bble
         </span>
       )}

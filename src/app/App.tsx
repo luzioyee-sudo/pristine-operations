@@ -966,7 +966,7 @@ export default function App() {
     const name = prompt('Enter a new folder name:');
     if (!name || !name.trim()) return;
 
-    const colors = ['#D67D6D', '#E2B25B', '#5BAEB6', '#222222', '#A4F5A6'];
+    const colors = ['#D67D6D', '#E2B25B', '#5BAEB6', '#21222D', '#ACD1FD'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
     const newF: Folder = {
@@ -1494,7 +1494,7 @@ export default function App() {
 
   return (
     <div 
-      className={`min-h-screen md:h-screen md:overflow-hidden bg-[#EFF1EE] dark:bg-[#121312] text-[#222222] dark:text-[#EFF1EE] transition-colors duration-300 flex flex-col md:flex-row overflow-x-hidden ${
+      className={`min-h-screen md:h-screen md:overflow-hidden bg-[#DBDBE5] dark:bg-[#121312] text-[#21222D] dark:text-[#DBDBE5] transition-colors duration-300 flex flex-col md:flex-row overflow-x-hidden ${
         isArabic ? 'font-arabic-sans' : 'font-sans'
       }`}
       dir={isArabic ? 'rtl' : 'ltr'}
@@ -1552,9 +1552,9 @@ export default function App() {
 
         {/* Upper Header (Aligned with Ribble Brand System) - Shown on Home Page for Mobile & Laptop */}
         {activeView === 'home' && (
-          <div className="flex flex-col gap-3 px-4 sm:px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-3 bg-[#EFF1EE]/90 backdrop-blur-xl border-b border-[#D0D2CF] shrink-0 md:grid md:grid-cols-3 md:items-center md:gap-4">
+          <div className="flex flex-col gap-3 px-4 sm:px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-3 bg-[#DBDBE5]/90 backdrop-blur-xl border-b border-[#DBDBE5] shrink-0 md:grid md:grid-cols-3 md:items-center md:gap-4">
             <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 md:hidden">
-              <div className="w-11 h-11 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
+              <div className="w-11 h-11 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
                 <img
                   src={getEffectiveAvatar(settings.userAvatar, activeAccount?.id || settings.userEmail || settings.userName)}
                   alt="Avatar"
@@ -1562,29 +1562,29 @@ export default function App() {
                 />
               </div>
               <div className="min-w-0">
-                <h2 className="text-[15px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] leading-tight truncate">
+                <h2 className="text-[15px] font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] leading-tight truncate">
                   Hello {activeAccount?.name || settings.userName || 'User'}
                 </h2>
-                <p className="text-[11px] text-[#666666] font-medium truncate">
+                <p className="text-[11px] text-[#545565] font-medium truncate">
                   Today {new Date().getDate()} {new Date().toLocaleDateString('en-US', { month: 'short' })}.
                 </p>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <button
                   onClick={() => setIsQuickSearchOpen(true)}
-                  className="w-11 h-11 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center active:scale-95 transition-all shadow-xs"
+                  className="w-11 h-11 rounded-full bg-white border border-[#DBDBE5] text-[#21222D] flex items-center justify-center active:scale-95 transition-all shadow-xs"
                   title="Search"
                 >
                   <Search className="w-[18px] h-[18px] stroke-[2.2]" />
                 </button>
                 <button
                   onClick={() => setIsNotificationCenterOpen(true)}
-                  className="relative w-11 h-11 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center active:scale-95 transition-all shadow-xs"
+                  className="relative w-11 h-11 rounded-full bg-white border border-[#DBDBE5] text-[#21222D] flex items-center justify-center active:scale-95 transition-all shadow-xs"
                   title="Notifications & Messages"
                 >
                   <Bell className="w-[18px] h-[18px] stroke-[2.2]" />
                   {unreadNotificationsCount > 0 && (
-                    <span className="absolute -top-1 -end-1 w-4 h-4 bg-[#A4F5A6] text-[#222222] font-bold text-[9px] rounded-full ring-2 ring-white flex items-center justify-center">
+                    <span className="absolute -top-1 -end-1 w-4 h-4 bg-[#ACD1FD] text-[#21222D] font-bold text-[9px] rounded-full ring-2 ring-white flex items-center justify-center">
                       {unreadNotificationsCount > 9 ? '9+' : unreadNotificationsCount}
                     </span>
                   )}
@@ -1602,7 +1602,7 @@ export default function App() {
             </div>
 
             <div className="hidden md:flex justify-self-start items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#222222] text-[#EFF1EE] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
+              <div className="w-10 h-10 rounded-full bg-[#21222D] text-[#DBDBE5] flex items-center justify-center font-bold text-sm shadow-xs overflow-hidden shrink-0 ring-2 ring-white">
                 <img 
                   src={getEffectiveAvatar(settings.userAvatar, activeAccount?.id || settings.userEmail || settings.userName)} 
                   alt="Avatar" 
@@ -1617,10 +1617,10 @@ export default function App() {
               />
             </div>
             <div className="hidden md:block justify-self-center text-center min-w-0">
-              <h2 className="text-sm font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#222222] leading-tight truncate max-w-[220px]">
+              <h2 className="text-sm font-['Cabinet_Grotesk','Plus_Jakarta_Sans',sans-serif] font-bold text-[#21222D] leading-tight truncate max-w-[220px]">
                 Hello {activeAccount?.name || settings.userName || 'User'}
               </h2>
-              <p className="text-[11px] text-[#666666] font-medium">
+              <p className="text-[11px] text-[#545565] font-medium">
                 Today {new Date().getDate()} {new Date().toLocaleDateString('en-US', { month: 'short' })}.
               </p>
             </div>
@@ -1628,19 +1628,19 @@ export default function App() {
             <div className="hidden md:flex justify-self-end items-center gap-2">
               <button
                 onClick={() => setIsQuickSearchOpen(true)}
-                className="w-10 h-10 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center hover:bg-[#D0D2CF] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
+                className="w-10 h-10 rounded-full bg-white border border-[#DBDBE5] text-[#21222D] flex items-center justify-center hover:bg-[#DBDBE5] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
                 title="Search"
               >
                 <Search className="w-4.5 h-4.5 stroke-[2.2]" />
               </button>
               <button
                 onClick={() => setIsNotificationCenterOpen(true)}
-                className="w-10 h-10 rounded-full bg-white border border-[#D0D2CF] text-[#222222] flex items-center justify-center hover:bg-[#D0D2CF] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0 relative"
+                className="w-10 h-10 rounded-full bg-white border border-[#DBDBE5] text-[#21222D] flex items-center justify-center hover:bg-[#DBDBE5] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0 relative"
                 title="Notifications & Messages"
               >
                 <Bell className="w-4.5 h-4.5 stroke-[2.2]" />
                 {unreadNotificationsCount > 0 && (
-                  <span className="absolute -top-1 -end-1 w-4 h-4 bg-[#A4F5A6] text-[#222222] font-bold text-[9px] rounded-full ring-2 ring-white flex items-center justify-center">
+                  <span className="absolute -top-1 -end-1 w-4 h-4 bg-[#ACD1FD] text-[#21222D] font-bold text-[9px] rounded-full ring-2 ring-white flex items-center justify-center">
                     {unreadNotificationsCount > 9 ? '9+' : unreadNotificationsCount}
                   </span>
                 )}
@@ -1659,21 +1659,21 @@ export default function App() {
         }`}>
           {/* Top Page Navigation Bar with Back Icon Button - Only shown on Library, Flashcards, and Dictionary pages */}
           {['reader', 'flashcards', 'flashcards-view', 'dictionary', 'practice', 'quizzes', 'writing'].includes(activeView) && !(activeView === 'reader' && activeDocument) && (
-            <div className="md:hidden flex items-center justify-between mb-5 pb-3 border-b border-[#D0D2CF] shrink-0">
+            <div className="md:hidden flex items-center justify-between mb-5 pb-3 border-b border-[#DBDBE5] shrink-0">
               <button
                 id="top-nav-back-button"
                 onClick={handleNavigateBack}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-[#222222] border border-[#D0D2CF] hover:bg-[#EFF1EE] transition-all shadow-xs text-xs font-bold cursor-pointer group"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white text-[#21222D] border border-[#DBDBE5] hover:bg-[#DBDBE5] transition-all shadow-xs text-xs font-bold cursor-pointer group"
                 title="Go back to previous page"
               >
-                <ArrowLeft className="w-4 h-4 text-[#222222] group-hover:-translate-x-1 transition-transform stroke-[2.2]" />
+                <ArrowLeft className="w-4 h-4 text-[#21222D] group-hover:-translate-x-1 transition-transform stroke-[2.2]" />
                 <span>Back</span>
               </button>
 
               {activeView === 'dictionary' ? (
                 <>
                   {/* On Desktop: Standard View Title 'Dictionary' */}
-                  <span className="hidden sm:inline text-xs font-bold text-[#222222]">
+                  <span className="hidden sm:inline text-xs font-bold text-[#21222D]">
                     Dictionary
                   </span>
 
@@ -1681,11 +1681,11 @@ export default function App() {
                   <div className="sm:hidden relative">
                     <button
                       onClick={() => setIsTopLangDropdownOpen(!isTopLangDropdownOpen)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#D0D2CF] text-[#222222] font-bold text-xs shadow-xs cursor-pointer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#DBDBE5] text-[#21222D] font-bold text-xs shadow-xs cursor-pointer"
                     >
-                      <Globe className="w-3.5 h-3.5 text-[#222222]" />
+                      <Globe className="w-3.5 h-3.5 text-[#21222D]" />
                       <span>{settings.targetLanguage || 'Arabic'}</span>
-                      <ChevronDown className={`w-3 h-3 text-[#666666] transition-transform duration-200 ${isTopLangDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-3 h-3 text-[#545565] transition-transform duration-200 ${isTopLangDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
 
                     <AnimatePresence>
@@ -1700,9 +1700,9 @@ export default function App() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 4, scale: 0.95 }}
                             transition={{ duration: 0.15 }}
-                            className="absolute end-0 top-full mt-2 w-48 bg-white border border-[#D0D2CF] rounded-2xl shadow-lg z-50 p-1.5 overflow-hidden"
+                            className="absolute end-0 top-full mt-2 w-48 bg-white border border-[#DBDBE5] rounded-2xl shadow-lg z-50 p-1.5 overflow-hidden"
                           >
-                            <div className="text-[9px] font-bold tracking-widest uppercase text-[#666666] px-2.5 py-1 border-b border-[#D0D2CF] mb-1">
+                            <div className="text-[9px] font-bold tracking-widest uppercase text-[#545565] px-2.5 py-1 border-b border-[#DBDBE5] mb-1">
                               Translate To
                             </div>
                             <div className="max-h-56 overflow-y-auto flex flex-col gap-0.5 custom-scrollbar">
@@ -1718,15 +1718,15 @@ export default function App() {
                                     }}
                                     className={`flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                                       isSelected
-                                        ? 'bg-[#A4F5A6] text-[#222222] font-bold shadow-xs'
-                                        : 'text-[#222222] hover:bg-[#EFF1EE]'
+                                        ? 'bg-[#ACD1FD] text-[#21222D] font-bold shadow-xs'
+                                        : 'text-[#21222D] hover:bg-[#DBDBE5]'
                                     }`}
                                   >
                                     <div className="flex items-center gap-2">
                                       <FlagIcon code={lang.code} className="w-5 h-3.5" />
                                       <span>{lang.name}</span>
                                     </div>
-                                    {isSelected && <Check className="w-3.5 h-3.5 text-[#222222]" />}
+                                    {isSelected && <Check className="w-3.5 h-3.5 text-[#21222D]" />}
                                   </button>
                                 );
                               })}
@@ -1742,13 +1742,13 @@ export default function App() {
                   {activeView === 'flashcards' && (
                     <button
                       onClick={() => setIsFlashcardsSidebarOpen(true)}
-                      className="w-11 h-11 bg-white text-[#222222] border border-[#D0D2CF] rounded-full flex items-center justify-center hover:bg-[#EFF1EE] hover:scale-105 active:scale-95 shadow-xs transition-all cursor-pointer shrink-0"
+                      className="w-11 h-11 bg-white text-[#21222D] border border-[#DBDBE5] rounded-full flex items-center justify-center hover:bg-[#DBDBE5] hover:scale-105 active:scale-95 shadow-xs transition-all cursor-pointer shrink-0"
                       title="Open Card Options"
                     >
                       <div className="flex flex-col gap-[3px] w-4.5">
-                        <div className="h-[1.5px] w-full bg-[#222222] rounded-full" />
-                        <div className="h-[1.5px] w-full bg-[#222222] rounded-full" />
-                        <div className="h-[1.5px] w-full bg-[#222222] rounded-full" />
+                        <div className="h-[1.5px] w-full bg-[#21222D] rounded-full" />
+                        <div className="h-[1.5px] w-full bg-[#21222D] rounded-full" />
+                        <div className="h-[1.5px] w-full bg-[#21222D] rounded-full" />
                       </div>
                     </button>
                   )}
@@ -1893,14 +1893,14 @@ export default function App() {
                 className="space-y-6"
               >
                 {/* Secondary Navigation Controller */}
-                <div id="flashcards-nav-controller" className="hidden md:flex gap-2 border-b border-[#D0D2CF] pb-3 select-none flex-wrap items-center">
+                <div id="flashcards-nav-controller" className="hidden md:flex gap-2 border-b border-[#DBDBE5] pb-3 select-none flex-wrap items-center">
                   <button
                     id="flashcards-tab-study"
                     onClick={() => setFlashcardsSubView('study')}
                     className={`px-5 py-2 text-xs font-bold rounded-full transition-all cursor-pointer flex items-center gap-2 ${
                       flashcardsSubView === 'study' && !activeDeckForTab
-                        ? 'bg-[#A4F5A6] text-[#222222] shadow-xs scale-102'
-                        : 'text-[#222222] bg-white border border-[#D0D2CF] hover:bg-[#EFF1EE]'
+                        ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs scale-102'
+                        : 'text-[#21222D] bg-white border border-[#DBDBE5] hover:bg-[#DBDBE5]'
                     }`}
                   >
                     <GraduationCap className="w-4 h-4 shrink-0" />
@@ -1917,8 +1917,8 @@ export default function App() {
                     }}
                     className={`px-5 py-2 text-xs font-bold rounded-full transition-all cursor-pointer flex items-center gap-2 ${
                       flashcardsSubView === 'decks' && !activeDeckForTab
-                        ? 'bg-[#A4F5A6] text-[#222222] shadow-xs scale-102'
-                        : 'text-[#222222] bg-white border border-[#D0D2CF] hover:bg-[#EFF1EE]'
+                        ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs scale-102'
+                        : 'text-[#21222D] bg-white border border-[#DBDBE5] hover:bg-[#DBDBE5]'
                     }`}
                   >
                     <Layers className="w-4 h-4 shrink-0" />
@@ -1934,8 +1934,8 @@ export default function App() {
                     }}
                     className={`px-5 py-2 text-xs font-bold rounded-full transition-all cursor-pointer flex items-center gap-2 ${
                       flashcardsSubView === 'saved-words' && !activeDeckForTab
-                        ? 'bg-[#A4F5A6] text-[#222222] shadow-xs scale-102'
-                        : 'text-[#222222] bg-white border border-[#D0D2CF] hover:bg-[#EFF1EE]'
+                        ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs scale-102'
+                        : 'text-[#21222D] bg-white border border-[#DBDBE5] hover:bg-[#DBDBE5]'
                     }`}
                   >
                     <BookMarked className="w-4 h-4 shrink-0" />
@@ -1951,8 +1951,8 @@ export default function App() {
                     }}
                     className={`px-5 py-2 text-xs font-bold rounded-full transition-all cursor-pointer flex items-center gap-2 ${
                       flashcardsSubView === 'browse' && !activeDeckForTab
-                        ? 'bg-[#A4F5A6] text-[#222222] shadow-xs scale-102'
-                        : 'text-[#222222] bg-white border border-[#D0D2CF] hover:bg-[#EFF1EE]'
+                        ? 'bg-[#ACD1FD] text-[#21222D] shadow-xs scale-102'
+                        : 'text-[#21222D] bg-white border border-[#DBDBE5] hover:bg-[#DBDBE5]'
                     }`}
                   >
                     <LayoutGrid className="w-4 h-4 shrink-0" />
@@ -1973,8 +1973,8 @@ export default function App() {
                         }}
                         className={`px-4 py-1.5 text-xs font-bold rounded-s-full border transition-all cursor-pointer flex items-center gap-1.5 ${
                           isActive
-                            ? 'bg-[#A4F5A6] text-[#222222] border-[#A4F5A6] shadow-xs'
-                            : 'text-[#222222] bg-white border-[#D0D2CF] hover:bg-[#EFF1EE]'
+                            ? 'bg-[#ACD1FD] text-[#21222D] border-[#ACD1FD] shadow-xs'
+                            : 'text-[#21222D] bg-white border-[#DBDBE5] hover:bg-[#DBDBE5]'
                         }`}
                       >
                         <Layers className="w-3.5 h-3.5 shrink-0" />
@@ -1983,7 +1983,7 @@ export default function App() {
                       <button
                         onClick={() => handleCloseDeckTab(openId)}
                         className={`px-2.5 py-1.5 rounded-e-full border transition-all hover:bg-red-50 hover:text-red-600 cursor-pointer ${
-                          isActive ? 'bg-[#A4F5A6] text-[#222222] border-[#A4F5A6]' : 'text-[#666666] bg-white border-[#D0D2CF]'
+                          isActive ? 'bg-[#ACD1FD] text-[#21222D] border-[#ACD1FD]' : 'text-[#545565] bg-white border-[#DBDBE5]'
                         }`}
                         title="Close deck sheet tab"
                       >
@@ -2156,11 +2156,11 @@ export default function App() {
                             }}
                             className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-start border transition-all cursor-pointer ${
                               isCurrent
-                                ? 'bg-[#A4F5A6] border-[#A4F5A6] text-[#222222] shadow-xs'
-                                : 'bg-white dark:bg-stone-900 border-[#D0D2CF] dark:border-white/10 hover:bg-[#EFF1EE] dark:hover:bg-stone-800 text-[#222222] dark:text-stone-300'
+                                ? 'bg-[#ACD1FD] border-[#ACD1FD] text-[#21222D] shadow-xs'
+                                : 'bg-white dark:bg-stone-900 border-[#DBDBE5] dark:border-white/10 hover:bg-[#DBDBE5] dark:hover:bg-stone-800 text-[#21222D] dark:text-stone-300'
                             }`}
                           >
-                            <IconComponent className={`w-4 h-4 shrink-0 stroke-[2] ${isCurrent ? 'text-[#222222]' : 'text-[#222222] dark:text-[#A4F5A6]'}`} />
+                            <IconComponent className={`w-4 h-4 shrink-0 stroke-[2] ${isCurrent ? 'text-[#21222D]' : 'text-[#21222D] dark:text-[#ACD1FD]'}`} />
                             <span className="text-xs font-black truncate">{p.label}</span>
                           </button>
                         );
@@ -2358,15 +2358,15 @@ export default function App() {
       {(['home', 'dictionary', 'all-tools', 'settings', 'practice', 'quizzes', 'writing'].includes(activeView) || (activeView === 'reader' && !activeDocument)) && (
         <nav 
           aria-label="Mobile Navigation" 
-          className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-1/2 -translate-x-1/2 z-50 w-[330px] max-w-[92vw] mx-auto bg-white/85 backdrop-blur-xl text-[#222222] flex items-center justify-between py-2 px-3 shadow-[0_10px_30px_-10px_rgba(34,34,34,0.35)] rounded-full border border-[#D0D2CF] md:hidden transition-all duration-200"
+          className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-1/2 -translate-x-1/2 z-50 w-[330px] max-w-[92vw] mx-auto bg-white/85 backdrop-blur-xl text-[#21222D] flex items-center justify-between py-2 px-3 shadow-[0_10px_30px_-10px_rgba(34,34,34,0.35)] rounded-full border border-[#DBDBE5] md:hidden transition-all duration-200"
         >
           {/* 1. Home */}
           <button
             onClick={() => handleNavigateWithHistory('home')}
             className={`transition-all cursor-pointer flex items-center justify-center ${
               activeView === 'home' 
-                ? 'bg-[#A4F5A6] text-[#222222] px-5 py-2.5 rounded-full font-bold shadow-xs' 
-                : 'text-[#222222]/70 hover:text-[#222222] p-3 rounded-full'
+                ? 'bg-[#ACD1FD] text-[#21222D] px-5 py-2.5 rounded-full font-bold shadow-xs' 
+                : 'text-[#21222D]/70 hover:text-[#21222D] p-3 rounded-full'
             }`}
             title="Home"
           >
@@ -2378,8 +2378,8 @@ export default function App() {
             onClick={() => handleNavigateWithHistory('dictionary')}
             className={`transition-all cursor-pointer flex items-center justify-center ${
               activeView === 'dictionary' 
-                ? 'bg-[#A4F5A6] text-[#222222] px-5 py-2.5 rounded-full font-bold shadow-xs' 
-                : 'text-[#222222]/70 hover:text-[#222222] p-3 rounded-full'
+                ? 'bg-[#ACD1FD] text-[#21222D] px-5 py-2.5 rounded-full font-bold shadow-xs' 
+                : 'text-[#21222D]/70 hover:text-[#21222D] p-3 rounded-full'
             }`}
             title="Dictionary"
           >
@@ -2391,8 +2391,8 @@ export default function App() {
             onClick={() => handleNavigateWithHistory('all-tools')}
             className={`transition-all cursor-pointer flex items-center justify-center ${
               activeView === 'all-tools' 
-                ? 'bg-[#A4F5A6] text-[#222222] px-5 py-2.5 rounded-full font-bold shadow-xs' 
-                : 'text-[#222222]/70 hover:text-[#222222] p-3 rounded-full'
+                ? 'bg-[#ACD1FD] text-[#21222D] px-5 py-2.5 rounded-full font-bold shadow-xs' 
+                : 'text-[#21222D]/70 hover:text-[#21222D] p-3 rounded-full'
             }`}
             title="All Tools"
           >
@@ -2404,8 +2404,8 @@ export default function App() {
             onClick={() => handleNavigateWithHistory('settings')}
             className={`transition-all cursor-pointer flex items-center justify-center ${
               activeView === 'settings' 
-                ? 'bg-[#A4F5A6] text-[#222222] px-5 py-2.5 rounded-full font-bold shadow-xs' 
-                : 'text-[#222222]/70 hover:text-[#222222] p-3 rounded-full'
+                ? 'bg-[#ACD1FD] text-[#21222D] px-5 py-2.5 rounded-full font-bold shadow-xs' 
+                : 'text-[#21222D]/70 hover:text-[#21222D] p-3 rounded-full'
             }`}
             title="Profile & Settings"
           >

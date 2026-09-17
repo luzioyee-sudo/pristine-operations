@@ -621,9 +621,9 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
             <button 
               onClick={() => handleSearch()}
               disabled={isLoading}
-              className="bg-[#A4F5A6] hover:bg-[#8ee590] text-[#222222] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-xs cursor-pointer active:scale-95 shrink-0"
+              className="bg-[#ACD1FD] hover:bg-[#8ee590] text-[#21222D] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-xs cursor-pointer active:scale-95 shrink-0"
             >
-              {isLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin text-[#222222]" /> : (t.lookup || 'Lookup')}
+              {isLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin text-[#21222D]" /> : (t.lookup || 'Lookup')}
             </button>
 
             {/* Target Language Dropdown Selector (Laptop / Desktop) - Absolute Right */}
@@ -689,16 +689,16 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
         </div>
 
         {/* Word Display Area */}
-        <div className="pearl-card bg-white dark:bg-[#1E1E1E] border border-[#D0D2CF] dark:border-white/10 shadow-xs rounded-3xl p-5 sm:p-6 relative order-1 md:order-2 space-y-4">
+        <div className="pearl-card bg-white dark:bg-[#1E1E1E] border border-[#DBDBE5] dark:border-white/10 shadow-xs rounded-3xl p-5 sm:p-6 relative order-1 md:order-2 space-y-4">
           {isLoading && (
-            <div className="absolute inset-0 bg-[#222222]/80 backdrop-blur-xs rounded-3xl z-10 flex items-center justify-center gap-2 text-white font-semibold text-xs">
-              <Loader2 className="w-4 h-4 animate-spin text-[#A4F5A6]" />
+            <div className="absolute inset-0 bg-[#21222D]/80 backdrop-blur-xs rounded-3xl z-10 flex items-center justify-center gap-2 text-white font-semibold text-xs">
+              <Loader2 className="w-4 h-4 animate-spin text-[#ACD1FD]" />
               <span>{t.translating || 'Translating...'}</span>
             </div>
           )}
 
           <div className="flex flex-wrap items-center gap-3">
-              <h1 className="text-2xl sm:text-4xl font-black text-[#222222] dark:text-white tracking-tight leading-none">
+              <h1 className="text-2xl sm:text-4xl font-black text-[#21222D] dark:text-white tracking-tight leading-none">
                 {currentResult.word}
               </h1>
               <button 
@@ -706,8 +706,8 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                 title={t.listenToPronunciation || 'Listen to pronunciation'}
                 className={`p-2.5 border rounded-full transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 font-bold text-xs ${
                   isPlayingAudio 
-                    ? 'bg-[#A4F5A6] text-[#222222] border-[#A4F5A6] animate-pulse shadow-md' 
-                    : 'border-[#D0D2CF] bg-[#EFF1EE] hover:bg-[#A4F5A6] text-[#222222] dark:text-white dark:bg-stone-800'
+                    ? 'bg-[#ACD1FD] text-[#21222D] border-[#ACD1FD] animate-pulse shadow-md' 
+                    : 'border-[#DBDBE5] bg-[#DBDBE5] hover:bg-[#ACD1FD] text-[#21222D] dark:text-white dark:bg-stone-800'
                 }`}
               >
                 <Volume2 className="w-4 h-4" />
@@ -720,7 +720,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                   <select
                     value={selectedDeckId}
                     onChange={(e) => setSelectedDeckId(e.target.value)}
-                    className="px-2.5 py-1.5 text-[11px] font-semibold border border-[#D0D2CF] dark:border-white/10 rounded-lg bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-white outline-none cursor-pointer"
+                    className="px-2.5 py-1.5 text-[11px] font-semibold border border-[#DBDBE5] dark:border-white/10 rounded-lg bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-white outline-none cursor-pointer"
                   >
                     {decks.map((d) => (
                       <option key={d.id} value={d.id}>
@@ -735,21 +735,21 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                 onClick={() => handleSaveWord(targetLang)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold transition-all shadow-xs cursor-pointer ${
                   isWordSaved
-                    ? 'bg-[#A4F5A6] text-[#222222]'
-                    : 'border border-[#D0D2CF] dark:border-white/10 text-[#222222] dark:text-white hover:bg-[#EFF1EE] dark:hover:bg-stone-800'
+                    ? 'bg-[#ACD1FD] text-[#21222D]'
+                    : 'border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white hover:bg-[#DBDBE5] dark:hover:bg-stone-800'
                 }`}
               >
                 {isWordSaved ? (
                   <Check className="w-3.5 h-3.5" />
                 ) : (
-                  <Bookmark className="w-3.5 h-3.5 text-[#222222] dark:text-white" />
+                  <Bookmark className="w-3.5 h-3.5 text-[#21222D] dark:text-white" />
                 )}
               </button>
 
               <button 
                 onClick={() => handleCopy(`${currentResult.word} - ${currentResult.definition}`)}
                 title={t.copyToClipboard || 'Copy to Clipboard'}
-                className="p-1.5 border border-[#D0D2CF] dark:border-white/10 rounded-full hover:bg-[#EFF1EE] dark:hover:bg-stone-800 text-[#666666] dark:text-slate-300 cursor-pointer"
+                className="p-1.5 border border-[#DBDBE5] dark:border-white/10 rounded-full hover:bg-[#DBDBE5] dark:hover:bg-stone-800 text-[#545565] dark:text-slate-300 cursor-pointer"
               >
                 {copiedText === `${currentResult.word} - ${currentResult.definition}` ? (
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
@@ -760,35 +760,35 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
           </div>
           
           <div className="flex items-center gap-2 mt-2.5 text-xs flex-wrap">
-            <span className="px-2 py-0.5 border border-[#D0D2CF] dark:border-white/10 rounded-md text-[10px] text-[#666666] dark:text-stone-300 uppercase tracking-wider font-semibold bg-[#EFF1EE] dark:bg-stone-800">
+            <span className="px-2 py-0.5 border border-[#DBDBE5] dark:border-white/10 rounded-md text-[10px] text-[#545565] dark:text-stone-300 uppercase tracking-wider font-semibold bg-[#DBDBE5] dark:bg-stone-800">
               {currentResult.partOfSpeech}
             </span>
-            <span className="text-[#222222] dark:text-white font-bold text-[11px]">
+            <span className="text-[#21222D] dark:text-white font-bold text-[11px]">
               {currentResult.phonetic}
             </span>
-            <span className="text-[#666666] dark:text-stone-400 italic text-[11px]">
+            <span className="text-[#545565] dark:text-stone-400 italic text-[11px]">
               ({getLocalizedLangName(currentResult.sourceLanguage, t)})
             </span>
           </div>
 
-          <p className="mt-2.5 text-[#222222] dark:text-stone-200 text-xs sm:text-sm leading-relaxed font-medium">
+          <p className="mt-2.5 text-[#21222D] dark:text-stone-200 text-xs sm:text-sm leading-relaxed font-medium">
             {currentResult.definition}
           </p>
 
           {currentResult.grammarNote && (
-            <div className="mt-2 text-[11px] bg-[#EFF1EE] dark:bg-stone-800 border border-[#D0D2CF] dark:border-white/10 text-[#222222] dark:text-stone-200 p-2.5 rounded-lg">
-              <span className="font-bold uppercase tracking-wider text-[9px] me-1.5 text-[#222222] dark:text-white">{t.grammarNote || 'Grammar Note'}:</span>
+            <div className="mt-2 text-[11px] bg-[#DBDBE5] dark:bg-stone-800 border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-stone-200 p-2.5 rounded-lg">
+              <span className="font-bold uppercase tracking-wider text-[9px] me-1.5 text-[#21222D] dark:text-white">{t.grammarNote || 'Grammar Note'}:</span>
               {currentResult.grammarNote}
             </div>
           )}
 
-          <hr className="my-4 border-[#D0D2CF]/60 dark:border-white/10" />
+          <hr className="my-4 border-[#DBDBE5]/60 dark:border-white/10" />
 
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-[10px] font-bold tracking-[0.15em] text-[#222222] dark:text-white uppercase flex items-center gap-1.5">
+            <h3 className="text-[10px] font-bold tracking-[0.15em] text-[#21222D] dark:text-white uppercase flex items-center gap-1.5">
               <span>{t.translation || 'Translation'} ({getLocalizedLangName(targetLang, t)})</span>
             </h3>
-            <span className="text-[10px] text-[#666666] dark:text-stone-400">{t.selectedTargetLanguage || 'Selected Target Language'}</span>
+            <span className="text-[10px] text-[#545565] dark:text-stone-400">{t.selectedTargetLanguage || 'Selected Target Language'}</span>
           </div>
 
           <div className="grid grid-cols-1 gap-3">
@@ -802,33 +802,33 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                 return (
                   <div 
                     key={langName}
-                    className="border rounded-2xl p-4 relative shadow-xs transition-all border-[#D0D2CF] dark:border-white/10 bg-[#EFF1EE]/60 dark:bg-stone-900/60"
+                    className="border rounded-2xl p-4 relative shadow-xs transition-all border-[#DBDBE5] dark:border-white/10 bg-[#DBDBE5]/60 dark:bg-stone-900/60"
                   >
-                  <div className="flex justify-between items-center mb-2.5 text-[#666666]">
+                  <div className="flex justify-between items-center mb-2.5 text-[#545565]">
                     <div className="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase">
                       <FlagIcon code={transData.flag || (langName === 'Arabic' ? 'EG' : langName === 'French' ? 'FR' : 'GB')} className="w-5 h-3.5" />
-                      <span className={isActive ? 'text-[#222222] dark:text-white font-bold' : ''}>{getLocalizedLangName(langName, t)}</span>
+                      <span className={isActive ? 'text-[#21222D] dark:text-white font-bold' : ''}>{getLocalizedLangName(langName, t)}</span>
                     </div>
 
                     <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                       <button 
                         onClick={() => handleSpeakText(transData.text, langName)}
                         title={t.pronounce || 'Pronounce'}
-                        className="p-1 hover:bg-white rounded-full text-[#222222] dark:text-stone-300 cursor-pointer"
+                        className="p-1 hover:bg-white rounded-full text-[#21222D] dark:text-stone-300 cursor-pointer"
                       >
                         <Volume2 className="w-3.5 h-3.5" />
                       </button>
                       <button 
                         onClick={() => handleSaveWord(langName, transData.text, transData.definition)}
                         title={t.saveToVocab || 'Save Translation'}
-                        className="p-1 hover:bg-white rounded-full text-[#222222] dark:text-stone-300 cursor-pointer"
+                        className="p-1 hover:bg-white rounded-full text-[#21222D] dark:text-stone-300 cursor-pointer"
                       >
-                        <Bookmark className="w-3.5 h-3.5 text-[#222222] dark:text-white" />
+                        <Bookmark className="w-3.5 h-3.5 text-[#21222D] dark:text-white" />
                       </button>
                       <button 
                         onClick={() => handleCopy(transData.text)}
                         title={t.copy || 'Copy'}
-                        className="p-1 hover:bg-white rounded-full text-[#222222] dark:text-stone-300 cursor-pointer"
+                        className="p-1 hover:bg-white rounded-full text-[#21222D] dark:text-stone-300 cursor-pointer"
                       >
                         <Copy className="w-3.5 h-3.5" />
                       </button>
@@ -837,19 +837,19 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
 
                   <div className={`flex flex-col gap-1 ${langName === 'Arabic' ? 'text-end' : ''}`}>
                     <div 
-                      className={`text-lg font-serif font-bold text-[#222222] dark:text-white ${isActive ? 'text-[#222222] dark:text-white' : ''}`}
+                      className={`text-lg font-serif font-bold text-[#21222D] dark:text-white ${isActive ? 'text-[#21222D] dark:text-white' : ''}`}
                       dir={langName === 'Arabic' ? 'rtl' : 'ltr'}
                     >
                       {transData.text}
                     </div>
                     <div 
-                      className="text-[11px] text-[#666666] dark:text-stone-300 leading-normal font-sans"
+                      className="text-[11px] text-[#545565] dark:text-stone-300 leading-normal font-sans"
                       dir={langName === 'Arabic' ? 'rtl' : 'ltr'}
                     >
                       {transData.definition}
                     </div>
                     {transData.example && (
-                      <div className="text-[10px] text-[#666666] dark:text-stone-400 italic mt-0.5 pt-1.5 border-t border-[#D0D2CF]/60 dark:border-white/10">
+                      <div className="text-[10px] text-[#545565] dark:text-stone-400 italic mt-0.5 pt-1.5 border-t border-[#DBDBE5]/60 dark:border-white/10">
                         "{transData.example}"
                       </div>
                     )}
@@ -860,18 +860,18 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
           </div>
 
           {/* CONTEXT & EXAMPLES, SYNONYMS, ANTONYMS SECTION */}
-          <div className="mt-6 pt-5 border-t border-[#D0D2CF]/60 dark:border-white/10 flex flex-col gap-5">
+          <div className="mt-6 pt-5 border-t border-[#DBDBE5]/60 dark:border-white/10 flex flex-col gap-5">
             {/* Context & Examples Header Pill */}
             <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF1EE] dark:bg-stone-800 border border-[#D0D2CF] dark:border-white/10 text-[#222222] dark:text-white font-bold text-[11px] tracking-wider uppercase shadow-2xs">
-                <Quote className="w-3.5 h-3.5 text-[#222222] dark:text-[#A4F5A6]" />
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DBDBE5] dark:bg-stone-800 border border-[#DBDBE5] dark:border-white/10 text-[#21222D] dark:text-white font-bold text-[11px] tracking-wider uppercase shadow-2xs">
+                <Quote className="w-3.5 h-3.5 text-[#21222D] dark:text-[#ACD1FD]" />
                 <span>{t.contextSentence || 'Context & Examples'}</span>
               </div>
             </div>
 
             {/* Contextual Sentence Examples */}
             <div>
-              <div className="text-[10px] font-bold tracking-[0.15em] text-[#666666] dark:text-stone-400 uppercase mb-3">
+              <div className="text-[10px] font-bold tracking-[0.15em] text-[#545565] dark:text-stone-400 uppercase mb-3">
                 {t.contextualExamples || 'Contextual Sentence Examples'}
               </div>
               <div className="flex flex-col gap-2.5">
@@ -883,15 +883,15 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                   return (
                     <div 
                       key={idx}
-                      className="bg-[#EFF1EE]/50 dark:bg-stone-800/40 border border-[#D0D2CF] dark:border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs hover:border-[#222222] dark:hover:border-white/20 transition-colors"
+                      className="bg-[#DBDBE5]/50 dark:bg-stone-800/40 border border-[#DBDBE5] dark:border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs hover:border-[#21222D] dark:hover:border-white/20 transition-colors"
                     >
-                      <p className="text-[#222222] dark:text-stone-200 italic font-serif text-xs sm:text-sm leading-relaxed">
+                      <p className="text-[#21222D] dark:text-stone-200 italic font-serif text-xs sm:text-sm leading-relaxed">
                         "{cleanSentence}"
                       </p>
                       <button
                         onClick={() => handleSpeakText(cleanSentence, currentResult.sourceLanguage)}
                         title={t.listenToPronunciation || 'Listen to sentence'}
-                        className="p-1.5 text-[#666666] hover:text-[#222222] dark:hover:text-[#A4F5A6] hover:bg-white rounded-full transition-colors cursor-pointer shrink-0"
+                        className="p-1.5 text-[#545565] hover:text-[#21222D] dark:hover:text-[#ACD1FD] hover:bg-white rounded-full transition-colors cursor-pointer shrink-0"
                       >
                         <Volume2 className="w-4 h-4" />
                       </button>
@@ -905,7 +905,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               {/* Synonyms */}
               <div>
-                <div className="text-[10px] font-bold tracking-[0.15em] text-[#666666] dark:text-stone-400 uppercase mb-2.5">
+                <div className="text-[10px] font-bold tracking-[0.15em] text-[#545565] dark:text-stone-400 uppercase mb-2.5">
                   {t.synonymsClickToLookup || 'Synonyms (Click to lookup)'}
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">
@@ -919,7 +919,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                         setSearchTerm(syn);
                         handleSearch(syn);
                       }}
-                      className="px-3.5 py-1 rounded-full border border-[#D0D2CF] dark:border-white/10 bg-white dark:bg-stone-800 text-[#222222] dark:text-stone-200 text-xs font-medium hover:border-[#222222] hover:bg-[#A4F5A6] hover:text-[#222222] transition-colors cursor-pointer shadow-2xs"
+                      className="px-3.5 py-1 rounded-full border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-stone-800 text-[#21222D] dark:text-stone-200 text-xs font-medium hover:border-[#21222D] hover:bg-[#ACD1FD] hover:text-[#21222D] transition-colors cursor-pointer shadow-2xs"
                     >
                       {syn}
                     </button>
@@ -929,7 +929,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
 
               {/* Antonyms */}
               <div>
-                <div className="text-[10px] font-bold tracking-[0.15em] text-[#666666] dark:text-stone-400 uppercase mb-2.5">
+                <div className="text-[10px] font-bold tracking-[0.15em] text-[#545565] dark:text-stone-400 uppercase mb-2.5">
                   {t.antonyms || 'Antonyms'}
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">
@@ -943,7 +943,7 @@ export const DictionaryView: React.FC<DictionaryViewProps> = ({
                         setSearchTerm(ant);
                         handleSearch(ant);
                       }}
-                      className="px-3.5 py-1 rounded-full border border-[#D0D2CF] dark:border-white/10 bg-white dark:bg-stone-800 text-[#222222] dark:text-stone-200 text-xs font-medium hover:border-[#222222] hover:bg-[#A4F5A6] hover:text-[#222222] transition-colors cursor-pointer shadow-2xs"
+                      className="px-3.5 py-1 rounded-full border border-[#DBDBE5] dark:border-white/10 bg-white dark:bg-stone-800 text-[#21222D] dark:text-stone-200 text-xs font-medium hover:border-[#21222D] hover:bg-[#ACD1FD] hover:text-[#21222D] transition-colors cursor-pointer shadow-2xs"
                     >
                       {ant}
                     </button>

@@ -187,12 +187,12 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
     const percentage = Math.round((score / quiz.questionCount) * 100);
     const { grade, color } = getGrade(percentage);
     return (
-      <div className="max-w-xl mx-auto p-12 text-center space-y-6 bg-white rounded-3xl border border-[#D0D2CF] shadow-sm">
-        <h2 className="text-4xl font-black text-[#222222]">{t.quizCompleted || 'Quiz Complete'}</h2>
+      <div className="max-w-xl mx-auto p-12 text-center space-y-6 bg-white rounded-3xl border border-[#DBDBE5] shadow-sm">
+        <h2 className="text-4xl font-black text-[#21222D]">{t.quizCompleted || 'Quiz Complete'}</h2>
         <div className={`text-6xl font-black ${color}`}>{grade}</div>
-        <p className="text-xl font-bold text-[#555555]">{t.yourScore || 'Your Score'}: {score} / {quiz.questionCount} ({percentage}%)</p>
-        <div className="p-6 bg-[#EFF1EE] rounded-2xl text-start border border-[#D0D2CF] max-h-60 overflow-y-auto space-y-3">
-          <h4 className="font-black text-[#222222] uppercase tracking-wider text-xs">{t.quickStats || 'Review Results'}:</h4>
+        <p className="text-xl font-bold text-[#21222D]">{t.yourScore || 'Your Score'}: {score} / {quiz.questionCount} ({percentage}%)</p>
+        <div className="p-6 bg-[#DBDBE5] rounded-2xl text-start border border-[#DBDBE5] max-h-60 overflow-y-auto space-y-3">
+          <h4 className="font-black text-[#21222D] uppercase tracking-wider text-xs">{t.quickStats || 'Review Results'}:</h4>
           {quiz.questions.map((q, idx) => (
             <div key={q.id} className="flex gap-3 text-sm items-start border-b border-stone-200 pb-2 last:border-0 last:pb-0">
               {answers[q.id]?.isCorrect ? (
@@ -201,7 +201,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
                 <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
               )}
               <div>
-                <p className="font-bold text-[#222222]">{idx + 1}. {q.prompt}</p>
+                <p className="font-bold text-[#21222D]">{idx + 1}. {q.prompt}</p>
                 <p className="text-stone-500">Correct: <span className="font-semibold text-stone-700">{q.correctAnswer}</span></p>
               </div>
             </div>
@@ -209,7 +209,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
         </div>
         <button 
           onClick={() => onNavigate('practice')} 
-          className="w-full py-4 bg-[#222222] text-[#EFF1EE] rounded-2xl font-black text-lg hover:bg-stone-800 transition-all"
+          className="w-full py-4 bg-[#21222D] text-[#DBDBE5] rounded-2xl font-black text-lg hover:bg-stone-800 transition-all"
         >
           {t.backToQuizzes || 'Return to Practice Hub'}
         </button>
@@ -219,9 +219,9 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
 
   // Progress blocks: ■■■□□□
   const progressBlocks = Array.from({ length: quiz.questionCount }).map((_, i) => {
-    if (i < currentIndex) return 'bg-[#A4F5A6]'; // Completed
-    if (i === currentIndex) return 'bg-[#B2A1FF]'; // Current
-    return 'bg-[#D0D2CF]'; // Upcoming
+    if (i < currentIndex) return 'bg-[#ACD1FD]'; // Completed
+    if (i === currentIndex) return 'bg-[#958CE8]'; // Current
+    return 'bg-[#DBDBE5]'; // Upcoming
   });
 
   // Render question interface based on type
@@ -246,12 +246,12 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
             const isSelected = userAns?.selected === opt;
             const isCorrect = opt.trim().toLowerCase() === currentQ.correctAnswer.trim().toLowerCase();
             
-            let btnStyle = 'bg-[#EFF1EE] border-[#D0D2CF] hover:border-[#222222] text-[#222222]';
+            let btnStyle = 'bg-[#DBDBE5] border-[#DBDBE5] hover:border-[#21222D] text-[#21222D]';
             if (isAnswered) {
-              if (isCorrect) btnStyle = 'bg-[#A4F5A6] border-[#A4F5A6] text-emerald-900';
+              if (isCorrect) btnStyle = 'bg-[#ACD1FD] border-[#ACD1FD] text-emerald-900';
               else if (isSelected) btnStyle = 'bg-red-100 border-red-300 text-red-900';
             } else if (isSelected) {
-              btnStyle = 'bg-[#B2A1FF] border-[#B2A1FF] text-white';
+              btnStyle = 'bg-[#958CE8] border-[#958CE8] text-white';
             }
 
             return (
@@ -281,7 +281,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
               value={typedInput}
               onChange={(e) => setTypedInput(e.target.value)}
               placeholder={t.typeAnswerPlaceholder || "Type your answer here..."}
-              className="w-full p-4 rounded-2xl border-2 border-[#D0D2CF] focus:border-[#B2A1FF] outline-none font-bold text-lg text-center"
+              className="w-full p-4 rounded-2xl border-2 border-[#DBDBE5] focus:border-[#958CE8] outline-none font-bold text-lg text-center"
               onKeyDown={(e) => {
                 if (e.key === 'Enter') handleCheckBlank();
               }}
@@ -290,7 +290,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
               <button 
                 onClick={handleCheckBlank}
                 disabled={!typedInput.trim()}
-                className="w-full py-4 bg-[#B2A1FF] text-white font-black text-base rounded-2xl hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:pointer-events-none"
+                className="w-full py-4 bg-[#958CE8] text-white font-black text-base rounded-2xl hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:pointer-events-none"
               >
                 {t.submitAnswer || "Submit Answer"}
               </button>
@@ -338,11 +338,11 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
                 const isMatched = matchedPairs.some(p => p.left === word);
                 const isSelected = selectedLeft === word;
 
-                let style = 'bg-[#EFF1EE] border-[#D0D2CF] text-[#222222]';
+                let style = 'bg-[#DBDBE5] border-[#DBDBE5] text-[#21222D]';
                 if (isMatched) {
-                  style = 'bg-[#A4F5A6] border-[#A4F5A6] text-emerald-900 opacity-60 pointer-events-none';
+                  style = 'bg-[#ACD1FD] border-[#ACD1FD] text-emerald-900 opacity-60 pointer-events-none';
                 } else if (isSelected) {
-                  style = 'bg-[#B2A1FF] border-[#B2A1FF] text-white ring-2 ring-[#B2A1FF]/40';
+                  style = 'bg-[#958CE8] border-[#958CE8] text-white ring-2 ring-[#958CE8]/40';
                 }
 
                 return (
@@ -366,11 +366,11 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
                 const isMatched = matchedPairs.some(p => p.right === meaning);
                 const isSelected = selectedRight === meaning;
 
-                let style = 'bg-[#EFF1EE] border-[#D0D2CF] text-[#222222]';
+                let style = 'bg-[#DBDBE5] border-[#DBDBE5] text-[#21222D]';
                 if (isMatched) {
-                  style = 'bg-[#A4F5A6] border-[#A4F5A6] text-emerald-900 opacity-60 pointer-events-none';
+                  style = 'bg-[#ACD1FD] border-[#ACD1FD] text-emerald-900 opacity-60 pointer-events-none';
                 } else if (isSelected) {
-                  style = 'bg-[#B2A1FF] border-[#B2A1FF] text-white ring-2 ring-[#B2A1FF]/40';
+                  style = 'bg-[#958CE8] border-[#958CE8] text-white ring-2 ring-[#958CE8]/40';
                 }
 
                 return (
@@ -401,7 +401,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
       return (
         <div className="space-y-6">
           {/* Construction area */}
-          <div className="min-h-24 p-5 bg-stone-50 rounded-2xl border-2 border-dashed border-[#D0D2CF] flex flex-wrap gap-2 items-center justify-center">
+          <div className="min-h-24 p-5 bg-stone-50 rounded-2xl border-2 border-dashed border-[#DBDBE5] flex flex-wrap gap-2 items-center justify-center">
             {orderedTokens.length === 0 && (
               <span className="text-sm font-bold text-stone-400">{t.clickWordCardsToOrder || "Click word cards below to order sentence..."}</span>
             )}
@@ -410,7 +410,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
                 key={i}
                 disabled={isAnswered}
                 onClick={() => handleTokenClick(tok, 'ordered')}
-                className="px-3.5 py-2 bg-[#B2A1FF] text-white font-black rounded-xl text-sm md:text-base border border-[#B2A1FF] hover:bg-opacity-90 shadow-sm transition-all active:scale-95"
+                className="px-3.5 py-2 bg-[#958CE8] text-white font-black rounded-xl text-sm md:text-base border border-[#958CE8] hover:bg-opacity-90 shadow-sm transition-all active:scale-95"
               >
                 {tok}
               </button>
@@ -424,7 +424,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
                 key={i}
                 disabled={isAnswered}
                 onClick={() => handleTokenClick(tok, 'scrambled')}
-                className="px-3.5 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-300 rounded-xl text-[#222222] font-semibold text-sm md:text-base transition-all active:scale-95 shadow-sm"
+                className="px-3.5 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-300 rounded-xl text-[#21222D] font-semibold text-sm md:text-base transition-all active:scale-95 shadow-sm"
               >
                 {tok}
               </button>
@@ -435,7 +435,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
             <button 
               onClick={handleCheckOrder}
               disabled={orderedTokens.length === 0}
-              className="w-full py-4 bg-[#B2A1FF] text-white font-black text-base rounded-2xl hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:pointer-events-none"
+              className="w-full py-4 bg-[#958CE8] text-white font-black text-base rounded-2xl hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:pointer-events-none"
             >
               {t.verifySentenceOrder || "Verify Sentence Order"}
             </button>
@@ -453,9 +453,9 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
               const isCorrectTarget = tok.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "") === currentQ.correctAnswer.toLowerCase();
               const isSelected = userAns?.selected === tok;
               
-              let style = 'bg-white hover:bg-stone-50 border-stone-300 text-[#222222]';
+              let style = 'bg-white hover:bg-stone-50 border-stone-300 text-[#21222D]';
               if (isAnswered) {
-                if (isCorrectTarget) style = 'bg-[#A4F5A6] border-[#A4F5A6] text-emerald-900';
+                if (isCorrectTarget) style = 'bg-[#ACD1FD] border-[#ACD1FD] text-emerald-900';
                 else if (isSelected) style = 'bg-red-100 border-red-300 text-red-900';
               }
 
@@ -483,11 +483,11 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
       <div className="flex items-center justify-between mb-2">
         <button 
           onClick={() => onNavigate('practice')} 
-          className="p-2.5 bg-white rounded-xl border border-[#D0D2CF] hover:bg-stone-50 transition-all shadow-sm"
+          className="p-2.5 bg-white rounded-xl border border-[#DBDBE5] hover:bg-stone-50 transition-all shadow-sm"
         >
           <ArrowLeft className="w-5 h-5 text-stone-700"/>
         </button>
-        <span className="text-xs font-black uppercase tracking-widest text-[#666666]">
+        <span className="text-xs font-black uppercase tracking-widest text-[#545565]">
           {t.question || "Question"} {currentIndex + 1} / {quiz.questionCount}
         </span>
       </div>
@@ -499,14 +499,14 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
         ))}
       </div>
 
-      <div className="bg-white p-6 md:p-10 rounded-3xl border border-[#D0D2CF] shadow-sm space-y-8">
+      <div className="bg-white p-6 md:p-10 rounded-3xl border border-[#DBDBE5] shadow-sm space-y-8">
         <div className="space-y-3">
           <div className="flex justify-between items-center">
-            <span className="px-3 py-1 bg-[#B2A1FF]/10 text-[#B2A1FF] rounded-full text-xs font-black uppercase tracking-wider">
+            <span className="px-3 py-1 bg-[#958CE8]/10 text-[#958CE8] rounded-full text-xs font-black uppercase tracking-wider">
               {currentQ.type.replace(/_/g, ' ')}
             </span>
           </div>
-          <h3 className="text-xl md:text-2xl font-black text-[#222222] leading-snug whitespace-pre-line">
+          <h3 className="text-xl md:text-2xl font-black text-[#21222D] leading-snug whitespace-pre-line">
             {currentQ.prompt}
           </h3>
         </div>
@@ -521,7 +521,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
             animate={{ opacity: 1, y: 0 }}
             className={`p-6 rounded-2xl border ${
               answers[currentQ.id].isCorrect 
-                ? 'bg-[#A4F5A6]/10 border-[#A4F5A6] text-emerald-900' 
+                ? 'bg-[#ACD1FD]/10 border-[#ACD1FD] text-emerald-900' 
                 : 'bg-red-50 border-red-200 text-red-900'
             } space-y-2`}
           >
@@ -540,7 +540,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
             </div>
             
             <p className="text-sm font-bold text-stone-700">
-              {t.correctSolutionLabel || "Correct Solution:"} <span className="font-black text-[#222222] underline">{currentQ.correctAnswer}</span>
+              {t.correctSolutionLabel || "Correct Solution:"} <span className="font-black text-[#21222D] underline">{currentQ.correctAnswer}</span>
             </p>
 
             {currentQ.explanation && (
@@ -554,7 +554,7 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ settings, quiz, onNaviga
         {answers[currentQ.id] && (
           <button 
             onClick={() => currentIndex + 1 < quiz.questionCount ? setCurrentIndex(prev => prev + 1) : setIsFinished(true)}
-            className="w-full py-5 bg-[#222222] text-[#EFF1EE] rounded-2xl font-black text-lg hover:bg-stone-800 transition-all shadow-sm active:scale-[0.99]"
+            className="w-full py-5 bg-[#21222D] text-[#DBDBE5] rounded-2xl font-black text-lg hover:bg-stone-800 transition-all shadow-sm active:scale-[0.99]"
           >
             {currentIndex + 1 < quiz.questionCount ? (t.nextQuestionBtn || 'Next Question →') : (t.finishQuizBtn || 'Finish Quiz 🏁')}
           </button>

@@ -100,20 +100,20 @@ export const DecksView: React.FC<DecksViewProps> = ({
       
       {/* Title & Folder/Deck Action Buttons */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <h1 className="text-3xl font-black font-serif text-[#222222] dark:text-[#EFF1EE]">
+        <h1 className="text-3xl font-black font-serif text-[#21222D] dark:text-[#DBDBE5]">
           {titleText}
         </h1>
         <div className="flex items-center gap-2.5">
           <button
             onClick={onNewFolderClick}
-            className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-xl text-xs font-bold text-[#222222] dark:text-stone-300 hover:bg-[#EFF1EE] transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-xl text-xs font-bold text-[#21222D] dark:text-stone-300 hover:bg-[#DBDBE5] transition-colors cursor-pointer"
           >
-            <FolderPlus className="w-4.5 h-4.5 text-[#222222] dark:text-stone-300" />
+            <FolderPlus className="w-4.5 h-4.5 text-[#21222D] dark:text-stone-300" />
             <span>{t.newFolder || "New Folder"}</span>
           </button>
           <button
             onClick={onNewDeckClick}
-            className="flex items-center gap-1.5 px-4 py-2 bg-[#A4F5A6] hover:bg-[#92E894] rounded-xl text-xs font-bold text-[#222222] transition-colors cursor-pointer shadow-xs"
+            className="flex items-center gap-1.5 px-4 py-2 bg-[#ACD1FD] hover:bg-[#958CE8] rounded-xl text-xs font-bold text-[#21222D] transition-colors cursor-pointer shadow-xs"
           >
             <Plus className="w-4.5 h-4.5" />
             <span>{t.newDeck || "New Deck"}</span>
@@ -123,7 +123,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
 
       {/* Active Deck Filter Row */}
       <div className="flex flex-wrap items-center gap-2.5 text-xs font-bold text-stone-500 py-1">
-        <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#666666] me-1">
+        <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#545565] me-1">
           {activeFilterLabel}
         </span>
         
@@ -132,8 +132,8 @@ export const DecksView: React.FC<DecksViewProps> = ({
           onClick={() => setSelectedFilterId('all')}
           className={`px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-wider uppercase border transition-all cursor-pointer ${
             !selectedFilterId || selectedFilterId === 'all'
-              ? 'bg-[#A4F5A6] text-[#222222] border-[#222222] shadow-xs'
-              : 'bg-white dark:bg-[#1D201A] text-[#555555] dark:text-stone-400 border-[#D0D2CF] dark:border-stone-800 hover:border-[#222222]'
+              ? 'bg-[#ACD1FD] text-[#21222D] border-[#21222D] shadow-xs'
+              : 'bg-white dark:bg-[#1D201A] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
           }`}
         >
           {allWordsMainDeckLabel} {vocabulary.length}
@@ -149,8 +149,8 @@ export const DecksView: React.FC<DecksViewProps> = ({
               onClick={() => setSelectedFilterId(deck.id)}
               className={`px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-wider uppercase border transition-all cursor-pointer ${
                 isActive
-                  ? 'bg-[#A4F5A6] text-[#222222] border-[#222222] shadow-xs'
-                  : 'bg-white dark:bg-[#1D201A] text-[#555555] dark:text-stone-400 border-[#D0D2CF] dark:border-stone-800 hover:border-[#222222]'
+                  ? 'bg-[#ACD1FD] text-[#21222D] border-[#21222D] shadow-xs'
+                  : 'bg-white dark:bg-[#1D201A] text-[#21222D] dark:text-stone-400 border-[#DBDBE5] dark:border-stone-800 hover:border-[#21222D]'
               }`}
             >
               {deck.name} {cardsCount}
@@ -160,22 +160,22 @@ export const DecksView: React.FC<DecksViewProps> = ({
       </div>
 
       {/* Selected Deck Details Hero Card */}
-      <div className="bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
+      <div className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
           <div className="flex gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-[#A4F5A6]/30 dark:bg-[#A4F5A6]/20 flex items-center justify-center text-[#222222] dark:text-[#A4F5A6] shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-[#ACD1FD]/30 dark:bg-[#ACD1FD]/20 flex items-center justify-center text-[#21222D] dark:text-[#ACD1FD] shrink-0">
               <BookOpen className="w-7 h-7" />
             </div>
             <div className="space-y-1.5">
               <div className="flex items-center gap-2">
-                <h2 className="text-xl font-bold font-serif text-[#222222] dark:text-[#EFF1EE] leading-tight">
+                <h2 className="text-xl font-bold font-serif text-[#21222D] dark:text-[#DBDBE5] leading-tight">
                   {selectedDeckName}
                 </h2>
-                <span className="px-2.5 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider uppercase bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-stone-300 border border-[#D0D2CF] dark:border-stone-700">
+                <span className="px-2.5 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider uppercase bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-300 border border-[#DBDBE5] dark:border-stone-700">
                   {universalSyncBadge}
                 </span>
               </div>
-              <p className="text-xs text-[#666666] dark:text-stone-400 max-w-xl leading-relaxed">
+              <p className="text-xs text-[#545565] dark:text-stone-400 max-w-xl leading-relaxed">
                 {heroDescription}
               </p>
             </div>
@@ -183,7 +183,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
 
           <button
             onClick={() => onStudyDeck(selectedFilterId)}
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#A4F5A6] hover:bg-[#92E894] text-[#222222] text-xs font-bold rounded-2xl transition-all cursor-pointer shadow-xs shrink-0 self-start sm:self-auto"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-[#ACD1FD] hover:bg-[#958CE8] text-[#21222D] text-xs font-bold rounded-2xl transition-all cursor-pointer shadow-xs shrink-0 self-start sm:self-auto"
           >
             <BookMarked className="w-4 h-4" />
             <span>{t.studyAllWords || "Study All Words"} ({selectedDeckStats.total})</span>
@@ -191,36 +191,36 @@ export const DecksView: React.FC<DecksViewProps> = ({
         </div>
 
         {/* 3 Statistic Blocks Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#D0D2CF]/60 dark:border-stone-800 pt-6">
-          <div className="p-4 bg-[#EFF1EE] dark:bg-stone-900 rounded-2xl border border-[#D0D2CF] dark:border-stone-800 flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-white dark:bg-stone-800 flex items-center justify-center text-[#222222] dark:text-stone-300 shadow-2xs">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#DBDBE5]/60 dark:border-stone-800 pt-6">
+          <div className="p-4 bg-[#DBDBE5] dark:bg-stone-900 rounded-2xl border border-[#DBDBE5] dark:border-stone-800 flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-white dark:bg-stone-800 flex items-center justify-center text-[#21222D] dark:text-stone-300 shadow-2xs">
               <Layers className="w-5 h-5" />
             </div>
             <div>
-              <span className="block text-lg font-black text-[#222222] dark:text-[#EFF1EE] leading-tight">{selectedDeckStats.newCards}</span>
-              <span className="block text-[10px] font-bold text-[#666666] uppercase">{t.newWords || "New Words"}</span>
+              <span className="block text-lg font-black text-[#21222D] dark:text-[#DBDBE5] leading-tight">{selectedDeckStats.newCards}</span>
+              <span className="block text-[10px] font-bold text-[#545565] uppercase">{t.newWords || "New Words"}</span>
               <span className="block text-[9px] text-stone-400">{t.newWordsDesc || "Ready for first encounter"}</span>
             </div>
           </div>
 
-          <div className="p-4 bg-[#EFF1EE] dark:bg-stone-900 rounded-2xl border border-[#D0D2CF] dark:border-stone-800 flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#B2A1FF]/30 dark:bg-stone-800 flex items-center justify-center text-[#222222] dark:text-[#B2A1FF] shadow-2xs">
+          <div className="p-4 bg-[#DBDBE5] dark:bg-stone-900 rounded-2xl border border-[#DBDBE5] dark:border-stone-800 flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#958CE8]/30 dark:bg-stone-800 flex items-center justify-center text-[#21222D] dark:text-[#958CE8] shadow-2xs">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <span className="block text-lg font-black text-[#222222] dark:text-[#EFF1EE] leading-tight">{selectedDeckStats.learning}</span>
-              <span className="block text-[10px] font-bold text-[#666666] uppercase">{t.learningWords || "Learning Words"}</span>
+              <span className="block text-lg font-black text-[#21222D] dark:text-[#DBDBE5] leading-tight">{selectedDeckStats.learning}</span>
+              <span className="block text-[10px] font-bold text-[#545565] uppercase">{t.learningWords || "Learning Words"}</span>
               <span className="block text-[9px] text-stone-400">{t.learningWordsDesc || "In active SRS review"}</span>
             </div>
           </div>
 
-          <div className="p-4 bg-[#EFF1EE] dark:bg-stone-900 rounded-2xl border border-[#D0D2CF] dark:border-stone-800 flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#A4F5A6]/40 dark:bg-stone-800 flex items-center justify-center text-[#222222] dark:text-[#A4F5A6] shadow-2xs">
+          <div className="p-4 bg-[#DBDBE5] dark:bg-stone-900 rounded-2xl border border-[#DBDBE5] dark:border-stone-800 flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#ACD1FD]/40 dark:bg-stone-800 flex items-center justify-center text-[#21222D] dark:text-[#ACD1FD] shadow-2xs">
               <Check className="w-5 h-5" />
             </div>
             <div>
-              <span className="block text-lg font-black text-[#222222] dark:text-[#EFF1EE] leading-tight">{selectedDeckStats.mastered}</span>
-              <span className="block text-[10px] font-bold text-[#666666] uppercase">{t.masteredWords || "Mastered Words"}</span>
+              <span className="block text-lg font-black text-[#21222D] dark:text-[#DBDBE5] leading-tight">{selectedDeckStats.mastered}</span>
+              <span className="block text-[10px] font-bold text-[#545565] uppercase">{t.masteredWords || "Mastered Words"}</span>
               <span className="block text-[9px] text-stone-400">{t.masteredWordsDesc || "Long-term memory"}</span>
             </div>
           </div>
@@ -229,7 +229,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
 
       {/* Section: Topic Folders */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold font-serif text-[#222222] dark:text-[#EFF1EE]">
+        <h3 className="text-lg font-bold font-serif text-[#21222D] dark:text-[#DBDBE5]">
           {topicFoldersTitle}
         </h3>
 
@@ -237,11 +237,11 @@ export const DecksView: React.FC<DecksViewProps> = ({
           {folders.map(folder => (
             <div
               key={folder.id}
-              className="w-full flex items-center justify-between p-4 bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-2xl hover:bg-[#EFF1EE] dark:hover:bg-stone-800/50 transition-colors"
+              className="w-full flex items-center justify-between p-4 bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl hover:bg-[#DBDBE5] dark:hover:bg-stone-800/50 transition-colors"
             >
               <div className="flex items-center gap-3">
-                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: folder.color || '#B2A1FF' }} />
-                <span className="text-xs font-black text-[#222222] dark:text-[#EFF1EE] font-serif">{folder.name}</span>
+                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: folder.color || '#958CE8' }} />
+                <span className="text-xs font-black text-[#21222D] dark:text-[#DBDBE5] font-serif">{folder.name}</span>
                 <span className="text-[10px] text-stone-400">({folder.deckIds.length} decks)</span>
               </div>
               <div className="flex items-center gap-2">
@@ -251,7 +251,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
                       onDeleteFolder(folder.id);
                     }
                   }}
-                  className="p-1.5 text-stone-400 hover:text-red-500 rounded-lg hover:bg-[#D0D2CF]/40 dark:hover:bg-stone-800 transition-colors"
+                  className="p-1.5 text-stone-400 hover:text-red-500 rounded-lg hover:bg-[#DBDBE5]/40 dark:hover:bg-stone-800 transition-colors"
                   title="Delete Folder"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -269,7 +269,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
 
       {/* Section: Custom Decks (No Folder) */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold font-serif text-[#222222] dark:text-[#EFF1EE]">
+        <h3 className="text-lg font-bold font-serif text-[#21222D] dark:text-[#DBDBE5]">
           {customDecksNoFolderTitle} ({decks.length})
         </h3>
 
@@ -283,23 +283,23 @@ export const DecksView: React.FC<DecksViewProps> = ({
             return (
               <div
                 key={deck.id}
-                className="bg-white dark:bg-[#1D201A] border border-[#D0D2CF] dark:border-stone-800 rounded-2xl p-5 shadow-xs hover:shadow-sm transition-shadow flex flex-col justify-between"
+                className="bg-white dark:bg-[#1D201A] border border-[#DBDBE5] dark:border-stone-800 rounded-2xl p-5 shadow-xs hover:shadow-sm transition-shadow flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="px-2 py-0.5 rounded-full text-[8px] font-extrabold tracking-wider uppercase bg-[#EFF1EE] dark:bg-stone-800 text-[#222222] dark:text-stone-400 border border-[#D0D2CF] dark:border-stone-700">
+                    <span className="px-2 py-0.5 rounded-full text-[8px] font-extrabold tracking-wider uppercase bg-[#DBDBE5] dark:bg-stone-800 text-[#21222D] dark:text-stone-400 border border-[#DBDBE5] dark:border-stone-700">
                       {deck.language}
                     </span>
                     <span className="text-[10px] text-stone-400 font-bold uppercase">{cards.length} cards</span>
                   </div>
 
-                  <h4 className="text-base font-bold font-serif text-[#222222] dark:text-[#EFF1EE] mb-4">
+                  <h4 className="text-base font-bold font-serif text-[#21222D] dark:text-[#DBDBE5] mb-4">
                     {deck.name}
                   </h4>
                 </div>
 
-                <div className="border-t border-[#D0D2CF]/50 dark:border-stone-800 pt-3 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5 text-[10px] text-[#666666] font-mono">
+                <div className="border-t border-[#DBDBE5]/50 dark:border-stone-800 pt-3 flex items-center justify-between">
+                  <div className="flex items-center gap-2.5 text-[10px] text-[#545565] font-mono">
                     <span title={t.newWords || "New"}>🆕 {countNew}</span>
                     <span title="Learning">🔥 {countLearning}</span>
                     <span title="Mastered">🎓 {countMastered}</span>
@@ -312,14 +312,14 @@ export const DecksView: React.FC<DecksViewProps> = ({
                           onDeleteDeck(deck.id);
                         }
                       }}
-                      className="p-2 text-stone-400 hover:text-red-500 rounded-xl hover:bg-[#EFF1EE] dark:hover:bg-stone-800 transition-colors cursor-pointer"
+                      className="p-2 text-stone-400 hover:text-red-500 rounded-xl hover:bg-[#DBDBE5] dark:hover:bg-stone-800 transition-colors cursor-pointer"
                       title="Delete Deck"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => onOpenDeck(deck.id)}
-                      className="px-3.5 py-1.5 bg-[#EFF1EE] hover:bg-[#A4F5A6] text-[#222222] border border-[#D0D2CF] hover:border-[#222222] text-[10px] font-bold rounded-xl transition-all cursor-pointer flex items-center gap-1 shadow-2xs"
+                      className="px-3.5 py-1.5 bg-[#DBDBE5] hover:bg-[#ACD1FD] text-[#21222D] border border-[#DBDBE5] hover:border-[#21222D] text-[10px] font-bold rounded-xl transition-all cursor-pointer flex items-center gap-1 shadow-2xs"
                     >
                       <span>{openFileLabel}</span>
                       <ArrowRight className="w-3 h-3" />
@@ -331,7 +331,7 @@ export const DecksView: React.FC<DecksViewProps> = ({
           })}
 
           {decks.length === 0 && (
-            <div className="col-span-full py-12 text-center border-2 border-dashed border-[#D0D2CF] dark:border-stone-800 rounded-2xl bg-white dark:bg-[#1D201A]">
+            <div className="col-span-full py-12 text-center border-2 border-dashed border-[#DBDBE5] dark:border-stone-800 rounded-2xl bg-white dark:bg-[#1D201A]">
               <p className="text-xs text-stone-400 font-medium">{t.noDecks || "No custom decks found."}</p>
             </div>
           )}

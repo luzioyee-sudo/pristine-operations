@@ -207,7 +207,7 @@ export const PdfPageCanvas: React.FC<PdfPageCanvasProps> = ({
         {/* Loading overlay for smooth rendering */}
         {isLoading && (
           <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] flex items-center justify-center pointer-events-none">
-            <div className="w-6 h-6 border-2 border-[#222222] border-t-transparent rounded-full animate-spin" />
+            <div className="w-6 h-6 border-2 border-[#21222D] border-t-transparent rounded-full animate-spin" />
           </div>
         )}
 
